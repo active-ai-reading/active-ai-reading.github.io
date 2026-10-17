@@ -6,7 +6,6 @@ description: A course where students read AI papers actively, and publish summar
 ---
 
 {%- assign recent_posts = site.posts | slice: 0, 6 -%}
-{%- assign papers = site.papers | sort: 'year' | reverse -%}
 
 <div class="post">
   <section class="home-hero">
@@ -28,11 +27,7 @@ description: A course where students read AI papers actively, and publish summar
   </section>
 
   <h2 class="section-title">Papers</h2>
-  <div class="paper-grid">
-    {% for paper in papers limit: 6 %}
-      {% include course/paper_card.liquid paper=paper %}
-    {% endfor %}
-  </div>
+  {% include course/paper_grid.liquid limit=6 %}
 
   {% if recent_posts.size > 0 %}
     <h2 class="section-title">Latest posts</h2>

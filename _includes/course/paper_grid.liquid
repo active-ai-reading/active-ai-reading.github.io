@@ -1,0 +1,30 @@
+{%- comment -%}
+  Paper cards in schedule order (week 1 first), then papers not on the schedule, newest first.
+  Usage: {% include course/paper_grid.liquid limit=6 %}
+{%- endcomment -%}
+{%- assign _shown = '' -%}
+{%- assign _count = 0 -%}
+{%- assign _limit = include.limit | default: 1000 -%}
+<div class="paper-grid">
+  {%- for w in site.data.schedule -%}
+    {%- assign _p = site.papers | where: 'slug', w.paper | first -%}
+    {%- capture _key %}|{{ w.paper }}|{% endcapture -%}
+    {%- if _p and _count < _limit -%}
+      {%- unless _shown contains _key -%}
+        {% include course/paper_card.liquid paper=_p %}
+        {%- assign _shown = _shown | append: _key -%}
+        {%- assign _count = _count | plus: 1 -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign _rest = site.papers | sort: 'year' | reverse -%}
+  {%- for _p in _rest -%}
+    {%- capture _key %}|{{ _p.slug }}|{% endcapture -%}
+    {%- if _count < _limit -%}
+      {%- unless _shown contains _key -%}
+        {% include course/paper_card.liquid paper=_p %}
+        {%- assign _count = _count | plus: 1 -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+</div>

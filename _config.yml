@@ -57,7 +57,7 @@ external_services:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false # a fixed footer takes too much room on phones
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
