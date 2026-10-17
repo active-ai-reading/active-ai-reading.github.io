@@ -187,13 +187,13 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/recurrent-depth-latent-reasoning/";
-            },},{id: "people-borgr",
-          title: 'Borgr',
+            },},{id: "people-leshem-choshen",
+          title: 'Leshem Choshen',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/borgr/";
             },},{id: "people-course-team",
-          title: 'Course Team',
+          title: 'Course team',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/course-team/";
