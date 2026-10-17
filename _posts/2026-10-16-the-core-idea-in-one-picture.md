@@ -25,11 +25,11 @@ The paper has one idea you can draw: **knowledge flows between languages only th
 
 <div class="tok-diagram">
 <div class="tok-row">
-<h4>1. English₁ – English₂: identical text, disjoint token IDs</h4>
-<div class="tok-line"><span class="tok-lang">English₁</span>
+<h4>1. English<sub>1</sub> – English<sub>2</sub>: identical text, disjoint token IDs</h4>
+<div class="tok-line"><span class="tok-lang">English<sub>1</sub></span>
 <span class="tok a">The<small>464</small></span><span class="tok a">cat<small>3797</small></span><span class="tok a">sleeps<small>22118</small></span>
 </div>
-<div class="tok-line"><span class="tok-lang">English₂</span>
+<div class="tok-line"><span class="tok-lang">English<sub>2</sub></span>
 <span class="tok b">The<small>V+464</small></span><span class="tok b">cat<small>V+3797</small></span><span class="tok b">sleeps<small>V+22118</small></span>
 </div>
 <div class="tok-verdict">Same words, same grammar, same data. Only the IDs differ. Knowledge transfer: <b>CLeq ≈ −2.6%</b> (none).</div>
