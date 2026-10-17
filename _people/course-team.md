@@ -1,5 +1,6 @@
 ---
 name: Course team
+title: Course team
 role_in_course: examples
 affiliation: Active AI Reading
 tagline: Author of the example posts. Copy them, then do better.

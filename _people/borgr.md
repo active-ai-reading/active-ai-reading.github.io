@@ -1,5 +1,6 @@
 ---
 name: Leshem Choshen
+title: Leshem Choshen # shown in the browser tab
 role_in_course: instructor
 affiliation: Weizmann Institute of Science · MIT-IBM Watson AI Lab
 tagline: Openly researching the future of humane AI.

@@ -3,6 +3,7 @@
 # The filename must be your GitHub username (that's how posts find their authors).
 # Everything below is optional except name. Delete lines you don't want.
 name: Your Name # a pseudonym is fine
+title: Your Name # same as name; shown in the browser tab
 pronouns: # e.g. she/her
 affiliation: Weizmann Institute of Science # or wherever you are
 role_in_course: student # student, instructor, TA, guest...
