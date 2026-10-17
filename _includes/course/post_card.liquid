@@ -1,0 +1,15 @@
+{%- comment -%} A compact card for a post. Usage: {% include course/post_card.liquid post=post show_paper=true %} {%- endcomment -%}
+{%- assign _post = include.post -%}
+{%- assign _role = site.data.roles | where: 'id', _post.role | first -%}
+<a class="post-card" href="{{ _post.url | relative_url }}" style="--role-color: {{ _role.color | default: '#888' }}">
+  <div class="post-card-top">
+    {% if _role %}<span class="post-card-role">{{ _role.icon }} {{ _role.name }}</span>{% endif %}
+    <span class="post-card-date">{{ _post.date | date: '%b %-d, %Y' }}</span>
+  </div>
+  <div class="post-card-title">{{ _post.title }}</div>
+  {% if _post.description %}<div class="post-card-desc">{{ _post.description }}</div>{% endif %}
+  {% if include.show_paper and _post.paper %}
+    {%- assign _paper = site.papers | where: 'slug', _post.paper | first -%}
+    {% if _paper %}<div class="post-card-paper">{{ _paper.short | default: _paper.title }}</div>{% endif %}
+  {% endif %}
+</a>

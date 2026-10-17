@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- comment -%} Profile page for one participant (a file in _people/<github-username>.md). {%- endcomment -%}
+{%- assign my_posts = site.posts | where_exp: 'p', 'p.by contains page.slug' -%}
+<div class="post person-page">
+  <header class="person-header">
+    <img class="person-photo" src="{% if page.photo %}{{ page.photo | relative_url }}{% else %}https://github.com/{{ page.slug }}.png?size=320{% endif %}" alt="{{ page.name }}">
+    <div>
+      <h1 class="post-title">{{ page.name | default: page.slug }}</h1>
+      {% if page.pronouns %}<div class="muted">{{ page.pronouns }}</div>{% endif %}
+      {% if page.affiliation %}<div class="person-affiliation">{{ page.affiliation }}</div>{% endif %}
+      {% if page.tagline %}<p class="person-tagline">{{ page.tagline }}</p>{% endif %}
+      <div class="person-links">
+        {% unless page.no_github %}<a href="https://github.com/{{ page.slug }}" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endunless %}
+        {% if page.website %}<a href="{{ page.website }}" title="Website"><i class="fa-solid fa-globe"></i></a>{% endif %}
+        {% if page.scholar %}<a href="{{ page.scholar }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+        {% if page.bluesky %}<a href="{{ page.bluesky }}" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>{% endif %}
+        {% if page.x %}<a href="{{ page.x }}" title="X"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
+        {% if page.mastodon %}<a href="{{ page.mastodon }}" title="Mastodon" rel="me"><i class="fa-brands fa-mastodon"></i></a>{% endif %}
+        {% if page.linkedin %}<a href="{{ page.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+      </div>
+    </div>
+  </header>
+
+  <article class="post-content">{{ content }}</article>
+
+  <h2 class="section-title">Posts <span class="count">{{ my_posts.size }}</span></h2>
+  {% if my_posts.size == 0 %}
+    <p class="muted">No posts yet.</p>
+  {% else %}
+    <div class="post-grid">
+      {% for p in my_posts %}{% include course/post_card.liquid post=p show_paper=true %}{% endfor %}
+    </div>
+  {% endif %}
+
+  <p class="edit-footer"><a href="https://github.com/{{ site.github_repo }}/edit/main/{{ page.path }}"><i class="fa-solid fa-pen fa-xs"></i> Edit this profile</a></p>
+</div>

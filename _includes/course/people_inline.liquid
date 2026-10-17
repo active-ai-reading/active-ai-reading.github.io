@@ -1,0 +1,22 @@
+{%- comment -%}
+  Renders a list of GitHub usernames as linked names with small avatars.
+  Usage: {% include course/people_inline.liquid people=page.by %}
+  A username with a file in _people/ links to that profile; others link to GitHub.
+{%- endcomment -%}
+{%- for handle in include.people -%}
+  {%- assign _p = site.people | where: 'slug', handle | first -%}
+  <span class="person-inline">
+    {%- if _p -%}
+      {%- if _p.photo -%}
+        <img class="avatar" src="{{ _p.photo | relative_url }}" alt="" loading="lazy">
+      {%- else -%}
+        <img class="avatar" src="https://github.com/{{ handle }}.png?size=64" alt="" loading="lazy">
+      {%- endif -%}
+      <a href="{{ _p.url | relative_url }}">{{ _p.name | default: handle }}</a>
+    {%- else -%}
+      <img class="avatar" src="https://github.com/{{ handle }}.png?size=64" alt="" loading="lazy">
+      <a href="https://github.com/{{ handle }}">{{ handle }}</a>
+    {%- endif -%}
+  </span>
+  {%- unless forloop.last %}, {% endunless -%}
+{%- endfor -%}

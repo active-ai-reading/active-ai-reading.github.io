@@ -1,0 +1,14 @@
+{%- comment -%}
+  A colored role badge.  Usage: {% include course/role_badge.liquid role="research" task="critique" %}
+  Roles and tasks are defined in _data/roles.yml.
+{%- endcomment -%}
+{%- assign _role = site.data.roles | where: 'id', include.role | first -%}
+{%- if _role -%}
+  {%- assign _task = _role.tasks | where: 'id', include.task | first -%}
+  <a class="role-badge" href="{{ '/roles/' | relative_url }}#{{ _role.id }}" style="--role-color: {{ _role.color }}"
+    ><span class="role-badge-icon">{{ _role.icon }}</span> {{ _role.name -}}
+    {%- if _task and include.short != true %} <span class="role-badge-task">· {{ _task.name }}</span>{% endif -%}
+  </a>
+{%- elsif include.role -%}
+  <span class="role-badge">{{ include.role }}{% if include.task %} · {{ include.task }}{% endif %}</span>
+{%- endif -%}

@@ -1,0 +1,21 @@
+{%- comment -%}
+  The course header shown under a post's title: paper, role, authors, date, edit link.
+  Driven by the post's front matter: paper, role, task, by.
+{%- endcomment -%}
+{%- assign _paper = site.papers | where: 'slug', page.paper | first -%}
+<div class="course-post-meta">
+  {% if page.role %}{% include course/role_badge.liquid role=page.role task=page.task %}{% endif %}
+  {% if _paper %}
+    <div class="course-post-paper">
+      on <a href="{{ _paper.url | relative_url }}"><em>{{ _paper.title }}</em></a>
+    </div>
+  {% endif %}
+  <div class="course-post-byline">
+    {% if page.by %}by {% include course/people_inline.liquid people=page.by %} · {% endif %}
+    {{ page.date | date: '%B %-d, %Y' }}
+    {% if page.example %}· <span class="example-flag" title="Written as an example for the course">example post</span>{% endif %}
+    {% if site.github_repo and page.path %}
+      · <a class="edit-link" href="https://github.com/{{ site.github_repo }}/edit/main/{{ page.path }}"><i class="fa-solid fa-pen fa-xs"></i> edit this page</a>
+    {% endif %}
+  </div>
+</div>

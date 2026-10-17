@@ -1,0 +1,478 @@
+/*******************************************************************************
+ * Active AI Reading: course styles
+ * Everything specific to this site lives here. Change anything you like.
+ * Colors come from al-folio's CSS variables (see _themes.scss), so light and
+ * dark mode both work. Role colors come from _data/roles.yml (--role-color).
+ ******************************************************************************/
+
+:root {
+  --course-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --course-sans: Inter, Roboto, -apple-system, "Segoe UI", sans-serif;
+  --course-radius: 12px;
+}
+
+body {
+  font-family: var(--course-sans);
+}
+
+// Long-form reading text in serif, like a good journal.
+.post-content,
+.post-subtitle,
+.tldr,
+.paper-card-tldr,
+.home-lede {
+  font-family: var(--course-serif);
+}
+.post-content {
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+.post-title {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.post-subtitle {
+  font-size: 1.2rem;
+  color: var(--global-text-color-light);
+  margin-top: -0.25rem;
+}
+
+.muted {
+  color: var(--global-text-color-light);
+}
+
+// ---------------------------------------------------------------- badges ----
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--role-color, var(--global-theme-color)) !important;
+  background: color-mix(in srgb, var(--role-color, #888) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--role-color, #888) 35%, transparent);
+  text-decoration: none !important;
+}
+.role-badge-task {
+  font-weight: 500;
+  opacity: 0.9;
+}
+.mini-badge {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  margin-right: 0.3em;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: color-mix(in srgb, var(--role-color, #888) 14%, transparent);
+  color: var(--global-text-color);
+}
+
+// ------------------------------------------------------------ post header ----
+.course-post-meta {
+  margin: 0.75rem 0 1.25rem;
+  font-size: 0.95rem;
+  color: var(--global-text-color-light);
+  .course-post-paper {
+    margin-top: 0.5rem;
+  }
+  .course-post-byline {
+    margin-top: 0.25rem;
+  }
+  a {
+    color: var(--global-theme-color);
+  }
+}
+.person-inline {
+  white-space: nowrap;
+}
+.avatar {
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: -0.35em;
+  margin-right: 0.25em;
+}
+.example-flag {
+  font-size: 0.8rem;
+  padding: 0.05em 0.5em;
+  border-radius: 4px;
+  background: var(--global-code-bg-color);
+}
+.edit-link,
+.edit-footer {
+  font-size: 0.85rem;
+}
+.edit-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+  color: var(--global-text-color-light);
+}
+
+// Before/after blocks used by the writing tasks.
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+  > div {
+    border: 1px solid var(--global-divider-color);
+    border-radius: var(--course-radius);
+    padding: 0.75rem 1rem;
+    font-size: 0.97rem;
+  }
+  .label {
+    display: block;
+    font-family: var(--course-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+  }
+  .before .label {
+    color: var(--global-text-color-light);
+  }
+  .after {
+    border-color: var(--global-theme-color);
+    .label {
+      color: var(--global-theme-color);
+    }
+  }
+}
+@media (max-width: 640px) {
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ------------------------------------------------------------------ cards ----
+.post-grid,
+.paper-grid,
+.people-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+.post-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.paper-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.people-grid {
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+}
+
+.post-card,
+.paper-card,
+.person-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--global-divider-color);
+  border-radius: var(--course-radius);
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color) !important;
+  text-decoration: none !important;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.post-card {
+  padding: 0.9rem 1rem;
+  border-top: 4px solid var(--role-color, var(--global-theme-color));
+  .post-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+  }
+  .post-card-role {
+    color: var(--role-color);
+    font-weight: 600;
+  }
+  .post-card-title {
+    font-weight: 650;
+    margin: 0.35rem 0 0.25rem;
+    line-height: 1.3;
+  }
+  .post-card-desc {
+    font-size: 0.88rem;
+    color: var(--global-text-color-light);
+  }
+  .post-card-paper {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--global-text-color-light);
+  }
+}
+
+.paper-card {
+  overflow: hidden;
+  .paper-card-img {
+    height: 150px;
+    background-size: cover;
+    background-position: center top;
+    background-color: #fff;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+  .paper-card-img-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--global-theme-color) 18%, transparent), transparent);
+  }
+  .paper-card-body {
+    padding: 0.9rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .paper-card-title {
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .paper-card-authors {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    margin: 0.25rem 0 0.5rem;
+  }
+  .paper-card-tldr {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin-bottom: 0.75rem;
+  }
+  .paper-card-roles {
+    margin-top: auto;
+  }
+  .paper-card-none {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.person-card {
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+  .person-card-name {
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .person-card-sub {
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// ------------------------------------------------------------- paper page ----
+.paper-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+}
+.paper-authors {
+  color: var(--global-text-color-light);
+  margin-bottom: 0.75rem;
+}
+.btn-pill {
+  display: inline-block;
+  margin: 0 0.35rem 0.4rem 0;
+  padding: 0.25em 0.9em;
+  border-radius: 999px;
+  border: 1px solid var(--global-divider-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  &:hover {
+    border-color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+.tldr {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0 var(--course-radius) var(--course-radius) 0;
+  background: color-mix(in srgb, var(--global-theme-color) 7%, transparent);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+.tldr-label {
+  font-family: var(--course-sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--global-theme-color);
+  margin-right: 0.4em;
+}
+.paper-hero {
+  margin: 1.5rem 0;
+  img {
+    width: 100%;
+    border-radius: var(--course-radius);
+    border: 1px solid var(--global-divider-color);
+    background: #fff;
+  }
+  figcaption {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.35rem;
+  }
+}
+.section-title {
+  margin-top: 2.5rem;
+  font-weight: 700;
+  .count {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--global-text-color-light);
+    margin-left: 0.25rem;
+  }
+}
+.role-group h3 {
+  color: var(--role-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+}
+.claims {
+  list-style: none;
+  padding-left: 0;
+  li {
+    margin: 0.35rem 0;
+  }
+}
+
+// ------------------------------------------------------------ person page ----
+.person-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.person-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.person-affiliation {
+  color: var(--global-text-color-light);
+}
+.person-tagline {
+  margin: 0.5rem 0;
+  font-family: var(--course-serif);
+  font-size: 1.1rem;
+}
+.person-links a {
+  font-size: 1.3rem;
+  margin-right: 0.6rem;
+}
+
+// ------------------------------------------------------------------- home ----
+.home-hero {
+  padding: 2rem 0 1rem;
+  h1 {
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+  .accent {
+    color: var(--global-theme-color);
+  }
+}
+.home-lede {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  max-width: 40em;
+  color: var(--global-text-color);
+}
+.home-cta a {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.5em 1.1em;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid var(--global-theme-color);
+  &.primary {
+    background: var(--global-theme-color);
+    color: #fff !important;
+  }
+  &:hover {
+    text-decoration: none;
+    opacity: 0.9;
+  }
+}
+.role-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+// ------------------------------------------------------------- roles page ----
+.role-section {
+  border-left: 4px solid var(--role-color);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  margin: 2rem 0;
+  h2 {
+    color: var(--role-color);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .task {
+    margin: 0.9rem 0;
+  }
+  .task-name {
+    font-weight: 650;
+  }
+  .task-id {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// ---------------------------------------------------------- schedule page ----
+.schedule-week {
+  border: 1px solid var(--global-divider-color);
+  border-radius: var(--course-radius);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  .week-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-weight: 700;
+  }
+  .week-date {
+    font-weight: 500;
+    color: var(--global-text-color-light);
+  }
+}

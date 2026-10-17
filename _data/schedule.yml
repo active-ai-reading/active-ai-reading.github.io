@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------------------
+# The schedule. One entry per class meeting.
+#   paper: the id of a file in _papers/ (its filename without .md), or empty.
+#   claims: who does what this week. To claim a task, add a line with your
+#           GitHub username, the role id and the task id (see _data/roles.yml).
+#           Several people can take the same task; that is encouraged.
+# ---------------------------------------------------------------------------
+
+- week: 1
+  date: TBD
+  topic: About the course, expectations, and a fast first read
+  paper: cross-lingual-knowledge-pretraining
+  notes: We read this one together in class. The example posts show what each task can look like.
+  claims: []
+  #   - who: your-github-username
+  #     role: research
+  #     task: critique
+
+- week: 2
+  date: TBD
+  topic: Matryoshka Language Model Suites
+  paper: matryoshka-lm-suites
+  claims: []
+
+- week: 3
+  date: TBD
+  topic: Recurrent-depth latent reasoning (tentative)
+  paper: recurrent-depth-latent-reasoning
+  claims: []

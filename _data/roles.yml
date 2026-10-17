@@ -1,0 +1,107 @@
+# ---------------------------------------------------------------------------
+# Roles and tasks.
+# This file drives the Roles page, the colored badges on every post, and the
+# grouping on each paper's page. Edit it freely: add, rename or remove roles
+# and tasks. A post refers to a role by its `id` and to a task by its `id`.
+# Colors: any CSS color. Icons: any emoji.
+# ---------------------------------------------------------------------------
+
+- id: writing
+  name: Writing
+  icon: "✍️"
+  color: "#2f6fde"
+  summary: Make the paper itself better written.
+  tasks:
+    - id: abstract
+      name: Rewrite the abstract (or title)
+      prompt: Rewrite the abstract, or the title if that is what needs improving. Show before and after and say what you changed and why.
+    - id: copyedit
+      name: Copyedit a section
+      prompt: Copyedit the biggest part you can. Could the overall story improve? The structure? If not, what can be cut or phrased better? Give a before and after, and the general rule you applied.
+    - id: key-points
+      name: The points that matter
+      prompt: What are the most important points for most readers, and how could the paper convey or emphasize them better?
+
+- id: learning
+  name: Learning to learn
+  icon: "🧠"
+  color: "#8a3ffc"
+  summary: Bring something new into the room.
+  tasks:
+    - id: teach
+      name: Teach us something new
+      prompt: Teach us something new, on writing, on the topic, or on something else entirely.
+
+- id: visualization
+  name: Visualization
+  icon: "📊"
+  color: "#e8590c"
+  summary: Make the paper's ideas visible.
+  tasks:
+    - id: redo-graph
+      name: Redo a graph, better
+      prompt: Redo one of the paper's graphs, but better. In class we compare versions (and if several people did it, theirs too).
+    - id: key-visual
+      name: Visualize the core idea
+      prompt: Create a visualization of the most important part of the paper.
+
+- id: communication
+  name: Communicate to the world
+  icon: "📣"
+  color: "#d6336c"
+  summary: Get the ideas out of the PDF and into people's feeds.
+  tasks:
+    - id: social
+      name: Social media posts
+      prompt: Write a post for X, Bluesky, Mastodon and LinkedIn. Each platform has a different audience and length.
+    - id: compile
+      name: Compile the blog
+      prompt: Compile the week's outputs into one readable post that links to everyone's work.
+    - id: extra-step
+      name: One more step
+      prompt: Try something new, help the others, make a test, or use another platform.
+
+- id: research
+  name: Research skills
+  icon: "🔬"
+  color: "#0c8a5f"
+  summary: Read like a researcher, not like a student.
+  tasks:
+    - id: contact-authors
+      name: Contact the authors
+      prompt: Contact the authors with a question or a pointer, if it makes sense.
+    - id: critique
+      name: Critique
+      prompt: Strengths and weaknesses, and how the paper could have been improved. Decide if it is worth publishing, and worth pursuing.
+    - id: literature
+      name: Literature review
+      prompt: Which papers is this one built on? Which fields and concepts does it relate to most?
+    - id: authors
+      name: The authors' path
+      prompt: Describe the prominent authors (usually first and last) and how this paper fits into their larger research. Stick to public, professional information.
+    - id: followups
+      name: Follow-ups worth doing
+      prompt: Exercise academic taste. Suggest follow-ups that are worth doing, and say why.
+    - id: recent-paper
+      name: A related paper from last month
+      prompt: Find a relevant paper from the last month and explain its gist.
+
+- id: coding
+  name: Coding
+  icon: "💻"
+  color: "#495057"
+  summary: Make it run.
+  tasks:
+    - id: reimplement
+      name: Reimplement an experiment or graph
+      prompt: Reimplement an experiment, a metric, or a graph from the paper.
+
+- id: chill
+  name: Chill
+  icon: "😎"
+  color: "#868e96"
+  summary: We are a group. Sometimes it is not your job, and that is fine.
+  tasks:
+    - id: chill
+      name: Chill, dude
+      prompt: Read the paper, come to class, ask good questions.

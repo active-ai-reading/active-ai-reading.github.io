@@ -1,0 +1,79 @@
+---
+layout: default
+---
+{%- comment -%}
+  Page for one paper (a file in _papers/). Lists every post whose front matter
+  says `paper: <this file's name>`, grouped by role in the order of _data/roles.yml.
+{%- endcomment -%}
+{%- assign paper_posts = site.posts | where: 'paper', page.slug -%}
+<div class="post paper-page">
+  <header class="paper-header">
+    <div class="paper-kicker">Paper{% if page.year %} · {{ page.year }}{% endif %}</div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.authors %}<p class="paper-authors">{{ page.authors }}</p>{% endif %}
+    <div class="paper-links">
+      {% if page.arxiv %}
+        <a class="btn-pill" href="https://arxiv.org/abs/{{ page.arxiv }}">arXiv</a>
+        <a class="btn-pill" href="https://arxiv.org/pdf/{{ page.arxiv }}">PDF</a>
+        <a class="btn-pill" href="https://www.alphaxiv.org/abs/{{ page.arxiv }}">alphaXiv discussion</a>
+      {% endif %}
+      {% if page.url_paper %}<a class="btn-pill" href="{{ page.url_paper }}">Paper</a>{% endif %}
+      {% if page.code %}<a class="btn-pill" href="{{ page.code }}">Code</a>{% endif %}
+    </div>
+    {% if page.tldr %}
+      <div class="tldr"><span class="tldr-label">TL;DR</span> {{ page.tldr }}</div>
+    {% endif %}
+  </header>
+
+  {% if page.image %}
+    <figure class="paper-hero">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: 'Main figure of the paper' }}">
+      {% if page.license %}<figcaption>Figure from the paper ({{ page.license }}).</figcaption>{% endif %}
+    </figure>
+  {% endif %}
+
+  <article class="post-content">{{ content }}</article>
+
+  <h2 class="section-title">What the class wrote <span class="count">{{ paper_posts.size }}</span></h2>
+  {% if paper_posts.size == 0 %}
+    <p class="muted">Nothing yet. Pick a task on the <a href="{{ '/roles/' | relative_url }}">roles page</a> and write the first post, see <a href="{{ '/guide/' | relative_url }}">how to post</a>.</p>
+  {% endif %}
+  {% for r in site.data.roles %}
+    {%- assign role_posts = paper_posts | where: 'role', r.id -%}
+    {% if role_posts.size > 0 %}
+      <section class="role-group" style="--role-color: {{ r.color }}">
+        <h3 id="{{ r.id }}"><span>{{ r.icon }}</span> {{ r.name }}</h3>
+        <div class="post-grid">
+          {% for p in role_posts %}{% include course/post_card.liquid post=p %}{% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  {% endfor %}
+  {%- assign other_posts = paper_posts | where_exp: 'p', 'p.role == nil' -%}
+  {% if other_posts.size > 0 %}
+    <section class="role-group">
+      <h3>Other</h3>
+      <div class="post-grid">
+        {% for p in other_posts %}{% include course/post_card.liquid post=p %}{% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  {%- assign weeks = site.data.schedule | where: 'paper', page.slug -%}
+  {% for w in weeks %}
+    {% if w.claims and w.claims.size > 0 %}
+      <h2 class="section-title">Who is working on what (week {{ w.week }})</h2>
+      <ul class="claims">
+        {% for c in w.claims %}
+          {%- assign who = c.who | split: '|' -%}
+          <li>{% include course/people_inline.liquid people=who %} {% include course/role_badge.liquid role=c.role task=c.task %}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+
+  <p class="edit-footer">
+    <a href="https://github.com/{{ site.github_repo }}/edit/main/{{ page.path }}"><i class="fa-solid fa-pen fa-xs"></i> Edit this paper's page</a>
+    · Add a post: copy a file from <a href="https://github.com/{{ site.github_repo }}/tree/main/templates">templates/</a> into <code>_posts/</code> and set <code>paper: {{ page.slug }}</code>.
+  </p>
+</div>

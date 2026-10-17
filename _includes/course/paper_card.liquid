@@ -1,0 +1,23 @@
+{%- comment -%} A card for a paper. Usage: {% include course/paper_card.liquid paper=paper %} {%- endcomment -%}
+{%- assign _paper = include.paper -%}
+{%- assign _posts = site.posts | where: 'paper', _paper.slug -%}
+<a class="paper-card" href="{{ _paper.url | relative_url }}">
+  {% if _paper.image %}
+    <div class="paper-card-img" style="background-image: url('{{ _paper.image | relative_url }}')"></div>
+  {% else %}
+    <div class="paper-card-img paper-card-img-empty"><span>📄</span></div>
+  {% endif %}
+  <div class="paper-card-body">
+    <div class="paper-card-title">{{ _paper.title }}</div>
+    <div class="paper-card-authors">{{ _paper.authors | truncatewords: 8 }} · {{ _paper.year }}</div>
+    {% if _paper.tldr %}<div class="paper-card-tldr">{{ _paper.tldr | strip_html | truncatewords: 32 }}</div>{% endif %}
+    <div class="paper-card-roles">
+      {%- assign _seen = '' -%}
+      {%- for r in site.data.roles -%}
+        {%- assign _n = _posts | where: 'role', r.id | size -%}
+        {%- if _n > 0 -%}<span class="mini-badge" style="--role-color: {{ r.color }}" title="{{ r.name }}: {{ _n }}">{{ r.icon }} {{ _n }}</span>{%- endif -%}
+      {%- endfor -%}
+      {%- if _posts.size == 0 -%}<span class="paper-card-none">no posts yet, be the first</span>{%- endif -%}
+    </div>
+  </div>
+</a>
