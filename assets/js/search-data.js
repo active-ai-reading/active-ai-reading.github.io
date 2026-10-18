@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/roles/";
           },
+        },{id: "nav-guides",
+          title: "guides",
+          description: "One living guide per role, written and passed on by the people who held it.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/guides/";
+          },
         },{id: "nav-schedule",
           title: "schedule",
           description: "What we read each week, and who is doing what.",
@@ -172,7 +179,42 @@ ninja.data = [{
             window.location.href = "/posts/2026/a-better-figure-2/";
           
         },
-      },{id: "papers-why-pretraining-fails-to-share-cross-lingual-knowledge",
+      },{id: "guides-the-chill-guide",
+          title: 'The chill guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/chill/";
+            },},{id: "guides-the-coding-guide",
+          title: 'The coding guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/coding/";
+            },},{id: "guides-the-communication-guide",
+          title: 'The communication guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/communication/";
+            },},{id: "guides-the-learning-to-learn-guide",
+          title: 'The learning-to-learn guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/learning/";
+            },},{id: "guides-the-research-skills-guide",
+          title: 'The research skills guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/research/";
+            },},{id: "guides-the-visualization-guide",
+          title: 'The visualization guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/visualization/";
+            },},{id: "guides-the-writing-guide",
+          title: 'The writing guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/writing/";
+            },},{id: "papers-why-pretraining-fails-to-share-cross-lingual-knowledge",
           title: 'Why Pretraining Fails to Share Cross-Lingual Knowledge',
           description: "",
           section: "Papers",handler: () => {
