@@ -23,7 +23,7 @@ icon: 📖 # the emoji used as the favicon (alternatively, provide image name in
 url: https://active-ai-reading.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 github_repo: active-ai-reading/active-ai-reading.github.io # used for "edit this page" links
-signup_sheet: # link to the Google Sheet where people sign up for roles each week
+signup_sheet: https://docs.google.com/spreadsheets/d/1RnLIBIF4uFraEYVjE9zPYDWsnHteO7yAw-xXWm-FFYE/edit?usp=sharing # the Google Sheet where people sign up for roles each week
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
