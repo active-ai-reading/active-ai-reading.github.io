@@ -4,7 +4,7 @@ title: roles
 permalink: /roles/
 nav: true
 nav_order: 3
-description: The tasks you can take on for each paper. Pick one (or invent your own) every week.
+description: The tasks you can take on for each paper. Pick one every week.
 ---
 
 Each week, everyone takes a task for that week's paper and writes a short piece for the site. You can do the default version, or try something new that might fail. Both are good. Several people can do the same task; comparing versions is half the fun.
@@ -27,4 +27,4 @@ To take a task, sign up in {% include course/signup_link.liquid %} (one row per 
 </section>
 {% endfor %}
 
-<p class="muted">The roles live in <a href="https://github.com/{{ site.github_repo }}/edit/main/_data/roles.yml"><code>_data/roles.yml</code></a>. Edit that file to add, rename or remove roles and tasks; this page, the badges, and the paper pages all update automatically.</p>
+<p class="muted">The roles and tasks are set by the course. Have an idea for a change? Raise it in class or in <a href="https://github.com/{{ site.github_repo }}/discussions">Discussions</a>.</p>

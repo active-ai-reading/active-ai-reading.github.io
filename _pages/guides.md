@@ -27,4 +27,3 @@ Each role has a guide, written by the students who held it and handed on from we
   {% endfor %}
 </div>
 
-<p class="muted">A role without a guide? Copy any file in <a href="https://github.com/{{ site.github_repo }}/tree/main/_guides"><code>_guides/</code></a>, rename it to the role's id, and change <code>role:</code> and <code>title:</code>.</p>

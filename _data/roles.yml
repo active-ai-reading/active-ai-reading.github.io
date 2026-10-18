@@ -1,8 +1,9 @@
 # ---------------------------------------------------------------------------
 # Roles and tasks.
 # This file drives the Roles page, the colored badges on every post, and the
-# grouping on each paper's page. Edit it freely: add, rename or remove roles
-# and tasks. A post refers to a role by its `id` and to a task by its `id`.
+# grouping on each paper's page. The roles and tasks are set by the course
+# staff (they must match the sign-up sheet's Rules tab); suggest changes in class.
+# A post refers to a role by its `id` and to a task by its `id`.
 # Colors: any CSS color. Icons: any emoji.
 # ---------------------------------------------------------------------------
 
