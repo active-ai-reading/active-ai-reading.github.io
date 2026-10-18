@@ -61,15 +61,8 @@ layout: default
 
   {%- assign weeks = site.data.schedule | where: 'paper', page.slug -%}
   {% for w in weeks %}
-    {% if w.claims and w.claims.size > 0 %}
-      <h2 class="section-title">Who is working on what (week {{ w.week }})</h2>
-      <ul class="claims">
-        {% for c in w.claims %}
-          {%- assign who = c.who | split: '|' -%}
-          <li>{% include course/people_inline.liquid people=who %} {% include course/role_badge.liquid role=c.role task=c.task %}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+    <h2 class="section-title">Who is doing what (week {{ w.week }})</h2>
+    {% include course/week_roles.liquid week=w.week %}
   {% endfor %}
 
   <p class="edit-footer">

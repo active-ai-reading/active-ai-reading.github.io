@@ -1,0 +1,22 @@
+{%- comment -%}
+  Lists who took which role in a given week, from _data/weekly_roles.csv.
+  Usage: {% include course/week_roles.liquid week=3 %}
+{%- endcomment -%}
+{%- assign _rows = site.data.weekly_roles | where: 'week', include.week -%}
+{%- if _rows.size > 0 -%}
+  <ul class="claims">
+    {%- for r in _rows -%}
+      {%- assign _who = r.github_username | strip | split: '|' -%}
+      <li>
+        {% include course/people_inline.liquid people=_who %}
+        {% include course/role_badge.liquid role=r.role task=r.task %}
+        {% if r.notes and r.notes != '' %}<span class="muted">· {{ r.notes }}</span>{% endif %}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- else -%}
+  <div class="muted">
+    Nobody has taken a role yet. Add yourself in
+    <a href="https://github.com/{{ site.github_repo }}/edit/main/_data/weekly_roles.csv"><code>_data/weekly_roles.csv</code></a>.
+  </div>
+{%- endif -%}

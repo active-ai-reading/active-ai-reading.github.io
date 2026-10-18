@@ -3,7 +3,7 @@ layout: page
 title: how to post
 permalink: /guide/
 nav: true
-nav_order: 6
+nav_order: 7
 description: Join, add yourself, claim a task, and publish your first post in about 10 minutes.
 toc:
   sidebar: left
@@ -23,16 +23,16 @@ This site belongs to the class. Everyone in the course can change **anything**: 
 
 Copy [`templates/person.md`](https://github.com/{{ site.github_repo }}/blob/main/templates/person.md) to `_people/<your-github-username>.md` and fill it in. The filename **must** be your GitHub username: that is how your posts find you. Your GitHub picture is used unless you add a `photo:`.
 
-## 3. Claim a task (every week)
+## 3. Take a role (every week)
 
-Look at the [roles]({{ '/roles/' | relative_url }}) and pick a task. Add yourself to that week in [`_data/schedule.yml`](https://github.com/{{ site.github_repo }}/edit/main/_data/schedule.yml):
+Look at the [roles]({{ '/roles/' | relative_url }}) and pick a task. Add one line to [`_data/weekly_roles.csv`](https://github.com/{{ site.github_repo }}/edit/main/_data/weekly_roles.csv):
 
-```yaml
-claims:
-  - who: your-github-username
-    role: visualization
-    task: redo-graph
+```text
+week,github_username,role,task,notes
+3,your-github-username,visualization,redo-graph,
 ```
+
+Then read your role's [guide]({{ '/guides/' | relative_url }}) and its latest [handoffs](https://github.com/{{ site.github_repo }}/tree/main/handoffs) before you start.
 
 ## 4. Write your post
 

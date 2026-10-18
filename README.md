@@ -8,11 +8,19 @@ A course where we read AI papers actively: we rewrite them, critique them, redra
 
 1. **Join:** comment on the pinned [**Join here**](../../issues) issue. Someone already in the course will add you, so accept the email invite.
 2. **Add yourself:** copy [`templates/person.md`](templates/person.md) to `_people/<your-github-username>.md` and fill it in.
-3. **Claim a task:** pick one on the [roles page](https://active-ai-reading.github.io/roles/) and add yourself to that week in [`_data/schedule.yml`](_data/schedule.yml).
+3. **Take a role:** pick a task on the [roles page](https://active-ai-reading.github.io/roles/), add a line to [`_data/weekly_roles.csv`](_data/weekly_roles.csv), and read that role's [guide](https://active-ai-reading.github.io/guides/).
 4. **Write:** copy your role's template from [`templates/`](templates/) to `_posts/YYYY-MM-DD-short-title.md`, fill in the header, write.
 5. **Publish:** commit to `main`. Watch the [Actions tab](../../actions): green ✓ means it's live.
 
 The full guide, with how to cite, add images, make charts and change the design, is on the site: **[how to post](https://active-ai-reading.github.io/guide/)**. The fastest way to learn is to open one of the [example posts](_posts/) and copy it.
+
+## Passing it on
+
+What one week learns, the next week inherits.
+
+- **Handoff notes:** after class, spend 5 minutes on `handoffs/week-NN/<github-username>-<role>.md`: what you tried, what failed, one tip. Raw is fine. See [handoffs/README.md](handoffs/README.md).
+- **Role guides:** each role has a living guide ([on the site](https://active-ai-reading.github.io/guides/), files in [`_guides/`](_guides/)). When you take a role, read its guide and the last handoffs for that role, move whatever is worth keeping into the guide, then do your task.
+- Mid-semester we reread every guide as a newcomer would and cut it back to what actually helps.
 
 ## Where things are
 
@@ -21,7 +29,10 @@ The full guide, with how to cite, add images, make charts and change the design,
 | Write a post | `_posts/YYYY-MM-DD-title.md` (start from `templates/`) |
 | Add a paper | `_papers/<paper-id>.md` (start from `templates/paper.md`) |
 | Your profile | `_people/<github-username>.md` |
-| Claim a task, see the weeks | `_data/schedule.yml` |
+| Take a role this week | `_data/weekly_roles.csv` |
+| The weeks and their papers | `_data/schedule.yml` |
+| Role guides | `_guides/<role>.md` |
+| Handoff notes | `handoffs/week-NN/<github-username>-<role>.md` |
 | Add, rename or change roles and tasks | `_data/roles.yml` |
 | Add a reference | `_bibliography/references.bib` |
 | Images | `assets/img/posts/<post-name>/` |

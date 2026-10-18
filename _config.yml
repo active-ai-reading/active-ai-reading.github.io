@@ -156,6 +156,9 @@ collections:
   people: # one file per participant: _people/<github-username>.md
     output: true
     permalink: /people/:name/
+  guides: # one living guide per role: _guides/<role-id>.md
+    output: true
+    permalink: /guides/:name/
   showcase: # al-folio feature demos (images, math, charts, tabs...). Copy what you need.
     output: true
     permalink: /showcase/:title/
@@ -182,6 +185,7 @@ include: ["_pages", "_scripts", ".nojekyll"]
 exclude:
   - bin/
   - docs/
+  - handoffs/
   - templates/
   - Dockerfile
   - docker-compose.yml
@@ -245,6 +249,13 @@ defaults:
       type: people
     values:
       layout: person
+  - scope:
+      path: ""
+      type: guides
+    values:
+      layout: guide
+      toc:
+        sidebar: left # the contents sidebar builds itself from the ## and ### headings
   - scope:
       path: ""
       type: showcase

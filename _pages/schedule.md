@@ -3,17 +3,18 @@ layout: page
 title: schedule
 permalink: /schedule/
 nav: true
-nav_order: 4
+nav_order: 5
 description: What we read each week, and who is doing what.
 ---
 
-To claim a task, [edit the schedule](https://github.com/{{ site.github_repo }}/edit/main/_data/schedule.yml) and add a line under that week's `claims`:
+Who does what each week lives in one spreadsheet-like file: [`_data/weekly_roles.csv`](https://github.com/{{ site.github_repo }}/edit/main/_data/weekly_roles.csv). To take a role, add one line:
 
-```yaml
-- who: your-github-username
-  role: research # a role id from the roles page
-  task: critique # a task id from the roles page
+```text
+week,github_username,role,task,notes
+3,your-github-username,visualization,redo-graph,trying a small-multiples version
 ```
+
+`role` and `task` are the ids shown in grey on the [roles page]({{ '/roles/' | relative_url }}). Several people can take the same task; `notes` is optional. Changed your mind? Edit or delete your line.
 
 {% for w in site.data.schedule %}
 {%- assign paper = site.papers | where: 'slug', w.paper | first -%}
@@ -25,15 +26,6 @@ To claim a task, [edit the schedule](https://github.com/{{ site.github_repo }}/e
   </div>
   {% if paper and w.topic %}<div class="muted">{{ w.topic }}</div>{% endif %}
   {% if w.notes %}<div>{{ w.notes }}</div>{% endif %}
-  {% if w.claims and w.claims.size > 0 %}
-    <ul class="claims">
-      {% for c in w.claims %}
-        {%- assign who = c.who | split: '|' -%}
-        <li>{% include course/people_inline.liquid people=who %} {% include course/role_badge.liquid role=c.role task=c.task %}</li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <div class="muted">No tasks claimed yet.</div>
-  {% endif %}
+  {% include course/week_roles.liquid week=w.week %}
 </div>
 {% endfor %}

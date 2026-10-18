@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{%- comment -%}
+  A role guide (a file in _guides/<role-id>.md). The text is written by the students
+  who held the role; everything below the text is filled in automatically.
+  The contents sidebar on the left is built from the page's ## and ### headings.
+{%- endcomment -%}
+{%- assign role = site.data.roles | where: 'id', page.role | first -%}
+{%- assign role_posts = site.posts | where: 'role', page.role -%}
+{%- assign holders = site.data.weekly_roles | where: 'role', page.role -%}
+<div class="post guide-page" style="--role-color: {{ role.color | default: '#888' }}">
+  <header class="post-header">
+    <div class="paper-kicker" style="color: var(--role-color)">{{ role.icon }} Role guide</div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if role.summary %}<p class="post-subtitle">{{ role.summary }}</p>{% endif %}
+    <p class="guide-howto muted">
+      Written by the people who held this role. Read it before you start, then read the
+      <a href="https://github.com/{{ site.github_repo }}/tree/main/handoffs">latest handoffs</a>, and fold in whatever is worth keeping.
+      Add sections as you need them; the contents on the left follow. Mid-semester we reread and prune.
+    </p>
+  </header>
+
+  <article class="post-content guide-text">{{ content }}</article>
+
+  <h2 class="section-title">Tasks in this role</h2>
+  <ul>
+    {% for t in role.tasks %}
+      <li><strong>{{ t.name }}</strong> <span class="task-id muted">({{ t.id }})</span>: {{ t.prompt }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="section-title">Who held this role <span class="count">{{ holders.size }}</span></h2>
+  {% if holders.size == 0 %}
+    <p class="muted">Nobody yet. You could be the first: add a line to <code>_data/weekly_roles.csv</code>.</p>
+  {% else %}
+    <ul class="claims">
+      {% for h in holders %}
+        {%- assign _who = h.github_username | strip | split: '|' -%}
+        <li>
+          <span class="muted">Week {{ h.week }}</span> · {% include course/people_inline.liquid people=_who %}
+          {% include course/role_badge.liquid role=h.role task=h.task short=false %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <h2 class="section-title">Posts in this role <span class="count">{{ role_posts.size }}</span></h2>
+  {% if role_posts.size == 0 %}
+    <p class="muted">No posts yet.</p>
+  {% else %}
+    <div class="post-grid">
+      {% for p in role_posts %}{% include course/post_card.liquid post=p show_paper=true %}{% endfor %}
+    </div>
+  {% endif %}
+
+  <p class="edit-footer">
+    <a href="https://github.com/{{ site.github_repo }}/edit/main/{{ page.path }}"><i class="fa-solid fa-pen fa-xs"></i> Edit this guide</a>
+    · <a href="https://github.com/{{ site.github_repo }}/commits/main/{{ page.path }}">History and contributors</a>
+    · <a href="{{ '/guides/' | relative_url }}">All guides</a>
+  </p>
+</div>
