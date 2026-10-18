@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-roles",
           title: "roles",
-          description: "The tasks you can take on for each paper. Pick one (or invent your own) every week.",
+          description: "The tasks you can take on for each paper. Pick one every week.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/roles/";
