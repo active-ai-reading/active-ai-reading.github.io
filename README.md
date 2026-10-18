@@ -18,7 +18,7 @@ The full guide, with how to cite, add images, make charts and change the design,
 
 What one week learns, the next week inherits.
 
-- **Handoff notes:** after class, spend 5 minutes on `handoffs/week-NN/<github-username>-<role>.md`: what you tried, what failed, one tip. Raw is fine. See [handoffs/README.md](handoffs/README.md).
+- **Handoff notes:** after class, spend 5 minutes on `handoffs/week-NN/<github-username>-<role>.md`: what you tried, what failed, one tip. Raw is fine. (Chill needs no handoff.) See [handoffs/README.md](handoffs/README.md).
 - **Role guides:** each role has a living guide ([on the site](https://active-ai-reading.github.io/guides/), files in [`_guides/`](_guides/)). When you take a role, read its guide and the last handoffs for that role, move whatever is worth keeping into the guide, then do your task.
 - Mid-semester we reread every guide as a newcomer would and cut it back to what actually helps.
 

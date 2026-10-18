@@ -2,6 +2,8 @@
 
 Notes from this week's people in a role to next week's. Not polished, not graded on success, not shown on the site.
 
+Every role writes one, except Chill: no handoff needed.
+
 **Where:** `handoffs/week-NN/<github-username>-<role>.md`
 for example `handoffs/week-03/ohad-agadi-visualization.md`
 

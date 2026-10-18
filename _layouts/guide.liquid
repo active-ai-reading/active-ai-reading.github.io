@@ -15,8 +15,8 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     {% if role.summary %}<p class="post-subtitle">{{ role.summary }}</p>{% endif %}
     <p class="guide-howto muted">
-      Written by the people who held this role. Read it before you start, then read the
-      <a href="https://github.com/{{ site.github_repo }}/tree/main/handoffs">latest handoffs</a>, and fold in whatever is worth keeping.
+      Written by the people who held this role. Read it before you start{% unless page.role == 'chill' %}, then read the
+      <a href="https://github.com/{{ site.github_repo }}/tree/main/handoffs">latest handoffs</a>, and fold in whatever is worth keeping{% endunless %}.
       Add sections as you need them; the contents on the left follow. Mid-semester we reread and prune.
     </p>
   </header>

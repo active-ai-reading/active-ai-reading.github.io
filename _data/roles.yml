@@ -96,6 +96,19 @@
       name: Reimplement an experiment or graph
       prompt: Reimplement an experiment, a metric, or a graph from the paper.
 
+- id: scouting
+  name: Paper scouting
+  icon: "🔭"
+  color: "#0b7285"
+  summary: Bring the group papers worth knowing about, popular or not.
+  tasks:
+    - id: trending
+      name: Trending papers
+      prompt: Go over trending papers and find at least two of interest to the group. Summarize each in one sentence.
+    - id: hidden-gems
+      name: Recent papers nobody is talking about
+      prompt: Go over recent papers and find at least two of interest to the group that are not trending (or that you would not have found because they are). Summarize each in one sentence.
+
 - id: chill
   name: Chill
   icon: "😎"
