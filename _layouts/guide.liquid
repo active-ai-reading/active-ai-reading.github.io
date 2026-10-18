@@ -30,7 +30,7 @@ layout: default
     {% endfor %}
   </ul>
 
-  <h2 class="section-title">Who held this role <span class="count">{{ holders.size }}</span></h2>
+  <h2 class="section-title" data-toc-text="Who held this role">Who held this role <span class="count">{{ holders.size }}</span></h2>
   {% if holders.size == 0 %}
     <p class="muted">Nobody yet. You could be the first: add a line to <code>_data/weekly_roles.csv</code>.</p>
   {% else %}
@@ -45,7 +45,7 @@ layout: default
     </ul>
   {% endif %}
 
-  <h2 class="section-title">Posts in this role <span class="count">{{ role_posts.size }}</span></h2>
+  <h2 class="section-title" data-toc-text="Posts in this role">Posts in this role <span class="count">{{ role_posts.size }}</span></h2>
   {% if role_posts.size == 0 %}
     <p class="muted">No posts yet.</p>
   {% else %}
