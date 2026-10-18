@@ -8,7 +8,7 @@ A course where we read AI papers actively: we rewrite them, critique them, redra
 
 1. **Join:** comment on the pinned [**Join here**](../../issues) issue. Someone already in the course will add you, so accept the email invite.
 2. **Add yourself:** copy [`templates/person.md`](templates/person.md) to `_people/<your-github-username>.md` and fill it in.
-3. **Take a role:** pick a task on the [roles page](https://active-ai-reading.github.io/roles/), add a line to [`_data/weekly_roles.csv`](_data/weekly_roles.csv), and read that role's [guide](https://active-ai-reading.github.io/guides/).
+3. **Take a role:** pick a task on the [roles page](https://active-ai-reading.github.io/roles/), add yourself in the sign-up sheet (Google Sheet, linked on the [schedule page](https://active-ai-reading.github.io/schedule/)), and read that role's [guide](https://active-ai-reading.github.io/guides/).
 4. **Write:** copy your role's template from [`templates/`](templates/) to `_posts/YYYY-MM-DD-short-title.md`, fill in the header, write.
 5. **Publish:** commit to `main`. Watch the [Actions tab](../../actions): green ✓ means it's live.
 
@@ -29,7 +29,7 @@ What one week learns, the next week inherits.
 | Write a post | `_posts/YYYY-MM-DD-title.md` (start from `templates/`) |
 | Add a paper | `_papers/<paper-id>.md` (start from `templates/paper.md`) |
 | Your profile | `_people/<github-username>.md` |
-| Take a role this week | `_data/weekly_roles.csv` |
+| Take a role this week | the sign-up Google Sheet (linked on the schedule page) |
 | The weeks and their papers | `_data/schedule.yml` |
 | Role guides | `_guides/<role>.md` |
 | Handoff notes | `handoffs/week-NN/<github-username>-<role>.md` |

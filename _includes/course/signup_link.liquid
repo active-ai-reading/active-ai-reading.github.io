@@ -1,0 +1,10 @@
+{%- comment -%}
+  Link to the shared Google Sheet where people sign up for roles (set signup_sheet in _config.yml).
+  Usage: {% include course/signup_link.liquid text="the sign-up sheet" %}
+{%- endcomment -%}
+{%- assign _text = include.text | default: 'the sign-up sheet' -%}
+{%- if site.signup_sheet and site.signup_sheet != '' -%}
+  <a href="{{ site.signup_sheet }}">{{ _text }}</a>
+{%- else -%}
+  {{ _text }} <span class="muted">(link coming soon)</span>
+{%- endif -%}

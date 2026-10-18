@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # The schedule. One entry per class meeting.
 #   paper: the id of a file in _papers/ (its filename without .md), or empty.
-# Who does what each week is NOT here: add yourself to _data/weekly_roles.csv.
+# Who does what each week is NOT here: it lives in the shared sign-up Google Sheet (signup_sheet in _config.yml).
 # ---------------------------------------------------------------------------
 
 - week: 1

@@ -25,12 +25,7 @@ Copy [`templates/person.md`](https://github.com/{{ site.github_repo }}/blob/main
 
 ## 3. Take a role (every week)
 
-Look at the [roles]({{ '/roles/' | relative_url }}) and pick a task. Add one line to [`_data/weekly_roles.csv`](https://github.com/{{ site.github_repo }}/edit/main/_data/weekly_roles.csv):
-
-```text
-week,github_username,role,task,notes
-3,your-github-username,visualization,redo-graph,
-```
+Look at the [roles]({{ '/roles/' | relative_url }}) and pick a task, then add yourself in {% include course/signup_link.liquid %}: one row per week with the week, your GitHub username and the task. Change it whenever you like; if the sheet shows your change leaves a major task short or puts a task over its limit, switch with someone instead.
 
 Then read your role's [guide]({{ '/guides/' | relative_url }}) and its latest [handoffs](https://github.com/{{ site.github_repo }}/tree/main/handoffs) before you start.
 

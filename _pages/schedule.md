@@ -7,14 +7,7 @@ nav_order: 5
 description: What we read each week, and who is doing what.
 ---
 
-Who does what each week lives in one spreadsheet-like file: [`_data/weekly_roles.csv`](https://github.com/{{ site.github_repo }}/edit/main/_data/weekly_roles.csv). To take a role, add one line:
-
-```text
-week,github_username,role,task,notes
-3,your-github-username,visualization,redo-graph,trying a small-multiples version
-```
-
-`role` and `task` are the ids shown in grey on the [roles page]({{ '/roles/' | relative_url }}). Several people can take the same task; `notes` is optional. Changed your mind? Edit or delete your line.
+Who does what each week lives in {% include course/signup_link.liquid text="the shared sign-up sheet" %}: add one row per week (week, your GitHub username, task) and change it whenever you like. Its *Week check* tab shows, per week, which major tasks still need people and which are over their limit. If your change would break a rule, switch with someone instead.
 
 {% for w in site.data.schedule %}
 {%- assign paper = site.papers | where: 'slug', w.paper | first -%}

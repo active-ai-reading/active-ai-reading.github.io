@@ -13,12 +13,11 @@ Each role has a guide, written by the students who held it and handed on from we
   {% for r in site.data.roles %}
     {%- assign g = site.guides | where: 'role', r.id | first -%}
     {%- if g -%}
-      {%- assign n_holders = site.data.weekly_roles | where: 'role', r.id | size -%}
       {%- assign n_words = g.content | strip_html | number_of_words -%}
       <a class="post-card" href="{{ g.url | relative_url }}" style="--role-color: {{ r.color }}">
         <div class="post-card-top">
           <span class="post-card-role">{{ r.icon }} {{ r.name }}</span>
-          <span class="post-card-date">{{ n_holders }} held it</span>
+          <span class="post-card-date">{{ r.tasks | size }} task{% if r.tasks.size != 1 %}s{% endif %}</span>
         </div>
         <div class="post-card-title">{{ g.title }}</div>
         <div class="post-card-desc">{{ r.summary }}</div>

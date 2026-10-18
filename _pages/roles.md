@@ -11,7 +11,7 @@ Each week, everyone takes a task for that week's paper and writes a short piece 
 
 **Before every class, read the paper:** at least the main part, and whatever your task needs.
 
-To take a task, add a line to [`_data/weekly_roles.csv`](https://github.com/{{ site.github_repo }}/edit/main/_data/weekly_roles.csv) (see the [schedule]({{ '/schedule/' | relative_url }})). Each role has a [guide]({{ '/guides/' | relative_url }}) written by the people who held it before you. To write it up, copy the template named after the role from the [`templates/`](https://github.com/{{ site.github_repo }}/tree/main/templates) folder. The role and task ids below (in grey) are what you put in your post's header.
+To take a task, sign up in {% include course/signup_link.liquid %} (one row per week). Each role has a [guide]({{ '/guides/' | relative_url }}) written by the people who held it before you. To write it up, copy the template named after the role from the [`templates/`](https://github.com/{{ site.github_repo }}/tree/main/templates) folder. The role and task ids below (in grey) are what you put in your post's header.
 
 {% for r in site.data.roles %}
 
