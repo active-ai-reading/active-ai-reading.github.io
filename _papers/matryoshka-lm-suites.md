@@ -8,3 +8,4 @@ tldr: >
   (To be written by the class. Edit this file: one or two sentences someone can read in 10 seconds.)
 tags: [efficiency, model suites]
 ---
+Will be read on Week 2
