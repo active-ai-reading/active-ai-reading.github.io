@@ -204,6 +204,11 @@ ninja.data = [{
           description: "",
           section: "Guides",handler: () => {
               window.location.href = "/guides/research/";
+            },},{id: "guides-the-paper-scouting-guide",
+          title: 'The paper scouting guide',
+          description: "",
+          section: "Guides",handler: () => {
+              window.location.href = "/guides/scouting/";
             },},{id: "guides-the-visualization-guide",
           title: 'The visualization guide',
           description: "",
