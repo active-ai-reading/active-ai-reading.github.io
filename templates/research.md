@@ -3,7 +3,7 @@ title: "<Critique / literature review / follow-ups> of <paper>"
 description: One sentence summary of your take.
 paper: paper-id
 role: research
-task: critique # critique | literature | followups | authors | recent-paper | contact-authors
+task: critique # critique | literature | followups | authors | contact-authors
 by: [your-github-username]
 ---
 
@@ -31,8 +31,3 @@ Would you accept it? Is the direction worth pursuing? Why?
 ## Follow-ups worth doing
 
 For each: the question, the experiment, and why it's worth someone's time.
-
-<!-- RECENT PAPER -->
-## A related paper from last month
-
-Title, link, its gist in a paragraph, and how it relates.

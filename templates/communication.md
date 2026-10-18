@@ -3,7 +3,7 @@ title: "<Paper> in a thread"
 description: Social media posts for <paper>.
 paper: paper-id
 role: communication
-task: social # social | compile | extra-step
+task: social # social | compile | extras
 by: [your-github-username]
 ---
 

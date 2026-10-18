@@ -57,9 +57,9 @@
     - id: compile
       name: Compile the blog
       prompt: Compile the week's outputs into one readable post that links to everyone's work.
-    - id: extra-step
-      name: One more step
-      prompt: Try something new, help the others, make a test, or use another platform.
+    - id: extras
+      name: Extras (video, poster, other platforms...)
+      prompt: More communication practice, your way. A short video, a poster, a thread in another language, a press-style summary, another platform, or helping the others.
 
 - id: research
   name: Research skills
@@ -82,9 +82,6 @@
     - id: followups
       name: Follow-ups worth doing
       prompt: Exercise academic taste. Suggest follow-ups that are worth doing, and say why.
-    - id: recent-paper
-      name: A related paper from last month
-      prompt: Find a relevant paper from the last month and explain its gist.
 
 - id: coding
   name: Coding
