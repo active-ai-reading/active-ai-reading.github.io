@@ -20,4 +20,4 @@ description: Everyone writing for Active AI Reading.
   {% endfor %}
 </div>
 
-<p class="muted">Not here yet? Copy <code>templates/person.md</code> to <code>_people/&lt;your-github-username&gt;.md</code>. See the <a href="{{ '/guide/' | relative_url }}">guide</a>.</p>
+<p>Not here yet? <a class="profile-link" href="https://github.com/{{ site.github_repo }}/blob/main/templates/person.md">Add yourself →</a> (rename the file to your GitHub username)</p>

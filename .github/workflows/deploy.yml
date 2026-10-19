@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write # needed to push the built site to the gh-pages branch
+  issues: write # to report a broken build in an issue (see the last two steps)
 
 # With many people pushing, only the newest build matters: cancel older ones.
 concurrency:
@@ -49,7 +50,8 @@ jobs:
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
-          bundle exec jekyll build
+          set -o pipefail
+          bundle exec jekyll build 2>&1 | tee build.log
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
@@ -59,3 +61,34 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+
+      # Tell whoever pushed when their change broke the build, in one issue everyone can see.
+      - name: Report a broken build 🚨
+        if: failure() && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ACTOR: ${{ github.actor }}
+        run: |
+          TITLE="Site build is broken"
+          REPO_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+          ERR=$(grep -E "Liquid Exception|Error|error:|YAML Exception|Conversion error" build.log 2>/dev/null | grep -vi imagemagick | head -5 | sed 's/\x1b\[[0-9;]*m//g')
+          {
+            echo "@$ACTOR the site did not rebuild after [this change]($REPO_URL/commit/$GITHUB_SHA). The live site still shows the previous version."
+            echo
+            echo '**Error:**'
+            echo '```'
+            echo "${ERR:-(see the full log)}"
+            echo '```'
+            echo "Often it is a typo in a post header: a missing \`---\`, or a \`:\` inside a title (wrap the title in quotes)."
+            echo "[Full log]($REPO_URL/actions/runs/$GITHUB_RUN_ID). Fix the file and save again; this issue closes itself once the site builds."
+          } > body.md
+          NUM=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
+          if [ -n "$NUM" ]; then gh issue comment "$NUM" --body-file body.md; else gh issue create --title "$TITLE" --body-file body.md; fi
+
+      - name: Close the broken-build issue ✅
+        if: success() && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NUM=$(gh issue list --state open --search '"Site build is broken" in:title' --json number --jq '.[0].number')
+          if [ -n "$NUM" ]; then gh issue close "$NUM" --comment "Fixed: the site builds again (${GITHUB_SHA:0:7})."; fi

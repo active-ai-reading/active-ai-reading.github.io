@@ -3,6 +3,31 @@
   Driven by the post's front matter: paper, role, task, by.
 {%- endcomment -%}
 {%- assign _paper = site.papers | where: 'slug', page.paper | first -%}
+{%- comment -%} Spot typos in the header: they would silently hide the post from its paper page. {%- endcomment -%}
+{%- assign _problems = '' -%}
+{%- if page.paper and _paper == nil -%}
+  {%- capture _problems %}{{ _problems }}<li><code>paper: {{ page.paper }}</code> is not a paper on this site. <a href="{{ '/papers/' | relative_url }}">Paper ids</a> are the file names in <code>_papers/</code>.</li>{% endcapture -%}
+{%- endif -%}
+{%- if page.role -%}
+  {%- assign _role = site.data.roles | where: 'id', page.role | first -%}
+  {%- if _role == nil -%}
+    {%- capture _problems %}{{ _problems }}<li><code>role: {{ page.role }}</code> is not a role. Use one of: {% for r in site.data.roles %}<code>{{ r.id }}</code>{% unless forloop.last %}, {% endunless %}{% endfor %}.</li>{% endcapture -%}
+  {%- elsif page.task -%}
+    {%- assign _task = _role.tasks | where: 'id', page.task | first -%}
+    {%- if _task == nil -%}
+      {%- capture _problems %}{{ _problems }}<li><code>task: {{ page.task }}</code> is not a {{ _role.name | downcase }} task. Use one of: {% for t in _role.tasks %}<code>{{ t.id }}</code>{% unless forloop.last %}, {% endunless %}{% endfor %}.</li>{% endcapture -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if page.by contains 'your-github-username' -%}
+  {%- capture _problems %}{{ _problems }}<li>Replace <code>your-github-username</code> in <code>by:</code> with your GitHub username.</li>{% endcapture -%}
+{%- endif -%}
+{%- if _problems != '' -%}
+  <div class="header-problems">
+    Fix the header of this post (<a href="https://github.com/{{ site.github_repo }}/edit/main/{{ page.path }}">edit</a>):
+    <ul>{{ _problems }}</ul>
+  </div>
+{%- endif -%}
 <div class="course-post-meta">
   {% if page.role %}{% include course/role_badge.liquid role=page.role task=page.task %}{% endif %}
   {% if _paper %}

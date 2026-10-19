@@ -11,16 +11,16 @@ Each week, everyone takes a task for that week's paper and writes a short piece 
 
 **Before every class, read the paper:** at least the main part, and whatever your task needs.
 
-To take a task, sign up in {% include course/signup_link.liquid %} (one row per week). Each role has a [guide]({{ '/guides/' | relative_url }}) written by the people who held it before you. To write it up, copy the template named after the role from the [`templates/`](https://github.com/{{ site.github_repo }}/tree/main/templates) folder. The role and task ids below (in grey) are what you put in your post's header.
+To take a task, sign up in {% include course/signup_link.liquid %} (one row per week). Each role has a [guide]({{ '/guides/' | relative_url }}) written by the people who held it before you. To write it up, click **Write** next to your task: it opens a new post with everything filled in, for the current week's paper.
 
 {% for r in site.data.roles %}
 
 <section class="role-section" id="{{ r.id }}" style="--role-color: {{ r.color }}">
-  <h2>{{ r.icon }} {{ r.name }} <span class="task-id">role: {{ r.id }}</span></h2>
+  <h2>{{ r.icon }} {{ r.name }}</h2>
   <p class="muted">{{ r.summary }} <a href="{{ '/guides/' | append: r.id | append: '/' | relative_url }}">Read the {{ r.name | downcase }} guide →</a></p>
   {% for t in r.tasks %}
     <div class="task">
-      <div><span class="task-name">{{ t.name }}</span> <span class="task-id">task: {{ t.id }}</span></div>
+      <div><span class="task-name">{{ t.name }}</span> {% include course/write_link.liquid role=r.id task=t.id text="Write" %}</div>
       <div>{{ t.prompt }}</div>
     </div>
   {% endfor %}

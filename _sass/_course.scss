@@ -556,3 +556,30 @@ body {
   font-weight: 400;
   opacity: 0.5;
 }
+
+// "Write" links next to tasks, and the task picker on paper pages.
+.write-link {
+  margin-left: 0.4rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.write-about select {
+  margin: 0 0.3rem;
+  padding: 0.15rem 0.3rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+}
+
+// Shown on a post only when its header has a typo (see _includes/course/post_meta.liquid).
+.header-problems {
+  margin: 0.75rem 0;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid #d6336c;
+  background: color-mix(in srgb, #d6336c 8%, transparent);
+  font-size: 0.92rem;
+  ul {
+    margin: 0.3rem 0 0;
+  }
+}

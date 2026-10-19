@@ -23,7 +23,7 @@ layout: default
   <p>Sign up in {% include course/signup_link.liquid %}.</p>
   <ul>
     {% for t in role.tasks %}
-      <li><strong>{{ t.name }}.</strong> {{ t.prompt }}</li>
+      <li><strong>{{ t.name }}.</strong> {{ t.prompt }} {% include course/write_link.liquid role=role.id task=t.id text="Write" %}</li>
     {% endfor %}
   </ul>
 

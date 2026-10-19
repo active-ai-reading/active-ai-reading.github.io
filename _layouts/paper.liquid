@@ -66,6 +66,17 @@ layout: default
 
   <p class="edit-footer">
     <a href="https://github.com/{{ site.github_repo }}/edit/main/{{ page.path }}"><i class="fa-solid fa-pen fa-xs"></i> Edit this paper's page</a>
-    · Add a post: copy a file from <a href="https://github.com/{{ site.github_repo }}/tree/main/templates">templates/</a> into <code>_posts/</code> and set <code>paper: {{ page.slug }}</code>.
+  </p>
+  <p class="write-about">
+    Write about this paper:
+    <select class="write-select" aria-label="Task">
+      {%- for r in site.data.roles -%}{%- unless r.id == 'chill' -%}
+        <optgroup label="{{ r.name }}">
+          {%- for t in r.tasks -%}<option value="{{ r.id }}/{{ t.id }}">{{ t.name }}</option>{%- endfor -%}
+        </optgroup>
+      {%- endunless -%}{%- endfor -%}
+    </select>
+    {%- assign _r0 = site.data.roles | first -%}{%- assign _t0 = _r0.tasks | first -%}
+    {% include course/write_link.liquid role=_r0.id task=_t0.id paper=page.slug text="Write" %}
   </p>
 </div>

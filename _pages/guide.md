@@ -11,6 +11,8 @@ toc:
 
 This site belongs to the class. Everyone in the course can change **anything**: posts, pages, design, roles. No one approves your changes. When you save, the site rebuilds by itself in a few minutes.
 
+Stuck or curious? Ask in [Q&A](https://github.com/{{ site.github_repo }}/discussions/categories/q-a): answers stay there for the next person.
+
 ## 1. Join (once)
 
 1. Make a [GitHub account](https://github.com/signup) if you don't have one.
@@ -21,7 +23,7 @@ This site belongs to the class. Everyone in the course can change **anything**: 
 
 ## 2. Add yourself (once)
 
-Copy [`templates/person.md`](https://github.com/{{ site.github_repo }}/blob/main/templates/person.md) to `_people/<your-github-username>.md` and fill it in. The filename **must** be your GitHub username: that is how your posts find you. Your GitHub picture is used unless you add a `photo:`.
+Click <a class="profile-link" href="https://github.com/{{ site.github_repo }}/blob/main/templates/person.md">Add yourself</a>. It opens a new profile in GitHub's editor: rename the file to your GitHub username (that is how your posts find you), fill it in, and click **Commit changes**. Your GitHub picture is used unless you add a `photo:`.
 
 ## 3. Take a role (every week)
 
@@ -31,9 +33,9 @@ Then read your role's [guide]({{ '/guides/' | relative_url }}) and its latest [h
 
 ## 4. Write your post
 
-1. Copy the template for your role from [`templates/`](https://github.com/{{ site.github_repo }}/tree/main/templates) into `_posts/`.
-2. Name it `YYYY-MM-DD-short-title.md`, for example `_posts/2026-10-27-a-better-figure-1.md`. The date in the name is the publish date.
-3. Fill in the header (between the `---` lines) and write.
+Click **Write** next to your task on the [roles page]({{ '/roles/' | relative_url }}) (or pick a task at the bottom of a paper's page). It opens a new post in GitHub's editor, already named, dated and filled in for that paper and task. Replace `your-github-username`, write, and click **Commit changes**.
+
+Prefer to do it by hand? Copy your role's template from [`templates/`](https://github.com/{{ site.github_repo }}/tree/main/templates) to `_posts/YYYY-MM-DD-short-title.md`.
 
 The header is what puts your post on the right paper page with the right badge:
 
