@@ -71,7 +71,7 @@ jobs:
         run: |
           TITLE="Site build is broken"
           REPO_URL="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
-          ERR=$(grep -E "Liquid Exception|Error|error:|YAML Exception|Conversion error" build.log 2>/dev/null | grep -vi imagemagick | head -5 | sed 's/\x1b\[[0-9;]*m//g')
+          ERR=$(grep -E "Liquid Exception|Conversion error|ERROR" build.log 2>/dev/null | grep -vi imagemagick | head -1 | sed 's/\x1b\[[0-9;]*m//g' | sed "s#$GITHUB_WORKSPACE/##g" | sed 's/^ *//')
           {
             echo "@$ACTOR the site did not rebuild after [this change]($REPO_URL/commit/$GITHUB_SHA). The live site still shows the previous version."
             echo
@@ -79,7 +79,7 @@ jobs:
             echo '```'
             echo "${ERR:-(see the full log)}"
             echo '```'
-            echo "Often it is a typo in a post header: a missing \`---\`, or a \`:\` inside a title (wrap the title in quotes)."
+            echo "Usually it is a \`{% ... %}\` tag: a misspelled file name in an include, or a tag that is never closed."
             echo "[Full log]($REPO_URL/actions/runs/$GITHUB_RUN_ID). Fix the file and save again; this issue closes itself once the site builds."
           } > body.md
           NUM=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
