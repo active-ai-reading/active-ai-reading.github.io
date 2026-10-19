@@ -1,6 +1,5 @@
 ---
-title: Temporary test: broken header (will be removed)
-paper: [unclosed
+title: "Temporary test post (will be removed)"
 ---
 
-Testing the broken-build issue.
+Testing the broken-build issue: {% include no-such-file.liquid %}
