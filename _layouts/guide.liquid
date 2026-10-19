@@ -10,23 +10,20 @@ layout: default
 {%- assign role_posts = site.posts | where: 'role', page.role -%}
 <div class="post guide-page" style="--role-color: {{ role.color | default: '#888' }}">
   <header class="post-header">
-    <div class="paper-kicker" style="color: var(--role-color)">{{ role.icon }} Role guide</div>
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% if role.summary %}<p class="post-subtitle">{{ role.summary }}</p>{% endif %}
-    <p class="guide-howto muted">
-      Written by the people who held this role. Read it before you start{% unless page.role == 'chill' %}, then read the
-      <a href="https://github.com/{{ site.github_repo }}/tree/main/handoffs">latest handoffs</a>, and fold in whatever is worth keeping{% endunless %}.
-      Add sections as you need them; the contents on the left follow. Mid-semester we reread and prune.
+    <h1 class="post-title">{{ role.icon }} {{ page.title }}</h1>
+    <p class="post-subtitle">
+      Written by the people who held this role.{% unless page.role == 'chill' %} See also the
+      <a href="https://github.com/{{ site.github_repo }}/tree/main/handoffs">latest handoffs</a>.{% endunless %}
     </p>
   </header>
 
   <article class="post-content guide-text">{{ content }}</article>
 
   <h2 class="section-title">Tasks in this role</h2>
-  <p class="muted">To take one, sign up in {% include course/signup_link.liquid %}. Its <em>Roster</em> tab shows who held which role.</p>
+  <p>Sign up in {% include course/signup_link.liquid %}.</p>
   <ul>
     {% for t in role.tasks %}
-      <li><strong>{{ t.name }}</strong> <span class="task-id muted">({{ t.id }})</span>: {{ t.prompt }}</li>
+      <li><strong>{{ t.name }}.</strong> {{ t.prompt }}</li>
     {% endfor %}
   </ul>
 

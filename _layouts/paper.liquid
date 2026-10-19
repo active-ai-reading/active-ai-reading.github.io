@@ -8,9 +8,8 @@ layout: default
 {%- assign paper_posts = site.posts | where: 'paper', page.slug -%}
 <div class="post paper-page">
   <header class="paper-header">
-    <div class="paper-kicker">Paper{% if page.year %} · {{ page.year }}{% endif %}</div>
     <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.authors %}<p class="paper-authors">{{ page.authors }}</p>{% endif %}
+    {% if page.authors %}<p class="paper-authors">{{ page.authors }}{% if page.year %}, {{ page.year }}{% endif %}</p>{% endif %}
     <div class="paper-links">
       {% if page.arxiv %}
         <a class="btn-pill" href="https://arxiv.org/abs/{{ page.arxiv }}">arXiv</a>

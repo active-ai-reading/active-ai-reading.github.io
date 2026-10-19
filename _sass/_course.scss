@@ -476,3 +476,83 @@ body {
     color: var(--global-text-color-light);
   }
 }
+
+
+/*******************************************************************************
+ * Minimal look (overrides the rules above).
+ * One typeface, two heading sizes, lists without bullet signs, little grey,
+ * no italics or capitals for decoration. Delete this block for the busier look.
+ ******************************************************************************/
+
+:root {
+  --course-serif: var(--course-sans); // one typeface everywhere
+}
+
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.section-title,
+.role-group h3,
+.role-section h2 {
+  font-family: var(--course-sans);
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  color: var(--global-text-color);
+  margin: 2rem 0 0.5rem;
+}
+.post-title {
+  font-size: 2rem;
+}
+
+// Lists: no bullet signs, just spacing. Numbered lists keep their numbers.
+.post ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    margin: 0.4rem 0;
+  }
+  ul {
+    margin-top: 0.4rem;
+    padding-left: 1rem;
+  }
+}
+
+// Less grey, less italic, no decorative capitals.
+.post-subtitle,
+.paper-authors,
+.course-post-meta,
+.post-card .post-card-desc,
+.person-affiliation {
+  color: var(--global-text-color);
+  opacity: 0.75;
+}
+.muted,
+.task-id {
+  color: inherit;
+  opacity: 0.6;
+}
+.post-content em,
+.post-card .post-card-paper,
+.course-post-paper em {
+  font-style: normal;
+}
+.paper-kicker,
+.tldr-label,
+.before-after .label {
+  text-transform: none;
+  letter-spacing: 0;
+}
+.post-content,
+.tldr {
+  font-size: 1.02rem;
+}
+.section-title .count {
+  font-size: inherit;
+  font-weight: 400;
+  opacity: 0.5;
+}
