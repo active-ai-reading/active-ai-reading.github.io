@@ -1,9 +1,6 @@
 ---
-title: "Temporary test post (will be removed in a few minutes)"
-paper: no-such-paper
-role: research
-task: critque
-by: [your-github-username]
+title: Temporary test: broken header (will be removed)
+paper: [unclosed
 ---
 
-Testing the header check.
+Testing the broken-build issue.
