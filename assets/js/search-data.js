@@ -58,18 +58,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/2026-10-19-zz-test-header-check/";
-          
-        },
-      },{id: "post-week-1-in-one-page-tokens-keep-knowledge-apart",
+        },{id: "post-week-1-in-one-page-tokens-keep-knowledge-apart",
         
           title: "Week 1 in one page: tokens keep knowledge apart",
         
