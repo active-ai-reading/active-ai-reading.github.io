@@ -26,6 +26,7 @@ layout: default
       {% if page.meta %}• {{ page.meta }}{% endif %}
     </p>
     {% endif %}
+    {% if page.paper == nil %}
     <p class="post-tags">
       {% if url_beginning == '/posts/' %}
         <a href="{{ year | prepend: '/posts/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
@@ -60,6 +61,7 @@ layout: default
         {% endfor %}
       {% endif %}
     </p>
+    {% endif %}
   </header>
 
   <article class="post-content">
