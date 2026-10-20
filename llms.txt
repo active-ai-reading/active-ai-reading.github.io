@@ -12,6 +12,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [critique of matryoshka paper (GA26)](https://active-ai-reading.github.io/posts/2026/critique-cross-lingual-knowledge-pretraining/): The narative about saving on parameters is diluted by a secondary point about cheap distiliation. (Research skills, 2026-10-20)
 - [Week 1 in one page: tokens keep knowledge apart](https://active-ai-reading.github.io/posts/2026/week-1-in-one-page/): The paper, what we learned, and everything the class wrote about it, in a five-minute read. (Communicate to the world, on "Why Pretraining Fails to Share Cross-Lingual Knowledge", 2026-10-16)
 - [Three things to remember, and where the paper hides them](https://active-ai-reading.github.io/posts/2026/three-things-to-remember/): The points most readers should leave with, and how the paper could make them harder to miss. (Writing, on "Why Pretraining Fails to Share Cross-Lingual Knowledge", 2026-10-16)
 - [The paper in four feeds](https://active-ai-reading.github.io/posts/2026/the-paper-in-four-feeds/): Posts for X, Bluesky, Mastodon and LinkedIn, and why each one is written differently. (Communicate to the world, on "Why Pretraining Fails to Share Cross-Lingual Knowledge", 2026-10-16)

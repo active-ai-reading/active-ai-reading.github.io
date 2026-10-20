@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-week-1-in-one-page-tokens-keep-knowledge-apart",
+        },{id: "post-critique-of-matryoshka-paper-ga26",
+        
+          title: "critique of matryoshka paper (GA26)",
+        
+        description: "The narative about saving on parameters is diluted by a secondary point about cheap distiliation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-cross-lingual-knowledge-pretraining/";
+          
+        },
+      },{id: "post-week-1-in-one-page-tokens-keep-knowledge-apart",
         
           title: "Week 1 in one page: tokens keep knowledge apart",
         
