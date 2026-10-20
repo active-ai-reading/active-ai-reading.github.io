@@ -245,6 +245,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/recurrent-depth-latent-reasoning/";
+            },},{id: "people-yehoshua",
+          title: 'Yehoshua',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/shueyr/";
             },},{id: "people-leshem-choshen",
           title: 'Leshem Choshen',
           description: "",
