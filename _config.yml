@@ -262,6 +262,7 @@ defaults:
       type: showcase
     values:
       layout: post
+      sitemap: false # demo pages: keep them out of search engines
       related_posts: false
 
 sass:

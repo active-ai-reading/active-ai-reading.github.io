@@ -59,6 +59,8 @@ Save (commit) to the `main` branch. That's it. In about 3–5 minutes the site r
 - Watch progress in the repository's [**Actions** tab](https://github.com/{{ site.github_repo }}/actions). Green ✓ = live.
 - Red ✗ = the build broke. **The live site keeps working** (it just shows the previous version). Click the failed run, look for the error, fix the file and save again. Most errors are a typo in the header (a missing `---`, or a `:` inside a title: wrap the title in quotes).
 
+**Sharing it.** A shared link shows a preview card with your title, role and paper, made automatically. To show one of your figures instead, add `og_image: /assets/img/posts/<your-post>/figure.png` to the header.
+
 ## Three ways to edit
 
 | | Good for | How |

@@ -1,0 +1,23 @@
+---
+layout: none
+permalink: /llms.txt
+sitemap: false
+---
+# {{ site.title }}
+
+> {{ site.description | strip_newlines | strip }}
+
+Students of a graduate course read one AI research paper per week and publish what they make of it: rewritten abstracts, critiques, redrawn figures, reimplementations, literature maps, follow-up ideas and social media posts. Each paper page collects everything written about that paper.
+
+## Papers
+{% assign papers = site.papers | sort: 'year' | reverse %}{% for p in papers %}
+- [{{ p.title }}]({{ p.url | absolute_url }}): {% if p.tldr %}{{ p.tldr | strip_newlines | strip }}{% else %}{{ p.authors }}, {{ p.year }}{% endif %}{% if p.arxiv %} (arXiv {{ p.arxiv }}){% endif %}{% endfor %}
+
+## Posts
+{% for post in site.posts %}{% assign r = site.data.roles | where: 'id', post.role | first %}{% assign pp = site.papers | where: 'slug', post.paper | first %}
+- [{{ post.title }}]({{ post.url | absolute_url }}): {% if post.description %}{{ post.description | strip_newlines }} {% endif %}({% if r %}{{ r.name }}{% endif %}{% if pp %}, on "{{ pp.title }}"{% endif %}, {{ post.date | date: '%Y-%m-%d' }}){% endfor %}
+
+## About
+- [Roles and tasks]({{ '/roles/' | absolute_url }})
+- [How to post]({{ '/guide/' | absolute_url }})
+- [Source](https://github.com/{{ site.github_repo }}): everything is CC BY 4.0

@@ -12,3 +12,6 @@ node_modules/
 vendor
 .idea
 .venv
+
+# Social cards, generated at build time by bin/og/make_cards.py
+assets/og/
