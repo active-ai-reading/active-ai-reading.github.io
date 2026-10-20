@@ -66,7 +66,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/critique-cross-lingual-knowledge-pretraining/";
+            window.location.href = "/posts/2026/critique-matryoshka-language-model-suites/";
           
         },
       },{id: "post-week-1-in-one-page-tokens-keep-knowledge-apart",
