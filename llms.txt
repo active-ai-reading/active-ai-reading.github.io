@@ -11,7 +11,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Papers
 {% assign papers = site.papers | sort: 'year' | reverse %}{% for p in papers %}
-- [{{ p.title }}]({{ p.url | absolute_url }}): {% if p.tldr %}{{ p.tldr | strip_newlines | strip }}{% else %}{{ p.authors }}, {{ p.year }}{% endif %}{% if p.arxiv %} (arXiv {{ p.arxiv }}){% endif %}{% endfor %}
+- [{{ p.title }}]({{ p.url | absolute_url }}): {% if p.tldr and p.tldr contains 'To be written' %}{{ p.authors }}, {{ p.year }}{% elsif p.tldr %}{{ p.tldr | strip_newlines | strip }}{% else %}{{ p.authors }}, {{ p.year }}{% endif %}{% if p.arxiv %} (arXiv {{ p.arxiv }}){% endif %}{% endfor %}
 
 ## Posts
 {% for post in site.posts %}{% assign r = site.data.roles | where: 'id', post.role | first %}{% assign pp = site.papers | where: 'slug', post.paper | first %}

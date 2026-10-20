@@ -53,7 +53,7 @@
 {%- if page.url == '/' or seo_title == nil or seo_title == '' -%}{%- assign seo_title = site.title -%}{%- endif -%}
 {%- assign seo_desc = page.description -%}
 {%- if seo_desc == nil or seo_desc == '' -%}
-  {%- if page.collection == 'papers' -%}{%- assign seo_desc = page.tldr -%}
+  {%- if page.collection == 'papers' -%}{%- if page.tldr contains 'To be written' -%}{%- capture seo_desc %}{{ page.title }}, by {{ page.authors }}. What the class wrote about it.{% endcapture -%}{%- else -%}{%- assign seo_desc = page.tldr -%}{%- endif -%}
   {%- elsif page.collection == 'guides' -%}{%- assign _r = site.data.roles | where: 'id', page.role | first -%}{%- assign seo_desc = _r.summary -%}
   {%- elsif page.collection == 'people' -%}{%- assign seo_desc = page.tagline -%}
   {%- endif -%}

@@ -3,6 +3,7 @@ layout: page
 title: feature showcase
 permalink: /showcase/
 nav: false
+sitemap: false
 description: Everything a post on this site can do, with copyable source.
 ---
 
