@@ -51,6 +51,8 @@
 {%- assign seo_url = page.url | prepend: seo_base | remove_first: 'index.html' -%}
 {%- assign seo_title = page.title -%}
 {%- if page.url == '/' or seo_title == nil or seo_title == '' -%}{%- assign seo_title = site.title -%}{%- endif -%}
+{%- assign seo_authors = '' | split: '' -%}
+{%- for h in page.by -%}{%- assign _p = site.people | where: 'slug', h | first -%}{%- assign _n = _p.name | default: h -%}{%- assign seo_authors = seo_authors | push: _n -%}{%- endfor -%}
 {%- assign seo_desc = page.description -%}
 {%- if seo_desc == nil or seo_desc == '' -%}
   {%- if page.collection == 'papers' -%}{%- if page.tldr contains 'To be written' -%}{%- capture seo_desc %}{{ page.title }}, by {{ page.authors }}. What the class wrote about it.{% endcapture -%}{%- else -%}{%- assign seo_desc = page.tldr -%}{%- endif -%}
@@ -59,7 +61,35 @@
   {%- endif -%}
 {%- endif -%}
 {%- if seo_desc == nil or seo_desc == '' -%}{%- assign seo_desc = site.description -%}{%- endif -%}
-{%- assign seo_desc = seo_desc | strip_html | strip_newlines | strip | truncate: 200 -%}
+{%- assign seo_desc = seo_desc | strip_html | strip_newlines | strip -%}
+{%- comment -%}
+  Search engines want roughly 110-160 characters. When a description is shorter,
+  add context automatically (role, paper, authors, what the site is), so nobody
+  has to write long descriptions by hand.
+{%- endcomment -%}
+{%- if seo_desc.size < 110 -%}
+  {%- assign _last = seo_desc | slice: -1, 1 -%}
+  {%- unless _last == '.' or _last == '?' or _last == '!' -%}{%- assign seo_desc = seo_desc | append: '.' -%}{%- endunless -%}
+  {%- assign _paper = site.papers | where: 'slug', page.paper | first -%}
+  {%- if page.collection == 'posts' -%}
+    {%- assign _r = site.data.roles | where: 'id', page.role | first -%}
+    {%- capture _ctx -%}
+      {%- if _r %} A {{ _r.name | downcase }} post{% else %} A post{% endif -%}
+      {%- if _paper %} on "{{ _paper.title }}"{% endif -%}
+      {%- if seo_authors.size > 0 %} by {{ seo_authors | join: ', ' }}{% endif %}, from {{ site.title }}.
+    {%- endcapture -%}
+  {%- elsif page.collection == 'papers' -%}
+    {%- capture _ctx %} Summaries, critiques, redrawn figures and code by the students of {{ site.title }}.{% endcapture -%}
+  {%- elsif page.collection == 'guides' -%}
+    {%- capture _ctx %} A living guide to this role in {{ site.title }}, written by the students who held it: what worked, tools and resources.{% endcapture -%}
+  {%- elsif page.collection == 'people' -%}
+    {%- capture _ctx %} {{ page.name }}'s profile and posts in {{ site.title }}, a course where students read AI papers actively.{% endcapture -%}
+  {%- else -%}
+    {%- capture _ctx %} {{ site.title }}: a course where students read AI papers actively and publish summaries, critiques, figures and code.{% endcapture -%}
+  {%- endif -%}
+  {%- assign seo_desc = seo_desc | append: _ctx -%}
+{%- endif -%}
+{%- assign seo_desc = seo_desc | strip | truncate: 200 -%}
 {%- assign seo_image = page.og_image -%}
 {%- if seo_image == nil or seo_image == '' -%}
   {%- if page.collection == 'posts' -%}{%- capture _card %}/assets/og/{{ page.slug }}.png{% endcapture -%}
@@ -69,8 +99,6 @@
 {%- endif -%}
 {%- if seo_image == nil or seo_image == '' -%}{%- assign seo_image = site.og_image -%}{%- endif -%}
 {%- unless seo_image contains '://' -%}{%- assign seo_image = seo_image | prepend: seo_base -%}{%- endunless -%}
-{%- assign seo_authors = '' | split: '' -%}
-{%- for h in page.by -%}{%- assign _p = site.people | where: 'slug', h | first -%}{%- assign _n = _p.name | default: h -%}{%- assign seo_authors = seo_authors | push: _n -%}{%- endfor -%}
 {%- assign seo_paper = site.papers | where: 'slug', page.paper | first -%}
 
 <meta name="description" content="{{ seo_desc | escape }}">
