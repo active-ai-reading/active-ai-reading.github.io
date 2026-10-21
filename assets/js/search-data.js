@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-matryoshka-paper-ga26",
+        },{id: "post-matryoshka-language-model-suites-in-a-thread",
+        
+          title: "Matryoshka Language Model Suites in a thread",
+        
+        description: "Social media posts for Matryoshka Language Model Suites.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/social-matryoshka-lm-suites/";
+          
+        },
+      },{id: "post-critique-of-matryoshka-paper-ga26",
         
           title: "critique of matryoshka paper (GA26)",
         
