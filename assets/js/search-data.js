@@ -256,6 +256,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/recurrent-depth-latent-reasoning/";
+            },},{id: "people-adam-gaber",
+          title: 'Adam Gaber',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/adamjaber03/";
             },},{id: "people-matan-bar-tov",
           title: 'Matan Bar Tov',
           description: "",
