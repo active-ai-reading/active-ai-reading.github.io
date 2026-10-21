@@ -266,8 +266,8 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/matanbartov/";
-            },},{id: "people-yehoshua",
-          title: 'Yehoshua',
+            },},{id: "people-yehoshua-rothstein",
+          title: 'Yehoshua Rothstein',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shueyr/";
