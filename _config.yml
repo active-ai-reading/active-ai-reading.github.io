@@ -24,6 +24,8 @@ url: https://active-ai-reading.github.io # the base hostname & protocol for your
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 github_repo: active-ai-reading/active-ai-reading.github.io # used for "edit this page" links
 signup_sheet: https://docs.google.com/spreadsheets/d/1RnLIBIF4uFraEYVjE9zPYDWsnHteO7yAw-xXWm-FFYE/edit?usp=sharing # the Google Sheet where people sign up for roles each week
+course_start: 2026-10-18 # Sunday of the first class's week (week 0). Change this next year; the schedule highlights the current week from it.
+first_week_number: 0 # the first class is week 0
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button

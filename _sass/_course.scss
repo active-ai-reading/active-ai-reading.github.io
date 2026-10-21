@@ -583,3 +583,23 @@ body {
     margin: 0.3rem 0 0;
   }
 }
+
+// The current week on the schedule page (set by a small script on that page).
+.schedule-week.is-current {
+  border: 2px solid #1a73e8;
+  box-shadow: 0 0 0 4px color-mix(in srgb, #1a73e8 15%, transparent);
+}
+.schedule-week.is-past {
+  opacity: 0.6;
+}
+.now-badge {
+  display: inline-block;
+  padding: 0.05em 0.6em;
+  margin-right: 0.35em;
+  border-radius: 999px;
+  background: #1a73e8;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  vertical-align: 0.1em;
+}

@@ -1,5 +1,5 @@
 ---
-title: "Week 1 in one page: tokens keep knowledge apart"
+title: "Week 0 in one page: tokens keep knowledge apart"
 description: The paper, what we learned, and everything the class wrote about it, in a five-minute read.
 paper: cross-lingual-knowledge-pretraining
 role: communication

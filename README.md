@@ -74,5 +74,5 @@ Then add your profile (`_people/borgr.md` is a stub), check the schedule, and sh
 ### Maintenance notes
 
 - The site is built with [al-folio](https://github.com/alshedivat/al-folio) **v0.16.3**, chosen because all its layouts and styles live in this repo (the v1 line moves them into gems), so students can edit everything. The original al-folio docs are in [`docs/al-folio/`](docs/al-folio/).
-- The example posts are marked `example: true` and authored by `course-team`. Keep them as the reference for week 1, or delete them later.
+- The example posts are marked `example: true` and authored by `course-team`. Keep them as the reference for week 0, or delete them later.
 - Code is MIT (from al-folio, see [LICENSE](LICENSE)); content is CC BY 4.0 (see [LICENSE-content.md](LICENSE-content.md)).
