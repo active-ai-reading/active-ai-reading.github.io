@@ -15,4 +15,4 @@ mastodon:
 linkedin:
 ---
 
-A few sentences about you: what you study, what you hope to get from the course, what kind of papers you like.
+90% reading, 10% understanding.
