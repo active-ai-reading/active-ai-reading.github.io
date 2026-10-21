@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/social-matryoshka-lm-suites/";
           
         },
+      },{id: "post-editing-the-methods-of-lt-paper-gt",
+        
+          title: "Editing the methods of &lt;paper&gt;",
+        
+        description: "sub-models are made of blocks",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-critique-of-matryoshka-paper-ga26",
         
           title: "critique of matryoshka paper (GA26)",
