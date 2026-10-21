@@ -11,7 +11,7 @@ contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A course where we read AI papers actively: we summarize, critique, redraw, reimplement and share them, written by the students.
 footer_text: >
-  Written by the students of Active AI Reading. Content licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+  Written by the students of Active AI Reading, a course by <a href="https://borgr.github.io/">Leshem Choshen</a> at the Weizmann Institute of Science. Content licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
 keywords: AI, machine learning, NLP, paper reading, paper summaries, critiques, course, active reading
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
