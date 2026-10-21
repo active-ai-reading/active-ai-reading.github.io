@@ -69,9 +69,9 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-matryoshka-language-model-suites/";
           
         },
-      },{id: "post-week-1-in-one-page-tokens-keep-knowledge-apart",
+      },{id: "post-week-0-in-one-page-tokens-keep-knowledge-apart",
         
-          title: "Week 1 in one page: tokens keep knowledge apart",
+          title: "Week 0 in one page: tokens keep knowledge apart",
         
         description: "The paper, what we learned, and everything the class wrote about it, in a five-minute read.",
         section: "Posts",
