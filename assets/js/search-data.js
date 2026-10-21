@@ -282,6 +282,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shueyr/";
+            },},{id: "people-achi-or",
+          title: 'Achi-Or',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/achi-or/";
             },},{id: "people-leshem-choshen",
           title: 'Leshem Choshen',
           description: "",
