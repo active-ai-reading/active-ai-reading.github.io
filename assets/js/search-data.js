@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/visualizing-models/";
           
         },
+      },{id: "post-copyediting-section-1-introduction-of-matryoshka-language-model-suites",
+        
+          title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
+        
+        description: "Cutting the triple-repetition carousel and turning passive academic prose into an urgent engineering pitch.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-points-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-critique-of-matryoshka-language-model-suites",
         
           title: "Critique of Matryoshka Language Model Suites",
