@@ -1,6 +1,6 @@
 ---
 title: "Why autoregressive and diffusion LMs can imitate each other (and why it still costs)"
-description: A claim from week 1, made easier to follow with a picture: the two model types can reach the same results, each at a cost.
+description: "A claim from week 1, made easier to follow with a picture: the two model types can reach the same results, each at a cost."
 paper: cross-lingual-knowledge-pretraining
 role: learning
 task: teach
