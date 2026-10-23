@@ -58,18 +58,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/2026-10-25-autoregressive-vs-diffusion/";
-          
-        },
-      },{id: "post-critique-of-matryoshka-language-model-suites",
+        },{id: "post-critique-of-matryoshka-language-model-suites",
         
           title: "Critique of Matryoshka Language Model Suites",
         
