@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-matryoshka-lm-suites/";
           
         },
+      },{id: "post-why-autoregressive-and-diffusion-lms-can-imitate-each-other-and-why-it-still-costs",
+        
+          title: "Why autoregressive and diffusion LMs can imitate each other (and why it still...",
+        
+        description: "A claim from week 1, made easier to follow with a picture: the two model types can reach the same results, each at a cost.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/autoregressive-vs-diffusion/";
+          
+        },
       },{id: "post-matryoshka-language-model-suites-in-a-thread",
         
           title: "Matryoshka Language Model Suites in a thread",
