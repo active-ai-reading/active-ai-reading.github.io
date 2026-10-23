@@ -1,6 +1,6 @@
 ---
 title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites"
-description: Fixing the repetitive structure and turning passive academic prose into a more direct pitch.
+description: Removing repetition and simplifying the opening to get straight to the point.
 paper: matryoshka-lm-suites
 role: writing
 task: copyedit
@@ -9,9 +9,7 @@ by: shaharOssy
 
 ## What I changed and why
 
-When reading the original introduction, I felt a bit of déjà vu. The authors explain their three main ideas in the second paragraph, summarize them again in the fourth paragraph, and then list them *again* in the bullet points at the end. It's exhausting for the reader. I also noticed the opening sentence was really passive and clunky ("The way training and inference costs... scale steeply... creates a demand..."). 
-
-I merged the repetitive paragraphs directly into the final bullet points to cut out the filler, and rewrote the opening to focus directly on the actual engineering problem developers face. 
+The original introduction repeats its three main points three times: in the middle paragraphs, in a summary paragraph, and finally in the bullet points. This makes it longer than it needs to be. I removed the repetition by merging the summary paragraph directly into the final bullet points. I also simplified the opening sentence so it gets straight to the engineering problem without using passive language.
 
 ## Before and after
 
@@ -36,25 +34,24 @@ Overall, our contributions can be summarized as:
   </div>
   <div class="after"><span class="label">After</span>
 
-Because training and inference costs for large language models scale so steeply, developers rely on model families spanning everything from 100M to a trillion parameters. Releasing these models in "suites"—families of different sizes trained on the same data—is standard practice. But the way we build them is surprisingly inefficient: each model is trained in isolation, and transferring knowledge from large to small models requires expensive offline storage or parallel forward passes.
+Training and serving large language models of different sizes is expensive. Releasing them in suites is standard practice, but training them separately is inefficient. 
 
-We propose Matryoshka Language Model Suites, a framework that trains an entire model family in a single nested architecture. Instead of running separate training jobs, we feed the outputs of smaller sub-models into wider, deeper transformer blocks. For example, rather than training a {1B, 8B, 30B, 70B} suite across four independent runs, we stack 7B, 22B, and 40B blocks on top of a 1B base, training just 70B parameters in one pass. Unlike previous architectures that only change the width, each Matryoshka sub-model has its own width *and* depth. You can detach any size and serve it as an independent checkpoint with a proportionally smaller KV-cache.
+We propose Matryoshka Language Model Suites, a framework that trains an entire model family in a single nested architecture. Instead of running separate training jobs, we feed the outputs of smaller models into wider, deeper blocks. Each sub-model has its own width and depth, so it can be detached and served as an independent checkpoint.
 
-This shared backbone provides two major advantages:
-1. **Free Online Distillation:** One forward pass through the full model generates predictions for every sub-model, meaning the largest model distills knowledge into the smaller ones at every training step for free.
-2. **Better Speculative Decoding:** Normally, a separate draft model wastes GPU memory and duplicates the KV-cache. Here, smaller sub-models already live inside the verifier and share early layers. This eliminates the memory overhead and increases prediction agreement, making larger draft models practical.
+This shared architecture provides two major benefits:
+1. **Free Distillation:** A single forward pass through the full model generates predictions for every sub-model, meaning the largest model teaches the smaller ones during training for free.
+2. **Better Speculative Decoding:** Smaller draft models already live inside the verifier and share early layers. This eliminates memory overhead and increases prediction agreement, making speculative decoding much faster.
 
-We validated this on a 3B Matryoshka suite (500M, 1.5B, 3B) using 35B tokens from FineWeb-Edu. Our checkpoints and code are public. In short, our main contributions are:
+We tested a 3B Matryoshka suite (500M, 1.5B, 3B). Our main contributions are:
 
-* **End-to-End Architecture (Sec 2):** A parameter-free junction that rescales norms across hidden dimensions, combined with an integrated distillation loss across all exits.
-* **Parity at 36% Less Compute (Sec 3.2.1):** Our 3B suite matches independently trained baselines within 0.5 accuracy points across standard benchmarks, but uses 36% less training compute.
-* **Faster Speculative Decoding (Sec 3.2.2–3.2.3):** Shared weights boost token agreement by up to 5.7%, allowing a 500M-draft / 3B-verifier pair to achieve a 14–26% throughput speedup where standard speculative decoding would actually hurt latency.
-* **Architectural Guidelines (Sec 3.2.5):** We map the width-depth design space and show that norm rescaling and online distillation are crucial for small sub-model performance.
+* **End-to-End Architecture (Sec 2):** A parameter-free junction that rescales norms across hidden dimensions, with an integrated distillation loss.
+* **Matches Baselines for Less (Sec 3.2.1):** Our 3B suite matches independently trained baselines on standard benchmarks but uses 36% less training compute.
+* **Faster Speculative Decoding (Sec 3.2.2–3.2.3):** Shared weights boost token agreement, allowing a 500M / 3B pair to achieve a 14–26% throughput speedup.
+* **Architectural Guidelines (Sec 3.2.5):** We map the width-depth design space and show that norm rescaling and distillation are crucial for small models.
 
   </div>
 </div>
 
 ## The general rule
 
-1. **Don't preview your preview.** If you explain the mechanism in the narrative text, save the specific numbers and section signposts for the contribution list instead of summarizing the exact same points twice in a row.
-2. **Lead with the action.** Instead of passive nominalizations like *"The way X scales creates a demand for Y,"* write directly: *"Because X scales steeply, practitioners rely on Y."*
+**Don't repeat your summary.** If you explain your main points in the text, you don't need to summarize them in a paragraph and then summarize them again in a bulleted list right after. Also, use direct, simple sentences instead of long passive ones to introduce the main problem.
