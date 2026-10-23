@@ -69,11 +69,22 @@ ninja.data = [{
             window.location.href = "/posts/2026/visualizing-models/";
           
         },
+      },{id: "post-visualizing-the-core-idea-of-matryoshka-lm-suites",
+        
+          title: "Visualizing the core idea of Matryoshka LM Suites",
+        
+        description: "One figure that shows how three separate models become one nested model, and where the savings come from.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-copyediting-section-1-introduction-of-matryoshka-language-model-suites",
         
           title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
         
-        description: "Cutting the triple-repetition carousel and turning passive academic prose into an urgent engineering pitch.",
+        description: "Removing repetition and simplifying the opening to get straight to the point.",
         section: "Posts",
         handler: () => {
           
@@ -91,11 +102,11 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-matryoshka-lm-suites/";
           
         },
-      },{id: "post-why-autoregressive-and-diffusion-lms-can-imitate-each-other-and-why-it-still-costs",
+      },{id: "post-how-autoregressive-and-diffusion-lms-imitate-each-other-and-why-it-is-inefficient",
         
-          title: "Why autoregressive and diffusion LMs can imitate each other (and why it still...",
+          title: "How autoregressive and diffusion LMs imitate each other, and why it is inefficient...",
         
-        description: "A claim from week 1, made easier to follow with a picture: the two model types can reach the same results, each at a cost.",
+        description: "A claim from week 1, made easier to follow with pictures: each model type can do what the other does, and what it costs to do so.",
         section: "Posts",
         handler: () => {
           
@@ -376,6 +387,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shaharossy/";
+            },},{id: "people-shani-maor",
+          title: 'Shani Maor',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/shniki/";
             },},{id: "showcase-a-post-with-formatting-and-links",
           title: 'a post with formatting and links',
           description: "march &amp; april, looking forward to summer",
