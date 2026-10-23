@@ -4,7 +4,7 @@ description: Cutting the triple-repetition carousel and turning passive academic
 paper: matryoshka-lm-suites
 role: writing
 task: copyedit
-by: your-github-username
+by: shaharOssy
 ---
 
 ## What I changed and why
