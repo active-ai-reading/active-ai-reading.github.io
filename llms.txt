@@ -12,6 +12,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Critique of Matryoshka Language Model Suites ](https://active-ai-reading.github.io/posts/2026/critique-matryoshka-lm-suites/): Clean idea to boost efficency for training model suites, should use more extensive experiments (Research skills, on "Matryoshka Language Model Suites", 2026-10-23)
 - [Matryoshka Language Model Suites in a thread](https://active-ai-reading.github.io/posts/2026/social-matryoshka-lm-suites/): Social media posts for Matryoshka Language Model Suites. (Communicate to the world, on "Matryoshka Language Model Suites", 2026-10-21)
 - [Editing the methods of <paper>](https://active-ai-reading.github.io/posts/2026/copyedit-matryoshka-lm-suites/): sub-models are made of blocks (Writing, on "Matryoshka Language Model Suites", 2026-10-21)
 - [critique of matryoshka paper (GA26)](https://active-ai-reading.github.io/posts/2026/critique-matryoshka-lm-suites/): The narative about saving on parameters is diluted by a secondary point about cheap distiliation. (Research skills, 2026-10-20)

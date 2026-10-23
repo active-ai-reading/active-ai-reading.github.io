@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-matryoshka-language-model-suites-in-a-thread",
+        },{id: "post-critique-of-matryoshka-language-model-suites",
+        
+          title: "Critique of Matryoshka Language Model Suites",
+        
+        description: "Clean idea to boost efficency for training model suites, should use more extensive experiments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-matryoshka-lm-suites/";
+          
+        },
+      },{id: "post-matryoshka-language-model-suites-in-a-thread",
         
           title: "Matryoshka Language Model Suites in a thread",
         
@@ -312,6 +323,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/course-team/";
+            },},{id: "people-liad-bercovitch",
+          title: 'Liad Bercovitch',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/liadber/";
             },},{id: "people-ohad",
           title: 'ohad',
           description: "",
