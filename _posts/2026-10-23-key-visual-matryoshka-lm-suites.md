@@ -15,7 +15,15 @@ The idea is spread over three places. The structure (which layers are shared bet
 
 ## The figure:
 
-<img width="1000" height="940" alt="Diagram comparing a standard suite of three independent models (500M, 1.5B, 3B) with a Matryoshka suite of one nested model, and the junction that connects the sub-models" src="https://github.com/user-attachments/assets/23d3ce80-27f6-4e68-b42c-fd6f0df2ca3e" />
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1280px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img
+    src="{{ '/assets/img/posts/matryoshka-core-idea-tomeratia/figure.png' | relative_url }}"
+    alt="Diagram comparing a standard suite of three independent models (500M, 1.5B, 3B) with a Matryoshka suite of one nested model, and the junction that connects the sub-models"
+    style="display: block; width: 100%; height: auto;"
+    loading="lazy"
+  >
+  <figcaption>Left: three independent models. Right: one nested model. Each colored block is added on top of the previous one, and each exit gives a standalone sub-model. Bottom: how the output of one sub-model enters the next.</figcaption>
+</figure>
 
 *Left: three independent models. Right: one nested model. Each colored block is added on top of the previous one, and each exit gives a standalone sub-model. Bottom: how the output of one sub-model enters the next.*
 
