@@ -1,21 +1,22 @@
 ---
 title: "Visualizing the core idea of Matryoshka LM Suites"
-description: "One picture that shows how three separate models become one nested model, and where the savings come from."
+description: "One figure that shows how three separate models become one nested model, and where the savings come from."
 paper: matryoshka-lm-suites
 role: visualization
 task: key-visual
 by: [Tomeratia]
 ---
 
-## The original
+## Core idea:
 
 The core idea of the paper ([Godey and Artzi, 2026](https://arxiv.org/abs/2608.09703)) is explained in Section 2 and in Figure 1(a). Usually, a model suite (here 500M, 1.5B and 3B parameters) is trained as separate models. The paper nests the small models inside the large one and trains all of them together in a single run.
 
 The idea is spread over three places. The structure (what is shared) is in the text of Section 2. The mechanism that connects the sub-models, the junction, appears only in Equation 1. The numbers behind the savings are in Table 1. A new reader has to combine all three to understand why this works and why it is cheaper.
 
-## The redesign
+## The figure:
 
-{% include figure.liquid path="assets/img/posts/matryoshka-core-idea-tomeratia/figure.png" class="img-fluid rounded" caption="Left: three independent models. Right: one nested model. Each colored block is added on top of the previous one, and each exit gives a standalone sub-model. Bottom: how the output of one sub-model enters the next." %}
+<img width="1672" height="940" alt="figure" src="https://github.com/user-attachments/assets/23d3ce80-27f6-4e68-b42c-fd6f0df2ca3e" />
+
 
 **How to read it.**
 
