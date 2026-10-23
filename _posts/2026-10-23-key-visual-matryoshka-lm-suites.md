@@ -17,7 +17,7 @@ The idea is spread over three places. The structure (which layers are shared bet
 
 <figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1280px, calc(100vw - 2rem)); margin: 1.5rem 0;">
   <img
-    src="{{ '/assets/img/posts/matryoshka-core-idea-tomeratia/figure.png' | relative_url }}"
+    src="{{ '/assets/img/figure.png' | relative_url }}"
     alt="Diagram comparing a standard suite of three independent models (500M, 1.5B, 3B) with a Matryoshka suite of one nested model, and the junction that connects the sub-models"
     style="display: block; width: 100%; height: auto;"
     loading="lazy"
