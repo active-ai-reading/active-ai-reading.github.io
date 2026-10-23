@@ -12,6 +12,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Visualizing 🪆 Models](https://active-ai-reading.github.io/posts/2026/visualizing-models/): Diagrams of the nested model suite and its junction mechanism. (Visualization, on "Matryoshka Language Model Suites", 2026-10-23)
 - [Critique of Matryoshka Language Model Suites ](https://active-ai-reading.github.io/posts/2026/critique-matryoshka-lm-suites/): Clean idea to boost efficency for training model suites, should use more extensive experiments (Research skills, on "Matryoshka Language Model Suites", 2026-10-23)
 - [Why autoregressive and diffusion LMs can imitate each other (and why it still costs)](https://active-ai-reading.github.io/posts/2026/autoregressive-vs-diffusion/): A claim from week 1, made easier to follow with a picture: the two model types can reach the same results, each at a cost. (Learning to learn, on "Why Pretraining Fails to Share Cross-Lingual Knowledge", 2026-10-23)
 - [Matryoshka Language Model Suites in a thread](https://active-ai-reading.github.io/posts/2026/social-matryoshka-lm-suites/): Social media posts for Matryoshka Language Model Suites. (Communicate to the world, on "Matryoshka Language Model Suites", 2026-10-21)

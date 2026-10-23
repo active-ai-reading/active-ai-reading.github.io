@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-matryoshka-language-model-suites",
+        },{id: "post-visualizing-models",
+        
+          title: "Visualizing 🪆 Models",
+        
+        description: "Diagrams of the nested model suite and its junction mechanism.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/visualizing-models/";
+          
+        },
+      },{id: "post-critique-of-matryoshka-language-model-suites",
         
           title: "Critique of Matryoshka Language Model Suites",
         
