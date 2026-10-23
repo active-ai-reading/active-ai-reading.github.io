@@ -344,6 +344,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/ohad-agadi/";
+            },},{id: "people-shaharossy",
+          title: 'Shaharossy',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/shaharossy/";
             },},{id: "showcase-a-post-with-formatting-and-links",
           title: 'a post with formatting and links',
           description: "march &amp; april, looking forward to summer",
