@@ -15,7 +15,7 @@ The idea is spread over three places. The structure (which layers are shared bet
 
 ## The figure:
 
-<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1280px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+<figure style="margin: 1.5rem 0;">
   <img
     src="{{ '/assets/img/figure.png' | relative_url }}"
     alt="Diagram comparing a standard suite of three independent models (500M, 1.5B, 3B) with a Matryoshka suite of one nested model, and the junction that connects the sub-models"
@@ -25,8 +25,6 @@ The idea is spread over three places. The structure (which layers are shared bet
   <figcaption>Left: three independent models. Right: one nested model. Each colored block is added on top of the previous one, and each exit gives a standalone sub-model. Bottom: how the output of one sub-model enters the next.</figcaption>
 </figure>
 
-*Left: three independent models. Right: one nested model. Each colored block is added on top of the previous one, and each exit gives a standalone sub-model. Bottom: how the output of one sub-model enters the next.*
-
 **How to read it.**
 
 - **Left panel:** a standard suite. Three independent models, each with its own embedding and LM head, trained in three separate runs. The total is 5.2B parameters.
@@ -34,4 +32,3 @@ The idea is spread over three places. The structure (which layers are shared bet
 - **Bottom panel:** the junction. The output of sub-model m is rescaled to match the norm of the new token embedding, and then it is concatenated with that embedding. The embedding fills the extra channels that the wider sub-model m+1 needs. This adds no new parameters. In the paper's ablation at 200M scale, removing the rescaling costs about 0.2 validation perplexity, and filling the new channels with zeros costs about 0.54.
 
 The figure shows the parameter count: 3.2B instead of 5.2B (about 38% fewer). The paper's "36% less training compute" is a separate measurement of training cost, so the two numbers are close but not the same.
-
