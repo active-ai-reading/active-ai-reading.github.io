@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/visualizing-models/";
           
         },
+      },{id: "post-does-sharing-kv-cache-ruin-alignment-and-why-do-we-apply-forward-kl-divergence",
+        
+          title: "Does sharing KV cache ruin alignment and why do we apply forward KL-Divergence...",
+        
+        description: "2 papers similar to parts of the paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/scouting-recent-non-trending/";
+          
+        },
       },{id: "post-visualizing-the-core-idea-of-matryoshka-lm-suites",
         
           title: "Visualizing the core idea of Matryoshka LM Suites",
@@ -78,17 +89,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/posts/2026/key-visual-matryoshka-lm-suites/";
-          
-        },
-      },{id: "post-copyediting-section-1-introduction-of-matryoshka-language-model-suites",
-        
-          title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
-        
-        description: "Removing repetition and simplifying the opening to get straight to the point.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/key-points-matryoshka-lm-suites/";
           
         },
       },{id: "post-critique-of-matryoshka-language-model-suites",
@@ -322,6 +322,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/recurrent-depth-latent-reasoning/";
+            },},{id: "people-adam-gabet",
+          title: 'Adam Gabet',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/adamgabet/";
             },},{id: "people-adam-gaber",
           title: 'Adam Gaber',
           description: "",
