@@ -9,9 +9,10 @@ by: [Tomeratia]
 
 ## Core idea:
 
-The core idea of the paper ([Godey and Artzi, 2026](https://arxiv.org/abs/2608.09703)) is explained in Section 2 and in Figure 1(a). Usually, a model suite (here 500M, 1.5B and 3B parameters) is trained as separate models. The paper nests the small models inside the large one and trains all of them together in a single run.
+The core idea of the paper ([Godey and Artzi, 2026](https://arxiv.org/abs/2608.09703)) is explained in Section 2 and in Figure 1(a). A model suite is a group of models of different sizes, here 500M, 1.5B and 3B parameters. Usually, each model is trained separately. The paper builds one model in which the small models are contained inside the large one. The first 24 layers form the 500M model, 10 more layers extend it to the 1.5B model, and 5 more layers extend it to the 3B model. Each size has its own output layer (LM head), and all sizes are trained together in a single run. The result is a complete suite from one training run, with fewer parameters in total (3.2B instead of 5.2B).
 
-The idea is spread over three places. The structure (which layers are shared between the sub-models) is in the text of Section 2. The mechanism that connects the sub-models, the junction, appears only in Equation 1. The numbers behind the savings are in Table 1. A new reader has to combine all three to understand why this works and why it is cheaper.
+The idea is hard to see in the paper, because it is spread over three places. The structure (which layers are shared between the sub-models) is in the text of Section 2. The mechanism that connects the sub-models, the junction, appears only in Equation 1. The numbers behind the savings are in Table 1. A new reader has to combine all three to understand why this works and why it is cheaper.
+
 
 ## The figure:
 
