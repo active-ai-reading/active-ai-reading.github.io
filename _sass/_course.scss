@@ -603,3 +603,9 @@ body {
   font-weight: 700;
   vertical-align: 0.1em;
 }
+
+/* Bold text. The base theme (MDB) sets body text to weight 300 and <strong>
+   to 500, so emphasis barely shows in posts. Make it visibly bold. */
+strong, b {
+  font-weight: 600;
+}
