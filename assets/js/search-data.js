@@ -168,6 +168,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/follow-ups-matryoshka-lm-suites-eylonkrause/";
           
         },
+      },{id: "post-figure-2-in-layers-and-dimentions-annotations-in-the-matryoshka-article",
+        
+          title: "Figure 2 in layers and dimentions annotations in the Matryoshka article",
+        
+        description: "changing the paper&#39;s triangles&#39; ticks with layer counts and possible embedding dimensions for easier undderstanding",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/figure-2-in-layers/";
+          
+        },
       },{id: "post-copyediting-section-1-introduction-of-matryoshka-language-model-suites",
         
           title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
