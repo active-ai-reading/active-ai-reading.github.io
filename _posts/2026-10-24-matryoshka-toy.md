@@ -60,9 +60,7 @@ Full code (one file, runs on CPU), the results file and the figure: [github.com/
 
 ## Results
 
-![Validation loss during training: three separate models (dashed) vs one nested model with three exits (solid)](https://raw.githubusercontent.com/liadber/matryoshka-toy/main/curves.png){: .img-fluid .rounded .z-depth-1}
-
-*Validation loss during training. Dashed: three separate models. Solid: the three exits of one nested model. The medium and large pairs sit on top of each other; the small nested exit trails its twin for most of training and nearly closes the gap at the end.*
+{% include figure.liquid path="assets/img/posts/matryoshka-toy/curves.png" class="img-fluid rounded z-depth-1" caption="Validation loss during training. Dashed: three separate models. Solid: the three exits of one nested model. The medium and large pairs sit on top of each other; the small nested exit trails its twin for most of training and nearly closes the gap at the end." %}
 
 **Quality, per size** (validation cross-entropy per character, lower is better):
 
