@@ -326,6 +326,6 @@ More info and automated migrator: https://sass-lang.com/d/import
     /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/css/main.scss 21:3                   root stylesheet
 WARNING: 41 repetitive deprecation warnings omitted.
 Run in verbose mode to see all warnings.
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261024-3484-ysigav.ipynb to html
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261024-3270-87q0lk.ipynb to html
 /opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/nbconvert/filters/highlight.py:71: UserWarning: IPython3 lexer unavailable, falling back on Python 3
   return _pygments_highlight(
