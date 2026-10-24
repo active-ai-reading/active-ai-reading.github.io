@@ -397,6 +397,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/ohad-agadi/";
+            },},{id: "people-shahar-avni",
+          title: 'Shahar Avni',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/shachar731945/";
             },},{id: "people-shaharossy",
           title: 'Shaharossy',
           description: "",
