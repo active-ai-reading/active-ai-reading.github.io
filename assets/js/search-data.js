@@ -124,6 +124,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/copyedit-introduction-matryoshka-lm-suites/";
           
         },
+      },{id: "post-lt-critique-literature-review-follow-ups-gt-of-lt-paper-gt",
+        
+          title: "&lt;Critique / literature review / follow-ups&gt; of &lt;paper&gt;",
+        
+        description: "One sentence summary of your take.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/contact-authors-cross-lingual-knowledge-pretraining/";
+          
+        },
       },{id: "post-the-minds-behind-matryoshka",
         
           title: "The minds behind Matryoshka",
