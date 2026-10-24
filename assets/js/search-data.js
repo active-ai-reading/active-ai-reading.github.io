@@ -502,6 +502,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/daniellesprinzak/";
+            },},{id: "people-eylon-eliyahu-krause",
+          title: 'Eylon Eliyahu Krause',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/eylonkrause/";
             },},{id: "people-ido-ravid",
           title: 'Ido Ravid',
           description: "",
