@@ -1,7 +1,8 @@
 ---
 title: "critique of matryoshka paper (GA26)"
+permalink: /posts/2026/critique-matryoshka-lm-suites-ga26/
 description: The narative about saving on parameters is diluted by a secondary point about cheap distiliation.
-paper: matryoshka-language-model-suites
+paper: matryoshka-lm-suites
 role: research
 task: critique
 by: [ohad-agadi]
