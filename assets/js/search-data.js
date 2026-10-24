@@ -354,6 +354,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/adamjaber03/";
+            },},{id: "people-danielle-sprinzak",
+          title: 'Danielle Sprinzak',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/daniellesprinzak/";
             },},{id: "people-ido-ravid",
           title: 'Ido Ravid',
           description: "",
