@@ -59,4 +59,4 @@ Overall, our contributions can be summarized as:
 
 ## The general rule
 
-**Cut the fluff, keep the facts.** If you explain your main points in the text, you don't need to summarize them again before the bullet points. Remove sentences that state the obvious (like why small models are efficient) or summarize what was just said in the same paragraph. Move experimental setup details directly into your contribution bullets to save space.
+**Don't repeat your summary.** If you explain your main points in the text, you don't need to summarize them in a paragraph and then summarize them again in a bulleted list right after. Also, use direct, simple sentences instead of long passive ones to introduce the main problem.
