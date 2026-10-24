@@ -435,6 +435,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/liadber/";
+            },},{id: "people-niv-cohen",
+          title: 'Niv Cohen',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nivcohen-ml/";
             },},{id: "people-odedorenstein",
           title: 'Odedorenstein',
           description: "",
