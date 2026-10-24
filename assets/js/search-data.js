@@ -364,6 +364,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/matanbartov/";
+            },},{id: "people-nathan-adda",
+          title: 'Nathan Adda',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/nathanadda/";
             },},{id: "people-yehoshua-rothstein",
           title: 'Yehoshua Rothstein',
           description: "",
