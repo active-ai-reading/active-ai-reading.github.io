@@ -124,6 +124,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/authors-The-minds-behind-Matryoshka/";
           
         },
+      },{id: "post-copyediting-section-1-introduction-of-matryoshka-language-model-suites",
+        
+          title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
+        
+        description: "Removing repetition and simplifying the opening to get straight to the point.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-visualizing-models",
         
           title: "Visualizing 🪆 Models",
