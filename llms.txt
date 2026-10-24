@@ -12,6 +12,8 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [What Makes a Chain of Thought Easy to Learn?](https://active-ai-reading.github.io/posts/2026/what-makes-a-chain-of-thought-easy-to-learn/): How teacher-generated reasoning can help smaller models learn, and why the structure of a reasoning trace might matter. (Learning to learn, on "Matryoshka Language Model Suites", 2026-10-24)
+- [The minds behind Matryoshka](https://active-ai-reading.github.io/posts/2026/authors-The-minds-behind-Matryoshka/): The paper closely aligns with Nathan Godey’s research on efficient language model design and complements Yoav Artzi’s broader work on advancing language modeling methods. (Research skills, on "Matryoshka Language Model Suites", 2026-10-24)
 - [Visualizing 🪆 Models](https://active-ai-reading.github.io/posts/2026/visualizing-models/): Diagrams of the nested model suite and its junction mechanism. (Visualization, on "Matryoshka Language Model Suites", 2026-10-23)
 - [Does sharing KV cache ruin alignment and why do we apply forward KL-Divergence](https://active-ai-reading.github.io/posts/2026/scouting-recent-non-trending/): 2 papers similar to parts of the paper (Paper scouting, on "Matryoshka Language Model Suites", 2026-10-23)
 - [Visualizing the core idea of Matryoshka LM Suites](https://active-ai-reading.github.io/posts/2026/key-visual-matryoshka-lm-suites/): One figure that shows how three separate models become one nested model, and where the savings come from. (Visualization, on "Matryoshka Language Model Suites", 2026-10-23)

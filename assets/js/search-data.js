@@ -58,7 +58,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-visualizing-models",
+        },{id: "post-what-makes-a-chain-of-thought-easy-to-learn",
+        
+          title: "What Makes a Chain of Thought Easy to Learn?",
+        
+        description: "How teacher-generated reasoning can help smaller models learn, and why the structure of a reasoning trace might matter.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/what-makes-a-chain-of-thought-easy-to-learn/";
+          
+        },
+      },{id: "post-the-minds-behind-matryoshka",
+        
+          title: "The minds behind Matryoshka",
+        
+        description: "The paper closely aligns with Nathan Godey’s research on efficient language model design and complements Yoav Artzi’s broader work on advancing language modeling methods.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/authors-The-minds-behind-Matryoshka/";
+          
+        },
+      },{id: "post-visualizing-models",
         
           title: "Visualizing 🪆 Models",
         
@@ -397,6 +419,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/ohad-agadi/";
+            },},{id: "people-roey-magen",
+          title: 'Roey Magen',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/roey-magen/";
             },},{id: "people-shahar-avni",
           title: 'Shahar Avni',
           description: "",
