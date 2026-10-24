@@ -17,7 +17,7 @@ The paper {% cite godey2026matryoshka %} is really about cost: 36% less training
 
 **Experiment.** The authors' Hugging Face page has checkpoints up to 60B tokens with vanilla counterparts, plus an unpublished four-exit 100M / 300M / 600M / 1B suite trained to 105B. Evaluate every exit at every checkpoint against its vanilla counterpart. The cleanest pairs are the 500M exit (up to 60B tokens) and the four-exit suite's 100M (up to 105B, about 900 tokens per parameter). Mid-run checkpoints never had their learning rate decayed, so branch short matched cooldowns at two or three points, as the paper did for its 23B baseline.
 
-**Why it's worth doing.** It is cheap, and it tells #3 and #5 which regime to worry about. It is also the weakest here: the range is still short (the 500M reaches ~120 tokens per parameter, about 50× below SmolLM2), and the authors will probably publish this curve themselves, so share it with them.
+**Why it's worth doing.** It is cheap, and it tells #3 and #5 which regime to worry about. It is also the weakest here: the range is still short (the 500M reaches ~120 tokens per parameter, about 50× below SmolLM2).
 
 ## 2. Every doll as a draft, at a fixed batch size
 
