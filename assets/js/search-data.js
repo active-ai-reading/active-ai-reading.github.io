@@ -102,6 +102,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/redo-graph-figure-2/";
           
         },
+      },{id: "post-three-models-in-one-a-toy-matryoshka-suite-vs-three-separate-models",
+        
+          title: "Three models in one: a toy Matryoshka suite vs. three separate models",
+        
+        description: "One nested transformer with three exits, trained once, against three separate models of matched size. The shape of the paper&#39;s result holds at toy scale.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/matryoshka-toy/";
+          
+        },
       },{id: "post-a-new-way-of-speculative-decoding-and-on-policy-distillation",
         
           title: "A new way of speculative decoding and on policy distillation",
