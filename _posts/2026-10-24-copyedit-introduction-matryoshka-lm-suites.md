@@ -9,7 +9,7 @@ by: shaharOssy
 
 ## What I changed and why
 
-The original introduction repeats its three main points (stacking, distillation, speculative decoding) three times: in the middle paragraphs, in a summary paragraph, and finally in the bullet points. For example: "...the nested structure further **benefits speculative decoding**", and then: "Moreover, the shared-weight structure and low-cost distillation substantially improves cross-model agreement and *makes larger draft models practical for speculative decoding*."** and then: "We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and **make larger drafts practical for speculative decoding..."**
+The original introduction repeats its three main points (stacking, distillation, speculative decoding) three times: in the middle paragraphs, in a summary paragraph, and finally in the bullet points. For example: "...the nested structure further **benefits speculative decoding**", and then: "Moreover, the shared-weight structure and low-cost distillation substantially improves cross-model agreement and **makes larger draft models practical for speculative decoding."** and then: "We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and **make larger drafts practical for speculative decoding..."**
 
 This makes it longer than it needs to be. I removed the repetition by merging the summary paragraph directly into the final bullet points. I also simplified the opening sentence so it gets straight to the engineering problem without using passive language.
 
