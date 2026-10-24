@@ -5,4 +5,4 @@ role_in_course: student
 ---
 
 Sr. HW/FW Algorithm Engineer.  
-This page contains code from/for: GPU algorithms and communications, published papers, projects and present/former lecturing.
+My Git comprises GPU algorithms and communications, published papers, projects and present/former lecturing.
