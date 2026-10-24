@@ -88,7 +88,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/redo-graph-cross-lingual-knowledge-pretraining/";
+            window.location.href = "/posts/2026/redo-graph-figure-2/";
           
         },
       },{id: "post-a-new-way-of-speculative-decoding-and-on-policy-distillation",
