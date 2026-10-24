@@ -117,7 +117,7 @@ ninja.data = [{
         
           title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
         
-        description: "Removing repetition..",
+        description: "Removing repetition",
         section: "Posts",
         handler: () => {
           
