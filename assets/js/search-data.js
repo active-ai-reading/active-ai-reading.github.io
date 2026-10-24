@@ -102,6 +102,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/hidden-gems-matryoshka-lm-suites/";
           
         },
+      },{id: "post-follow-ups-of-matryoshka-language-model-suites",
+        
+          title: "Follow-ups of Matryoshka Language Model Suites",
+        
+        description: "The nested suite was built for efficiency, but its shared backbone makes it a ready-made interpretability testbed.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/follow-ups-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-the-minds-behind-matryoshka",
         
           title: "The minds behind Matryoshka",
@@ -154,7 +165,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/critique-matryoshka-lm-suites/";
+            window.location.href = "/posts/2026/critique-matryoshka-lm-suites-achi-or/";
           
         },
       },{id: "post-how-autoregressive-and-diffusion-lms-imitate-each-other-and-why-it-is-inefficient",
@@ -397,6 +408,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/idoravid/";
+            },},{id: "people-itamar-pitz",
+          title: 'Itamar (Pitz)',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/itamarfruchter/";
             },},{id: "people-matan-bar-tov",
           title: 'Matan Bar Tov',
           description: "",
