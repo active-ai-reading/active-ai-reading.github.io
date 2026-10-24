@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
+  <info>
+    <title>Narrative author-year citations</title>
+    <id>https://active-ai-reading.github.io/styles/narrative-author-year</id>
+    <updated>2026-10-24T00:00:00+00:00</updated>
+  </info>
+  <citation et-al-min="3" et-al-use-first="1">
+    <layout delimiter="; ">
+      <names variable="author">
+        <name form="short" and="text" delimiter=", " delimiter-precedes-last="never"/>
+        <et-al/>
+        <substitute><text variable="title"/></substitute>
+      </names>
+      <date variable="issued" prefix=" (" suffix=")"><date-part name="year"/></date>
+    </layout>
+  </citation>
+  <bibliography>
+    <layout>
+      <names variable="author"><name and="text"/></names>
+      <date variable="issued" prefix=" (" suffix="). "><date-part name="year"/></date>
+      <text variable="title"/>
+    </layout>
+  </bibliography>
+</style>
