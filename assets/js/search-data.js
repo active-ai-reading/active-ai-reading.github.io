@@ -201,6 +201,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/contact-authors-cross-lingual-knowledge-pretraining/";
           
         },
+      },{id: "post-the-authors-39-path-of-matryoshka-language-model-suites",
+        
+          title: "The Authors&#39; Path of Matryoshka Language Model Suites",
+        
+        description: "Background about the authors&#39; of Matryoshka LM and",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/authors-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-the-minds-behind-matryoshka",
         
           title: "The minds behind Matryoshka",
