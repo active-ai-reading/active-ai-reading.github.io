@@ -7,18 +7,7 @@ task: followups
 by: [EylonKrause]
 ---
 
-The paper {% cite godey2026matryoshka %} is really about cost: 36% less training compute and 14–26% faster speculative decoding, at near-parity quality. Each number comes from one setup: one training budget, one draft–verifier pair, one baseline, one distillation loss, and joint training throughout. Each follow-up below changes one of these. The [other follow-ups post]({{ '/posts/2026/follow-ups-matryoshka-lm-suites/' | relative_url }}) asks what is inside the dolls; this one asks whether nesting is the cheapest way to make and serve them.
-
-## First: Hugging Face has much more than the paper
-
-The first author's account has four Matryoshka repositories, not one:
-
-- `matryoshka-3B`: checkpoints from 5B to 52B tokens, plus a cooled-down 60B run (`_60B_cd`).
-- `matryoshka-baselines`: vanilla models matched in size and tokens. The smallest exit of each suite (500M, 100M, 50M) has a vanilla twin of exactly the same shape.
-- `matryoshka-200M`: the small-scale ablations ($$\alpha_d$$ sweep, depth splits, loss weights, junctions).
-- `matryoshka-1B`: a four-exit 100M / 300M / 600M / 1B suite trained to 105B tokens, which the paper never mentions.
-
-An *exit* is one nested sub-model, read off at its own LM head. The follow-ups go roughly from cheapest to most expensive.
+The paper {% cite godey2026matryoshka %} is really about cost: 36% less training compute and 14–26% faster speculative decoding, at near-parity quality. Each number comes from one setup: one training budget, one draft–verifier pair, one baseline, one distillation loss, and joint training throughout. Each follow-up below changes one of these. The [other follow-ups post]({{ '/posts/2026/follow-ups-matryoshka-lm-suites/' | relative_url }}) asks what is inside the dolls; this one asks whether nesting is the cheapest way to make and serve them. (An *exit* is one nested sub-model, read off at its own LM head.) The follow-ups go roughly from cheapest to most expensive.
 
 ## 1. Does parity hold past 35B tokens? (a day of evaluation, then a few A100-days)
 
@@ -26,7 +15,7 @@ An *exit* is one nested sub-model, read off at its own LM head. The follow-ups g
 
 **Question.** The paper's curves (Figures 3 and 4) track the gap to vanilla up to 35B tokens, about 11 per parameter for the 3B, below the compute-optimal ~20 {% cite hoffmann2022empirical %}. SmolLM2's 1.7B saw about 11T {% cite allal2025smollm2 %}. With more training, does the gap grow, because one 500M block serves three models, or shrink, because the free distillation keeps paying off?
 
-**Experiment.** Evaluate every exit at every checkpoint against its vanilla counterpart. The cleanest pairs are the 500M exit (up to 60B tokens) and the four-exit suite's 100M (up to 105B, about 900 tokens per parameter). Mid-run checkpoints never had their learning rate decayed, so branch short matched cooldowns at two or three points, as the paper did for its 23B baseline: about 2.5 A100-days each for the four-exit suite, 7.5 for the 3B.
+**Experiment.** The authors' Hugging Face page has checkpoints up to 60B tokens with vanilla counterparts, plus an unpublished four-exit 100M / 300M / 600M / 1B suite trained to 105B. Evaluate every exit at every checkpoint against its vanilla counterpart. The cleanest pairs are the 500M exit (up to 60B tokens) and the four-exit suite's 100M (up to 105B, about 900 tokens per parameter). Mid-run checkpoints never had their learning rate decayed, so branch short matched cooldowns at two or three points, as the paper did for its 23B baseline: about 2.5 A100-days each for the four-exit suite, 7.5 for the 3B.
 
 **Why it's worth doing.** It is cheap, and it tells #3 and #5 which regime to worry about. It is also the weakest here: the range is still short (the 500M reaches ~120 tokens per parameter, about 50× below SmolLM2), and the authors will probably publish this curve themselves, so share it with them. [achi-or's critique]({{ '/posts/2026/critique-matryoshka-lm-suites-achi-or/' | relative_url }}) asks for about 60B tokens, which is exactly where `_60B_cd` sits.
 
@@ -104,11 +93,3 @@ Predict first with hierarchical speculative decoding's latency model {% cite moh
 | 5 | joint training | joint run, vanilla 50M | about two A100-weeks |
 
 Costs are $$6ND$$, calibrated to the paper's five A100-days per 200M-scale run. If only one gets done, I'd pick #3: it decides what the headline means. #5 is the most interesting scientifically, and #2 is what the speed claim needs. #4's upside is capped, and #1 is a sanity check the authors will likely beat us to.
-
-## Traps in the released files
-
-- Don't use `main`: it is 42B in `matryoshka-3B`, the 3B suite in `matryoshka-200M`, and 10B in `matryoshka-1B`. `main_21B` and `main_42B` don't match `3B_21B` and `3B_42B`.
-- Some 3B branches carry stale 5B-token shards. Load `model.safetensors`.
-- The 50M and 100M branches of 200M splits v5, v6, v9 and v10 store `rope_theta = 1e4`; the paper uses `1e5`. Load the `200M_*` branch instead.
-- The code rescales the junction by RMS, not L2 norms as in Eq. 1. Follow the code.
-- `dist0`, `d05`, `d07`, `v9_atop` and the `_distill` branches are undocumented. Ask before relying on them.
