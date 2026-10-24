@@ -4,8 +4,10 @@ description: Removing repetition and trimming fluff to get straight to the point
 paper: matryoshka-lm-suites
 role: writing
 task: copyedit
-by: shaharOssy
+by: [shaharOssy]
 ---
+
+<!-- Keep the sections that fit your task, delete the rest. -->
 
 ## What I changed and why
 
@@ -16,9 +18,7 @@ This makes it longer than it needs to be. I removed the repetition by deleting t
 ## Before and after
 
 <div class="before-after">
-  <div class="before" markdown="1">
-<span class="label">Before</span>
-
+<div class="before"><span class="label">Before</span>
 The way training and inference costs of large language models (LLMs) scale steeply with model size creates a demand for models across a broad spectrum of sizes, from 100M [Allal et al., 2025] to trillion [DeepSeek-AI, 2026] parameters, for diverse deployment scenarios. Delivering models from different scales allows for different load/performance tradeoffs, with smaller models being more memory- and compute-efficient than their larger counterparts. As a result, models are usually released in suites: groups of models trained separately on similar data, with smaller models often distilled from larger ones in the suite. The question of efficiency in training and serving model suites jointly is rarely studied. We propose a training framework that is particularly well-suited to the model-suite paradigm and offers several concrete benefits over the standard approach.
 
 Instead of training separate models, our approach progressively stacks the outputs of smaller sub-models as inputs to larger ones. For instance, rather than training a {1B, 8B, 30B, 70B} suite as four independent runs, our method trains a single architecture combining a 1B sub-model with additional 7B, 22B, and 40B parameter blocks, resulting in 70B trained parameters instead of 109B. Contrarily to previous work [Devvrit et al., 2023], each sub-model can be detached as a standalone language model, with its own depth and KV cache footprint, and served independently just like a regular checkpoint. This setup also makes distillation from the largest model to all smaller ones a natural by-product, as logits from all submodels are available during training. As a result, training the Matryoshka suite costs on the same order as training only the largest model alone, and delivers all N sub-models in a single run, with cheap knowledge distillation.
@@ -34,11 +34,8 @@ Overall, our contributions can be summarized as:
 - We train a 3B-parameter Matryoshka suite and show it reaches near-parity (within 0.5 average points at every size) with independently trained baselines on standard benchmarks while using 36% less training compute (Section 3);
 - We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and make larger drafts practical for speculative decoding, where plain vanilla speculative decoding barely improves over autoregressive inference.
 - We provide extensive ablations at smaller scale (50M/100M/200M suite) that provide insights for architectural hyperparameters and training objectives.
-
-  </div>
-  <div class="after" markdown="1">
-<span class="label">After</span>
-
+</div>
+<div class="after"><span class="label">After</span>
 The steep training and inference costs of large language models (LLMs) create a demand for models across a broad spectrum of sizes, from 100M [Allal et al., 2025] to trillion [DeepSeek-AI, 2026] parameters. As a result, models are usually released in suites: groups of models trained separately on similar data, with smaller models often distilled from larger ones. The question of efficiency in training and serving model suites jointly is rarely studied. We propose a training framework that offers several concrete benefits over the standard approach.
 
 Instead of training separate models, our approach progressively stacks the outputs of smaller sub-models as inputs to larger ones. For instance, rather than training a {1B, 8B, 30B, 70B} suite as four independent runs, our method trains a single architecture resulting in 70B trained parameters instead of 109B. Contrarily to previous work [Devvrit et al., 2023], each sub-model can be detached as a standalone language model, with its own depth and KV cache footprint, and served independently. This setup also makes distillation from the largest model to all smaller ones a natural by-product, as logits from all submodels are available during training.
@@ -49,14 +46,13 @@ Overall, our contributions can be summarized as:
 
 - We introduce Matryoshka Language Model Suites, a pretraining framework that nests sub-models of increasing width and depth into a single jointly trained architecture (Section 2);
 - We derive a low-cost distillation objective that leverages the availability of all sub-model logits at every forward pass;
-- We train a 3B-parameter Matryoshka suite **on 35B tokens from the FineWeb-Edu dataset** and show it reaches near-parity (within 0.5 average points at every size) with independently trained baselines on standard benchmarks while using 36% less training compute (Section 3);
+- We train a 3B-parameter Matryoshka suite on 35B tokens from the FineWeb-Edu dataset and show it reaches near-parity (within 0.5 average points at every size) with independently trained baselines on standard benchmarks while using 36% less training compute (Section 3);
 - We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and make larger drafts practical for speculative decoding, where plain vanilla speculative decoding barely improves over autoregressive inference.
 - We provide extensive ablations at smaller scale (50M/100M/200M suite) that provide insights for architectural hyperparameters and training objectives.
-- **We release trained checkpoints and a HuggingFace's transformers-compatible implementation.**
-
-  </div>
+- We release trained checkpoints and a HuggingFace's transformers-compatible implementation.
+</div>
 </div>
 
 ## The general rule
 
-**Don't repeat your summary.** If you explain your main points in the text, you don't need to summarize them in a paragraph and then summarize them again in a bulleted list right after. Also, use direct, simple sentences instead of long passive ones to introduce the main problem.
+Don't repeat your summary. If you explain your main points in the text, you don't need to summarize them again right before the bullet points. Remove sentences that state the obvious or repeat facts already mentioned, and move experimental details straight into the contribution list.
