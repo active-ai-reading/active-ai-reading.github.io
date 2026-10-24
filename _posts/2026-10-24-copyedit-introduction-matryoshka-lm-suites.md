@@ -1,6 +1,6 @@
 ---
 title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites"
-description: Removing repetition and trimming fluff to get straight to the point.
+description: Removing repetition.
 paper: matryoshka-lm-suites
 role: writing
 task: copyedit
