@@ -9,13 +9,9 @@ by: shaharOssy
 
 ## What I changed and why
 
-The original introduction repeats its three main points (stacking, distillation, speculative decoding) three times: in the middle paragraphs, in a summary paragraph, and finally in the bullet points. It also includes trivial explanations (e.g., explaining that smaller models are more compute-efficient) and repetitive concluding sentences.
+The original introduction repeats its three main points (stacking, distillation, speculative decoding) three times: in the middle paragraphs, in a summary paragraph, and finally in the bullet points. For example: "...the nested structure further **benefits speculative decoding**", and then: "Moreover, the shared-weight structure and low-cost distillation substantially improves cross-model agreement and **makes larger draft models practical for speculative decoding."** and then: "We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and **make larger drafts practical for speculative decoding..."**
 
-To make it concise without rewriting the authors' original words, I applied strict trimming:
-1. Simplified the opening sentence to remove passive language.
-2. Deleted filler explanations and summary sentences that repeated facts already stated in the same paragraph.
-3. Completely removed the fourth paragraph by moving its unique details (the dataset used and the code release) directly into the bulleted list.
-4. Left the original phrasing of the bullet points intact.
+This makes it longer than it needs to be. I removed the repetition by deleting the redundant sentences in the summary paragraph—keeping only the unique details like the dataset and code release—and leaving the original bullet points intact. I also simplified the opening sentence so it gets straight to the engineering problem without using passive language.
 
 ## Before and after
 
