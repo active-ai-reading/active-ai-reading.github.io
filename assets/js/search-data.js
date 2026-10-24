@@ -198,7 +198,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/critique-matryoshka-lm-suites/";
+            window.location.href = "/posts/2026/critique-matryoshka-lm-suites-ga26/";
           
         },
       },{id: "post-week-0-in-one-page-tokens-keep-knowledge-apart",
