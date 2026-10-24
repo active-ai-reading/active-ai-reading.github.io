@@ -39,21 +39,20 @@ Overall, our contributions can be summarized as:
   <div class="after" markdown="1">
 <span class="label">After</span>
 
-The steep training and inference costs of large language models create a demand for models across a broad spectrum of sizes. Releasing them in suites is standard practice, but the question of efficiency in training and serving them jointly is rarely studied.
+The steep training and inference costs of large language models (LLMs) create a demand for models across a broad spectrum of sizes, from 100M [Allal et al., 2025] to trillion [DeepSeek-AI, 2026] parameters. Delivering models from different scales allows for different load/performance tradeoffs, with smaller models being more memory- and compute-efficient. As a result, models are usually released in suites: groups of models trained separately on similar data. However, the question of efficiency in training and serving model suites jointly is rarely studied. We propose a training framework that is particularly well-suited to the model-suite paradigm and offers several concrete benefits over the standard approach.
 
-We propose Matryoshka Language Model Suites, a framework that trains an entire model family in a single nested architecture. Instead of running separate training jobs, our approach progressively stacks the outputs of smaller models as inputs to larger ones. Each sub-model has its own width and depth, so it can be detached and served as an independent checkpoint.
+Instead of training separate models, our approach progressively stacks the outputs of smaller sub-models as inputs to larger ones. For instance, rather than training a {1B, 8B, 30B, 70B} suite as four independent runs, our method trains a single architecture combining a 1B sub-model with additional 7B, 22B, and 40B parameter blocks, resulting in 70B trained parameters instead of 109B. Contrarily to previous work [Devvrit et al., 2023], each sub-model can be detached as a standalone language model, with its own depth and KV cache footprint, and served independently just like a regular checkpoint. This setup also makes distillation from the largest model to all smaller ones a natural by-product, as logits from all submodels are available during training. As a result, training the Matryoshka suite costs on the same order as training only the largest model alone, and delivers all N sub-models in a single run, with cheap knowledge distillation.
 
-This shared architecture provides two major benefits:
+At inference time, the nested structure further benefits speculative decoding [Leviathan et al., 2023]: the draft model is nested in the verifier model, and both already share KV cache, eliminating the usual memory overhead of maintaining a separate draft model. Cross-model prediction agreement is also higher than in independently trained suites, directly increasing token acceptance rates.
 
-1. **Free Distillation:** A single forward pass through the full architecture generates logits for every sub-model, meaning distillation from the largest model to all smaller ones becomes a natural, zero-cost by-product of training.
-2. **Better Speculative Decoding:** The draft model is nested in the verifier model, and both already share early layers and KV cache. This eliminates memory overhead and directly increases token acceptance rates, making larger draft models practical.
+Overall, our contributions can be summarized as:
 
-We verified our approach on a 3B-parameter Matryoshka suite. Overall, our main contributions can be summarized as:
-
-- **End-to-End Architecture (Section 2):** A parameter-free junction that rescales norms across hidden dimensions, with an integrated distillation loss.
-- **Matches Baselines for Less (Section 3):** Our suite matches independently trained baselines on standard benchmarks while using 36% less training compute.
-- **Faster Speculative Decoding:** Shared weights and distillation boost cross-model agreement, allowing a 500M / 3B pair to achieve a 14–26% throughput speedup over plain autoregressive inference.
-- **Architectural Guidelines:** We map the width-depth design space and show that norm rescaling and distillation are crucial for the performance of smaller models.
+- We introduce Matryoshka Language Model Suites, a pretraining framework that nests sub-models of increasing width and depth into a single jointly trained architecture (Section 2).
+- We derive a low-cost distillation objective that leverages the availability of all sub-model logits at every forward pass.
+- We verify our approach by training a 3B-parameter Matryoshka suite (with 500M, 1.5B, and 3B sub-models on 35B tokens) that reaches near-parity with independently trained baselines on standard benchmarks while using 36% less total training compute (Section 3).
+- We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and make larger drafts practical for speculative decoding, where plain vanilla speculative decoding barely improves over autoregressive inference.
+- We conduct an extensive analysis of architectural design (at 50M/100M/200M scale) to show the impact of width and depth configurations, demonstrating that both the distillation loss and our model junction mechanism are crucial for smaller sub-models.
+- We release trained checkpoints and a HuggingFace's transformers-compatible implementation.
 
   </div>
 </div>
