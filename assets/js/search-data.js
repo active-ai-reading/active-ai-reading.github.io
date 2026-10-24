@@ -332,8 +332,8 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/adamjaber03/";
-            },},{id: "people-ido",
-          title: 'Ido',
+            },},{id: "people-ido-ravid",
+          title: 'Ido Ravid',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/idoravid/";
