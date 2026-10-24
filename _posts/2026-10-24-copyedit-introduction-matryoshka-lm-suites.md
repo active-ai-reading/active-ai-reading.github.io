@@ -1,11 +1,13 @@
 ---
 title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites"
-description: Removing repetition
+description: Removing repetition.
 paper: matryoshka-lm-suites
 role: writing
 task: copyedit
 by: [shaharOssy]
 ---
+
+<!-- Keep the sections that fit your task, delete the rest. -->
 
 ## What I changed and why
 
@@ -29,13 +31,11 @@ We verify our approach by training a 3B-parameter Matryoshka suite with 500M, 1.
 
 Overall, our contributions can be summarized as:
 
-<ul>
-<li>We introduce Matryoshka Language Model Suites, a pretraining framework that nests sub-models of increasing width and depth into a single jointly trained architecture (Section 2);</li>
-<li>We derive a low-cost distillation objective that leverages the availability of all sub-model logits at every forward pass;</li>
-<li>We train a 3B-parameter Matryoshka suite and show it reaches near-parity (within 0.5 average points at every size) with independently trained baselines on standard benchmarks while using 36% less training compute (Section 3);</li>
-<li>We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and make larger drafts practical for speculative decoding, where plain vanilla speculative decoding barely improves over autoregressive inference.</li>
-<li>We provide extensive ablations at smaller scale (50M/100M/200M suite) that provide insights for architectural hyperparameters and training objectives.</li>
-</ul>
+* We introduce Matryoshka Language Model Suites, a pretraining framework that nests sub-models of increasing width and depth into a single jointly trained architecture (Section 2);
+* We derive a low-cost distillation objective that leverages the availability of all sub-model logits at every forward pass;
+* We train a 3B-parameter Matryoshka suite and show it reaches near-parity (within 0.5 average points at every size) with independently trained baselines on standard benchmarks while using 36% less training compute (Section 3);
+* We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and make larger drafts practical for speculative decoding, where plain vanilla speculative decoding barely improves over autoregressive inference.
+* We provide extensive ablations at smaller scale (50M/100M/200M suite) that provide insights for architectural hyperparameters and training objectives.
 </div>
 
 <div class="after" markdown="1">
@@ -49,14 +49,12 @@ At inference time, the nested structure further benefits speculative decoding [L
 
 Overall, our contributions can be summarized as:
 
-<ul>
-<li>We introduce Matryoshka Language Model Suites, a pretraining framework that nests sub-models of increasing width and depth into a single jointly trained architecture (Section 2);</li>
-<li>We derive a low-cost distillation objective that leverages the availability of all sub-model logits at every forward pass;</li>
-<li>We train a 3B-parameter Matryoshka suite on 35B tokens from the FineWeb-Edu dataset and show it reaches near-parity (within 0.5 average points at every size) with independently trained baselines on standard benchmarks while using 36% less training compute (Section 3);</li>
-<li>We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and make larger drafts practical for speculative decoding, where plain vanilla speculative decoding barely improves over autoregressive inference.</li>
-<li>We provide extensive ablations at smaller scale (50M/100M/200M suite) that provide insights for architectural hyperparameters and training objectives.</li>
-<li>We release trained checkpoints and a HuggingFace's transformers-compatible implementation.</li>
-</ul>
+* We introduce Matryoshka Language Model Suites, a pretraining framework that nests sub-models of increasing width and depth into a single jointly trained architecture (Section 2);
+* We derive a low-cost distillation objective that leverages the availability of all sub-model logits at every forward pass;
+* We train a 3B-parameter Matryoshka suite on 35B tokens from the FineWeb-Edu dataset and show it reaches near-parity (within 0.5 average points at every size) with independently trained baselines on standard benchmarks while using 36% less training compute (Section 3);
+* We demonstrate that the shared-weight structure and low-cost distillation substantially improve cross-model agreement and make larger drafts practical for speculative decoding, where plain vanilla speculative decoding barely improves over autoregressive inference.
+* We provide extensive ablations at smaller scale (50M/100M/200M suite) that provide insights for architectural hyperparameters and training objectives.
+* We release trained checkpoints and a HuggingFace's transformers-compatible implementation.
 </div>
 </div>
 
