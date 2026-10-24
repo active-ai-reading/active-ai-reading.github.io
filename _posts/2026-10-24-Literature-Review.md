@@ -3,7 +3,7 @@ title: "Literature Review: Matryoshka LM Suites"
 description: "Contextualizing Matryoshka LM Suites within speculative decoding, knowledge distillation, and nested/elastic transformer architectures."
 paper: "matryoshka-lm-suites"
 role: "research"
-task: "literature-review"
+task: "literature"
 by: [leonicus]
 ---
 
