@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/rewriting-the-abstract-matryoshka-lm-suites/";
           
         },
+      },{id: "post-a-new-way-of-speculative-decoding-and-on-policy-distillation",
+        
+          title: "A new way of speculative decoding and on policy distillation",
+        
+        description: "2 papers that expand on ideas used in the matryoshka suits paper.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-the-minds-behind-matryoshka",
         
           title: "The minds behind Matryoshka",
