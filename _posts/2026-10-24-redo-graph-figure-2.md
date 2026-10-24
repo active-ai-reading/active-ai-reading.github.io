@@ -1,7 +1,7 @@
 ---
 title: "A better Figure 2"
 description: Figure 2 uses two ternary plots to select a model architecture, but the key tradeoff between memory and computation is hidden across separate panels
-paper: matryoshka-language-model-suites
+paper: matryoshka-lm-suites
 role: visualization
 task: redo-graph
 by: [MatanBarTov]
