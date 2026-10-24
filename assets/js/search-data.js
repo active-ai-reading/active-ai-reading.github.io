@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/rewriting-the-abstract-matryoshka-lm-suites/";
           
         },
+      },{id: "post-a-better-figure-2",
+        
+          title: "A better Figure 2",
+        
+        description: "Figure 2 uses two ternary plots to select a model architecture, but the key tradeoff between memory and computation is hidden across separate panels",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-cross-lingual-knowledge-pretraining/";
+          
+        },
       },{id: "post-a-new-way-of-speculative-decoding-and-on-policy-distillation",
         
           title: "A new way of speculative decoding and on policy distillation",
