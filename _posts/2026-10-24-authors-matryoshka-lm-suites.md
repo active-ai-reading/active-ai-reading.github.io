@@ -1,6 +1,6 @@
 ---
 title: "The Authors' Path of Matryoshka Language Model Suites"
-description: Background about the authors' of Matryoshka LM and 
+description: Background about the authors' of Matryoshka LM Suites and their recent research.
 paper: matryoshka-lm-suites
 role: research
 task: authors
