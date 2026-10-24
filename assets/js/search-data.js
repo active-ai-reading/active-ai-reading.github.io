@@ -157,6 +157,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/authors-The-minds-behind-Matryoshka/";
           
         },
+      },{id: "post-literature-review-matryoshka-lm-suites",
+        
+          title: "Literature Review: Matryoshka LM Suites",
+        
+        description: "Contextualizing Matryoshka LM Suites within speculative decoding, knowledge distillation, and nested/elastic transformer architectures.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/Literature-Review/";
+          
+        },
       },{id: "post-visualizing-models",
         
           title: "Visualizing 🪆 Models",
