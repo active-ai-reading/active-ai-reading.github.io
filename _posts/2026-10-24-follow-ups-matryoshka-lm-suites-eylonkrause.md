@@ -7,7 +7,7 @@ task: followups
 by: [EylonKrause]
 ---
 
-The paper {% cite godey2026matryoshka %} is really about cost: 36% less training compute and 14–26% faster speculative decoding, at near-parity quality. Each number comes from one setup: one training budget, one draft–verifier pair, one baseline, one distillation loss, and joint training throughout. Each follow-up below changes one of these. The question throughout is whether nesting is the cheapest way to make and serve the dolls. (An *exit* is one nested sub-model, read off at its own LM head.) The follow-ups go roughly from cheapest to most expensive.
+The paper {% cite godey2026matryoshka %} is really about cost: 36% less training compute and 14–26% faster speculative decoding, at near-parity quality. Each number comes from one setup: one training budget, one draft–verifier pair, one baseline, one distillation loss, and joint training throughout. Each follow-up below changes one of these. The question throughout is whether nesting is the cheapest way to make and serve the dolls. (I call each nested sub-model an *exit*: the point in the network where you stop and read off that model's prediction through its own output layer.) The follow-ups go roughly from cheapest to most expensive.
 
 ## 1. Does parity hold past 35B tokens?
 
