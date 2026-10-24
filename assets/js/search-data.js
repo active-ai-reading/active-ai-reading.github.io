@@ -117,7 +117,7 @@ ninja.data = [{
         
           title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
         
-        description: "Removing repetition and simplifying the opening to get straight to the point.",
+        description: "Removing repetition and trimming fluff to get straight to the point.",
         section: "Posts",
         handler: () => {
           
