@@ -1,6 +1,6 @@
 ---
-title: "Writing about the points that matter."
-description: One sentence that makes people want to click.
+title: "The points that matter about Matryoshka suites."
+description: A quick recap on what you need to remember from this paper instead of re-reading everything.
 paper: matryoshka-lm-suites # the filename of the paper in _papers/, without .md
 role: writing
 task: key-points # abstract | copyedit | key-points   (see the roles page)
