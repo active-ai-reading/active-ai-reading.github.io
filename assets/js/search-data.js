@@ -428,6 +428,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shueyr/";
+            },},{id: "people-tals",
+          title: 'Tals',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/tals/";
             },},{id: "people-tomer-atia",
           title: 'Tomer Atia',
           description: "",
