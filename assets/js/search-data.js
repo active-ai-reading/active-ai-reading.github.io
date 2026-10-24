@@ -402,6 +402,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shniki/";
+            },},{id: "people-your-name",
+          title: 'Your Name',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/your-github-username/";
             },},{id: "showcase-a-post-with-formatting-and-links",
           title: 'a post with formatting and links',
           description: "march &amp; april, looking forward to summer",
