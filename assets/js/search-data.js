@@ -205,7 +205,7 @@ ninja.data = [{
         
           title: "The Authors&#39; Path of Matryoshka Language Model Suites",
         
-        description: "Background about the authors&#39; of Matryoshka LM and",
+        description: "Background about the authors&#39; of Matryoshka LM Suites and their recent research.",
         section: "Posts",
         handler: () => {
           
