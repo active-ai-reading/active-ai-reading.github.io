@@ -1,7 +1,7 @@
 ---
 title: "Reimplementing a speculative decoding throughput test, shown in Figure 5a"
 description: I implemented a speculative decoding throughput performance test, running the 500M model as a draft model and the full 3B model as the verifier, examining a speedup against a baseline
-paper: Matryoshka Language Model Suites
+paper: matryoshka-lm-suites
 role: coding
 task: reimplement
 by: [TalSokolov]
