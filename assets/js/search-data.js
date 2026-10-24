@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/what-makes-a-chain-of-thought-easy-to-learn/";
           
         },
+      },{id: "post-writing-about-the-points-that-matter",
+        
+          title: "Writing about the points that matter.",
+        
+        description: "One sentence that makes people want to click.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week1-The-points-that-matter/";
+          
+        },
       },{id: "post-rewriting-the-abstract",
         
           title: "Rewriting the abstract",
