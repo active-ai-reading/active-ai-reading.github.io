@@ -157,6 +157,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/follow-ups-matryoshka-lm-suites/";
           
         },
+      },{id: "post-is-nesting-the-cheapest-way-to-build-a-model-suite",
+        
+          title: "Is nesting the cheapest way to build a model suite?",
+        
+        description: "Five follow-ups that test the paper&#39;s efficiency claims, all starting from checkpoints the authors have already released.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/follow-ups-matryoshka-lm-suites-eylonkrause/";
+          
+        },
       },{id: "post-copyediting-section-1-introduction-of-matryoshka-language-model-suites",
         
           title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
