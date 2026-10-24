@@ -7,7 +7,7 @@ task: followups
 by: [EylonKrause]
 ---
 
-The paper {% cite godey2026matryoshka %} is really about cost: 36% less training compute and 14–26% faster speculative decoding, at near-parity quality. Each number comes from one setup: one training budget, one draft–verifier pair, one baseline, one distillation loss, and joint training throughout. Each follow-up below changes one of these. The [other follow-ups post]({{ '/posts/2026/follow-ups-matryoshka-lm-suites/' | relative_url }}) asks what is inside the dolls; this one asks whether nesting is the cheapest way to make and serve them. (An *exit* is one nested sub-model, read off at its own LM head.) The follow-ups go roughly from cheapest to most expensive.
+The paper {% cite godey2026matryoshka %} is really about cost: 36% less training compute and 14–26% faster speculative decoding, at near-parity quality. Each number comes from one setup: one training budget, one draft–verifier pair, one baseline, one distillation loss, and joint training throughout. Each follow-up below changes one of these. The question throughout is whether nesting is the cheapest way to make and serve the dolls. (An *exit* is one nested sub-model, read off at its own LM head.) The follow-ups go roughly from cheapest to most expensive.
 
 ## 1. Does parity hold past 35B tokens?
 
@@ -17,7 +17,7 @@ The paper {% cite godey2026matryoshka %} is really about cost: 36% less training
 
 **Experiment.** The authors' Hugging Face page has checkpoints up to 60B tokens with vanilla counterparts, plus an unpublished four-exit 100M / 300M / 600M / 1B suite trained to 105B. Evaluate every exit at every checkpoint against its vanilla counterpart. The cleanest pairs are the 500M exit (up to 60B tokens) and the four-exit suite's 100M (up to 105B, about 900 tokens per parameter). Mid-run checkpoints never had their learning rate decayed, so branch short matched cooldowns at two or three points, as the paper did for its 23B baseline.
 
-**Why it's worth doing.** It is cheap, and it tells #3 and #5 which regime to worry about. It is also the weakest here: the range is still short (the 500M reaches ~120 tokens per parameter, about 50× below SmolLM2), and the authors will probably publish this curve themselves, so share it with them. [achi-or's critique]({{ '/posts/2026/critique-matryoshka-lm-suites-achi-or/' | relative_url }}) asks for about 60B tokens, which is exactly where `_60B_cd` sits.
+**Why it's worth doing.** It is cheap, and it tells #3 and #5 which regime to worry about. It is also the weakest here: the range is still short (the 500M reaches ~120 tokens per parameter, about 50× below SmolLM2), and the authors will probably publish this curve themselves, so share it with them.
 
 ## 2. Every doll as a draft, at a fixed batch size
 
@@ -31,10 +31,10 @@ The paper {% cite godey2026matryoshka %} is really about cost: 36% less training
 
 The suite is also a ladder of drafts, each one's KV cache the bottom of the next one's, and the 1.5B–3B pair has the largest agreement gain (+5.7%). Yet only one pair is tested. Does 500M → 1.5B → 3B beat it?
 
-**Experiment.** Write a loop with one KV cache per block; the released code has no generation, but [TalSokolov's reimplementation]({{ '/posts/2026/reimplement-cross-lingual-knowledge-pretraining/' | relative_url }}) has a 500M → 3B loop to start from.
+**Experiment.** Write a loop with one KV cache per block; the released code has no generation.
 
 - Chains: 500M → 3B, 1.5B → 3B, 500M → 1.5B → 3B, and n-gram → 500M → 1.5B → 3B.
-- Also test small vanilla drafts for the vanilla 3B (vanilla 100M, SmolLM2-135M/360M), which achi-or asks for.
+- Also test small vanilla drafts for the vanilla 3B (vanilla 100M, SmolLM2-135M/360M).
 - Batch sizes 1, 64 for both suites, and the maximum.
 
 **Why it's worth doing.** Multi-level speculation exists, even with shared KV caches: HiSpec gets 1.28× over a single level {% cite kumar2026hispec %}. But its middle levels are early exits of one fixed-width model. Here each level is a full model of its own width, and an extra level costs only its LM head (~0.23 GB). The 3B's last five layers are about half its compute, and a cascade runs them only on tokens the 1.5B accepted. If cascades win, nested suites get multi-level speculation almost free. If not, the fixed-batch runs still split the speedup into its three parts. One caveat: no released model uses grouped-query attention, though Llama-3.2-3B, whose shape the vanilla 3B copies, does. So the memory gain is probably inflated.
@@ -60,7 +60,7 @@ The suite is also a ladder of drafts, each one's KV cache the bottom of the next
 **Experiment.**
 
 - *No training:* on the released $$\alpha_d \in \{0, 0.3, 0.5, 0.7\}$$ branches, measure $$\beta$$ between the 50M and 200M exits at the paper's sampling settings; the paper reports only KL and perplexity.
-- *At 3B:* include the undocumented vanilla `500M_35B_distill`. If it is what its name suggests, it separates distillation from weight sharing, achi-or's question.
+- *At 3B:* include the undocumented vanilla `500M_35B_distill`. If it is what its name suggests, it separates distillation from weight sharing.
 - *Then train:* swap in reverse KL, Jensen–Shannon and an acceptance loss, plus an on-policy variant, as short cooldown branches. Train the best one into the head only and into the whole shared block.
 
 **Why it's worth doing.** Acceptance training usually freezes the verifier; one [unrefereed preprint](https://sergiu-nistor.com/assets/publications/Halfway_Speculative_Decoding.pdf) tunes an 8B target with its draft head. Here the draft *is* the verifier's first block, trained from scratch, so report the verifier's perplexity next to every speedup. The upside is capped: LK losses report up to 8–10% longer accepted length, against the paper's total 5% gain. A flat result still says agreement is limited by the 1:6 size gap, not the loss.
@@ -69,7 +69,7 @@ The suite is also a ladder of drafts, each one's KV cache the bottom of the next
 
 *Why this part: joint end-to-end training is the paper's central design choice, and the one it never ablates.*
 
-**Question.** In joint training, the 1.5B and 3B losses push gradients into the 500M block. Help or tax? There are hints that the biggest exit pays: at 200M scale the 200M exit trails vanilla (15.62 vs 15.21 perplexity) while the 100M beats it. The other post asks how the small model's *forward* signal helps the big one; this is the backward version.
+**Question.** In joint training, the 1.5B and 3B losses push gradients into the 500M block. Help or tax? There are hints that the biggest exit pays: at 200M scale the 200M exit trails vanilla (15.62 vs 15.21 perplexity) while the 100M beats it.
 
 **Experiment.** At 200M scale, with the same tokens and the paper's loss weights (it blames part of the gap on them, Appendix G):
 
