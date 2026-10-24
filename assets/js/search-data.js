@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/what-makes-a-chain-of-thought-easy-to-learn/";
           
         },
+      },{id: "post-rewriting-the-abstract",
+        
+          title: "Rewriting the abstract",
+        
+        description: "Why should we care about language model suites ?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/rewriting-the-abstract-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-the-minds-behind-matryoshka",
         
           title: "The minds behind Matryoshka",
