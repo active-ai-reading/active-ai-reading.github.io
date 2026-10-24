@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/rewriting-the-abstract-matryoshka-lm-suites/";
           
         },
+      },{id: "post-reimplementing-a-speculative-decoding-throughput-test-shown-in-figure-5a",
+        
+          title: "Reimplementing a speculative decoding throughput test, shown in Figure 5a",
+        
+        description: "I implemented a speculative decoding throughput performance test, running the 500M model as a draft model and the full 3B model as the verifier, examining a speedup against a baseline",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reimplement-cross-lingual-knowledge-pretraining/";
+          
+        },
       },{id: "post-a-better-figure-2",
         
           title: "A better Figure 2",
@@ -117,7 +128,7 @@ ninja.data = [{
         
           title: "Copyediting Section 1 (Introduction) of Matryoshka Language Model Suites",
         
-        description: "Removing repetition",
+        description: "Removing repetition.",
         section: "Posts",
         handler: () => {
           
