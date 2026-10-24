@@ -124,6 +124,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/matryoshka-toy/";
           
         },
+      },{id: "post-literature-review-of-matryoshka-language-model-suites",
+        
+          title: "Literature review of Matryoshka Language Model Suites",
+        
+        description: "Ideas behind Matryoshka LM Suites and what it adds",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/literature-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-a-new-way-of-speculative-decoding-and-on-policy-distillation",
         
           title: "A new way of speculative decoding and on policy distillation",
