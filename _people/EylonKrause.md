@@ -7,4 +7,4 @@ linkedin: https://www.linkedin.com/in/eylonkrause/
 ---
 
 Sr. Algorithm Engineer, and grad student at WIS  
-My Git comprises GPU algorithms and communications, published papers, projects and present/former lecturing.
+My GitHub comprises GPU algorithms and communications, published papers, projects and present/former lecturing.
