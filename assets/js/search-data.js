@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/key-visual-matryoshka-lm-suites/";
           
         },
+      },{id: "post-video-explainer-for-matryoshka-lm-suites",
+        
+          title: "Video explainer for Matryoshka LM Suites",
+        
+        description: "Video explainer for Matryoshka LM Suites.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/extras-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-rewriting-the-abstract-of-matryoshka-language-model-suites",
         
           title: "Rewriting the abstract of Matryoshka Language Model Suites",
