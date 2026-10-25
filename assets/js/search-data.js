@@ -58,9 +58,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-visualizing-the-core-idea-of-matryoshka-lm-suites",
+        },{id: "post-visualizing-core-ideas",
         
-          title: "Visualizing the core idea of Matryoshka LM Suites",
+          title: "Visualizing Core ideas",
         
         description: "One figure showing how three separate models become one nested model, how the blocks connect, and where the training savings come from.",
         section: "Posts",
