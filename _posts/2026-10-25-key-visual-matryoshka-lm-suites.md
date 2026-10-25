@@ -1,5 +1,5 @@
 ---
-title: "Visualizing the core idea of Matryoshka LM Suites"
+title: "Visualizing Core ideas"
 description: One figure showing how three separate models become one nested model, how the blocks connect, and where the training savings come from.
 paper: matryoshka-lm-suites
 role: visualization
