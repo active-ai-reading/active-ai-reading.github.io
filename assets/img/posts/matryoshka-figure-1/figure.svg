@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="730" viewBox="0 0 1200 730" role="img">
+<title>Matryoshka language model suites</title>
+<desc>(a) Three separately trained models versus one nested model whose prefixes are the smaller models. (b) Architecture drawn to scale: three blocks of increasing width, each ending in an exit with its own LM head; the largest exit distills into the smaller ones. (c) The junction rescales the old stream and appends fresh embedding channels. (d) Which blocks each exit's loss updates. (e) Training compute and speculative-decoding throughput.</desc>
+<style>
+  text{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;fill:#2E3640}
+  .pl{font-size:22px;font-weight:700;fill:#1B2430}
+  .lb{font-size:15px}
+  .sm{font-size:14px;fill:#4A5563}
+  .mu{font-size:15px;fill:#5A6470}
+  .mt{font-family:"Times New Roman",Times,serif;font-style:italic;font-size:17px;fill:#2E3640}
+  .or{fill:#C46A14;font-weight:700;font-size:15px}
+  .wh{fill:#fff;font-size:15px;font-weight:600}
+  .dk{fill:#0E2A52;font-size:15px;font-weight:600}
+</style>
+<defs>
+  <linearGradient id="gB1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D6E7F8"/><stop offset="1" stop-color="#A3C7EA"/></linearGradient>
+  <linearGradient id="gB2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A2C5EC"/><stop offset="1" stop-color="#6199D4"/></linearGradient>
+  <linearGradient id="gB3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F80C3"/><stop offset="1" stop-color="#264F8E"/></linearGradient>
+  <linearGradient id="gOr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8C285"/><stop offset="1" stop-color="#E58A30"/></linearGradient>
+  <linearGradient id="gGr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1F3F6"/><stop offset="1" stop-color="#D9DEE4"/></linearGradient>
+  <filter id="sh" x="-8%" y="-15%" width="116%" height="140%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#1B2A41" flood-opacity="0.18"/></filter>
+  <pattern id="p1" x="120" y="268" width="11" height="56" patternUnits="userSpaceOnUse"><rect width="9" height="56" rx="2.5" fill="url(#gB1)"/></pattern>
+  <pattern id="p2" x="406" y="268" width="11" height="127" patternUnits="userSpaceOnUse"><rect width="9" height="127" rx="2.5" fill="url(#gB2)"/></pattern>
+  <pattern id="p3" x="538" y="268" width="11" height="239" patternUnits="userSpaceOnUse"><rect width="9" height="239" rx="2.5" fill="url(#gB3)"/></pattern>
+  <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5z" fill="#4A5563"/></marker>
+  <marker id="ao" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5z" fill="#E58A30"/></marker>
+</defs>
+<rect width="1200" height="730" fill="#fff"/>
+
+<!-- (a) -->
+<text class="pl" x="40" y="44">(a)</text>
+<text class="mu" x="88" y="85" text-anchor="end">3 runs</text>
+<rect x="100" y="60" width="80" height="40" rx="20" fill="url(#gGr)" stroke="#B8C0CA" stroke-width=".8" filter="url(#sh)"/><text class="lb" x="140" y="80" text-anchor="middle" dominant-baseline="central">500M</text>
+<rect x="196" y="60" width="242" height="40" rx="20" fill="url(#gGr)" stroke="#B8C0CA" stroke-width=".8" filter="url(#sh)"/><text class="lb" x="317" y="80" text-anchor="middle" dominant-baseline="central">1.5B</text>
+<rect x="454" y="60" width="510" height="40" rx="20" fill="url(#gGr)" stroke="#B8C0CA" stroke-width=".8" filter="url(#sh)"/><text class="lb" x="709" y="80" text-anchor="middle" dominant-baseline="central">3B</text>
+<text class="mu" x="88" y="153" text-anchor="end">1 run</text>
+<rect x="100" y="124" width="512" height="48" rx="24" fill="url(#gB3)" filter="url(#sh)"/>
+<rect x="104" y="129" width="233" height="38" rx="19" fill="url(#gB2)"/>
+<rect x="108" y="134" width="72" height="28" rx="14" fill="url(#gB1)"/>
+<text class="dk" x="144" y="148" text-anchor="middle" dominant-baseline="central">500M</text>
+<text class="dk" x="259" y="148" text-anchor="middle" dominant-baseline="central">1.5B</text>
+<text class="wh" x="474" y="148" text-anchor="middle" dominant-baseline="central">3B</text>
+
+<!-- (b) -->
+<text class="pl" x="40" y="226">(b)</text>
+<text class="sm" x="251" y="254" text-anchor="middle">24 × 1024</text>
+<text class="sm" x="460" y="254" text-anchor="middle">10 × 2304</text>
+<text class="sm" x="565" y="254" text-anchor="middle">5 × 4352</text>
+
+<rect x="100" y="268" width="14" height="56" rx="5" fill="url(#gOr)" filter="url(#sh)"/>
+<rect x="120" y="268" width="262" height="56" fill="url(#p1)" filter="url(#sh)"/>
+<rect x="388" y="268" width="12" height="56" rx="5" fill="url(#gB1)" filter="url(#sh)"/>
+<rect x="388" y="327" width="12" height="68" rx="5" fill="url(#gOr)" filter="url(#sh)"/>
+<rect x="406" y="268" width="108" height="127" fill="url(#p2)" filter="url(#sh)"/>
+<rect x="520" y="268" width="12" height="127" rx="5" fill="url(#gB2)" filter="url(#sh)"/>
+<rect x="520" y="398" width="12" height="109" rx="5" fill="url(#gOr)" filter="url(#sh)"/>
+<rect x="538" y="268" width="53" height="239" fill="url(#p3)" filter="url(#sh)"/>
+
+<path d="M251 330C251 410 240 460 240 538" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M460 399C460 465 430 480 430 538" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M564 511C564 524 590 522 590 538" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+
+<g fill="#fff" stroke="#6B7684" stroke-width="1">
+<rect x="225" y="542" width="30" height="22" rx="7"/><rect x="415" y="542" width="30" height="22" rx="7"/><rect x="575" y="542" width="30" height="22" rx="7"/>
+</g>
+<text class="mt" x="240" y="558" text-anchor="middle" style="font-size:15px">W¹</text>
+<text class="mt" x="430" y="558" text-anchor="middle" style="font-size:15px">W²</text>
+<text class="mt" x="590" y="558" text-anchor="middle" style="font-size:15px">W³</text>
+<path d="M240 566V610" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M430 566V594" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M590 566V574" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+
+<path d="M190 640C206 640 216 636 224 628C230 621 235 616 240 616C245 616 250 621 256 628C264 636 274 640 290 640Z" fill="url(#gB1)" stroke="#86AEDB" stroke-width="1"/>
+<path d="M380 640C396 640 406 634 414 620C420 609 425 600 430 600C435 600 440 609 446 620C454 634 464 640 480 640Z" fill="url(#gB2)" stroke="#5189C8" stroke-width="1"/>
+<path d="M545 640C560 640 570 634 577 616C583 599 587 580 590 580C593 580 597 599 603 616C610 634 620 640 635 640Z" fill="url(#gB3)" stroke="#264F8E" stroke-width="1"/>
+<g stroke="#9AA5B1" stroke-width="1"><line x1="186" y1="640" x2="294" y2="640"/><line x1="376" y1="640" x2="484" y2="640"/><line x1="541" y1="640" x2="639" y2="640"/></g>
+
+<path d="M598 650C598 710 240 710 240 652" fill="none" stroke="#E58A30" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="round" marker-end="url(#ao)"/>
+<path d="M582 650C582 680 430 680 430 652" fill="none" stroke="#E58A30" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="round" marker-end="url(#ao)"/>
+<text class="mt" x="415" y="718" text-anchor="middle" style="fill:#C46A14">KD</text>
+
+<!-- (c) -->
+<text class="pl" x="640" y="226">(c)</text>
+<rect x="640" y="250" width="232" height="156" rx="14" fill="#F5F8FC" stroke="#E1E8F1" stroke-width="1"/>
+<rect x="950" y="250" width="232" height="156" rx="14" fill="#F5F8FC" stroke="#E1E8F1" stroke-width="1"/>
+<g fill="url(#gB2)">
+<rect x="656" y="292" width="6" height="79" rx="3"/><rect x="665" y="274" width="6" height="97" rx="3"/><rect x="674" y="300" width="6" height="71" rx="3"/><rect x="683" y="282" width="6" height="89" rx="3"/><rect x="692" y="270" width="6" height="101" rx="3"/><rect x="701" y="296" width="6" height="75" rx="3"/><rect x="710" y="278" width="6" height="93" rx="3"/><rect x="719" y="288" width="6" height="83" rx="3"/><rect x="728" y="272" width="6" height="99" rx="3"/><rect x="737" y="294" width="6" height="77" rx="3"/>
+<rect x="944" y="359" width="6" height="12" rx="3"/><rect x="953" y="357" width="6" height="14" rx="3"/><rect x="962" y="360" width="6" height="11" rx="3"/><rect x="971" y="358" width="6" height="13" rx="3"/><rect x="980" y="356" width="6" height="15" rx="3"/><rect x="989" y="360" width="6" height="11" rx="3"/><rect x="998" y="357" width="6" height="14" rx="3"/><rect x="1007" y="359" width="6" height="12" rx="3"/><rect x="1016" y="356" width="6" height="15" rx="3"/><rect x="1025" y="360" width="6" height="11" rx="3"/>
+</g>
+<g fill="url(#gOr)">
+<rect x="755" y="360" width="6" height="11" rx="3"/><rect x="764" y="357" width="6" height="14" rx="3"/><rect x="773" y="361" width="6" height="10" rx="3"/><rect x="782" y="358" width="6" height="13" rx="3"/><rect x="791" y="359" width="6" height="12" rx="3"/><rect x="800" y="356" width="6" height="15" rx="3"/><rect x="809" y="360" width="6" height="11" rx="3"/><rect x="818" y="358" width="6" height="13" rx="3"/><rect x="827" y="361" width="6" height="10" rx="3"/><rect x="836" y="357" width="6" height="14" rx="3"/><rect x="845" y="359" width="6" height="12" rx="3"/><rect x="854" y="358" width="6" height="13" rx="3"/>
+<rect x="1043" y="360" width="6" height="11" rx="3"/><rect x="1052" y="357" width="6" height="14" rx="3"/><rect x="1061" y="361" width="6" height="10" rx="3"/><rect x="1070" y="358" width="6" height="13" rx="3"/><rect x="1079" y="359" width="6" height="12" rx="3"/><rect x="1088" y="356" width="6" height="15" rx="3"/><rect x="1097" y="360" width="6" height="11" rx="3"/><rect x="1106" y="358" width="6" height="13" rx="3"/><rect x="1115" y="361" width="6" height="10" rx="3"/><rect x="1124" y="357" width="6" height="14" rx="3"/><rect x="1133" y="359" width="6" height="12" rx="3"/><rect x="1142" y="358" width="6" height="13" rx="3"/>
+</g>
+<g stroke="#C5CDD8" stroke-width="1"><line x1="650" y1="372" x2="862" y2="372"/><line x1="940" y1="372" x2="1172" y2="372"/></g>
+<text class="mt" x="699" y="394" text-anchor="middle">o</text>
+<text class="mt" x="807" y="394" text-anchor="middle">e</text>
+<text class="mt" x="987" y="394" text-anchor="middle">o</text>
+<text class="mt" x="1095" y="394" text-anchor="middle">e</text>
+<text class="mt" x="911" y="316" text-anchor="middle" style="font-size:16px">‖e‖ / ‖o‖</text>
+<path d="M884 332H938" fill="none" stroke="#4A5563" stroke-width="1.4" marker-end="url(#ag)"/>
+
+<!-- (d) -->
+<text class="pl" x="640" y="470">(d)</text>
+<rect x="713" y="484" width="14" height="14" rx="5" fill="url(#gB1)"/>
+<rect x="759" y="484" width="14" height="14" rx="5" fill="url(#gB2)"/>
+<rect x="805" y="484" width="14" height="14" rx="5" fill="url(#gB3)"/>
+<text class="mt" x="692" y="534" text-anchor="end" style="font-size:15px">W¹</text>
+<text class="mt" x="692" y="580" text-anchor="end" style="font-size:15px">W²</text>
+<text class="mt" x="692" y="626" text-anchor="end" style="font-size:15px">W³</text>
+<g stroke="#E1E5EA" stroke-width="1" fill="#F0F2F5">
+<rect x="746" y="508" width="40" height="40" rx="9"/><rect x="792" y="508" width="40" height="40" rx="9"/>
+<rect x="792" y="554" width="40" height="40" rx="9"/>
+</g>
+<rect x="700" y="508" width="40" height="40" rx="9" fill="url(#gB1)"/>
+<rect x="700" y="554" width="40" height="40" rx="9" fill="url(#gB1)"/><rect x="746" y="554" width="40" height="40" rx="9" fill="url(#gB2)"/>
+<rect x="700" y="600" width="40" height="40" rx="9" fill="url(#gB1)"/><rect x="746" y="600" width="40" height="40" rx="9" fill="url(#gB2)"/><rect x="792" y="600" width="40" height="40" rx="9" fill="url(#gB3)"/>
+<rect x="695" y="503" width="50" height="142" rx="14" fill="none" stroke="#E58A30" stroke-width="2"/>
+
+<!-- (e) -->
+<text class="pl" x="860" y="470">(e)</text>
+<circle cx="944" cy="466" r="6" fill="url(#gGr)" stroke="#B8C0CA" stroke-width="1"/><text class="sm" x="956" y="471">Standard</text>
+<circle cx="1044" cy="466" r="6" fill="url(#gB2)"/><text class="sm" x="1056" y="471">Nested</text>
+<rect x="872" y="530" width="38" height="118" rx="10" fill="url(#gGr)" stroke="#B8C0CA" stroke-width="1"/>
+<rect x="920" y="570" width="38" height="78" rx="10" fill="url(#gB2)"/>
+<rect x="1020" y="553" width="38" height="95" rx="10" fill="url(#gGr)" stroke="#B8C0CA" stroke-width="1"/>
+<rect x="1068" y="530" width="38" height="118" rx="10" fill="url(#gB2)"/>
+<rect x="850" y="641" width="300" height="14" fill="#fff"/>
+<g stroke="#9AA5B1" stroke-width="1"><line x1="860" y1="640" x2="970" y2="640"/><line x1="1008" y1="640" x2="1118" y2="640"/></g>
+<path d="M910 530H970M1058 553H1120" fill="none" stroke="#8A94A0" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M964 532V566" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M1114 551V534" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<text class="or" x="974" y="554">−36%</text>
+<text class="or" x="1122" y="548">+26%</text>
+<text class="sm" x="915" y="666" text-anchor="middle">Train FLOPs</text>
+<text class="sm" x="1063" y="666" text-anchor="middle">Tokens/s</text>
+</svg>
