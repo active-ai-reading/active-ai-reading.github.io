@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/key-visual-matryoshka-lm-suites/";
           
         },
+      },{id: "post-rewriting-the-abstract-of-matryoshka-language-model-suites",
+        
+          title: "Rewriting the abstract of Matryoshka Language Model Suites",
+        
+        description: "Making the comparisons clearer, with a trade-off in technical detail.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-what-makes-a-chain-of-thought-easy-to-learn",
         
           title: "What Makes a Chain of Thought Easy to Learn?",
