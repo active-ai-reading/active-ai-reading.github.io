@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-visualizing-core-ideas",
+        },{id: "post-rewriting-the-matryoshka-abstract-making-technical-concepts-more-intuitive",
+        
+          title: "Rewriting the Matryoshka Abstract: Making Technical Concepts More Intuitive",
+        
+        description: "Explaining nested language models and speculative decoding for readers unfamiliar with these concepts.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/matryoshka-abstract-chenshani-droid/";
+          
+        },
+      },{id: "post-visualizing-core-ideas",
         
           title: "Visualizing Core ideas",
         
