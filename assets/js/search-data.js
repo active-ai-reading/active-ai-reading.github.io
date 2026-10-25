@@ -66,7 +66,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/key-visual-matryoshka-lm-suites/";
+            window.location.href = "/posts/2026/main-visual-matryoshka-lm-suites/";
           
         },
       },{id: "post-video-explainer-for-matryoshka-lm-suites",
