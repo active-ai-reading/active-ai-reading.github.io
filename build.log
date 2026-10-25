@@ -338,6 +338,12 @@ More info and automated migrator: https://sass-lang.com/d/import
     /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/css/main.scss 21:3                   root stylesheet
 WARNING: 41 repetitive deprecation warnings omitted.
 Run in verbose mode to see all warnings.
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261025-3276-d0x8mq.ipynb to html
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261025-3664-7vltex.ipynb to html
 /opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/nbconvert/filters/highlight.py:71: UserWarning: IPython3 lexer unavailable, falling back on Python 3
   return _pygments_highlight(
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/posts/2026/key-visual-matryoshka-lm-suites/index.html[0m[0m
+[33m                     - /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_posts/2026-10-23-key-visual-matryoshka-lm-suites.md[0m
+[33m                     - /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_posts/2026-10-25-key-visual-matryoshka-lm-suites.md[0m
+[33m                    [0m

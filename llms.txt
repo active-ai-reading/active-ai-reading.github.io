@@ -12,6 +12,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Visualizing the core idea of Matryoshka LM Suites](https://active-ai-reading.github.io/posts/2026/key-visual-matryoshka-lm-suites/): One figure showing how three separate models become one nested model, how the blocks connect, and where the training savings come from. (Visualization, on "Matryoshka Language Model Suites", 2026-10-25)
 - [What Makes a Chain of Thought Easy to Learn?](https://active-ai-reading.github.io/posts/2026/what-makes-a-chain-of-thought-easy-to-learn/): How teacher-generated reasoning can help smaller models learn, and why the structure of a reasoning trace might matter. (Learning to learn, on "Matryoshka Language Model Suites", 2026-10-24)
 - [The points that matter about Matryoshka suites.](https://active-ai-reading.github.io/posts/2026/week1-The-points-that-matter/): A quick recap on what you need to remember from this paper instead of re-reading everything. (Writing, on "Matryoshka Language Model Suites", 2026-10-24)
 - [Rewriting the abstract](https://active-ai-reading.github.io/posts/2026/rewriting-the-abstract-matryoshka-lm-suites/): Why should we care about language model suites ? (Writing, on "Matryoshka Language Model Suites", 2026-10-24)

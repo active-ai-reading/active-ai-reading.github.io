@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-what-makes-a-chain-of-thought-easy-to-learn",
+        },{id: "post-visualizing-the-core-idea-of-matryoshka-lm-suites",
+        
+          title: "Visualizing the core idea of Matryoshka LM Suites",
+        
+        description: "One figure showing how three separate models become one nested model, how the blocks connect, and where the training savings come from.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-matryoshka-lm-suites/";
+          
+        },
+      },{id: "post-what-makes-a-chain-of-thought-easy-to-learn",
         
           title: "What Makes a Chain of Thought Easy to Learn?",
         
