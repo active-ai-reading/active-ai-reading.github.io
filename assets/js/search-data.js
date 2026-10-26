@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-1-matryoshka-collective-compilation/";
           
         },
+      },{id: "post-copyedit-matryoshka-lm-suites-2",
+        
+          title: "Copyedit Matryoshka Lm Suites_2",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-matryoshka-lm-suites_2/";
+          
+        },
       },{id: "post-copyedit-matryoshka-lm-suites",
         
           title: "Copyedit Matryoshka Lm Suites",
