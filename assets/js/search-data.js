@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-1-matryoshka-collective-compilation/";
           
         },
+      },{id: "post-copyedit-matryoshka-lm-suites",
+        
+          title: "Copyedit Matryoshka Lm Suites",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-matryoshka-lm-suites/";
+          
+        },
       },{id: "post-rewriting-the-matryoshka-abstract-making-technical-concepts-more-intuitive",
         
           title: "Rewriting the Matryoshka Abstract: Making Technical Concepts More Intuitive",

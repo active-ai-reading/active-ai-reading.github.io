@@ -14,6 +14,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 ## Posts
 
 - [Week 1 in one page: three models, one Matryoshka suite](https://active-ai-reading.github.io/posts/2026/week-1-matryoshka-collective-compilation/): What we read, built, redrew, challenged, and shared about Matryoshka LM Suites. (Communicate to the world, on "Matryoshka Language Model Suites", 2026-10-26)
+- [Copyedit Matryoshka Lm Suites](https://active-ai-reading.github.io/posts/2026/copyedit-matryoshka-lm-suites/): (, 2026-10-26)
 - [Rewriting the Matryoshka Abstract: Making Technical Concepts More Intuitive](https://active-ai-reading.github.io/posts/2026/matryoshka-abstract-chenshani-droid/): Explaining nested language models and speculative decoding for readers unfamiliar with these concepts. (Writing, on "Matryoshka Language Model Suites", 2026-10-25)
 - [Visualizing Core ideas](https://active-ai-reading.github.io/posts/2026/main-visual-matryoshka-lm-suites/): One figure showing how three separate models become one nested model, how the blocks connect, and how the smaller models learn from the largest. (Visualization, on "Matryoshka Language Model Suites", 2026-10-25)
 - [Video explainer for Matryoshka LM Suites](https://active-ai-reading.github.io/posts/2026/extras-matryoshka-lm-suites/): Video explainer for Matryoshka LM Suites. (Communicate to the world, on "Matryoshka Language Model Suites", 2026-10-25)
