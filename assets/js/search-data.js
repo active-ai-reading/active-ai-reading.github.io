@@ -537,6 +537,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/matryoshka-lm-suites/";
+            },},{id: "papers-multi-stream-attention-residuals",
+          title: 'Multi-Stream Attention Residuals',
+          description: "",
+          section: "Papers",handler: () => {
+              window.location.href = "/papers/multi-stream-attention-residuals/";
             },},{id: "papers-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-approach",
           title: 'Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach',
           description: "",

@@ -6,6 +6,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Papers
 
+- [Multi-Stream Attention Residuals](https://active-ai-reading.github.io/papers/multi-stream-attention-residuals/): Instead of a plain residual connection, each layer attends over the outputs of earlier layers, with several heads that each look at the past through a different context window. At 18B and 28B MoE scale it beats standard residuals, Hyper-Connections and Attention Residuals on 12 benchmarks, for a 1.58x compute speedup at equal loss. (arXiv 2610.13630)
 - [Matryoshka Language Model Suites](https://active-ai-reading.github.io/papers/matryoshka-lm-suites/): Nathan Godey, Yoav Artzi, 2026 (arXiv 2608.09703)
 - [Why Pretraining Fails to Share Cross-Lingual Knowledge](https://active-ai-reading.github.io/papers/cross-lingual-knowledge-pretraining/): Bilingual LLMs learn the same fact twice, once per language, and the cause is largely tokenization: two copies of English with disjoint token IDs already fail to share knowledge. Mapping Arabic words into English tokens (word-wise translation) makes knowledge transfer 14× better. (arXiv 2609.19291)
 - [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](https://active-ai-reading.github.io/papers/recurrent-depth-latent-reasoning/): Jonas Geiping, Sean McLeish, Neel Jain, John Kirchenbauer, Siddharth Singh, Brian R. Bartoldson, Bhavya Kailkhura, Abhinav Bhatele, Tom Goldstein, 2025 (arXiv 2502.05171)
