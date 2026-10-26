@@ -8,7 +8,9 @@ by: [nivcohen-ml]
 og_image: https://active-ai-reading.github.io/assets/img/posts/week-01-matryoshka-cover/Matryoshka%20social%20preview%20image.png
 ---
 
-![Matryoshka Language Model Suites — an original cover artwork illustrating nested language models and speculative token drafting.](https://active-ai-reading.github.io/assets/img/posts/week-01-matryoshka-cover/Matryoshka%20social%20preview%20image.png)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(940px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img src="https://active-ai-reading.github.io/assets/img/posts/week-01-matryoshka-cover/Matryoshka%20social%20preview%20image.png" alt="Matryoshka Language Model Suites — an original cover artwork illustrating nested language models and speculative token drafting." loading="lazy" style="display: block; width: 100%; height: auto;">
+</figure>
 
 *Week 1's collective reading of [Matryoshka Language Model Suites](https://arxiv.org/abs/2608.09703), by Nathan Godey and Yoav Artzi.*
 
@@ -36,7 +38,9 @@ Several classmates drew **different pictures of the same nested architecture**. 
 
 **Figure 1 — Independent suites versus nested exits**
 
-![Independent language models versus nested Matryoshka exits, with an inter-model junction.](https://active-ai-reading.github.io/assets/img/figure.png)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1050px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img src="https://active-ai-reading.github.io/assets/img/figure.png" alt="Independent language models versus nested Matryoshka exits, with an inter-model junction." loading="lazy" style="display: block; width: 100%; height: auto;">
+</figure>
 
 *[independent-versus-nested overview](https://active-ai-reading.github.io/posts/2026/key-visual-matryoshka-lm-suites/): a direct comparison of three separate models with one shared nested suite.*
 
@@ -44,7 +48,9 @@ Several classmates drew **different pictures of the same nested architecture**. 
 
 **Figure 2 — Architecture, distillation, and efficiency at a glance**
 
-![Five-panel Matryoshka overview with nesting, width changes, distillation, joint losses, and cost comparisons.](https://active-ai-reading.github.io/assets/img/posts/matryoshka-figure-1/figure.svg)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1280px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img src="https://active-ai-reading.github.io/assets/img/posts/matryoshka-figure-1/figure.svg" alt="Five-panel Matryoshka overview with nesting, width changes, distillation, joint losses, and cost comparisons." loading="lazy" style="display: block; width: 100%; height: auto;">
+</figure>
 
 *[five-panel core-ideas visualization](https://active-ai-reading.github.io/posts/2026/main-visual-matryoshka-lm-suites/): a denser view of the same mechanism and its reported savings.*
 
@@ -52,13 +58,24 @@ Several classmates drew **different pictures of the same nested architecture**. 
 
 **Figure 3 — Interactive model flows**
 
-[Explore the interactive architecture](https://active-ai-reading.github.io/assets/html/visualizing-matryoshka-slide1.html) to highlight the 500M, 1.5B, or 3B path through the nested network. This is part of the [interactive model-flow and junction visualization](https://active-ai-reading.github.io/posts/2026/visualizing-models/).
+<div style="position: relative; left: 50%; transform: translateX(-50%); width: min(1280px, calc(100vw - 2rem)); aspect-ratio: 16 / 9; margin: 1.5rem 0;">
+  <iframe
+    src="{{ '/assets/html/visualizing-matryoshka-slide1.html' | relative_url }}"
+    title="Interactive comparison of nested Matryoshka and independent model suites — select 500M, 1.5B, or 3B"
+    loading="lazy"
+    style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
+  ></iframe>
+</div>
+
+*Select **500M, 1.5B, or 3B** inside the diagram to trace each model's path. [Open the interactive architecture at full size](https://active-ai-reading.github.io/assets/html/visualizing-matryoshka-slide1.html). Created for the class's [interactive model-flow and junction visualization](https://active-ai-reading.github.io/posts/2026/visualizing-models/).*
 
 <a id="fig-4"></a>
 
 **Figure 4 — Junction close-up**
 
-![The junction rescales the earlier model output and concatenates it with a fresh embedding to widen the next block.](https://active-ai-reading.github.io/assets/img/posts/visualizing-matryoshka/slide2-junction.svg)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1120px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img src="https://active-ai-reading.github.io/assets/img/posts/visualizing-matryoshka/slide2-junction.svg" alt="The junction rescales the earlier model output and concatenates it with a fresh embedding to widen the next block." loading="lazy" style="display: block; width: 100%; height: auto;">
+</figure>
 
 *The complementary static diagram from the [interactive model-flow and junction visualization](https://active-ai-reading.github.io/posts/2026/visualizing-models/) shows how the hidden-width mismatch is resolved.*
 
@@ -68,13 +85,17 @@ The same principle—**show the trade-off, not just the mechanism**—guided two
 
 **Figure 5 — Original paper architecture-search plot**
 
-![Original paper Figure 2 on KV cache memory and theoretical FLOPs.](https://active-ai-reading.github.io/assets/img/papers/matryoshka-language-model-suites/figure2.png)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1140px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img src="https://active-ai-reading.github.io/assets/img/papers/matryoshka-language-model-suites/figure2.png" alt="Original paper Figure 2 on KV cache memory and theoretical FLOPs." loading="lazy" style="display: block; width: 100%; height: auto;">
+</figure>
 
 <a id="fig-6"></a>
 
 **Figure 6 — Annotated architecture-search plot**
 
-![Redesigned ternary plots with explicit layer counts and inferred hidden dimensions.](https://active-ai-reading.github.io/assets/img/posts/matryoshka-figure2/figure2-layer-counts.png)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1140px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img src="https://active-ai-reading.github.io/assets/img/posts/matryoshka-figure2/figure2-layer-counts.png" alt="Redesigned ternary plots with explicit layer counts and inferred hidden dimensions." loading="lazy" style="display: block; width: 100%; height: auto;">
+</figure>
 
 *Figure 6 makes the chosen **(24, 10, 5)** layer split easier to read. [Scalable SVG](https://active-ai-reading.github.io/assets/img/posts/matryoshka-figure2/figure2-layer-counts.svg).*
 
@@ -82,7 +103,11 @@ The same principle—**show the trade-off, not just the mechanism**—guided two
 
 **Figure 7 — KV-cache memory versus FLOPs**
 
-[![Static rendering of the architecture sweep scatter plot with candidate architectures, selected Matryoshka and vanilla baseline.](https://active-ai-reading.github.io/assets/img/posts/matryoshka-figure-2-scatter/static-scatter.svg)](https://active-ai-reading.github.io/posts/2026/redo-graph-figure-2/#the-redesign)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(1140px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <a href="https://active-ai-reading.github.io/posts/2026/redo-graph-figure-2/#the-redesign" aria-label="Open the interactive architecture-search scatter plot">
+    <img src="https://active-ai-reading.github.io/assets/img/posts/matryoshka-figure-2-scatter/static-scatter.svg" alt="Static rendering of the architecture sweep scatter plot with candidate architectures, selected Matryoshka and vanilla baseline." loading="lazy" style="display: block; width: 100%; height: auto;">
+  </a>
+</figure>
 
 *This static SVG was reconstructed from the [memory–FLOPs scatter redesign](https://active-ai-reading.github.io/posts/2026/redo-graph-figure-2/)'s Chart.js data. **Click the figure for the original interactive chart and its hover details.** These are theoretical resource estimates, not measured decoding-throughput curves.*
 
@@ -106,7 +131,9 @@ The [toy reimplementation](https://active-ai-reading.github.io/posts/2026/matryo
 
 **Figure 8 — Nested versus independent models at toy scale**
 
-![Toy reproduction training curves comparing nested exits and independently trained counterparts.](https://active-ai-reading.github.io/assets/img/posts/matryoshka-toy/curves.png)
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(900px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <img src="https://active-ai-reading.github.io/assets/img/posts/matryoshka-toy/curves.png" alt="Toy reproduction training curves comparing nested exits and independently trained counterparts." loading="lazy" style="display: block; width: 100%; height: auto;">
+</figure>
 
 *The toy implementation's validation-loss curves; these are not the paper's production-scale results.*
 
@@ -122,14 +149,19 @@ The [social-media versions](https://active-ai-reading.github.io/posts/2026/socia
 
 **Video 1 — Matryoshka Language Model Suites: class explainer**
 
-[![Title frame from the Matryoshka Language Model Suites class explainer. Click to play the class video.](https://active-ai-reading.github.io/assets/img/posts/week-01-matryoshka-video/video-preview.png)](https://active-ai-reading.github.io/assets/video/matryoshka.mp4)
-
-*Click the image to [watch the MP4](https://active-ai-reading.github.io/assets/video/matryoshka.mp4).*
-
-<video controls playsinline preload="metadata" width="100%" style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
-  <source src="https://active-ai-reading.github.io/assets/video/matryoshka.mp4" type="video/mp4">
-  Your browser does not support embedded video. <a href="https://active-ai-reading.github.io/assets/video/matryoshka.mp4">Open the video file</a>.
-</video>
+<figure style="position: relative; left: 50%; transform: translateX(-50%); width: min(960px, calc(100vw - 2rem)); margin: 1.5rem 0;">
+  <video
+    controls
+    playsinline
+    preload="metadata"
+    poster="{{ '/assets/img/posts/week-01-matryoshka-video/video-preview.png' | relative_url }}"
+    aria-label="Matryoshka Language Model Suites — class video explainer"
+    style="display: block; width: 100%; height: auto; border-radius: 8px;"
+  >
+    <source src="{{ '/assets/video/matryoshka.mp4' | relative_url }}" type="video/mp4">
+    Your browser does not support embedded video. <a href="https://active-ai-reading.github.io/assets/video/matryoshka.mp4">Open the MP4</a>.
+  </video>
+</figure>
 
 ## What we discussed in class
 
