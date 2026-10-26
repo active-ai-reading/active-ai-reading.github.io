@@ -242,7 +242,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/contact-authors-cross-lingual-knowledge-pretraining/";
+            window.location.href = "/posts/2026/contact-authors-matryoshka-lm-suites/";
           
         },
       },{id: "post-the-authors-39-path-of-matryoshka-language-model-suites",
