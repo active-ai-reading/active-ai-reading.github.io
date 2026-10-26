@@ -21,12 +21,13 @@
 
 - week: 2
   date: Week of 1 Nov 2026
-  topic: Recurrent-depth latent reasoning (tentative)
-  paper: recurrent-depth-latent-reasoning
+  topic: Multi-Stream Attention Residuals
+  paper: multi-stream-attention-residuals
 
 - week: 3
   date: Week of 8 Nov 2026
-  topic: To be decided
+  topic: Recurrent-depth latent reasoning (tentative)
+  paper: recurrent-depth-latent-reasoning
 
 - week: 4
   date: Week of 15 Nov 2026
