@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-rewriting-the-matryoshka-abstract-making-technical-concepts-more-intuitive",
+        },{id: "post-week-1-in-one-page-three-models-one-matryoshka-suite",
+        
+          title: "Week 1 in one page: three models, one Matryoshka suite",
+        
+        description: "What we read, built, redrew, challenged, and shared about Matryoshka LM Suites.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week-1-matryoshka-collective-compilation/";
+          
+        },
+      },{id: "post-rewriting-the-matryoshka-abstract-making-technical-concepts-more-intuitive",
         
           title: "Rewriting the Matryoshka Abstract: Making Technical Concepts More Intuitive",
         
