@@ -73,7 +73,7 @@ ninja.data = [{
         
           title: "Visualizing Core ideas",
         
-        description: "One figure showing how three separate models become one nested model, how the blocks connect, and where the training savings come from.",
+        description: "One figure showing how three separate models become one nested model, how the blocks connect, and how the smaller models learn from the largest.",
         section: "Posts",
         handler: () => {
           

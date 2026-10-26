@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="730" viewBox="0 0 1200 730" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img">
 <title>Matryoshka language model suites</title>
-<desc>(a) Three separately trained models versus one nested model whose prefixes are the smaller models. (b) Architecture drawn to scale: three blocks of increasing width, each ending in an exit with its own LM head; the largest exit distills into the smaller ones. (c) The junction rescales the old stream and appends fresh embedding channels. (d) Which blocks each exit's loss updates. (e) Training compute and speculative-decoding throughput.</desc>
+<desc>(a) Three separate training runs versus one run that yields a nested model. (b) Architecture drawn to scale: a sentence with a blank enters three blocks of increasing width, each ending in an output head that fills the blank as a distribution over five words; the largest model's distribution (graduation cap) is the teacher, its shape is handed to the two smaller models, which are trained to match it. (c) At each junction the large old stream is rescaled to the norm of a fresh embedding and the two are concatenated.</desc>
 <style>
   text{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;fill:#2E3640}
   .pl{font-size:22px;font-weight:700;fill:#1B2430}
@@ -8,7 +8,6 @@
   .sm{font-size:14px;fill:#4A5563}
   .mu{font-size:15px;fill:#5A6470}
   .mt{font-family:"Times New Roman",Times,serif;font-style:italic;font-size:17px;fill:#2E3640}
-  .or{fill:#C46A14;font-weight:700;font-size:15px}
   .wh{fill:#fff;font-size:15px;font-weight:600}
   .dk{fill:#0E2A52;font-size:15px;font-weight:600}
 </style>
@@ -24,10 +23,15 @@
   <pattern id="p3" x="538" y="268" width="11" height="239" patternUnits="userSpaceOnUse"><rect width="9" height="239" rx="2.5" fill="url(#gB3)"/></pattern>
   <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5z" fill="#4A5563"/></marker>
   <marker id="ao" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5z" fill="#E58A30"/></marker>
+  <marker id="as" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5z" fill="#E58A30"/></marker>
+  <g id="badge">
+    <rect x="-22" y="-14" width="44" height="28" rx="8" fill="#fff" stroke="#E58A30" stroke-width="1.4"/>
+    <g fill="#E58A30"><rect x="-16" y="-7" width="5" height="16" rx="1.5"/><rect x="-9" y="2" width="5" height="7" rx="1.2"/><rect x="-2" y="5" width="5" height="4" rx="1"/><rect x="5" y="6.2" width="5" height="2.8" rx="0.9"/><rect x="12" y="7.2" width="5" height="1.8" rx="0.7"/></g>
+  </g>
 </defs>
-<rect width="1200" height="730" fill="#fff"/>
+<rect width="1280" height="720" fill="#fff"/>
 
-<!-- (a) -->
+<!-- (a) original -->
 <text class="pl" x="40" y="44">(a)</text>
 <text class="mu" x="88" y="85" text-anchor="end">3 runs</text>
 <rect x="100" y="60" width="80" height="40" rx="20" fill="url(#gGr)" stroke="#B8C0CA" stroke-width=".8" filter="url(#sh)"/><text class="lb" x="140" y="80" text-anchor="middle" dominant-baseline="central">500M</text>
@@ -41,12 +45,22 @@
 <text class="dk" x="259" y="148" text-anchor="middle" dominant-baseline="central">1.5B</text>
 <text class="wh" x="474" y="148" text-anchor="middle" dominant-baseline="central">3B</text>
 
-<!-- (b) -->
+<!-- (b) redesigned -->
 <text class="pl" x="40" y="226">(b)</text>
-<text class="sm" x="251" y="254" text-anchor="middle">24 × 1024</text>
-<text class="sm" x="460" y="254" text-anchor="middle">10 × 2304</text>
-<text class="sm" x="565" y="254" text-anchor="middle">5 × 4352</text>
+<g transform="translate(-50,30.8) scale(0.9)">
 
+<!-- input sentence with a blank -->
+<g fill="#DDE3EA"><rect x="100" y="228" width="26" height="16" rx="4"/><rect x="130" y="228" width="26" height="16" rx="4"/><rect x="160" y="228" width="26" height="16" rx="4"/><rect x="190" y="228" width="20" height="16" rx="4"/><rect x="214" y="228" width="26" height="16" rx="4"/></g>
+<rect x="244" y="228" width="30" height="16" rx="4" fill="none" stroke="#8A94A0" stroke-width="1.2" stroke-dasharray="3 2"/>
+<path d="M100 249V253H274V249" fill="none" stroke="#8A94A0" stroke-width="1"/>
+<path d="M107 253V265" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+
+<!-- block labels -->
+<text class="sm" x="330" y="258" text-anchor="middle">24 × 1024</text>
+<text class="sm" x="460" y="258" text-anchor="middle">10 × 2304</text>
+<text class="sm" x="565" y="258" text-anchor="middle">5 × 4352</text>
+
+<!-- stack to scale -->
 <rect x="100" y="268" width="14" height="56" rx="5" fill="url(#gOr)" filter="url(#sh)"/>
 <rect x="120" y="268" width="262" height="56" fill="url(#p1)" filter="url(#sh)"/>
 <rect x="388" y="268" width="12" height="56" rx="5" fill="url(#gB1)" filter="url(#sh)"/>
@@ -56,30 +70,64 @@
 <rect x="520" y="398" width="12" height="109" rx="5" fill="url(#gOr)" filter="url(#sh)"/>
 <rect x="538" y="268" width="53" height="239" fill="url(#p3)" filter="url(#sh)"/>
 
-<path d="M251 330C251 410 240 460 240 538" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
-<path d="M460 399C460 465 430 480 430 538" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
-<path d="M564 511C564 524 590 522 590 538" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
-
+<!-- exits and heads -->
+<path d="M255 326V530" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M480 397V530" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M564 509C564 526 710 516 710 530" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
 <g fill="#fff" stroke="#6B7684" stroke-width="1">
-<rect x="225" y="542" width="30" height="22" rx="7"/><rect x="415" y="542" width="30" height="22" rx="7"/><rect x="575" y="542" width="30" height="22" rx="7"/>
+<rect x="240" y="534" width="30" height="22" rx="7"/><rect x="465" y="534" width="30" height="22" rx="7"/><rect x="695" y="534" width="30" height="22" rx="7"/>
 </g>
-<text class="mt" x="240" y="558" text-anchor="middle" style="font-size:15px">W¹</text>
-<text class="mt" x="430" y="558" text-anchor="middle" style="font-size:15px">W²</text>
-<text class="mt" x="590" y="558" text-anchor="middle" style="font-size:15px">W³</text>
-<path d="M240 566V610" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
-<path d="M430 566V594" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
-<path d="M590 566V574" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<g fill="#6B7684">
+<circle cx="250" cy="541" r="1.7"/><circle cx="260" cy="541" r="1.7"/><circle cx="250" cy="549" r="1.7"/><circle cx="260" cy="549" r="1.7"/>
+<circle cx="475" cy="541" r="1.7"/><circle cx="485" cy="541" r="1.7"/><circle cx="475" cy="549" r="1.7"/><circle cx="485" cy="549" r="1.7"/>
+<circle cx="705" cy="541" r="1.7"/><circle cx="715" cy="541" r="1.7"/><circle cx="705" cy="549" r="1.7"/><circle cx="715" cy="549" r="1.7"/>
+</g>
+<path d="M255 558V570" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M480 558V570" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
+<path d="M710 558V570" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
 
-<path d="M190 640C206 640 216 636 224 628C230 621 235 616 240 616C245 616 250 621 256 628C264 636 274 640 290 640Z" fill="url(#gB1)" stroke="#86AEDB" stroke-width="1"/>
-<path d="M380 640C396 640 406 634 414 620C420 609 425 600 430 600C435 600 440 609 446 620C454 634 464 640 480 640Z" fill="url(#gB2)" stroke="#5189C8" stroke-width="1"/>
-<path d="M545 640C560 640 570 634 577 616C583 599 587 580 590 580C593 580 597 599 603 616C610 634 620 640 635 640Z" fill="url(#gB3)" stroke="#264F8E" stroke-width="1"/>
-<g stroke="#9AA5B1" stroke-width="1"><line x1="186" y1="640" x2="294" y2="640"/><line x1="376" y1="640" x2="484" y2="640"/><line x1="541" y1="640" x2="639" y2="640"/></g>
+<!-- output cards -->
+<rect x="181" y="574" width="148" height="112" rx="12" fill="#F5F8FC" stroke="#E1E8F1" stroke-width="1"/>
+<rect x="406" y="574" width="148" height="112" rx="12" fill="#F5F8FC" stroke="#E1E8F1" stroke-width="1"/>
+<rect x="630" y="574" width="160" height="112" rx="12" fill="#FFF7EE" stroke="#E58A30" stroke-width="2"/>
+<g stroke="#B8C2CE" stroke-width="1"><line x1="189" y1="650" x2="321" y2="650"/><line x1="414" y1="650" x2="546" y2="650"/><line x1="640" y1="650" x2="780" y2="650"/></g>
 
-<path d="M598 650C598 710 240 710 240 652" fill="none" stroke="#E58A30" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="round" marker-end="url(#ao)"/>
-<path d="M582 650C582 680 430 680 430 652" fill="none" stroke="#E58A30" stroke-width="1.6" stroke-dasharray="6 4" stroke-linecap="round" marker-end="url(#ao)"/>
-<text class="mt" x="415" y="718" text-anchor="middle" style="fill:#C46A14">KD</text>
+<rect x="195" y="620" width="16" height="30" rx="3" fill="url(#gB1)"/><rect x="221" y="628" width="16" height="22" rx="3" fill="url(#gB1)"/><rect x="247" y="631" width="16" height="19" rx="3" fill="url(#gB1)"/><rect x="273" y="634" width="16" height="16" rx="3" fill="url(#gB1)"/><rect x="299" y="637" width="16" height="13" rx="3" fill="url(#gB1)"/>
+<rect x="420" y="605" width="16" height="45" rx="3" fill="url(#gB2)"/><rect x="446" y="628" width="16" height="22" rx="3" fill="url(#gB2)"/><rect x="472" y="635" width="16" height="15" rx="3" fill="url(#gB2)"/><rect x="498" y="640" width="16" height="10" rx="3" fill="url(#gB2)"/><rect x="524" y="642" width="16" height="8" rx="3" fill="url(#gB2)"/>
+<rect x="645" y="590" width="18" height="60" rx="3" fill="url(#gB3)"/><rect x="673" y="632" width="18" height="18" rx="3" fill="url(#gB3)"/><rect x="701" y="640" width="18" height="10" rx="3" fill="url(#gB3)"/><rect x="729" y="643" width="18" height="7" rx="3" fill="url(#gB3)"/><rect x="757" y="645" width="18" height="5" rx="3" fill="url(#gB3)"/>
 
-<!-- (c) -->
+<!-- teacher's shape as dashed outlines over the two students -->
+<g fill="none" stroke="#E58A30" stroke-width="1.4" stroke-dasharray="3 2.5">
+<rect x="195" y="590" width="16" height="60" rx="3"/><rect x="221" y="632" width="16" height="18" rx="3"/><rect x="247" y="640" width="16" height="10" rx="3"/><rect x="273" y="643" width="16" height="7" rx="3"/><rect x="299" y="645" width="16" height="5" rx="3"/>
+<rect x="420" y="590" width="16" height="60" rx="3"/><rect x="446" y="632" width="16" height="18" rx="3"/><rect x="472" y="640" width="16" height="10" rx="3"/><rect x="498" y="643" width="16" height="7" rx="3"/><rect x="524" y="645" width="16" height="5" rx="3"/>
+</g>
+<path d="M203 617V595" fill="none" stroke="#E58A30" stroke-width="1.8" stroke-linecap="round" marker-end="url(#as)"/>
+<path d="M428 602V595" fill="none" stroke="#E58A30" stroke-width="1.8" stroke-linecap="round" marker-end="url(#as)"/>
+
+<!-- blank word tiles under the bars -->
+<g fill="#DDE3EA">
+<rect x="191" y="660" width="24" height="14" rx="4"/><rect x="217" y="660" width="24" height="14" rx="4"/><rect x="243" y="660" width="24" height="14" rx="4"/><rect x="269" y="660" width="24" height="14" rx="4"/><rect x="295" y="660" width="24" height="14" rx="4"/>
+<rect x="416" y="660" width="24" height="14" rx="4"/><rect x="442" y="660" width="24" height="14" rx="4"/><rect x="468" y="660" width="24" height="14" rx="4"/><rect x="494" y="660" width="24" height="14" rx="4"/><rect x="520" y="660" width="24" height="14" rx="4"/>
+<rect x="642" y="660" width="24" height="14" rx="4"/><rect x="670" y="660" width="24" height="14" rx="4"/><rect x="698" y="660" width="24" height="14" rx="4"/><rect x="726" y="660" width="24" height="14" rx="4"/><rect x="754" y="660" width="24" height="14" rx="4"/>
+</g>
+
+<!-- teacher cap -->
+<g transform="translate(784,570)">
+<path d="M-7 1V7C-3 10 3 10 7 7V1L0 4Z" fill="#3B4552"/>
+<path d="M-13 -2L0 -8L13 -2L0 4Z" fill="#1B2430"/>
+<line x1="13" y1="-2" x2="13" y2="7" stroke="#E58A30" stroke-width="1.4"/>
+<circle cx="13" cy="8.5" r="1.8" fill="#E58A30"/>
+</g>
+
+<!-- the teacher's distribution is handed to both students -->
+<path d="M710 688V718H255V694" fill="none" stroke="#E58A30" stroke-width="1.8" stroke-dasharray="6 4" stroke-linecap="round" marker-end="url(#ao)"/>
+<path d="M480 718V694" fill="none" stroke="#E58A30" stroke-width="1.8" stroke-dasharray="6 4" stroke-linecap="round" marker-end="url(#ao)"/>
+<use href="#badge" x="595" y="718"/>
+<use href="#badge" x="365" y="718"/>
+</g>
+
+<!-- (c) original, moved down and right to sit beside (b) -->
+<g transform="translate(60,120)">
 <text class="pl" x="640" y="226">(c)</text>
 <rect x="640" y="250" width="232" height="156" rx="14" fill="#F5F8FC" stroke="#E1E8F1" stroke-width="1"/>
 <rect x="950" y="250" width="232" height="156" rx="14" fill="#F5F8FC" stroke="#E1E8F1" stroke-width="1"/>
@@ -98,39 +146,5 @@
 <text class="mt" x="1095" y="394" text-anchor="middle">e</text>
 <text class="mt" x="911" y="316" text-anchor="middle" style="font-size:16px">‖e‖ / ‖o‖</text>
 <path d="M884 332H938" fill="none" stroke="#4A5563" stroke-width="1.4" marker-end="url(#ag)"/>
-
-<!-- (d) -->
-<text class="pl" x="640" y="470">(d)</text>
-<rect x="713" y="484" width="14" height="14" rx="5" fill="url(#gB1)"/>
-<rect x="759" y="484" width="14" height="14" rx="5" fill="url(#gB2)"/>
-<rect x="805" y="484" width="14" height="14" rx="5" fill="url(#gB3)"/>
-<text class="mt" x="692" y="534" text-anchor="end" style="font-size:15px">W¹</text>
-<text class="mt" x="692" y="580" text-anchor="end" style="font-size:15px">W²</text>
-<text class="mt" x="692" y="626" text-anchor="end" style="font-size:15px">W³</text>
-<g stroke="#E1E5EA" stroke-width="1" fill="#F0F2F5">
-<rect x="746" y="508" width="40" height="40" rx="9"/><rect x="792" y="508" width="40" height="40" rx="9"/>
-<rect x="792" y="554" width="40" height="40" rx="9"/>
 </g>
-<rect x="700" y="508" width="40" height="40" rx="9" fill="url(#gB1)"/>
-<rect x="700" y="554" width="40" height="40" rx="9" fill="url(#gB1)"/><rect x="746" y="554" width="40" height="40" rx="9" fill="url(#gB2)"/>
-<rect x="700" y="600" width="40" height="40" rx="9" fill="url(#gB1)"/><rect x="746" y="600" width="40" height="40" rx="9" fill="url(#gB2)"/><rect x="792" y="600" width="40" height="40" rx="9" fill="url(#gB3)"/>
-<rect x="695" y="503" width="50" height="142" rx="14" fill="none" stroke="#E58A30" stroke-width="2"/>
-
-<!-- (e) -->
-<text class="pl" x="860" y="470">(e)</text>
-<circle cx="944" cy="466" r="6" fill="url(#gGr)" stroke="#B8C0CA" stroke-width="1"/><text class="sm" x="956" y="471">Standard</text>
-<circle cx="1044" cy="466" r="6" fill="url(#gB2)"/><text class="sm" x="1056" y="471">Nested</text>
-<rect x="872" y="530" width="38" height="118" rx="10" fill="url(#gGr)" stroke="#B8C0CA" stroke-width="1"/>
-<rect x="920" y="570" width="38" height="78" rx="10" fill="url(#gB2)"/>
-<rect x="1020" y="553" width="38" height="95" rx="10" fill="url(#gGr)" stroke="#B8C0CA" stroke-width="1"/>
-<rect x="1068" y="530" width="38" height="118" rx="10" fill="url(#gB2)"/>
-<rect x="850" y="641" width="300" height="14" fill="#fff"/>
-<g stroke="#9AA5B1" stroke-width="1"><line x1="860" y1="640" x2="970" y2="640"/><line x1="1008" y1="640" x2="1118" y2="640"/></g>
-<path d="M910 530H970M1058 553H1120" fill="none" stroke="#8A94A0" stroke-width="1" stroke-dasharray="3 3"/>
-<path d="M964 532V566" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
-<path d="M1114 551V534" fill="none" stroke="#4A5563" stroke-width="1.3" marker-end="url(#ag)"/>
-<text class="or" x="974" y="554">−36%</text>
-<text class="or" x="1122" y="548">+26%</text>
-<text class="sm" x="915" y="666" text-anchor="middle">Train FLOPs</text>
-<text class="sm" x="1063" y="666" text-anchor="middle">Tokens/s</text>
 </svg>
