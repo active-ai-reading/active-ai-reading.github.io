@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-week-1-in-one-page-three-models-one-matryoshka-suite",
+        },{id: "post-msar-explainer-video",
+        
+          title: "MSAR Explainer Video",
+        
+        description: "Video explainer for Multi-Stream Attention Residuals.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/extras-msar-explainer/";
+          
+        },
+      },{id: "post-week-1-in-one-page-three-models-one-matryoshka-suite",
         
           title: "Week 1 in one page: three models, one Matryoshka suite",
         
