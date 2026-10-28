@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/extras-msar-explainer/";
           
         },
+      },{id: "post-what-are-these-evals-anyway",
+        
+          title: "What are these evals anyway?",
+        
+        description: "We discuss evals in general, evals in the MSAR paper and the OpenCompass evaluation platforms",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/but-what-are-these-evals-anyway/";
+          
+        },
       },{id: "post-week-1-in-one-page-three-models-one-matryoshka-suite",
         
           title: "Week 1 in one page: three models, one Matryoshka suite",
