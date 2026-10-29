@@ -3,6 +3,7 @@ Configuration file: /home/runner/work/active-ai-reading.github.io/active-ai-read
        Destination: /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
+[33m          Skipping: _posts/2026-10-30-copyedit-multi-stream-attention-residuals.md has a future date[0m
 Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/js/bibsearch.js
 Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/js/calendar-setup.js
 Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/js/chartjs-setup.js
@@ -350,7 +351,7 @@ More info and automated migrator: https://sass-lang.com/d/import
     /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/css/main.scss 21:3                   root stylesheet
 WARNING: 41 repetitive deprecation warnings omitted.
 Run in verbose mode to see all warnings.
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261029-3502-xza981.ipynb to html
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261029-3515-8tps9t.ipynb to html
 /opt/hostedtoolcache/Python/3.13.17/x64/lib/python3.13/site-packages/nbconvert/filters/highlight.py:71: UserWarning: IPython3 lexer unavailable, falling back on Python 3
   return _pygments_highlight(
 [33m          Conflict: The following destination is shared by multiple files.[0m
