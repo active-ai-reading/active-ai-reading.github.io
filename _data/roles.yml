@@ -69,7 +69,7 @@
   summary: Read like a researcher, not like a student.
   tasks:
     - id: contact-authors
-      name: Contact the authors
+      name: Contact the authors (cancelled)
       prompt: Contact the authors with a question or a pointer, if it makes sense.
     - id: critique
       name: Critique
