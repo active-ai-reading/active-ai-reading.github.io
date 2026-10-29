@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-msar-explainer-video",
+        },{id: "post-critique-of-multi-stream-attention-residuals",
+        
+          title: "Critique of Multi-Stream Attention Residuals",
+        
+        description: "Is their technique really attention over residuals?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-multi-stream-attention-residuals-adam-gabet/";
+          
+        },
+      },{id: "post-msar-explainer-video",
         
           title: "MSAR Explainer Video",
         
