@@ -16,8 +16,4 @@ that try to make the student model surpass the teacher rather to simply imitate 
 (Hyeongju Ha, Jae-Joon Kim) this paper introduce a new way for speculative decoding for looped language models, that parallelizes token drafting and verification
 across different recurrence depths, significantly accelerating inference without requiring an additional draft model.
 
-Therefore:
 
-$$
-X\in\mathbb R^{4\times1024}
-$$
