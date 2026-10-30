@@ -45,9 +45,7 @@ But it also introduces a limitation. Every residual update is accumulated into t
 
 A later layer receives this combined representation, rather than separately maintaining all the contributions that created it.
 
-$$$$$
-The original [Hyper-Connections paper](https://arxiv.org/abs/2409.19606) also discusses a related tradeoff between gradient propagation and representation similarity across deep layers. Standard PreNorm residual connections provide a strong gradient path, but successive hidden representations may become increasingly similar, limiting the benefit of additional depth.
-$$$$$
+The original Hyper-Connections paper highlights a limitation of standard PreNorm residual connections. Although they help gradients flow through deep networks, they can also cause the hidden representations of consecutive layers to become very similar. As a result, adding more layers may contribute relatively little new information, reducing the benefit of making the model deeper.
 
 This motivates a natural question:
 
@@ -362,7 +360,7 @@ One stream has been amplified dramatically, while another has almost disappeared
 
 In actual HC models, the matrices are more complicated and can differ across layers and inputs. Nevertheless, the same underlying problem exists: **repeated multiplication by unconstrained matrices can cause signals and gradients to grow or shrink excessively.**
 
-In the [mHC paper](https://arxiv.org/abs/2512.24880), the authors report this kind of instability in large-scale HC training. Their experiments show loss and gradient-norm instabilities associated with strong amplification through the residual mixing path.
+n the mHC paper, the authors show that repeatedly mixing residual streams across many layers can excessively amplify information and gradients. Their experiments reveal sudden spikes in training loss and large fluctuations in gradient magnitude, suggesting that this amplification makes HC training unstable.
 
 So we face a tradeoff.
 
