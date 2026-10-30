@@ -15,3 +15,9 @@ that try to make the student model surpass the teacher rather to simply imitate 
 [WaveFront Decoding: Parallelized Self-Speculative Decoding for Looped Language Models]([url](https://arxiv.org/abs/2609.23033?utm_source=chatgpt.com))
 (Hyeongju Ha, Jae-Joon Kim) this paper introduce a new way for speculative decoding for looped language models, that parallelizes token drafting and verification
 across different recurrence depths, significantly accelerating inference without requiring an additional draft model.
+
+Therefore:
+
+$$
+X\in\mathbb R^{4\times1024}
+$$
