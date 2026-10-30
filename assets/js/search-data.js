@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-making-the-msar-methods-section-easier-to-follow",
+        },{id: "post-explaing-hc-and-mhc",
+        
+          title: "explaing HC and mHC",
+        
+        description: "Can Transformers Learn Better Residual Connections?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/teach-multi-stream-attention-residuals/";
+          
+        },
+      },{id: "post-making-the-msar-methods-section-easier-to-follow",
         
           title: "Making the MSAR methods section easier to follow",
         
