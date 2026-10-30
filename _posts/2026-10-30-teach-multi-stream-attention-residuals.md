@@ -45,7 +45,9 @@ But it also introduces a limitation. Every residual update is accumulated into t
 
 A later layer receives this combined representation, rather than separately maintaining all the contributions that created it.
 
+$$$$$
 The original [Hyper-Connections paper](https://arxiv.org/abs/2409.19606) also discusses a related tradeoff between gradient propagation and representation similarity across deep layers. Standard PreNorm residual connections provide a strong gradient path, but successive hidden representations may become increasingly similar, limiting the benefit of additional depth.
+$$$$$
 
 This motivates a natural question:
 
@@ -139,12 +141,6 @@ $$
 h=H^{\mathrm{pre}}X
 $$
 
-Checking dimensions:
-
-$$
-(1\times4)(4\times1024)=(1\times1024)
-$$
-
 The resulting vector is:
 
 $$
@@ -226,12 +222,6 @@ $$
 X_{\mathrm{mixed}}=H^{\mathrm{res}}X
 $$
 
-Checking dimensions:
-
-$$
-(4\times4)(4\times1024)=(4\times1024)
-$$
-
 Using the first coordinate of each stream, the mixed values are:
 
 $$
@@ -265,12 +255,6 @@ The write operation is:
 
 $$
 H^{\mathrm{post}}r
-$$
-
-Checking dimensions:
-
-$$
-(4\times1)(1\times1024)=(4\times1024)
 $$
 
 So the resulting update can be added to the four existing streams.
@@ -570,7 +554,7 @@ HC and mHC increase the capacity of the information carried forward through the 
 
 MSAR instead retains information about earlier computations and increases the flexibility of retrieving it.
 
-## References
+## further reading
 
 1. **Zhu, D., et al. (2024).** *Hyper-Connections.* arXiv:2409.19606. [https://arxiv.org/abs/2409.19606](https://arxiv.org/abs/2409.19606)
 
