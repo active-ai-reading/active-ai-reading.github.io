@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-multi-stream-attention-residuals",
+        },{id: "post-making-the-msar-methods-section-easier-to-follow",
+        
+          title: "Making the MSAR methods section easier to follow",
+        
+        description: "A table of operations and dimensions helps readers follow the architecture without losing track.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-multi-stream-attention-residuals/";
+          
+        },
+      },{id: "post-critique-of-multi-stream-attention-residuals",
         
           title: "Critique of Multi-Stream Attention Residuals",
         

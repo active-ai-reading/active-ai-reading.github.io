@@ -13,6 +13,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Making the MSAR methods section easier to follow](https://active-ai-reading.github.io/posts/2026/copyedit-multi-stream-attention-residuals/): A table of operations and dimensions helps readers follow the architecture without losing track. (Writing, on "Multi-Stream Attention Residuals", 2026-10-30)
 - [Critique of Multi-Stream Attention Residuals](https://active-ai-reading.github.io/posts/2026/critique-multi-stream-attention-residuals-adam-gabet/): Is their technique really attention over residuals? (Research skills, on "Multi-Stream Attention Residuals", 2026-10-29)
 - [MSAR Explainer Video](https://active-ai-reading.github.io/posts/2026/extras-msar-explainer/): Video explainer for Multi-Stream Attention Residuals. (Communicate to the world, on "Multi-Stream Attention Residuals", 2026-10-28)
 - [What are these evals anyway?](https://active-ai-reading.github.io/posts/2026/but-what-are-these-evals-anyway/): We discuss evals in general, evals in the MSAR paper and the OpenCompass evaluation platforms (Learning to learn, on "Multi-Stream Attention Residuals", 2026-10-28)
