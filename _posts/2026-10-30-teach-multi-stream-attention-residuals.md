@@ -443,9 +443,7 @@ $$
 \end{aligned}
 $$
 
-Notice what happened.
-
-Each new stream is a weighted average of the previous streams.
+we can see that Each new stream is a weighted average of the previous streams.
 
 More importantly, their combined value is preserved:
 
