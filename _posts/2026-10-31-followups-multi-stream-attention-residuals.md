@@ -16,11 +16,11 @@ by: [shaharOssy]
   Can we significantly reduce the memory access bottleneck of MSAR by deploying multi-stream retrieval ($m=4$) exclusively before Attention sublayers, while keeping standard single-stream residuals before MLP sublayers?
 
 * **The Experiment:**
-  1. Train a 10B MoE model using the architecture and Pile training budget described in Table 2 and Appendix A.
+  1. Train a 10B MoE model using the architecture and Pile training budget described in Table 2 and in Table 3 (Appendix A).
   2. Evaluate four configurations under identical training tokens and compute budgets:
      * **Full MSAR (Default):** $m=4$ streams applied to both Attention and MLP sublayers.
      * **Asymmetric MSAR:** $m=4$ streams prior to Attention sublayers; MLP sublayers bypass multi-stream expansion and the $\mathcal{H}^{Pre}$ mixer entirely, relying on standard single-stream residual connections.
-     * **Standard Baselines:** Vanilla residuals and Block AttnRes as reference baselines.
+     * **Standard Baselines:** Vanilla residuals and **Block AttnRes** as reference baselines.
   3. Measure the final pre-training loss on Pile, downstream benchmark scores, and wall-clock training throughput (tokens/sec) alongside memory I/O cost.
   4. Visualize the learned Pre-Attn depth-attention weights (replicating Figure 4) to verify that restricting MLP sublayers to a single stream does not degrade the cross-depth diversity of Attention sublayers.
 
