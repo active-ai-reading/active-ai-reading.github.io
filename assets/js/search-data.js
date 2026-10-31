@@ -113,6 +113,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/illustrated-speculative-decoder/";
           
         },
+      },{id: "post-dynamic-modification-at-inference-time",
+        
+          title: "Dynamic Modification at Inference Time",
+        
+        description: "One sentence on what you found.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-follow-ups-on-multi-stream-attention-residuals",
         
           title: "Follow-ups on Multi-Stream Attention Residuals",
