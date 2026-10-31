@@ -11,9 +11,9 @@ Who does what each week lives in {% include course/signup_link.liquid text="the 
 
 <div class="reading-status" id="reading-status" hidden>
   <div><span class="label">Read</span> <span data-slot="read"></span></div>
-  <div><span class="label">This week</span> <span data-slot="current"></span></div>
-  <div><span class="label">Next</span> <span data-slot="next"></span></div>
-  <div><span class="label">Planned after</span> <span data-slot="planned"></span></div>
+  <div><span class="label">Next class</span> <span data-slot="current"></span></div>
+  <div><span class="label">After that</span> <span data-slot="next"></span></div>
+  <div><span class="label">Planned later</span> <span data-slot="planned"></span></div>
 </div>
 
 The papers come from `_data/schedule.yml`, the only place to change them. The sign-up sheet's *Papers* tab reads the same list from [schedule.csv]({{ '/schedule.csv' | relative_url }}).
@@ -33,43 +33,51 @@ The papers come from `_data/schedule.yml`, the only place to change them. The si
 {% endfor %}
 
 <script>
-  // Highlight the current week (like the "now" line in a calendar), from course_start in _config.yml.
+  // Mark the next class (like the "now" line in a calendar), from course_start and class_day in _config.yml.
+  // A week counts as read once its class day has passed; the next class is the first one today or later.
   (function () {
     var start = new Date("{{ site.course_start | date: '%Y-%m-%d' }}T00:00:00");
     var first = {{ site.first_week_number | default: 0 }};
-    var now = new Date(), day = 24 * 3600 * 1000;
-    var current = first + Math.floor((now - start) / (7 * day));
+    var classDay = {{ site.class_day | default: 0 }};
+    var now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var days = Math.round((today - start) / (24 * 3600 * 1000));
+    var current = first + Math.max(0, Math.ceil((days - classDay) / 7));
     var weeks = document.querySelectorAll(".schedule-week[data-week]");
     var last = weeks.length ? +weeks[weeks.length - 1].dataset.week : first;
-    current = Math.max(first, Math.min(current, last));
+    current = Math.min(current, last);
     weeks.forEach(function (el) {
       var w = +el.dataset.week;
       if (w < current) el.classList.add("is-past");
       if (w === current) {
         el.classList.add("is-current");
         var head = el.querySelector(".week-head span");
-        if (head) head.insertAdjacentHTML("afterbegin", '<span class="now-badge">This week</span> ');
-        if (!location.hash) el.scrollIntoView({ block: "center" });
+        if (head) head.insertAdjacentHTML("afterbegin", '<span class="now-badge">Next class</span> ');
       }
     });
 
-    // The status box: read / this week / next / planned after, from the same weeks.
+    // The status box at the top: read / next class / after that / planned later.
     var box = document.getElementById("reading-status");
-    function link(el) {
-      if (!el.dataset.paperTitle) return null;
-      return '<a href="' + el.dataset.paperUrl + '">' + el.dataset.paperTitle + "</a> (week " + el.dataset.week + ")";
-    }
     var slots = { read: [], current: [], next: [], planned: [] };
     weeks.forEach(function (el) {
-      var w = +el.dataset.week, a = link(el);
-      if (!a) return;
-      if (w < current) slots.read.push(a);
-      else if (w === current) slots.current.push(a);
-      else if (w === current + 1) slots.next.push(a);
-      else slots.planned.push(a);
+      if (!el.dataset.paperTitle) return;
+      var w = +el.dataset.week;
+      var slot = w < current ? "read" : w === current ? "current" : w === current + 1 ? "next" : "planned";
+      slots[slot].push(el);
     });
     Object.keys(slots).forEach(function (k) {
-      box.querySelector('[data-slot="' + k + '"]').innerHTML = slots[k].join(" · ") || '<span class="muted">not chosen yet</span>';
+      var target = box.querySelector('[data-slot="' + k + '"]');
+      if (!slots[k].length) {
+        target.innerHTML = '<span class="muted">not chosen yet</span>';
+        return;
+      }
+      slots[k].forEach(function (el, i) {
+        if (i) target.appendChild(document.createTextNode(" · "));
+        var a = document.createElement("a");
+        a.href = el.dataset.paperUrl;
+        a.textContent = el.dataset.paperTitle;
+        target.appendChild(a);
+        target.appendChild(document.createTextNode(" (week " + el.dataset.week + ")"));
+      });
     });
     box.hidden = false;
   })();
