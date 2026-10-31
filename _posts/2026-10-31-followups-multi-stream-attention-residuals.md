@@ -4,7 +4,7 @@ description: "Cutting memory bandwidth overhead via asymmetric residual stream a
 paper: multi-stream-attention-residuals
 role: research
 task: followups
-by: shaharOssy
+by: [shaharOssy]
 ---
 
 <!-- FOLLOW-UPS -->
