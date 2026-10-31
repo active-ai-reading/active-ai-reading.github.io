@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-multi-stream-attention-residuals/";
           
         },
+      },{id: "post-trending-papers-mechanist-and-thinking-inertia",
+        
+          title: "Trending papers: Mechanist and Thinking Inertia",
+        
+        description: "Two papers on automated mechanistic interpretability and control of visible reasoning.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-mechanist-thinking-inertia-yakovafgin/";
+          
+        },
       },{id: "post-rewriting-the-abstract-of-multi-stream-attention-residuals",
         
           title: "Rewriting the abstract of Multi-Stream Attention Residuals",
