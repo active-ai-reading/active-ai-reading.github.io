@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /schedule.csv
+sitemap: false
+---
+{%- comment -%}
+  The schedule as CSV, built from _data/schedule.yml and _papers/. The sign-up Google Sheet
+  reads it (its "Papers" tab: =IMPORTDATA("https://active-ai-reading.github.io/schedule.csv")),
+  so the papers are only ever edited in _data/schedule.yml. Keep the column order: the sheet's
+  formulas refer to the columns by position.
+{%- endcomment -%}
+week,date,paper_id,title,page,arxiv,topic,notes
+{% for w in site.data.schedule -%}
+{%- assign paper = site.papers | where: 'slug', w.paper | first -%}
+{%- capture paper_title -%}{% if paper %}{{ paper.title }}{% endif %}{%- endcapture -%}
+{%- capture page_url -%}{% if paper %}{{ paper.url | absolute_url }}{% endif %}{%- endcapture -%}
+{%- capture arxiv -%}{% if paper.arxiv %}https://arxiv.org/abs/{{ paper.arxiv }}{% endif %}{%- endcapture -%}
+{{ w.week }},"{{ w.date | replace: '"', '""' }}","{{ w.paper }}","{{ paper_title | strip | replace: '"', '""' }}","{{ page_url }}","{{ arxiv }}","{{ w.topic | replace: '"', '""' }}","{{ w.notes | replace: '"', '""' }}"
+{% endfor -%}

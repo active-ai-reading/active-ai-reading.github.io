@@ -592,6 +592,20 @@ body {
 .schedule-week.is-past {
   opacity: 0.6;
 }
+// The read / this week / next / planned box at the top of the schedule page.
+.reading-status {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1rem 0;
+  padding: 0.8rem 1.1rem;
+  border-left: 3px solid #1a73e8;
+  background: color-mix(in srgb, #1a73e8 6%, transparent);
+  .label {
+    display: inline-block;
+    min-width: 7.5rem;
+    font-weight: 700;
+  }
+}
 .now-badge {
   display: inline-block;
   padding: 0.05em 0.6em;
