@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-explaing-hc-and-mhc",
+        },{id: "post-critique-of-of-multi-stream-attention-residuals",
+        
+          title: "Critique of of Multi-Stream Attention Residuals",
+        
+        description: "An interesting and efficient architecture with strong results, but its individual contributions could be better isolated.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-multi-stream-attention-residuals-odedorenstein/";
+          
+        },
+      },{id: "post-explaing-hc-and-mhc",
         
           title: "explaing HC and mHC",
         
