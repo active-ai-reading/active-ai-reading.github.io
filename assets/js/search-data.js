@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-2-multi-stream-attention-the-authors-path/";
           
         },
+      },{id: "post-rewriting-the-abstract-of-multi-stream-attention-residuals",
+        
+          title: "Rewriting the abstract of Multi-Stream Attention Residuals",
+        
+        description: "MSAR&#39;s most compelling result, reaching the same training loss with substantially less compute, is buried at the end of the abstract. Here is a version that puts it first.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/rewrite_abstract-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-a-token-pov-through-msar",
         
           title: "A token pov through MSAR",
