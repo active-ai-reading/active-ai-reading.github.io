@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-2-multi-stream-attention-the-authors-path/";
           
         },
+      },{id: "post-a-token-pov-through-msar",
+        
+          title: "A token pov through MSAR",
+        
+        description: "Visualising the MSAR architecure from a token focuse prespective, emphasizing the convulution across the sequence dimension.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-the-illustrated-speculative-decoder",
         
           title: "The Illustrated Speculative Decoder",
