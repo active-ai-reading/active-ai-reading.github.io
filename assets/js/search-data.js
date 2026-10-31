@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/illustrated-speculative-decoder/";
           
         },
+      },{id: "post-follow-ups-on-multi-stream-attention-residuals",
+        
+          title: "Follow-ups on Multi-Stream Attention Residuals",
+        
+        description: "Cutting memory bandwidth overhead via asymmetric residual stream allocation between Attention and MLP sublayers.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/followups-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-critique-of-of-multi-stream-attention-residuals",
         
           title: "Critique of of Multi-Stream Attention Residuals",
