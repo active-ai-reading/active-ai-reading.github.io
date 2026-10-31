@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-multi-stream-attention-residuals-odedorenstein/";
           
         },
+      },{id: "post-critique-of-multi-stream-attention-residuals-quot",
+        
+          title: "Critique of Multi-Stream Attention Residuals -&quot;",
+        
+        description: "One sentence summary of your take.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-multi-stream-attention-residuals-gilk717/";
+          
+        },
       },{id: "post-key-points-of-multi-stream-attention",
         
           title: "Key points of Multi Stream Attention",
