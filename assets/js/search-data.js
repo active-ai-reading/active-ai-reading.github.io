@@ -124,6 +124,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-multi-stream-attention-residuals-gilk717/";
           
         },
+      },{id: "post-rewriting-the-abstract-of-multi-stream-attention-residuals",
+        
+          title: "Rewriting the abstract of Multi-Stream Attention Residuals",
+        
+        description: "A new approach to Transformer residual connections that improves performance while reducing the computational cost of deep learning.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-key-points-of-multi-stream-attention",
         
           title: "Key points of Multi Stream Attention",
