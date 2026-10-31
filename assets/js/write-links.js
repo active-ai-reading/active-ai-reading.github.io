@@ -6,10 +6,10 @@
 (function () {
   const cfg = window.AAR_WRITE;
   if (!cfg) return;
-  // A week's class day: course_start (the Sunday of week first_week_number) plus 7 days a week plus class_day.
+  // A meeting's date (YYYY-MM-DD), computed by the site from _config.yml (see _includes/course/class_date.liquid).
   function classDate(week) {
-    const [y, m, d] = cfg.courseStart.split("-").map(Number);
-    return new Date(y, m - 1, d + 7 * (week - (cfg.firstWeek || 0)) + (cfg.classDay || 0));
+    const [y, m, d] = (cfg.dates[week] || "9999-12-31").split("-").map(Number);
+    return new Date(y, m - 1, d);
   }
 
   // The upcoming meeting's paper: the first week whose class day is today or later

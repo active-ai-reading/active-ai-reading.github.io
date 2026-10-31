@@ -37,7 +37,7 @@ What one week learns, the next week inherits.
 | Add a reference | `_bibliography/references.bib` |
 | Images | `assets/img/posts/<post-name>/` |
 | Change the look | `_sass/_course.scss`, `_sass/_variables.scss`, `_layouts/`, `_includes/course/` |
-| Site title, menu, settings, semester start (`course_start`) and class day | `_config.yml` |
+| Site title, menu, settings, first class (`course_start`) and Sundays without class (`no_class`) | `_config.yml` |
 | See every theme feature | `_showcase/` (rendered at [/showcase/](https://active-ai-reading.github.io/showcase/)) |
 
 Editing options: the github.com web editor (press <kbd>.</kbd> on the repo page), a **Codespace** (Code → Codespaces → Create; it opens with a live site preview), or locally with `docker compose up` → http://localhost:8080.

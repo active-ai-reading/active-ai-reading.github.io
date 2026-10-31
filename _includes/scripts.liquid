@@ -333,6 +333,6 @@
 
 <!-- One-click "Write" links (see _includes/course/write_link.liquid) -->
 <script>
-  window.AAR_WRITE = { repo: {{ site.github_repo | jsonify }}, schedule: {{ site.data.schedule | jsonify }}, courseStart: {{ site.course_start | date: '%Y-%m-%d' | jsonify }}, firstWeek: {{ site.first_week_number | default: 0 }}, classDay: {{ site.class_day | default: 0 }} };
+  window.AAR_WRITE = { repo: {{ site.github_repo | jsonify }}, schedule: {{ site.data.schedule | jsonify }}, dates: { {%- for w in site.data.schedule -%}{%- capture ts %}{% include course/class_date.liquid week=w.week %}{% endcapture -%}"{{ w.week }}": "{{ ts | date: '%Y-%m-%d' }}"{% unless forloop.last %}, {% endunless %}{%- endfor -%} } };
 </script>
 <script defer src="{{ '/assets/js/write-links.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

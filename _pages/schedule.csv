@@ -5,17 +5,17 @@ sitemap: false
 ---
 {%- comment -%}
   The schedule as CSV, built from _data/schedule.yml and _papers/. The sign-up Google Sheet
-  reads it (its "Papers" tab: =IMPORTDATA("https://active-ai-reading.github.io/schedule.csv")),
-  so the papers are only ever edited in _data/schedule.yml. Keep the column order: the sheet's
-  formulas refer to the columns by position. Both dates come from course_start in _config.yml:
-  week_start is the week's Sunday, class_date adds class_day. The sheet takes its calendar from
-  week_start and marks a paper as read once its class_date has passed.
+  imports it (its "Papers" tab), so the papers are only ever edited in _data/schedule.yml.
+  date is the meeting's Sunday (see _includes/course/class_date.liquid); the sheet takes its
+  calendar from it and marks a paper as read once that day has passed. Keep the column order:
+  the sheet's formulas refer to the columns by position.
 {%- endcomment -%}
-week,week_start,paper_id,title,page,arxiv,topic,notes,class_date
+week,date,paper_id,title,page,arxiv,topic,notes
 {% for w in site.data.schedule -%}
 {%- assign paper = site.papers | where: 'slug', w.paper | first -%}
+{%- capture ts %}{% include course/class_date.liquid week=w.week %}{% endcapture -%}
 {%- capture paper_title -%}{% if paper %}{{ paper.title }}{% endif %}{%- endcapture -%}
 {%- capture page_url -%}{% if paper %}{{ paper.url | absolute_url }}{% endif %}{%- endcapture -%}
 {%- capture arxiv -%}{% if paper.arxiv %}https://arxiv.org/abs/{{ paper.arxiv }}{% endif %}{%- endcapture -%}
-{{ w.week }},{% include course/week_date.liquid week=w.week format="%Y-%m-%d" %},"{{ w.paper }}","{{ paper_title | strip | replace: '"', '""' }}","{{ page_url }}","{{ arxiv }}","{{ w.topic | replace: '"', '""' }}","{{ w.notes | replace: '"', '""' }}",{% include course/week_date.liquid week=w.week class=true format="%Y-%m-%d" %}
+{{ w.week }},{{ ts | date: "%Y-%m-%d" }},"{{ w.paper }}","{{ paper_title | strip | replace: '"', '""' }}","{{ page_url }}","{{ arxiv }}","{{ w.topic | replace: '"', '""' }}","{{ w.notes | replace: '"', '""' }}"
 {% endfor -%}

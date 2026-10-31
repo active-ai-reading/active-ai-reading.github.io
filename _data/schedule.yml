@@ -1,14 +1,14 @@
 # ---------------------------------------------------------------------------
-# The schedule. One entry per class meeting. Weeks are counted from 0 (the first class is week 0).
-# The site marks the upcoming meeting from course_start and class_day in _config.yml.
+# The schedule. One entry per class meeting, counted from 0 (the first class is week 0).
 #   paper: the id of a file in _papers/ (its filename without .md), or leave it out until chosen.
 #   topic: optional; shown under the paper title, or instead of it while there is no paper.
-#   notes: optional; e.g. a holiday that week.
-# Dates are not typed here: each week's date is worked out from course_start (and class_day) in
-# _config.yml. Calendar: Weizmann School of Science calendar 2026-27, Semester 1 courses 18 Oct 2026 - 14 Jan 2027
-# (https://www.weizmann.ac.il/wsos/academics/academic-calendar/academic-calendar-2026-2027). Exams from 17 Jan.
-# This file is the only place the papers are set. The site builds /schedule.csv from it, and the sign-up
-# sheet's "Papers" tab imports that CSV, so read / upcoming meeting / after that / planned show up in both on their own.
+#   notes: optional.
+# This file is the only place the papers are set. Dates are not typed here: the class meets on
+# Sundays from course_start, skipping the no_class dates (both in _config.yml). Calendar: Weizmann
+# School of Science 2026-27, Semester 1 courses 18 Oct 2026 - 14 Jan 2027, no class Sun 6 Dec (Hanukkah)
+# (https://www.weizmann.ac.il/wsos/academics/academic-calendar/academic-calendar-2026-2027).
+# The site builds /schedule.csv from this file and the sign-up sheet's "Papers" tab imports it, so
+# read / upcoming meeting / after that / planned show up in both on their own.
 # Who does what each week is NOT here: it lives in the shared sign-up Google Sheet (signup_sheet in _config.yml).
 # ---------------------------------------------------------------------------
 
@@ -34,16 +34,12 @@
 - week: 6
 
 - week: 7
-  notes: "No classes on Sun 6 Dec (Hanukkah)."
 
 - week: 8
 
 - week: 9
-  notes: "No classes on Fri 25 Dec (Christmas)."
-
-- week: 10
   notes: "Free choice from this week: repeat any role you like."
 
-- week: 11
+- week: 10
 
-- week: 12
+- week: 11
