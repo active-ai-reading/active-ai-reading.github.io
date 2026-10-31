@@ -13,6 +13,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [The Illustrated Speculative Decoder](https://active-ai-reading.github.io/posts/2026/illustrated-speculative-decoder/): Speculative decoding in four pictures. (, on "Matryoshka Language Model Suites", 2026-10-31)
 - [Critique of of Multi-Stream Attention Residuals](https://active-ai-reading.github.io/posts/2026/critique-multi-stream-attention-residuals-odedorenstein/): An interesting and efficient architecture with strong results, but its individual contributions could be better isolated. (Research skills, on "Multi-Stream Attention Residuals", 2026-10-31)
 - [Key points of Multi Stream Attention](https://active-ai-reading.github.io/posts/2026/Key-points-week2/): They had a point, I'm sure it's buried in here somewhere. (Writing, on "Multi-Stream Attention Residuals", 2026-10-31)
 - [explaing HC and mHC](https://active-ai-reading.github.io/posts/2026/teach-multi-stream-attention-residuals/): Can Transformers Learn Better Residual Connections? (Learning to learn, on "Multi-Stream Attention Residuals", 2026-10-30)

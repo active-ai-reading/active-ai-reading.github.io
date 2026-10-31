@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-of-multi-stream-attention-residuals",
+        },{id: "post-the-illustrated-speculative-decoder",
+        
+          title: "The Illustrated Speculative Decoder",
+        
+        description: "Speculative decoding in four pictures.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/illustrated-speculative-decoder/";
+          
+        },
+      },{id: "post-critique-of-of-multi-stream-attention-residuals",
         
           title: "Critique of of Multi-Stream Attention Residuals",
         
