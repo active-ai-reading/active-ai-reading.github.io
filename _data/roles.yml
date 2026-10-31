@@ -2,7 +2,10 @@
 # Roles and tasks.
 # This file drives the Roles page, the colored badges on every post, and the
 # grouping on each paper's page. The roles and tasks are set by the course
-# staff (they must match the sign-up sheet's Rules tab); suggest changes in class.
+# staff; suggest changes in class.
+# sheet: the task's exact label in the sign-up sheet's dropdown (Rules tab, column C). Change a task here
+# first; the Rules tab's "On the site?" column then flags the row to update there. Leave it out for a
+# task nobody signs up for (e.g. a cancelled one).
 # A post refers to a role by its `id` and to a task by its `id`.
 # Colors: any CSS color. Icons: any emoji.
 # ---------------------------------------------------------------------------
@@ -15,12 +18,15 @@
   tasks:
     - id: abstract
       name: Rewrite the abstract (or title)
+      sheet: "Writing: Rewrite abstract/title"
       prompt: Rewrite the abstract, or the title if that is what needs improving. Show before and after and say what you changed and why.
     - id: copyedit
       name: Copyedit a section
+      sheet: "Writing: Copyedit a section"
       prompt: Copyedit the biggest part you can. Could the overall story improve? The structure? If not, what can be cut or phrased better? Give a before and after, and the general rule you applied.
     - id: key-points
       name: The points that matter
+      sheet: "Writing: The points that matter"
       prompt: What are the most important points for most readers, and how could the paper convey or emphasize them better?
 
 - id: learning
@@ -31,6 +37,7 @@
   tasks:
     - id: teach
       name: Teach us something new
+      sheet: "Learning: Teach something new"
       prompt: Teach us something new, on writing, on the topic, or on something else entirely.
 
 - id: visualization
@@ -41,9 +48,11 @@
   tasks:
     - id: redo-graph
       name: Redo a graph, better
+      sheet: "Visualization: Redo a graph"
       prompt: Redo one of the paper's graphs, but better. In class we compare versions (and if several people did it, theirs too).
     - id: key-visual
       name: Visualize the core idea
+      sheet: "Visualization: Visualize the core idea"
       prompt: Create a visualization of the most important part of the paper.
 
 - id: communication
@@ -54,12 +63,15 @@
   tasks:
     - id: social
       name: Social media posts
+      sheet: "Communication: Social posts"
       prompt: Write a post for X, Bluesky, Mastodon and LinkedIn. Each platform has a different audience and length.
     - id: compile
       name: Compile the blog
+      sheet: "Communication: Compile the blog"
       prompt: Compile the week's outputs into one readable post that links to everyone's work.
     - id: extras
       name: Extras (video, poster, other platforms...)
+      sheet: "Communication: Extras (video, poster, other platforms...)"
       prompt: More communication practice, your way. A short video, a poster, a thread in another language, a press-style summary, another platform, or helping the others.
 
 - id: research
@@ -73,15 +85,19 @@
       prompt: Contact the authors with a question or a pointer, if it makes sense.
     - id: critique
       name: Critique
+      sheet: "Research: Critique"
       prompt: Strengths and weaknesses, and how the paper could have been improved. Decide if it is worth publishing, and worth pursuing.
     - id: literature
       name: Literature review
+      sheet: "Research: Literature review"
       prompt: Which papers is this one built on? Which fields and concepts does it relate to most?
     - id: authors
       name: The authors' path
+      sheet: "Research: The authors' path"
       prompt: Describe the prominent authors (usually first and last) and how this paper fits into their larger research. Stick to public, professional information.
     - id: followups
       name: Follow-ups worth doing
+      sheet: "Research: Follow-ups worth doing"
       prompt: Exercise academic taste. Suggest follow-ups that are worth doing, and say why.
 
 - id: coding
@@ -92,6 +108,7 @@
   tasks:
     - id: reimplement
       name: Reimplement an experiment or graph
+      sheet: "Coding: Reimplement"
       prompt: Reimplement an experiment, a metric, or a graph from the paper.
 
 - id: scouting
@@ -102,9 +119,11 @@
   tasks:
     - id: trending
       name: Trending papers
+      sheet: "Scouting: Trending papers"
       prompt: Go over trending papers and find at least two of interest to the group. Summarize each in one sentence.
     - id: hidden-gems
       name: Recent papers nobody is talking about
+      sheet: "Scouting: Recent, not trending"
       prompt: Go over recent papers and find at least two of interest to the group that are not trending (or that you would not have found because they are). Summarize each in one sentence.
 
 - id: chill
@@ -115,4 +134,5 @@
   tasks:
     - id: chill
       name: Chill, dude
+      sheet: "Chill"
       prompt: Read the paper, come to class, ask good questions.

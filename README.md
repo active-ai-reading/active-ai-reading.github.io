@@ -33,11 +33,11 @@ What one week learns, the next week inherits.
 | The weeks and their papers (read / upcoming meeting / after that / planned) | `_data/schedule.yml` only: the schedule page and the sign-up sheet's *Papers* tab both read it |
 | Role guides | `_guides/<role>.md` |
 | Handoff notes | `handoffs/week-NN/<github-username>-<role>.md` |
-| Add, rename or change roles and tasks | `_data/roles.yml` |
+| Add, rename or change roles and tasks | `_data/roles.yml` first, then the matching row in the sheet's *Rules* tab (its *On the site?* column shows which) |
 | Add a reference | `_bibliography/references.bib` |
 | Images | `assets/img/posts/<post-name>/` |
 | Change the look | `_sass/_course.scss`, `_sass/_variables.scss`, `_layouts/`, `_includes/course/` |
-| Site title, menu, settings | `_config.yml` |
+| Site title, menu, settings, semester start (`course_start`) and class day | `_config.yml` |
 | See every theme feature | `_showcase/` (rendered at [/showcase/](https://active-ai-reading.github.io/showcase/)) |
 
 Editing options: the github.com web editor (press <kbd>.</kbd> on the repo page), a **Codespace** (Code → Codespaces → Create; it opens with a live site preview), or locally with `docker compose up` → http://localhost:8080.

@@ -6,11 +6,10 @@
 (function () {
   const cfg = window.AAR_WRITE;
   if (!cfg) return;
-  const MONTHS = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
-
-  function weekStart(text) {
-    const m = /(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{4})/.exec(text || "");
-    return m ? new Date(+m[3], MONTHS[m[2].toLowerCase()], +m[1]) : null;
+  // A week's class day: course_start (the Sunday of week first_week_number) plus 7 days a week plus class_day.
+  function classDate(week) {
+    const [y, m, d] = cfg.courseStart.split("-").map(Number);
+    return new Date(y, m - 1, d + 7 * (week - (cfg.firstWeek || 0)) + (cfg.classDay || 0));
   }
 
   // The upcoming meeting's paper: the first week whose class day is today or later
@@ -22,10 +21,7 @@
     for (const w of cfg.schedule) {
       if (!w.paper) continue;
       pick = w.paper;
-      const start = weekStart(w.date);
-      if (!start) continue;
-      const classDate = new Date(start.getFullYear(), start.getMonth(), start.getDate() + (cfg.classDay || 0));
-      if (classDate >= today) return w.paper;
+      if (classDate(w.week) >= today) return w.paper;
     }
     return pick || "paper-id";
   }

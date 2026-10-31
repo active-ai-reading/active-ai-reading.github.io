@@ -1,0 +1,11 @@
+{%- comment -%}
+  The date of a week, worked out from course_start in _config.yml, so no date is ever typed by hand.
+  Usage: {% include course/week_date.liquid week=3 %}               -> 8 Nov 2026 (the week's Sunday)
+         {% include course/week_date.liquid week=3 class=true format="%Y-%m-%d" %}  -> the class day
+{%- endcomment -%}
+{%- assign days = include.week | minus: site.first_week_number | times: 7 -%}
+{%- if include.class -%}{%- assign days = days | plus: site.class_day -%}{%- endif -%}
+{%- assign ts = site.course_start | date: "%s" | plus: 43200 -%}
+{%- assign ts = days | times: 86400 | plus: ts -%}
+{%- assign format = include.format | default: "%-d %b %Y" -%}
+{{- ts | date: format -}}

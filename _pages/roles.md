@@ -22,6 +22,7 @@ To take a task, sign up in {% include course/signup_link.liquid %} (one row per 
     <div class="task">
       <div><span class="task-name">{{ t.name }}</span> {% include course/write_link.liquid role=r.id task=t.id text="Write" %}</div>
       <div>{{ t.prompt }}</div>
+      {% if t.sheet %}<div class="muted">In the sign-up sheet: <em>{{ t.sheet }}</em></div>{% endif %}
     </div>
   {% endfor %}
 </section>

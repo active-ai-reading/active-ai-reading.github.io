@@ -23,8 +23,8 @@ The papers come from `_data/schedule.yml`, the only place to change them. The si
 
 <div class="schedule-week" data-week="{{ w.week }}"{% if paper %} data-paper-title="{{ paper.short | default: paper.title | escape }}" data-paper-url="{{ paper.url | relative_url }}"{% endif %}>
   <div class="week-head">
-    <span>Week {{ w.week }}: {% if paper %}<a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>{% else %}{{ w.topic }}{% endif %}</span>
-    <span class="week-date">{{ w.date }}</span>
+    <span>Week {{ w.week }}: {% if paper %}<a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>{% else %}{{ w.topic | default: "To be decided" }}{% endif %}</span>
+    <span class="week-date">Week of {% include course/week_date.liquid week=w.week %}</span>
   </div>
   {% if paper and w.topic %}<div class="muted">{{ w.topic }}</div>{% endif %}
   {% if w.notes %}<div>{{ w.notes }}</div>{% endif %}

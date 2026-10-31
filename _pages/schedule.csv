@@ -7,17 +7,15 @@ sitemap: false
   The schedule as CSV, built from _data/schedule.yml and _papers/. The sign-up Google Sheet
   reads it (its "Papers" tab: =IMPORTDATA("https://active-ai-reading.github.io/schedule.csv")),
   so the papers are only ever edited in _data/schedule.yml. Keep the column order: the sheet's
-  formulas refer to the columns by position. class_date is the week's Sunday (course_start) plus
-  class_day from _config.yml; the sheet marks a paper as read once that date has passed.
+  formulas refer to the columns by position. Both dates come from course_start in _config.yml:
+  week_start is the week's Sunday, class_date adds class_day. The sheet takes its calendar from
+  week_start and marks a paper as read once its class_date has passed.
 {%- endcomment -%}
-week,date,paper_id,title,page,arxiv,topic,notes,class_date
+week,week_start,paper_id,title,page,arxiv,topic,notes,class_date
 {% for w in site.data.schedule -%}
 {%- assign paper = site.papers | where: 'slug', w.paper | first -%}
 {%- capture paper_title -%}{% if paper %}{{ paper.title }}{% endif %}{%- endcapture -%}
 {%- capture page_url -%}{% if paper %}{{ paper.url | absolute_url }}{% endif %}{%- endcapture -%}
-{%- assign class_ts = site.course_start | date: "%s" | plus: 0 | plus: 43200 -%}
-{%- assign offset_days = w.week | minus: site.first_week_number | times: 7 | plus: site.class_day -%}
-{%- assign class_ts = offset_days | times: 86400 | plus: class_ts -%}
 {%- capture arxiv -%}{% if paper.arxiv %}https://arxiv.org/abs/{{ paper.arxiv }}{% endif %}{%- endcapture -%}
-{{ w.week }},"{{ w.date | replace: '"', '""' }}","{{ w.paper }}","{{ paper_title | strip | replace: '"', '""' }}","{{ page_url }}","{{ arxiv }}","{{ w.topic | replace: '"', '""' }}","{{ w.notes | replace: '"', '""' }}",{{ class_ts | date: "%Y-%m-%d" }}
+{{ w.week }},{% include course/week_date.liquid week=w.week format="%Y-%m-%d" %},"{{ w.paper }}","{{ paper_title | strip | replace: '"', '""' }}","{{ page_url }}","{{ arxiv }}","{{ w.topic | replace: '"', '""' }}","{{ w.notes | replace: '"', '""' }}",{% include course/week_date.liquid week=w.week class=true format="%Y-%m-%d" %}
 {% endfor -%}
