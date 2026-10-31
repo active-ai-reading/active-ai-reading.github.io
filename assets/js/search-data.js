@@ -913,6 +913,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shniki/";
+            },},{id: "people-yakov-levi-afgin",
+          title: 'Yakov Levi Afgin',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/yakovafgin/";
             },},{id: "showcase-a-post-with-formatting-and-links",
           title: 'a post with formatting and links',
           description: "march &amp; april, looking forward to summer",
