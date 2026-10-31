@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-the-illustrated-speculative-decoder",
+        },{id: "post-multi-stream-attention-residuals-the-author-39-s-path",
+        
+          title: "Multi-Stream Attention Residuals, The Author&#39;s Path.",
+        
+        description: "What you need to know about the authors&#39;s background.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week-2-multi-stream-attention-the-authors-path/";
+          
+        },
+      },{id: "post-the-illustrated-speculative-decoder",
         
           title: "The Illustrated Speculative Decoder",
         
