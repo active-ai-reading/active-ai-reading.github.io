@@ -12,7 +12,7 @@ by: ItamarFruchter
 Using technical jargon might make your abstract shorter - but it'll take twice as long to read.
 Start the paper (abstract, intro) giving the readers some context on the problem you are trying to solve and on what is the state of solutions today, and **USE VISUALIZATIONS**.
 
-{% include figure.liquid path="assets/img/papers/multi-stream-attention/XKCD_average_familitarity.png" class="img-fluid rounded z-depth-1" caption="Relevant XKCD: <a href='https://xkcd.com/2501/'>xkcd #2501, Average Familiarity</a> by Randall Munroe (CC BY-NC 2.5)." %}
+{% include figure.liquid path="assets/img/papers/multi-stream-attention/XKCD_average_familiarity.png" class="img-fluid rounded z-depth-1" caption="Relevant XKCD: <a href='https://xkcd.com/2501/'>xkcd #2501, Average Familiarity</a> by Randall Munroe (CC BY-NC 2.5)." %}
 
 Reading the abstract, a reader with no sufficient context on the innovations in the field (like myself) will be lost quickly (after being attacked by "content-dependent retrieval" and "single-stream softmax attention" in the first sentence, and the first architecture figure in page 7).
 
