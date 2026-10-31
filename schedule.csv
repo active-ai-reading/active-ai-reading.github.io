@@ -1,14 +1,14 @@
-week,date,paper_id,title,page,arxiv,topic,notes,class_date
-0,"Week of 18 Oct 2026","cross-lingual-knowledge-pretraining","Why Pretraining Fails to Share Cross-Lingual Knowledge","https://active-ai-reading.github.io/papers/cross-lingual-knowledge-pretraining/","https://arxiv.org/abs/2609.19291","About the course, expectations, and a fast first read","We read this one together in class. The example posts show what each task can look like.",2026-10-18
-1,"Week of 25 Oct 2026","matryoshka-lm-suites","Matryoshka Language Model Suites","https://active-ai-reading.github.io/papers/matryoshka-lm-suites/","https://arxiv.org/abs/2608.09703","Matryoshka Language Model Suites","",2026-10-25
-2,"Week of 1 Nov 2026","multi-stream-attention-residuals","Multi-Stream Attention Residuals","https://active-ai-reading.github.io/papers/multi-stream-attention-residuals/","https://arxiv.org/abs/2610.13630","Multi-Stream Attention Residuals","",2026-11-01
-3,"Week of 8 Nov 2026","recurrent-depth-latent-reasoning","Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach","https://active-ai-reading.github.io/papers/recurrent-depth-latent-reasoning/","https://arxiv.org/abs/2502.05171","Recurrent-depth latent reasoning (tentative)","",2026-11-08
-4,"Week of 15 Nov 2026","","","","","To be decided","",2026-11-15
-5,"Week of 22 Nov 2026","","","","","To be decided","",2026-11-22
-6,"Week of 29 Nov 2026","","","","","To be decided","",2026-11-29
-7,"Week of 6 Dec 2026","","","","","To be decided","No classes on Sun 6 Dec (Hanukkah).",2026-12-06
-8,"Week of 13 Dec 2026","","","","","To be decided","",2026-12-13
-9,"Week of 20 Dec 2026","","","","","To be decided","No classes on Fri 25 Dec (Christmas).",2026-12-20
-10,"Week of 27 Dec 2026","","","","","To be decided","Free choice from this week: repeat any role you like.",2026-12-27
-11,"Week of 3 Jan 2027","","","","","To be decided","",2027-01-03
-12,"Week of 10 Jan 2027","","","","","To be decided","",2027-01-10
+week,week_start,paper_id,title,page,arxiv,topic,notes,class_date
+0,2026-10-18,"cross-lingual-knowledge-pretraining","Why Pretraining Fails to Share Cross-Lingual Knowledge","https://active-ai-reading.github.io/papers/cross-lingual-knowledge-pretraining/","https://arxiv.org/abs/2609.19291","About the course, expectations, and a fast first read","We read this one together in class. The example posts show what each task can look like.",2026-10-18
+1,2026-10-25,"matryoshka-lm-suites","Matryoshka Language Model Suites","https://active-ai-reading.github.io/papers/matryoshka-lm-suites/","https://arxiv.org/abs/2608.09703","","",2026-10-25
+2,2026-11-01,"multi-stream-attention-residuals","Multi-Stream Attention Residuals","https://active-ai-reading.github.io/papers/multi-stream-attention-residuals/","https://arxiv.org/abs/2610.13630","","",2026-11-01
+3,2026-11-08,"recurrent-depth-latent-reasoning","Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach","https://active-ai-reading.github.io/papers/recurrent-depth-latent-reasoning/","https://arxiv.org/abs/2502.05171","Recurrent-depth latent reasoning (tentative)","",2026-11-08
+4,2026-11-15,"","","","","","",2026-11-15
+5,2026-11-22,"","","","","","",2026-11-22
+6,2026-11-29,"","","","","","",2026-11-29
+7,2026-12-06,"","","","","","No classes on Sun 6 Dec (Hanukkah).",2026-12-06
+8,2026-12-13,"","","","","","",2026-12-13
+9,2026-12-20,"","","","","","No classes on Fri 25 Dec (Christmas).",2026-12-20
+10,2026-12-27,"","","","","","Free choice from this week: repeat any role you like.",2026-12-27
+11,2027-01-03,"","","","","","",2027-01-03
+12,2027-01-10,"","","","","","",2027-01-10
