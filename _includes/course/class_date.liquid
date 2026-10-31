@@ -1,0 +1,16 @@
+{%- comment -%}
+  The date of a class meeting, as a timestamp (seconds, at noon so time zones can't shift the day).
+  Meetings are the Sundays from course_start on, skipping the dates listed in no_class (_config.yml),
+  so no date is ever typed by hand. Pipe it through `date`:
+    {% capture ts %}{% include course/class_date.liquid week=3 %}{% endcapture %}{{ ts | date: "%a %-d %b %Y" }}
+{%- endcomment -%}
+{%- assign _start = site.course_start | date: "%s" | plus: 43200 -%}
+{%- assign _n = site.first_week_number | default: 0 -%}
+{%- assign _week = include.week | plus: 0 -%}
+{%- for _i in (0..60) -%}
+  {%- assign _ts = _i | times: 604800 | plus: _start -%}
+  {%- assign _day = _ts | date: "%Y-%m-%d" -%}
+  {%- if site.no_class contains _day -%}{%- continue -%}{%- endif -%}
+  {%- if _n == _week -%}{{ _ts }}{%- break -%}{%- endif -%}
+  {%- assign _n = _n | plus: 1 -%}
+{%- endfor -%}

@@ -1,71 +1,45 @@
 # ---------------------------------------------------------------------------
-# The schedule. One entry per class meeting. Weeks are counted from 0 (the first class is week 0).
-# The upcoming meeting is highlighted on the site from course_start and class_day in _config.yml.
-#   paper: the id of a file in _papers/ (its filename without .md), or empty.
-# Dates: Weizmann School of Science calendar 2026-27, Semester 1 courses 18 Oct 2026 - 14 Jan 2027
-# (https://www.weizmann.ac.il/wsos/academics/academic-calendar/academic-calendar-2026-2027). Exams from 17 Jan.
-# This file is the only place the papers are set. The site builds /schedule.csv from it, and the sign-up
-# sheet's "Papers" tab imports that CSV, so read / upcoming meeting / after that / planned show up in both on their own.
+# The schedule. One entry per class meeting, counted from 0 (the first class is week 0).
+#   paper: the id of a file in _papers/ (its filename without .md), or leave it out until chosen.
+#   topic: optional; shown under the paper title, or instead of it while there is no paper.
+#   notes: optional.
+# This file is the only place the papers are set. Dates are not typed here: the class meets on
+# Sundays from course_start, skipping the no_class dates (both in _config.yml). Calendar: Weizmann
+# School of Science 2026-27, Semester 1 courses 18 Oct 2026 - 14 Jan 2027, no class Sun 6 Dec (Hanukkah)
+# (https://www.weizmann.ac.il/wsos/academics/academic-calendar/academic-calendar-2026-2027).
+# The site builds /schedule.csv from this file and the sign-up sheet's "Papers" tab imports it, so
+# read / upcoming meeting / after that / planned show up in both on their own.
 # Who does what each week is NOT here: it lives in the shared sign-up Google Sheet (signup_sheet in _config.yml).
 # ---------------------------------------------------------------------------
 
 - week: 0
-  date: Week of 18 Oct 2026
   topic: About the course, expectations, and a fast first read
   paper: cross-lingual-knowledge-pretraining
   notes: "We read this one together in class. The example posts show what each task can look like."
 
 - week: 1
-  date: Week of 25 Oct 2026
-  topic: Matryoshka Language Model Suites
   paper: matryoshka-lm-suites
 
-
 - week: 2
-  date: Week of 1 Nov 2026
-  topic: Multi-Stream Attention Residuals
   paper: multi-stream-attention-residuals
 
 - week: 3
-  date: Week of 8 Nov 2026
   topic: Recurrent-depth latent reasoning (tentative)
   paper: recurrent-depth-latent-reasoning
 
 - week: 4
-  date: Week of 15 Nov 2026
-  topic: To be decided
 
 - week: 5
-  date: Week of 22 Nov 2026
-  topic: To be decided
 
 - week: 6
-  date: Week of 29 Nov 2026
-  topic: To be decided
 
 - week: 7
-  date: Week of 6 Dec 2026
-  topic: To be decided
-  notes: "No classes on Sun 6 Dec (Hanukkah)."
 
 - week: 8
-  date: Week of 13 Dec 2026
-  topic: To be decided
 
 - week: 9
-  date: Week of 20 Dec 2026
-  topic: To be decided
-  notes: "No classes on Fri 25 Dec (Christmas)."
-
-- week: 10
-  date: Week of 27 Dec 2026
-  topic: To be decided
   notes: "Free choice from this week: repeat any role you like."
 
-- week: 11
-  date: Week of 3 Jan 2027
-  topic: To be decided
+- week: 10
 
-- week: 12
-  date: Week of 10 Jan 2027
-  topic: To be decided
+- week: 11

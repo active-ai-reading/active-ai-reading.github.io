@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /roles.csv
+sitemap: false
+---
+{%- comment -%}
+  The sign-up sheet's task labels, one per line, from the `sheet:` field of each task in
+  _data/roles.yml. The sheet's Rules tab imports this to flag tasks that no longer match the site.
+{%- endcomment -%}
+{% for r in site.data.roles -%}
+{%- for t in r.tasks -%}
+{%- if t.sheet %}"{{ t.sheet | replace: '"', '""' }}"
+{% endif -%}
+{%- endfor -%}
+{%- endfor -%}

@@ -20,11 +20,12 @@ The papers come from `_data/schedule.yml`, the only place to change them. The si
 
 {% for w in site.data.schedule %}
 {%- assign paper = site.papers | where: 'slug', w.paper | first -%}
+{%- capture ts %}{% include course/class_date.liquid week=w.week %}{% endcapture -%}
 
-<div class="schedule-week" data-week="{{ w.week }}"{% if paper %} data-paper-title="{{ paper.short | default: paper.title | escape }}" data-paper-url="{{ paper.url | relative_url }}"{% endif %}>
+<div class="schedule-week" data-week="{{ w.week }}" data-date="{{ ts | date: '%Y-%m-%d' }}"{% if paper %} data-paper-title="{{ paper.short | default: paper.title | escape }}" data-paper-url="{{ paper.url | relative_url }}"{% endif %}>
   <div class="week-head">
-    <span>Week {{ w.week }}: {% if paper %}<a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>{% else %}{{ w.topic }}{% endif %}</span>
-    <span class="week-date">{{ w.date }}</span>
+    <span>Week {{ w.week }}: {% if paper %}<a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>{% else %}{{ w.topic | default: "To be decided" }}{% endif %}</span>
+    <span class="week-date">{{ ts | date: "%a %-d %b %Y" }}</span>
   </div>
   {% if paper and w.topic %}<div class="muted">{{ w.topic }}</div>{% endif %}
   {% if w.notes %}<div>{{ w.notes }}</div>{% endif %}
@@ -33,18 +34,16 @@ The papers come from `_data/schedule.yml`, the only place to change them. The si
 {% endfor %}
 
 <script>
-  // Mark the upcoming meeting (like the "now" line in a calendar), from course_start and class_day in _config.yml.
-  // A week counts as read once its class day has passed; the upcoming meeting is the first one today or later.
+  // Mark the upcoming meeting: the first class today or later (dates come from _config.yml, see
+  // _includes/course/class_date.liquid). A meeting counts as read once its day has passed.
   (function () {
-    var start = new Date("{{ site.course_start | date: '%Y-%m-%d' }}T00:00:00");
-    var first = {{ site.first_week_number | default: 0 }};
-    var classDay = {{ site.class_day | default: 0 }};
-    var now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    var days = Math.round((today - start) / (24 * 3600 * 1000));
-    var current = first + Math.max(0, Math.ceil((days - classDay) / 7));
+    var now = new Date();
+    var today = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
     var weeks = document.querySelectorAll(".schedule-week[data-week]");
-    var last = weeks.length ? +weeks[weeks.length - 1].dataset.week : first;
-    current = Math.min(current, last);
+    var current = weeks.length ? +weeks[weeks.length - 1].dataset.week : 0;
+    for (var i = 0; i < weeks.length; i++) {
+      if (weeks[i].dataset.date >= today) { current = +weeks[i].dataset.week; break; }
+    }
     weeks.forEach(function (el) {
       var w = +el.dataset.week;
       if (w < current) el.classList.add("is-past");
