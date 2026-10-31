@@ -102,6 +102,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/rewrite_abstract-multi-stream-attention-residuals/";
           
         },
+      },{id: "post-a-better-figure-1-c-how-residual-architectures-change-with-model-scale",
+        
+          title: "A Better Figure 1(c): How Residual Architectures Change With Model Scale",
+        
+        description: "A multiple slope chart reveals how benchmark scores change from 18B to 28B across four residual architectures.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/msar-scaling-redesign-chenshani-droid/";
+          
+        },
       },{id: "post-a-token-pov-through-msar",
         
           title: "A token pov through MSAR",
