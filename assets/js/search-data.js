@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-multi-stream-attention-residuals-odedorenstein/";
           
         },
+      },{id: "post-key-points-of-multi-stream-attention",
+        
+          title: "Key points of Multi Stream Attention",
+        
+        description: "They had a point, I&#39;m sure it&#39;s buried in here somewhere.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/Key-points-week2/";
+          
+        },
       },{id: "post-explaing-hc-and-mhc",
         
           title: "explaing HC and mHC",
