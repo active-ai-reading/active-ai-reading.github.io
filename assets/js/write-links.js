@@ -2,7 +2,7 @@
 // A link like <a class="write-link" data-role="research" data-task="critique" data-paper="...">
 // opens GitHub's editor with a new post already named, dated and filled from templates/<role>.md.
 // <a class="profile-link"> does the same for a profile in _people/.
-// Without data-paper, the paper of the current week (from _data/schedule.yml) is used.
+// Without data-paper, the paper of the upcoming meeting (from _data/schedule.yml) is used.
 (function () {
   const cfg = window.AAR_WRITE;
   if (!cfg) return;
@@ -13,14 +13,19 @@
     return m ? new Date(+m[3], MONTHS[m[2].toLowerCase()], +m[1]) : null;
   }
 
+  // The upcoming meeting's paper: the first week whose class day is today or later
+  // (so from the day after class it already points at the next week). After the last class: the last paper.
   function currentPaper() {
-    const today = new Date();
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     let pick = null;
     for (const w of cfg.schedule) {
       if (!w.paper) continue;
+      pick = w.paper;
       const start = weekStart(w.date);
-      if (!pick) pick = w.paper; // before the course starts: the first paper
-      if (start && start <= today) pick = w.paper;
+      if (!start) continue;
+      const classDate = new Date(start.getFullYear(), start.getMonth(), start.getDate() + (cfg.classDay || 0));
+      if (classDate >= today) return w.paper;
     }
     return pick || "paper-id";
   }

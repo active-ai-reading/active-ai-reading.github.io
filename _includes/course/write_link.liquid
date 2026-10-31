@@ -1,7 +1,7 @@
 {%- comment -%}
   A "Write" link: opens GitHub's editor with a new post already named, dated and filled in.
   Usage: {% include course/write_link.liquid role="research" task="critique" paper="cross-lingual-knowledge-pretraining" %}
-  Leave out paper to use the current week's paper. Needs assets/js/write-links.js.
+  Leave out paper to use the upcoming meeting's paper. Needs assets/js/write-links.js.
 {%- endcomment -%}
 {%- unless include.role == 'chill' -%}
   <a class="write-link" href="https://github.com/{{ site.github_repo }}/tree/main/templates" data-role="{{ include.role }}" data-task="{{ include.task }}"{% if include.paper %} data-paper="{{ include.paper }}"{% endif %}>{{ include.text | default: 'Write →' }}</a>

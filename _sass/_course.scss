@@ -584,7 +584,7 @@ body {
   }
 }
 
-// The current week on the schedule page (set by a small script on that page).
+// The upcoming meeting on the schedule page (set by a small script on that page).
 .schedule-week.is-current {
   border: 2px solid #1a73e8;
   box-shadow: 0 0 0 4px color-mix(in srgb, #1a73e8 15%, transparent);
@@ -592,7 +592,7 @@ body {
 .schedule-week.is-past {
   opacity: 0.6;
 }
-// The read / this week / next / planned box at the top of the schedule page.
+// The read / upcoming meeting / after that / planned box at the top of the schedule page.
 .reading-status {
   display: grid;
   gap: 0.35rem;

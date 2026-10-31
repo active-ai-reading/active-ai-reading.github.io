@@ -30,7 +30,7 @@ What one week learns, the next week inherits.
 | Add a paper | `_papers/<paper-id>.md` (start from `templates/paper.md`) |
 | Your profile | `_people/<github-username>.md` |
 | Take a role this week | the sign-up Google Sheet (linked on the schedule page) |
-| The weeks and their papers (read / this week / next / planned) | `_data/schedule.yml` only: the schedule page and the sign-up sheet's *Papers* tab both read it |
+| The weeks and their papers (read / upcoming meeting / after that / planned) | `_data/schedule.yml` only: the schedule page and the sign-up sheet's *Papers* tab both read it |
 | Role guides | `_guides/<role>.md` |
 | Handoff notes | `handoffs/week-NN/<github-username>-<role>.md` |
 | Add, rename or change roles and tasks | `_data/roles.yml` |

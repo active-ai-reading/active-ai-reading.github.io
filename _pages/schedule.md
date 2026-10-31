@@ -11,7 +11,7 @@ Who does what each week lives in {% include course/signup_link.liquid text="the 
 
 <div class="reading-status" id="reading-status" hidden>
   <div><span class="label">Read</span> <span data-slot="read"></span></div>
-  <div><span class="label">Next class</span> <span data-slot="current"></span></div>
+  <div><span class="label">Upcoming meeting</span> <span data-slot="current"></span></div>
   <div><span class="label">After that</span> <span data-slot="next"></span></div>
   <div><span class="label">Planned later</span> <span data-slot="planned"></span></div>
 </div>
@@ -33,8 +33,8 @@ The papers come from `_data/schedule.yml`, the only place to change them. The si
 {% endfor %}
 
 <script>
-  // Mark the next class (like the "now" line in a calendar), from course_start and class_day in _config.yml.
-  // A week counts as read once its class day has passed; the next class is the first one today or later.
+  // Mark the upcoming meeting (like the "now" line in a calendar), from course_start and class_day in _config.yml.
+  // A week counts as read once its class day has passed; the upcoming meeting is the first one today or later.
   (function () {
     var start = new Date("{{ site.course_start | date: '%Y-%m-%d' }}T00:00:00");
     var first = {{ site.first_week_number | default: 0 }};
@@ -51,11 +51,11 @@ The papers come from `_data/schedule.yml`, the only place to change them. The si
       if (w === current) {
         el.classList.add("is-current");
         var head = el.querySelector(".week-head span");
-        if (head) head.insertAdjacentHTML("afterbegin", '<span class="now-badge">Next class</span> ');
+        if (head) head.insertAdjacentHTML("afterbegin", '<span class="now-badge">Upcoming meeting</span> ');
       }
     });
 
-    // The status box at the top: read / next class / after that / planned later.
+    // The status box at the top: read / upcoming meeting / after that / planned later.
     var box = document.getElementById("reading-status");
     var slots = { read: [], current: [], next: [], planned: [] };
     weeks.forEach(function (el) {

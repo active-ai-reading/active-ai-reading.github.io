@@ -333,6 +333,6 @@
 
 <!-- One-click "Write" links (see _includes/course/write_link.liquid) -->
 <script>
-  window.AAR_WRITE = { repo: {{ site.github_repo | jsonify }}, schedule: {{ site.data.schedule | jsonify }} };
+  window.AAR_WRITE = { repo: {{ site.github_repo | jsonify }}, schedule: {{ site.data.schedule | jsonify }}, classDay: {{ site.class_day | default: 0 }} };
 </script>
 <script defer src="{{ '/assets/js/write-links.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

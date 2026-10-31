@@ -11,7 +11,7 @@ Each week, everyone takes a task for that week's paper and writes a short piece 
 
 **Before every class, read the paper:** at least the main part, and whatever your task needs.
 
-To take a task, sign up in {% include course/signup_link.liquid %} (one row per week). Each role has a [guide]({{ '/guides/' | relative_url }}) written by the people who held it before you. To write it up, click **Write** next to your task: it opens a new post with everything filled in, for the current week's paper.
+To take a task, sign up in {% include course/signup_link.liquid %} (one row per week). Each role has a [guide]({{ '/guides/' | relative_url }}) written by the people who held it before you. To write it up, click **Write** next to your task: it opens a new post with everything filled in, for the upcoming meeting's paper.
 
 {% for r in site.data.roles %}
 
