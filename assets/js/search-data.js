@@ -848,8 +848,8 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shachar731945/";
-            },},{id: "people-shaharossy",
-          title: 'Shaharossy',
+            },},{id: "people-shahar-ossy",
+          title: 'Shahar Ossy',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shaharossy/";
