@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-multi-stream-attention-residuals/";
           
         },
+      },{id: "post-week-2-in-one-page-multi-stream-attention",
+        
+          title: "Week 2 in one page: Multi-Stream Attention",
+        
+        description: "What we read, built, redrew, challenged, and shared about Multi-Stream Attention Residuals.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/compile-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-multi-stream-attention-residuals-the-author-39-s-path",
         
           title: "Multi-Stream Attention Residuals, The Author&#39;s Path.",
