@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/linkedin-msar/";
           
         },
+      },{id: "post-key-points-multi-stream-attention-residuals",
+        
+          title: "Key Points Multi Stream Attention Residuals",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-points-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-critique-of-multi-stream-attention-residuals-msar",
         
           title: "Critique of Multi-Stream Attention Residuals (MSAR)",
