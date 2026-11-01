@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-multi-stream-attention-residuals-the-author-39-s-path",
+        },{id: "post-critique-of-multi-stream-attention-residuals-msar",
+        
+          title: "Critique of Multi-Stream Attention Residuals (MSAR)",
+        
+        description: "A clever, low-cost multi-head generalization of depth-wise residual retrieval with strong, consistent pre-training gains — but the win is shown only in FLOPs and pre-training loss, not wall-clock or post-training.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-multi-stream-attention-residuals/";
+          
+        },
+      },{id: "post-multi-stream-attention-residuals-the-author-39-s-path",
         
           title: "Multi-Stream Attention Residuals, The Author&#39;s Path.",
         
