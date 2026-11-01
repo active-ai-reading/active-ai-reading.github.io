@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-multi-stream-attention-residuals-msar",
+        },{id: "post-msar-paper-on-linkedin",
+        
+          title: "MSAR paper on LinkedIn",
+        
+        description: "LinkedIn post for Multi-Stream Attention Residuals",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/linkedin-msar/";
+          
+        },
+      },{id: "post-critique-of-multi-stream-attention-residuals-msar",
         
           title: "Critique of Multi-Stream Attention Residuals (MSAR)",
         
