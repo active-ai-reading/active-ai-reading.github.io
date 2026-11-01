@@ -135,6 +135,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/redo-graph-multi-stream-attention-residuals/";
           
         },
+      },{id: "post-msar-across-tokens-then-across-depth",
+        
+          title: "MSAR: across tokens, then across depth",
+        
+        description: "Explore how causal convolutions and per-stream depth attention combine historical Transformer representations.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/msar-tokens-and-depth/";
+          
+        },
       },{id: "post-a-better-figure-1-c-how-residual-architectures-change-with-model-scale",
         
           title: "A Better Figure 1(c): How Residual Architectures Change With Model Scale",
