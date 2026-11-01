@@ -102,6 +102,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/rewrite_abstract-multi-stream-attention-residuals/";
           
         },
+      },{id: "post-a-better-figure-1-as-a-better-first-impression",
+        
+          title: "A better Figure 1 as a better First Impression",
+        
+        description: "Making the first visual explain the paper&#39;s point better.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-multi-stream-attention-residuals/";
+          
+        },
       },{id: "post-a-better-figure-1-c-how-residual-architectures-change-with-model-scale",
         
           title: "A Better Figure 1(c): How Residual Architectures Change With Model Scale",

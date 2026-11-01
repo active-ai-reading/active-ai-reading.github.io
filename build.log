@@ -162,6 +162,24 @@ Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-readin
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure2c-800.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure2c-1400.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure2c-1400.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1a-480.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1a-480.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1a-800.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1a-800.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1a-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1a-1400.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1b-480.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1b-480.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1b-800.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1b-800.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1b-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1b-1400.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1c-480.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1c-480.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1c-800.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1c-800.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1c-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/papers/multi-stream-attention/figure_1c-1400.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/autoregressive-vs-diffusion/four-runs-en-480.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/autoregressive-vs-diffusion/four-runs-en-480.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/autoregressive-vs-diffusion/four-runs-en-800.webp"
@@ -270,7 +288,7 @@ Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-readin
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-800.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-1400.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-1400.webp
-       Imagemagick: Generated 117 file(s)
+       Imagemagick: Generated 126 file(s)
          AutoPages: Disabled/Not configured in site.config.
         Pagination: Complete, processed 1 pagination page(s)
 DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
@@ -392,8 +410,8 @@ More info and automated migrator: https://sass-lang.com/d/import
     /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/css/main.scss 21:3                   root stylesheet
 WARNING: 41 repetitive deprecation warnings omitted.
 Run in verbose mode to see all warnings.
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261031-3306-8gom02.ipynb to html
-/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/nbconvert/filters/highlight.py:71: UserWarning: IPython3 lexer unavailable, falling back on Python 3
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261031-3501-tr9v2s.ipynb to html
+/opt/hostedtoolcache/Python/3.13.17/x64/lib/python3.13/site-packages/nbconvert/filters/highlight.py:71: UserWarning: IPython3 lexer unavailable, falling back on Python 3
   return _pygments_highlight(
 [33m          Conflict: The following destination is shared by multiple files.[0m
 [33m                    The written file may end up with unexpected contents.[0m
