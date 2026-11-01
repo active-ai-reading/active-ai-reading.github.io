@@ -80,11 +80,11 @@ ninja.data = [{
             window.location.href = "/posts/2026/linkedin-msar/";
           
         },
-      },{id: "post-key-points-multi-stream-attention-residuals",
+      },{id: "post-multi-head-depth-attention-is-not-just-multiple-queries",
         
-          title: "Key Points Multi Stream Attention Residuals",
+          title: "Multi-Head Depth Attention Is Not Just Multiple Queries",
         
-        description: "",
+        description: "What MSAR really adds to AttnRes, and how the paper could make it clearer.",
         section: "Posts",
         handler: () => {
           
