@@ -844,6 +844,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/recurrent-depth-latent-reasoning/";
+            },},{id: "papers-tokenization-a-survey-for-modern-nlp",
+          title: 'Tokenization: A Survey for Modern NLP',
+          description: "",
+          section: "Papers",handler: () => {
+              window.location.href = "/papers/tokenization-survey/";
             },},{id: "people-adam-gabet",
           title: 'Adam Gabet',
           description: "",
