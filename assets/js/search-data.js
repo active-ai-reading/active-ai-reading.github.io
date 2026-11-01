@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-msar-paper-on-linkedin",
+        },{id: "post-visualizing-core-ideas",
+        
+          title: "Visualizing Core ideas",
+        
+        description: "One figure showing how three separate models become one nested model, how the blocks connect, and how the smaller models learn from the largest.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/main-visual-recurrent-depth/";
+          
+        },
+      },{id: "post-msar-paper-on-linkedin",
         
           title: "MSAR paper on LinkedIn",
         
