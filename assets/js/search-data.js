@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-2-multi-stream-attention-the-authors-path/";
           
         },
+      },{id: "post-literature-review-of-multi-stream-attention-residuals",
+        
+          title: "literature review of Multi-Stream Attention Residuals",
+        
+        description: "Important previous articles for this paper, building the knowledge of it",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week-2-MSAR-literature-review/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
