@@ -14,6 +14,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Reimplementing Figure 1 with additional metrics](https://active-ai-reading.github.io/posts/2026/week-3-reimplement-and-calculate-metrics-and-graph/): Reimplemented Figure 1 and added new metrics to evaluate the model on (Coding, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-03)
 - [Visualizing Core ideas](https://active-ai-reading.github.io/posts/2026/main-visual-recurrent-depth/): One figure showing how three separate models become one nested model, how the blocks connect, and how the smaller models learn from the largest. (Visualization, on "Matryoshka Language Model Suites", 2026-11-01)
 - [MSAR paper on LinkedIn](https://active-ai-reading.github.io/posts/2026/linkedin-msar/): LinkedIn post for Multi-Stream Attention Residuals (Communicate to the world, on "Multi-Stream Attention Residuals", 2026-11-01)
 - [Multi-Head Depth Attention Is Not Just Multiple Queries](https://active-ai-reading.github.io/posts/2026/key-points-multi-stream-attention-residuals/): What MSAR really adds to AttnRes, and how the paper could make it clearer. (Writing, on "Multi-Stream Attention Residuals", 2026-11-01)

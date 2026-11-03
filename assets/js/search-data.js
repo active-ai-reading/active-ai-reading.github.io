@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-visualizing-core-ideas",
+        },{id: "post-reimplementing-figure-1-with-additional-metrics",
+        
+          title: "Reimplementing Figure 1 with additional metrics",
+        
+        description: "Reimplemented Figure 1 and added new metrics to evaluate the model on",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week-3-reimplement-and-calculate-metrics-and-graph/";
+          
+        },
+      },{id: "post-visualizing-core-ideas",
         
           title: "Visualizing Core ideas",
         
