@@ -58,18 +58,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/2026-11-04-followups-recurrent-depth-latent-reasoning/";
-          
-        },
-      },{id: "post-retracing-hidden-state-trajectories",
+        },{id: "post-retracing-hidden-state-trajectories",
         
           title: "Retracing hidden state trajectories",
         
@@ -78,6 +67,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/posts/2026/retracing-hidden-trajectories/";
+          
+        },
+      },{id: "post-can-we-make-machine-to-think-more-like-humans",
+        
+          title: "Can we make machine to think more like humans",
+        
+        description: "Adaptive Reasoning: Teaching Language Models When to Think and When to Write",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/followups-recurrent-depth-latent-reasoning/";
           
         },
       },{id: "post-reimplementing-figure-1-with-additional-metrics",
