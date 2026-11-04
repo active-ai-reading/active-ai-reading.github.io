@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/retracing-hidden-trajectories/";
           
         },
+      },{id: "post-lt-critique-literature-review-follow-ups-gt-of-lt-paper-gt",
+        
+          title: "&lt;Critique / literature review / follow-ups&gt; of &lt;paper&gt;",
+        
+        description: "One sentence summary of your take.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/followups-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-reimplementing-figure-1-with-additional-metrics",
         
           title: "Reimplementing Figure 1 with additional metrics",
