@@ -14,8 +14,8 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [](https://active-ai-reading.github.io/posts/2026/2026-11-04-followups-recurrent-depth-latent-reasoning/): (, 2026-11-04)
 - [Retracing hidden state trajectories](https://active-ai-reading.github.io/posts/2026/retracing-hidden-trajectories/): reimplementing the experiment in the original paper, that looked at the trajectories of hidden states across recurrent steps. (Coding, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-04)
-- [<Critique / literature review / follow-ups> of <paper>](https://active-ai-reading.github.io/posts/2026/followups-recurrent-depth-latent-reasoning/): One sentence summary of your take. (Research skills, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-04)
 - [Reimplementing Figure 1 with additional metrics](https://active-ai-reading.github.io/posts/2026/week-3-reimplement-and-calculate-metrics-and-graph/): Reimplemented Figure 1 and added new metrics to evaluate the model on (Coding, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-03)
 - [Visualizing Core ideas](https://active-ai-reading.github.io/posts/2026/main-visual-recurrent-depth/): One figure showing how three separate models become one nested model, how the blocks connect, and how the smaller models learn from the largest. (Visualization, on "Matryoshka Language Model Suites", 2026-11-01)
 - [MSAR paper on LinkedIn](https://active-ai-reading.github.io/posts/2026/linkedin-msar/): LinkedIn post for Multi-Stream Attention Residuals (Communicate to the world, on "Multi-Stream Attention Residuals", 2026-11-01)
