@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-reimplementing-figure-1-with-additional-metrics",
+        },{id: "post-retracing-hidden-state-trajectories",
+        
+          title: "Retracing hidden state trajectories",
+        
+        description: "reimplementing the experiment in the original paper, that looked at the trajectories of hidden states across recurrent steps.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/retracing-hidden-trajectories/";
+          
+        },
+      },{id: "post-reimplementing-figure-1-with-additional-metrics",
         
           title: "Reimplementing Figure 1 with additional metrics",
         
