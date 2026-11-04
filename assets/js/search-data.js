@@ -69,9 +69,9 @@ ninja.data = [{
             window.location.href = "/posts/2026/retracing-hidden-trajectories/";
           
         },
-      },{id: "post-can-we-make-machine-to-think-more-like-humans",
+      },{id: "post-can-we-make-machine-think-more-like-humans",
         
-          title: "Can we make machine to think more like humans",
+          title: "Can we make machine think more like humans",
         
         description: "Adaptive Reasoning: Teaching Language Models When to Think and When to Write",
         section: "Posts",
