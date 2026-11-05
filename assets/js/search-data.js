@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-retracing-hidden-state-trajectories",
+        },{id: "post-reproducing-figure-3-how-often-is-each-recurrence-depth-sampled",
+        
+          title: "Reproducing Figure 3: How often is each recurrence depth sampled?",
+        
+        description: "Reproducing the distribution of training depths from Section 3.3.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reproducing-figure-3-recurrence-depth/";
+          
+        },
+      },{id: "post-retracing-hidden-state-trajectories",
         
           title: "Retracing hidden state trajectories",
         
