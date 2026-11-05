@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/reproducing-figure-3-recurrence-depth/";
           
         },
+      },{id: "post-rewriting-the-abstract-of-scaling-up-test-time-compute-with-latent-reasoning",
+        
+          title: "Rewriting the abstract of Scaling up Test-Time Compute with Latent Reasoning",
+        
+        description: "The abstract promises dramatic gains but never shows one. Here is a version that says what the model does, what it costs, and where the gains actually appear.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-retracing-hidden-state-trajectories",
         
           title: "Retracing hidden state trajectories",
