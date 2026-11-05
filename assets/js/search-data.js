@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/reproducing-figure-3-recurrence-depth/";
           
         },
+      },{id: "post-literature-review-recurrent-depth-and-latent-reasoning",
+        
+          title: "Literature Review: Recurrent Depth and Latent Reasoning",
+        
+        description: "How recurrent networks, looped Transformers, and implicit reasoning lead to test-time scaling in latent space.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/literature-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-rewriting-the-abstract-of-scaling-up-test-time-compute-with-latent-reasoning",
         
           title: "Rewriting the abstract of Scaling up Test-Time Compute with Latent Reasoning",
