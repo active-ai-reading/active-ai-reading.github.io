@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-recurrent-depth-latent-reasoning/";
           
         },
+      },{id: "post-learningharness-optimize-your-learning-with-ai",
+        
+          title: "LearningHarness: Optimize your learning with AI",
+        
+        description: "My experience using an AI learning tool to read this paper.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/teach-recurrent-depth-latent-reasoning-AdamJaber03/";
+          
+        },
       },{id: "post-connecting-trajectories-and-predictions",
         
           title: "Connecting trajectories and predictions",
