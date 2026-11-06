@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-connecting-trajectories-and-predictions",
+        },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "Recent work extends recurrent latent reasoning to large-scale language models, multimodal generation, and hybrid reasoning.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-recurrent-depth-latent-reasoning/";
+          
+        },
+      },{id: "post-connecting-trajectories-and-predictions",
         
           title: "Connecting trajectories and predictions",
         
