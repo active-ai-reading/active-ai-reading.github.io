@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-reproducing-figure-3-how-often-is-each-recurrence-depth-sampled",
+        },{id: "post-connecting-trajectories-and-predictions",
+        
+          title: "Connecting trajectories and predictions",
+        
+        description: "Showing all component pairs and linking recurrent steps to prediction probabilities.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-recurrent-depth-latent-reasoning/";
+          
+        },
+      },{id: "post-reproducing-figure-3-how-often-is-each-recurrence-depth-sampled",
         
           title: "Reproducing Figure 3: How often is each recurrence depth sampled?",
         
