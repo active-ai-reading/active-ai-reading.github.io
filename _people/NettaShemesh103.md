@@ -10,5 +10,3 @@ tagline: I am interested in AI and its integration into problems in the physical
 # x:
 linkedin: https://www.linkedin.com/in/netta-shemesh/
 ---
-
-I am an Master student in Computer Science at the Weizmann Institute of Science. I am interested in AI research, specifically in NLP and interpretability.
