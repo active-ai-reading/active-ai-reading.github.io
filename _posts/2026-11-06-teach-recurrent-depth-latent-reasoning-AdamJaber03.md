@@ -17,12 +17,12 @@ Next comes the probing stage. To identify your current knowledge and personalize
 
 Once mapping what you already know has been completed, the harness designs a tree of ideas/logical-steps towards your learning goal and the dependency relations between them:
 
-<img width="2249" height="1518" alt="image" src="https://github.com/user-attachments/assets/de9cd208-3037-4727-bd9c-2f675fa654d4" />
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/de9cd208-3037-4727-bd9c-2f675fa654d4" />
 
 
 Learning begins. The model will walk you through one idea at a time. Providing short explanations followed by a question meant to check your understanding or build intuition towards the next point.
 Example learning step:
-<img width="2788" height="1148" alt="image" src="https://github.com/user-attachments/assets/141022aa-b6e7-463b-9e63-72d03234a161" />
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/141022aa-b6e7-463b-9e63-72d03234a161" />
 
 ### What I liked
 1. The harness pulls additional resources from various online sources/papers so that it doesn't only walk you through the paper but also through the motivation.
