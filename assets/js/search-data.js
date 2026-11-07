@@ -168,6 +168,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/before-you-read-msar/";
           
         },
+      },{id: "post-literature-review-of-recurrent-depth-latent-reasoning",
+        
+          title: "literature review of recurrent depth latent reasoning",
+        
+        description: "How Jonas Geiping and Tom Goldstein&#39;s earlier work on efficient language models and recurrent computation converged in a new approach to test-time scaling.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/authors-path-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
