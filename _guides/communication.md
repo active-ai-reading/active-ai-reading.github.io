@@ -8,6 +8,10 @@ Yours to write. Some questions to start from:
 - What makes people stop scrolling?
 - What did you post, and what happened?
 
+## LinkedIn
+
+- If you have more than one figure, combine them into a single image before attaching: LinkedIn shows several images as a cropped grid, but one image appears whole in the feed.
+
 ## Weekly blog writing tips
 where there are multiple posts for the same role, try to find points where different posts conflict; these are probably the most interesting things to highlight. Especially true for covering the critiques. Did someone praise a control while someone else found it to be not sufficient? did someone praise the novelty while someone else called the ideas unoriginal? Highlight the core difference and where it stems from.
 
