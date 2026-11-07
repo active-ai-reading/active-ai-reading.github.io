@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-recurrent-depth-latent-reasoning-chanoch1234/";
           
         },
+      },{id: "post-thinking-without-more-tokens-visualizing-recurrent-depth",
+        
+          title: "Thinking Without More Tokens: Visualizing Recurrent Depth",
+        
+        description: "An interactive visualization of how language models can increase inference-time computation by repeatedly reusing the same Transformer layers.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
