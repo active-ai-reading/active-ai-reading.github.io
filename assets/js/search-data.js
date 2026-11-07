@@ -102,6 +102,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/copyedit-recurrent-depth-latent-reasoning/";
           
         },
+      },{id: "post-copyediting-section-7-what-the-latent-trajectories-show-and-what-is-a-guess",
+        
+          title: "Copyediting Section 7: what the latent trajectories show, and what is a guess...",
+        
+        description: "The paper&#39;s most exciting section blends what its plots show with what the authors hope they mean, so I pulled the two apart.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-recurrent-depth-latent-reasoning-eylonkrause/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
