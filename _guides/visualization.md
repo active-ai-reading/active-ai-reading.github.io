@@ -30,3 +30,15 @@ one must draw parallel lines from the point to each side of the triangle, take t
 This requires much effort and makes user skip it all together, which misses the important quality gradient created there (FLOPs and KV cache size).
 
 ## How to improve an existing graph/diagram?
+
+## How to visualize the core idea of a paper?
+
+### Show what is new by contrasting it with what already exists
+
+When visualizing a new idea, showing how it works is not always enough. Comparing it with existing approaches can make the innovation much easier to understand.
+
+For example, in *Scaling up Test-Time Compute with Latent Reasoning*, I compared three approaches: increasing model parameters, generating more reasoning tokens, and reusing the same layers through recurrent depth.
+
+By allowing readers to switch between these approaches, the visualization highlights **what changes and what stays the same** in each one.
+
+**The lesson:** Sometimes the clearest way to explain a new idea is to show how it differs from what came before.
