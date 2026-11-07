@@ -87,3 +87,7 @@
 #rd-explorer .rd-compact-control {
     color: #eef4ff !important;
 }
+
+#rd-explorer .callout strong {
+    color: #eaf4ff !important;
+}
