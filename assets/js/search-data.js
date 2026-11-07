@@ -1043,8 +1043,8 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nathanadda/";
-            },},{id: "people-nettashemesh103",
-          title: 'Nettashemesh103',
+            },},{id: "people-netta-shemesh",
+          title: 'Netta Shemesh',
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/nettashemesh103/";
