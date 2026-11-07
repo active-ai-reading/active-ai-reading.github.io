@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-3-visualization-converted-table4-to-graph/";
           
         },
+      },{id: "post-recent-work-on-recurrent-depth-language-models",
+        
+          title: "Recent work on recurrent-depth language models",
+        
+        description: "Two recent papers explore how recurrent latent reasoning can become more adaptive and more stable.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-recurrent-depth-latent-reasoning-chanoch1234/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
