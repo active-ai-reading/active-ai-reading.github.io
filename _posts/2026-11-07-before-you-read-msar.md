@@ -50,3 +50,5 @@ One reading tip: the paper calls this a "depth-wise" convolution, but it runs ov
 ## In short
 
 There are three ways to connect layers, and what separates them is whether the weights are fixed or computed from the input. Attention Residuals is the dynamic one, but without projection matrices it is limited to a single head. MSAR gives each head a different window over the sequence, and that is the whole idea. With these three pieces in place, the paper is a straightforward read.
+
+Posted at: [LinkedIn](https://www.linkedin.com/feed/update/urn:li:share:7524911557277802496/) · [X](https://x.com/LiadBercovitch/status/2119148408984248760)
