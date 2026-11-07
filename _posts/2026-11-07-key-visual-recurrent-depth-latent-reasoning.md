@@ -1,6 +1,6 @@
 ---
 title: "Thinking Without More Tokens: Visualizing Recurrent Depth"
-description: "An interactive visualization of how language models can increase inference-time computation by repeatedly reusing the same Transformer layers."
+description: "An interactive comparison of three approaches to improving language model reasoning."
 paper: recurrent-depth-latent-reasoning
 role: visualization
 task: key-visual
@@ -9,38 +9,32 @@ by: [shaharOssy]
 
 ## The core idea
 
-Most approaches to scaling language models involve increasing the number of parameters or generating additional reasoning tokens through Chain-of-Thought.
+How can we improve a language model's ability to solve difficult problems without simply making it bigger or asking it to generate more reasoning steps?
 
-Geiping et al. (2025) explore a third possibility: **increasing computation in latent space without increasing the number of parameters or generating intermediate reasoning tokens.**
+Geiping et al. (2025) explore a third scaling approach: **recurrent depth**. Instead of adding distinct Transformer layers or generating a longer verbal chain of thought, the model repeatedly updates its hidden state using the **same four-layer recurrent core**. A two-layer *prelude* processes the input, and a two-layer *coda* produces next-token probabilities after the recurrent computation.
 
-Their model, Huginn-0125, consists of three components:
-
-1. **Prelude:** Processes the input into a latent representation.
-2. **Recurrent core:** Repeatedly updates the hidden state using the same Transformer layers.
-3. **Coda:** Converts the final hidden state into next-token probabilities.
-
-The key distinction is between **the number of unique layers a model stores** and **the number of times those layers are executed**.
+The authors show that repeating this process can improve the model's performance on reasoning tasks.
 
 ## Interactive visualization
 
-The following visualization illustrates how recurrent depth works and what happens when we increase the number of recurrent iterations.
+The visualization compares three approaches: increasing model size, generating more reasoning tokens, and repeating the same layers internally.
+
+**Select an approach, move the slider, and see what changes.**
 
 {% include recurrent-depth-explorer.liquid %}
 
 ## What to explore
 
-1. **Compare the three scaling approaches.** Notice that recurrent depth increases computation without adding parameters or generating intermediate reasoning tokens.
-2. **Adjust the recurrence slider.** Observe how the same four-layer recurrent block is reused while the effective computational depth increases.
-3. **Watch the recurrence animation.** The model repeatedly updates its latent state before producing the next token.
-4. **Explore the benchmark results.** Additional iterations can improve performance, but different tasks benefit from different amounts of computation.
+1. **Scale parameters:** Add more independently learned layers.
+2. **Scale output tokens:** Generate more intermediate reasoning steps.
+3. **This paper:** Repeat the same four-layer block without adding parameters or reasoning tokens.
 
-## The key takeaway
+In the third approach, 32 repetitions produce an effective depth of 132 layer applications, while the model still has only eight distinct Transformer layers.
 
-**Computational depth and parameter count are not the same thing.**
+## The takeaway
 
-With only eight distinct Transformer layers, Huginn-0125 can achieve an effective depth of 132 layer applications when its four-layer recurrent core is executed 32 times.
+**A model can do more internal processing without becoming larger or producing more text.**
 
-The model does not become larger. Instead, it performs more computation using the parameters it already has.
+The paper shows that this additional processing can improve reasoning performance. However, more repetitions require more computation, and they do not always lead to better results.
 
-This raises an interesting question: **Could future language models dynamically decide how much internal computation each problem requires?**
-
+*Source: Geiping et al. (2025), [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](https://arxiv.org/abs/2502.05171), §3 and §5.*
