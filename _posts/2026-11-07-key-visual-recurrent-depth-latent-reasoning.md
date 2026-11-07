@@ -35,6 +35,4 @@ In the third approach, 32 repetitions produce an effective depth of 132 layer ap
 
 **A model can do more internal processing without becoming larger or producing more text.**
 
-The paper shows that this additional processing can improve reasoning performance. However, more repetitions require more computation, and they do not always lead to better results.
-
-*Source: Geiping et al. (2025), [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](https://arxiv.org/abs/2502.05171), §3 and §5.*
+The paper shows that this approach can significantly improve reasoning performance, especially on challenging tasks. Recurrent depth offers a promising new way to make language models better at reasoning by allowing them to think longer before producing an answer.
