@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-recurrent-depth-latent-reasoning-chanoch1234/";
           
         },
+      },{id: "post-a-better-figure-lt-n-gt",
+        
+          title: "A better Figure &lt;N&gt;",
+        
+        description: "What the new figure makes obvious that the old one didn&#39;t.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-thinking-without-more-tokens-visualizing-recurrent-depth",
         
           title: "Thinking Without More Tokens: Visualizing Recurrent Depth",
