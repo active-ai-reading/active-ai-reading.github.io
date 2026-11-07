@@ -72,3 +72,18 @@
 #rd-explorer input {
   color: #eef4ff;
 }
+
+/* Ensure readable text on the dark background */
+#rd-explorer,
+#rd-explorer h1,
+#rd-explorer h2,
+#rd-explorer h3,
+#rd-explorer h4,
+#rd-explorer label,
+#rd-explorer output,
+#rd-explorer .ticks,
+#rd-explorer .control-head,
+#rd-explorer .mini-panel h3,
+#rd-explorer .rd-compact-control {
+    color: #eef4ff !important;
+}
