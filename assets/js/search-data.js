@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-3-visualization-converted-table4-to-graph/";
           
         },
+      },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "Relevant latent reasoning papers",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-recurrent-depth-latent-reasoning_gil/";
+          
+        },
       },{id: "post-can-we-read-huginn-39-s-latent-thoughts-it-depends-on-the-lens",
         
           title: "Can we read Huginn&#39;s latent thoughts? It depends on the lens",
