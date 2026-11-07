@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-a-better-graph-instead-of-table-4",
+        },{id: "post-key-points-regarding-latenct-reasoning",
+        
+          title: "Key points regarding Latenct reasoning",
+        
+        description: "Does latent reasoning bring LLM processing mechanisms closer to human thinking processes?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week3-The-points-that-matter/";
+          
+        },
+      },{id: "post-a-better-graph-instead-of-table-4",
         
           title: "A better graph instead of Table 4",
         
