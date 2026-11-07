@@ -206,6 +206,18 @@ Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-readin
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/autoregressive-vs-diffusion/table-tree-800.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/autoregressive-vs-diffusion/table-tree-1400.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/autoregressive-vs-diffusion/table-tree-1400.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/heads-with-and-without-conv-480.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/heads-with-and-without-conv-480.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/heads-with-and-without-conv-800.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/heads-with-and-without-conv-800.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/heads-with-and-without-conv-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/heads-with-and-without-conv-1400.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/three-answers-480.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/three-answers-480.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/three-answers-800.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/three-answers-800.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/three-answers-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/before-you-read-msar/three-answers-1400.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/illustrated-speculative-decoder/draft-inside-verifier-480.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/illustrated-speculative-decoder/draft-inside-verifier-480.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/illustrated-speculative-decoder/draft-inside-verifier-800.webp"
@@ -320,7 +332,7 @@ Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-readin
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-800.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-1400.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-1400.webp
-       Imagemagick: Generated 141 file(s)
+       Imagemagick: Generated 147 file(s)
          AutoPages: Disabled/Not configured in site.config.
         Pagination: Complete, processed 1 pagination page(s)
 DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
@@ -442,10 +454,10 @@ More info and automated migrator: https://sass-lang.com/d/import
     /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/css/main.scss 21:3                   root stylesheet
 WARNING: 41 repetitive deprecation warnings omitted.
 Run in verbose mode to see all warnings.
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3090-o2qg4l.ipynb to html
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3104-qywhsu.ipynb to html
 /opt/hostedtoolcache/Python/3.13.18/x64/lib/python3.13/site-packages/nbconvert/filters/highlight.py:71: UserWarning: IPython3 lexer unavailable, falling back on Python 3
   return _pygments_highlight(
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3090-9wdn5w.ipynb to html
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3104-2yc2hj.ipynb to html
 [NbConvertApp] WARNING | Alternative text is missing on 1 image(s).
 [33m          Conflict: The following destination is shared by multiple files.[0m
 [33m                    The written file may end up with unexpected contents.[0m
