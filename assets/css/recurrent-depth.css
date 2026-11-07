@@ -91,3 +91,11 @@
 #rd-explorer .callout strong {
     color: #eaf4ff !important;
 }
+
+/* Slider label and tick numbers */
+#rd-explorer #rd-slider-label,
+#rd-explorer #rd-min,
+#rd-explorer #rd-mid,
+#rd-explorer #rd-max {
+    color: #eaf4ff !important;
+}
