@@ -124,6 +124,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/copyedit-recurrent-depth-latent-reasoning/";
           
         },
+      },{id: "post-a-scalable-recurrent-architecture-rewritten-for-easier-understanding",
+        
+          title: "A Scalable Recurrent Architecture - Rewritten for Easier Understanding",
+        
+        description: "Rewriting the section 3.1 explaining the macro of the latent recurrent-depth model.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-recurrent-depth-latent-reasoning-shniki/";
+          
+        },
       },{id: "post-copyediting-section-7-of-recurrent-depth",
         
           title: "Copyediting Section 7 of Recurrent Depth",
