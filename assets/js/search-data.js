@@ -124,6 +124,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/copyedit-recurrent-depth-latent-reasoning-eylonkrause/";
           
         },
+      },{id: "post-before-you-read-msar-the-three-ideas-it-builds-on",
+        
+          title: "Before you read MSAR: the three ideas it builds on",
+        
+        description: "A short guide to the background the paper assumes: residual connections, Hyper-Connections and Attention Residuals, and the problem that leads to MSAR.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/before-you-read-msar/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
