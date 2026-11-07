@@ -113,11 +113,11 @@ ninja.data = [{
             window.location.href = "/posts/2026/copyedit-recurrent-depth-latent-reasoning/";
           
         },
-      },{id: "post-copyediting-section-7-what-the-latent-trajectories-show-and-what-is-a-guess",
+      },{id: "post-copyediting-section-7-of-recurrent-depth",
         
-          title: "Copyediting Section 7: what the latent trajectories show, and what is a guess...",
+          title: "Copyediting Section 7 of Recurrent Depth",
         
-        description: "The paper&#39;s most exciting section blends what its plots show with what the authors hope they mean, so I pulled the two apart.",
+        description: "Section 7 is the most fun part of the paper, but it mixes what the authors saw with what they guess.",
         section: "Posts",
         handler: () => {
           
