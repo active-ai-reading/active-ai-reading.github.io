@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-papers-worth-knowing-this-week",
+        },{id: "post-can-we-read-huginn-39-s-latent-thoughts-it-depends-on-the-lens",
+        
+          title: "Can we read Huginn&#39;s latent thoughts? It depends on the lens",
+        
+        description: "Two papers that try to decode the recurrent states of this week&#39;s model, and why they seem to disagree.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-recurrent-depth-latent-reasoning/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
         
