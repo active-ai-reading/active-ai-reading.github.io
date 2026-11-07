@@ -12,6 +12,7 @@ by: [NathanAdda]
 Table 4 in *Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach* (Geiping et al., 2025) compares recurrent models with a fixed-depth Transformer baseline across several benchmarks.
 
 ![Original Table 4, showing benchmark accuracies for the fixed-depth baseline and recurrent models at 180B and 800B training tokens.](/assets/img/posts/week-03-visualization-converted-table4-to-graph/original_table4.png)
+{: style="display: block; width: 100%; max-width: 760px; height: auto; margin: 1.5rem auto;"}
 
 The table is useful for looking up exact scores, but it makes the reader work to see the improvement over the baseline. For each benchmark, we must find the relevant rows, subtract their scores, and remember the difference while moving to the next column.
 
@@ -20,6 +21,7 @@ The table is useful for looking up exact scores, but it makes the reader work to
 The redesigned chart focuses on **“Ours early ckpt” at r=1 and r=32**, compared with the fixed-depth baseline. All three rows use **180B training tokens**; the later 800B-token checkpoints are excluded.
 
 ![Diverging grouped bar chart of accuracy differences from the fixed-depth baseline for the early recurrent checkpoint. Blue bars show r=1 and orange bars show r=32 across ten metrics. The r=32 model exceeds the baseline on all ten metrics; r=1 exceeds it only on WinoGrande.](/assets/img/posts/week-03-visualization-converted-table4-to-graph/table4_recurrent_comparison.png)
+{: style="display: block; width: 100%; max-width: 760px; height: auto; margin: 1.5rem auto;"}
 
 Each bar shows **recurrent accuracy minus baseline accuracy, in percentage points**, rather than a relative percentage improvement. For example, HellaSwag changes from 37.34% for the baseline to 29.19% at r=1 and 48.80% at r=32: the bars therefore show **−8.15** and **+11.46** percentage points.
 
