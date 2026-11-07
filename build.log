@@ -3,6 +3,7 @@ Configuration file: /home/runner/work/active-ai-reading.github.io/active-ai-read
        Destination: /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
+[33m          Skipping: _posts/2026-11-08-recurrent-depth-exit-and-trajectories-yak0v.md has a future date[0m
 Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/js/bibsearch.js
 Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/js/calendar-setup.js
 Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/js/chartjs-setup.js
@@ -267,6 +268,18 @@ Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-readin
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/msar-scaling-redesign-chenshani-droid/msar_small_multiples_slopegraph-800.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/msar-scaling-redesign-chenshani-droid/msar_small_multiples_slopegraph-1400.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/msar-scaling-redesign-chenshani-droid/msar_small_multiples_slopegraph-1400.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/answer_if_stopped_at_trip-480.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/answer_if_stopped_at_trip-480.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/answer_if_stopped_at_trip-800.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/answer_if_stopped_at_trip-800.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/answer_if_stopped_at_trip-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/answer_if_stopped_at_trip-1400.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/late_trajectories_all_tokens-480.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/late_trajectories_all_tokens-480.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/late_trajectories_all_tokens-800.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/late_trajectories_all_tokens-800.webp
+       Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/late_trajectories_all_tokens-1400.webp"
+       Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/recurrent-depth-exit-and-trajectories/late_trajectories_all_tokens-1400.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/reproducing-figure-3-recurrence-depth/figure-3-480.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/reproducing-figure-3-recurrence-depth/figure-3-480.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/posts/reproducing-figure-3-recurrence-depth/figure-3-800.webp"
@@ -345,7 +358,7 @@ Terser: Minifying /home/runner/work/active-ai-reading.github.io/active-ai-readin
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-800.webp
        Imagemagick: Generating image "/home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-1400.webp"
        Imagemagick: Adding static file /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/_site/assets/img/template_error-1400.webp
-       Imagemagick: Generated 153 file(s)
+       Imagemagick: Generated 159 file(s)
          AutoPages: Disabled/Not configured in site.config.
         Pagination: Complete, processed 1 pagination page(s)
 DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
@@ -467,10 +480,10 @@ More info and automated migrator: https://sass-lang.com/d/import
     /home/runner/work/active-ai-reading.github.io/active-ai-reading.github.io/assets/css/main.scss 21:3                   root stylesheet
 WARNING: 41 repetitive deprecation warnings omitted.
 Run in verbose mode to see all warnings.
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3580-d3uoga.ipynb to html
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3097-qjnvpi.ipynb to html
 /opt/hostedtoolcache/Python/3.13.18/x64/lib/python3.13/site-packages/nbconvert/filters/highlight.py:71: UserWarning: IPython3 lexer unavailable, falling back on Python 3
   return _pygments_highlight(
-[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3580-1lcg19.ipynb to html
+[NbConvertApp] Converting notebook /tmp/jekyll-jupyter-notebook20261107-3097-z9ts0c.ipynb to html
 [NbConvertApp] WARNING | Alternative text is missing on 1 image(s).
 [33m          Conflict: The following destination is shared by multiple files.[0m
 [33m                    The written file may end up with unexpected contents.[0m
