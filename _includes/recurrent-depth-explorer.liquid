@@ -1,0 +1,34 @@
+<link href="{{ '/assets/css/recurrent-depth.css' | relative_url }}" rel="stylesheet"/>
+<section aria-label="Interactive comparison of three ways to scale language model computation" id="rd-explorer">
+<div aria-label="Choose a scaling approach" class="comparison" role="group">
+<button aria-pressed="false" class="compare" data-mode="parameters" type="button"><div class="num">01 / CONVENTIONAL</div><h3>Scale parameters</h3><p>Build a larger model with more distinct learned weights.</p><div class="bottom">↑ Parameter memory &amp; compute</div></button>
+<button aria-pressed="false" class="compare" data-mode="tokens" type="button"><div class="num">02 / VERBAL REASONING</div><h3>Scale output tokens</h3><p>Generate intermediate reasoning text before the final answer.</p><div class="bottom">↑ Generated tokens &amp; compute</div></button>
+<button aria-pressed="true" class="compare" data-mode="recurrent" type="button"><div class="num">03 / THIS PAPER ★</div><h3>Scale recurrent depth</h3><p>Update a latent state repeatedly using the <strong>same</strong> Transformer block.</p><div class="bottom">↑ Compute, not parameters or reasoning tokens</div></button>
+</div>
+<section class="panel workarea">
+<div class="section-tag" id="rd-mechanism-tag">01 / THE MECHANISM</div>
+<h2 class="panel-title" id="rd-title">One block. Many passes.</h2>
+<p class="sub" id="rd-subtitle">The input is processed once, the recurrent core is reused, and the final state is decoded.</p>
+<div class="rd-compact-bar"><div class="rd-compact-control"><div class="control-head"><label for="rd-depth"><strong id="rd-slider-label">Recurrent passes</strong></label><span class="big-n" id="rd-rval">8</span></div><input class="slider" id="rd-depth" max="32" min="1" step="1" type="range" value="8"/><div class="ticks"><span id="rd-min">1</span><span id="rd-mid">16</span><span id="rd-max">32</span></div><div class="rd-actions"><button class="play" id="rd-play" type="button">▶ Animate</button><span aria-live="polite" class="tiny" id="rd-status" role="status">Drag to explore.</span></div></div><div aria-label="What changes?" class="rd-compact-metrics"><div class="metric"><div class="value" id="rd-depth-value">36</div><div class="label" id="rd-depth-caption">Effective layer applications</div></div><div class="metric"><div class="value" id="rd-weights-value">8</div><div class="label" id="rd-weights-caption">Distinct Transformer layers</div></div><div class="metric"><div class="value" id="rd-params-value">3.5B</div><div class="label" id="rd-params-caption">Stored model parameters</div></div><div class="metric"><div class="value" id="rd-output-value">0</div><div class="label" id="rd-output-caption">Intermediate reasoning tokens</div></div></div></div><svg aria-label="Diagram showing repeated execution of the recurrent Transformer core." class="diagram" id="rd-diagram" role="img" viewbox="0 0 660 272">
+<defs><marker id="rd-arrow" markerheight="8" markerwidth="8" orient="auto" refx="6" refy="3"><path d="M0 0 L6 3 L0 6Z" fill="#9cacc4"></path></marker><marker id="rd-arrowT" markerheight="8" markerwidth="8" orient="auto" refx="6" refy="3"><path d="M0 0 L6 3 L0 6Z" fill="#5de0be"></path></marker></defs>
+<g id="rd-recurrent-drawing">
+<text class="svg-micro" font-size="14" x="10" y="74">TOKENS</text><text class="svg-micro" font-size="14" x="552" y="74">NEXT TOKEN</text>
+<rect fill="#1b354e" height="74" rx="13" stroke="#76adf6" stroke-width="2" width="133" x="12" y="98"></rect><text class="svg-label" font-size="20" font-weight="700" text-anchor="middle" x="78.5" y="129">Prelude</text><text class="svg-sub" font-size="15" text-anchor="middle" x="78.5" y="151">2 layers</text>
+<rect fill="#193d3d" height="74" id="rd-rblock" rx="13" stroke="#5de0be" stroke-width="2" width="184" x="235" y="98"></rect><text class="svg-label" font-size="20" font-weight="700" text-anchor="middle" x="327" y="129">Recurrent core</text><text class="svg-sub" font-size="15" text-anchor="middle" x="327" y="151">4 shared layers</text>
+<rect fill="#442c40" height="74" rx="13" stroke="#e69cbd" stroke-width="2" width="137" x="510" y="98"></rect><text class="svg-label" font-size="20" font-weight="700" text-anchor="middle" x="578.5" y="129">Coda</text><text class="svg-sub" font-size="15" text-anchor="middle" x="578.5" y="151">2 layers</text>
+<path d="M145 135 H230" fill="none" marker-end="url(#rd-arrow)" stroke="#9cacc4" stroke-width="2.5"></path><path d="M419 135 H505" fill="none" marker-end="url(#rd-arrow)" stroke="#9cacc4" stroke-width="2.5"></path>
+<path d="M357 99 V37 Q357 21 341 21 H308 Q293 21 293 37 V94" fill="none" id="rd-loop-path" marker-end="url(#rd-arrowT)" stroke="#5de0be" stroke-width="2.8"></path>
+<text fill="#78efd1" font-size="18" font-weight="750" id="rd-times" text-anchor="middle" x="185" y="36">× 8 passes</text>
+<path d="M145 183 H197 Q207 183 207 195 V225 H327 V174" fill="none" marker-end="url(#rd-arrow)" stroke="#78b4ee" stroke-dasharray="5 6" stroke-width="2"></path>
+<text fill="#9dcaee" font-size="14" x="12" y="218">Input representation</text><text fill="#9dcaee" font-size="14" x="12" y="239">is reinjected each pass</text>
+<circle cx="145" cy="135" fill="#7dffe0" id="rd-moving-dot" opacity="0" r="7"></circle>
+<text fill="#99adc7" font-size="14" text-anchor="middle" x="327" y="266">Effective depth = 2 + 4r + 2</text>
+</g>
+<g id="rd-other-drawing" style="display:none"></g>
+</svg>
+
+<div class="callout" id="rd-callout"><strong>Shared weights, not independent layers.</strong> More passes increase computational depth without increasing stored parameters.</div>
+<div class="rd-small-note" id="rd-note">The three modes illustrate different scaling mechanisms, not equal-compute or equal-accuracy comparisons. Parameter and token modes are schematic; the recurrent mode uses the paper's (2, 4, 2) architecture.</div>
+</section>
+</section>
+<script defer="" src="{{ '/assets/js/recurrent-depth.js' | relative_url }}"></script>
