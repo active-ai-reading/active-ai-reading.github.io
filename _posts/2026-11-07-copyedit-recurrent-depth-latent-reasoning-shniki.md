@@ -95,7 +95,7 @@ As for the structure of the text, I personally would prefer having the motivatio
     <p>
        <ul>
             <li>
-            The prelude produces the embedded input data \mathbf\({e} = P(\mathbf{x})\).
+            The prelude produces the embedded input data \(\mathbf{e} = P(\mathbf{x})\).
             </li>
             <li>
             The initial random state \(s_0\) is drawn from some standard deviation \(\sigma\) distributed normally.
