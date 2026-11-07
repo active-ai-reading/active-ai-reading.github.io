@@ -245,6 +245,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/compile-multi-stream-attention-residuals/";
           
         },
+      },{id: "post-research-follow-ups-worth-doing-of-multi-stream-attention-residuals",
+        
+          title: "Research: Follow-ups worth doing  of Multi-Stream Attention Residuals",
+        
+        description: "Follow-ups worth doing - continue to explore the MSAR architecture",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week2-Research-Follow-ups-worth-doing/";
+          
+        },
       },{id: "post-multi-stream-attention-residuals-the-author-39-s-path",
         
           title: "Multi-Stream Attention Residuals, The Author&#39;s Path.",
