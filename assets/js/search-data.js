@@ -95,7 +95,7 @@ ninja.data = [{
         
           title: "Thinking Without More Tokens: Visualizing Recurrent Depth",
         
-        description: "An interactive visualization of how language models can increase inference-time computation by repeatedly reusing the same Transformer layers.",
+        description: "An interactive comparison of three approaches to improving language model reasoning.",
         section: "Posts",
         handler: () => {
           
