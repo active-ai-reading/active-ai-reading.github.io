@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-can-we-read-huginn-39-s-latent-thoughts-it-depends-on-the-lens",
+        },{id: "post-a-better-graph-instead-of-table-4",
+        
+          title: "A better graph instead of Table 4",
+        
+        description: "Turning Table 4 into a diverging bar chart makes the effect of recurrent depth easier to compare across benchmarks.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week-3-visualization-converted-table4-to-graph/";
+          
+        },
+      },{id: "post-can-we-read-huginn-39-s-latent-thoughts-it-depends-on-the-lens",
         
           title: "Can we read Huginn&#39;s latent thoughts? It depends on the lens",
         

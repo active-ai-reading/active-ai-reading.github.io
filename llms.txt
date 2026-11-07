@@ -14,6 +14,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [A better graph instead of Table 4](https://active-ai-reading.github.io/posts/2026/week-3-visualization-converted-table4-to-graph/): Turning Table 4 into a diverging bar chart makes the effect of recurrent depth easier to compare across benchmarks. (Visualization, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-07)
 - [Can we read Huginn's latent thoughts? It depends on the lens](https://active-ai-reading.github.io/posts/2026/hidden-gems-recurrent-depth-latent-reasoning/): Two papers that try to decode the recurrent states of this week's model, and why they seem to disagree. (Paper scouting, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-07)
 - [Papers worth knowing this week](https://active-ai-reading.github.io/posts/2026/trending-recurrent-depth-latent-reasoning/): Recent work extends recurrent latent reasoning to large-scale language models, multimodal generation, and hybrid reasoning. (Paper scouting, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-06)
 - [LearningHarness: Optimize your learning with AI](https://active-ai-reading.github.io/posts/2026/teach-recurrent-depth-latent-reasoning-AdamJaber03/): My experience using an AI learning tool to read this paper. (Learning to learn, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-06)
