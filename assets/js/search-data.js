@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/hidden-gems-recurrent-depth-latent-reasoning/";
           
         },
+      },{id: "post-copyediting-the-introduction-of-recurrent-depth",
+        
+          title: "Copyediting the Introduction of Recurrent Depth",
+        
+        description: "What is actually new about recurrent reasoning? Making the paper&#39;s contribution clear from the start.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
