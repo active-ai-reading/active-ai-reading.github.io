@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-recurrent-depth-latent-reasoning-chanoch1234/";
           
         },
+      },{id: "post-recurrent-depth-latent-reasoning-in-a-thread",
+        
+          title: "recurrent-depth-latent-reasoning in a thread",
+        
+        description: "Social media posts for recurrent-depth-latent-reasoning.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/social-recurrent-depth-latent-reasoning/";
+          
+        },
       },{id: "post-a-better-figure-lt-n-gt",
         
           title: "A better Figure &lt;N&gt;",
