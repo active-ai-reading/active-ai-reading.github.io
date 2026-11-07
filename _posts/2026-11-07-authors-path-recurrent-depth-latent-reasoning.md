@@ -7,15 +7,6 @@ task: authors
 by: [MatanBarTov]
 ---
 
----
-title: "The authors' path: From efficient training and deep thinking to latent reasoning"
-description: "How Jonas Geiping and Tom Goldstein's earlier work on efficient language models and recurrent computation converged in a new approach to test-time scaling."
-paper: recurrent-depth-latent-reasoning
-role: research
-task: authors
-by: your-github-username
----
-
 ## The authors' path
 
 The first and last authors of *Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach* are **Jonas Geiping** and **Tom Goldstein**. Their previous research provides two particularly relevant foundations for this paper: making language models more computationally efficient, and enabling neural networks to solve harder problems by performing more computation.
