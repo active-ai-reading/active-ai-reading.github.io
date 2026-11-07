@@ -124,6 +124,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/key-visual-recurrent-depth-latent-reasoning/";
           
         },
+      },{id: "post-visualizing-a-core-idea",
+        
+          title: "Visualizing a core idea",
+        
+        description: "Do the recurrent iterations stand for reasoning?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-recurrent-depth-latent-reasoning-ts/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
