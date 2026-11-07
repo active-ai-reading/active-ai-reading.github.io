@@ -117,7 +117,7 @@ ninja.data = [{
         
           title: "Copyediting Section 7 of Recurrent Depth",
         
-        description: "Section 7 is the most fun part of the paper, but it mixes what the authors saw with what they guess.",
+        description: "Section 7 interleaves observation and speculation about the model&#39;s latent trajectories; this edit separates the two.",
         section: "Posts",
         handler: () => {
           
