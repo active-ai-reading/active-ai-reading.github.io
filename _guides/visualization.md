@@ -31,6 +31,8 @@ This requires much effort and makes user skip it all together, which misses the 
 
 ## How to improve an existing graph/diagram?
 
+
+
 ## How to visualize the core idea of a paper?
 
 ### Show what is new by contrasting it with what already exists
