@@ -51,4 +51,3 @@ The important change is the first one. The original makes the reader work out fr
 - The curves end at about step 7,300, although the original caption says the plot covers the first 10,000 steps.
 - In the original, Bad Run 1's correlation is a flat line at 1.0, and it is redrawn that way.
 
-Code and extracted data: [fig5_redo.py](/assets/img/posts/recurrent-depth-figure5/fig5_redo.py), [fig5_data.json](/assets/img/posts/recurrent-depth-figure5/fig5_data.json).
