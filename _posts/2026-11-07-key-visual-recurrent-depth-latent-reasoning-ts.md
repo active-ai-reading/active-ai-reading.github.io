@@ -25,7 +25,7 @@ Here I visualize 3 points from the paper emphasizing the depth as a reasoning me
 Figure 7 shows that tasks that require more reasoning take more iterations to saturate the performance.
 Tables 1 and 4 include similar relevant evaluations that can be visualised in a similar plot:
 
-<img width="2369" height="2217" alt="relative_comparison_plot" src="https://github.com/user-attachments/assets/9247b892-7efe-4196-924e-8214d1a1123b" />
+<img width="790" height="740" alt="relative_comparison_plot" src="https://github.com/user-attachments/assets/9247b892-7efe-4196-924e-8214d1a1123b" />
 Blue shades are simple tasks, and green shades are tasks requiring more reasoning.
 Reading the text, I was expecting the trends to show a later convergence for reasoning demanding tasks than the simple ones, but this is not as convincing.
 
