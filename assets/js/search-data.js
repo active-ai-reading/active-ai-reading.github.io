@@ -58,7 +58,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-key-points-regarding-latenct-reasoning",
+        },{id: "post-reproducing-the-exit-rule-and-the-latent-trajectories-on-huginn-0125",
+        
+          title: "Reproducing the exit rule and the latent trajectories on Huginn-0125",
+        
+        description: "Per-token exit trips, what the answer would be if the loop stopped early, and the latent trajectories of every token, measured on the released model.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/recurrent-depth-exit-and-trajectories-yak0v/";
+          
+        },
+      },{id: "post-learning-about-information-bottleneck",
+        
+          title: "Learning about Information Bottleneck",
+        
+        description: "How can we measure the usefulness of latent representations?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/Week3-learning-Information-Bottleneck/";
+          
+        },
+      },{id: "post-key-points-regarding-latenct-reasoning",
         
           title: "Key points regarding Latenct reasoning",
         
