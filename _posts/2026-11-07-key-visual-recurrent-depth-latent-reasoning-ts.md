@@ -35,7 +35,7 @@ Reading the text, I was expecting the trends to show a later convergence for rea
 In Figure 9 they show that as the model gets more shots (examples of the task), the accuracy saturates later, maybe indicating the model uses the examples as part of a complex reasoning. 
 Table 4 compares closed book to open book tasks, in a similar context of open book allowing the preference reasoning over memorization.
 
-<img width="3867" height="2968" alt="closed_vs_open_with_difference" src="https://github.com/user-attachments/assets/97c97533-08e0-4e85-bc53-99af121e22ce" />
+<img width="1289" height="990" alt="closed_vs_open_with_difference" src="https://github.com/user-attachments/assets/97c97533-08e0-4e85-bc53-99af121e22ce" />
 Score shows performance (%). The model improves in an open-book scenario, showing similar improvement to other open source models.
 
 ## 3. "...the model exiting earlier on high school mathematics, but taking on average 3.5 steps more on moral scenarios"
@@ -47,4 +47,4 @@ Figure 10 shows the distribution of steps to exit on different tasks, where simp
 
 Focusing on the peak of the density functions, it's simpler to see that Continuous Chain-of-Thought (6.3) has little contribution, 
 but the effect of the task domain is clear.
-<img width="3245" height="1767" alt="early_exit" src="https://github.com/user-attachments/assets/9d62da12-a356-479d-af3f-cabee0920a8f" />
+<img width="1081" height="590" alt="early_exit" src="https://github.com/user-attachments/assets/9d62da12-a356-479d-af3f-cabee0920a8f" />
