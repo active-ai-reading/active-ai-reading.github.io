@@ -26,6 +26,7 @@ Figure 7 shows that tasks that require more reasoning take more iterations to sa
 Tables 1 and 4 include similar relevant evaluations that can be visualised in a similar plot:
 
 <img width="790" height="740" alt="relative_comparison_plot" src="https://github.com/user-attachments/assets/9247b892-7efe-4196-924e-8214d1a1123b" />
+
 Blue shades are simple tasks, and green shades are tasks requiring more reasoning.
 Reading the text, I was expecting the trends to show a later convergence for reasoning demanding tasks than the simple ones, but this is not as convincing.
 
@@ -35,7 +36,7 @@ Reading the text, I was expecting the trends to show a later convergence for rea
 In Figure 9 they show that as the model gets more shots (examples of the task), the accuracy saturates later, maybe indicating the model uses the examples as part of a complex reasoning. 
 Table 4 compares closed book to open book tasks, in a similar context of open book allowing the preference reasoning over memorization.
 
-<img width="1289" height="990" alt="closed_vs_open_with_difference" src="https://github.com/user-attachments/assets/97c97533-08e0-4e85-bc53-99af121e22ce" />
+<img width="860" height="660" alt="closed_vs_open_with_difference" src="https://github.com/user-attachments/assets/97c97533-08e0-4e85-bc53-99af121e22ce" />
 Score shows performance (%). The model improves in an open-book scenario, showing similar improvement to other open source models.
 
 ## 3. "...the model exiting earlier on high school mathematics, but taking on average 3.5 steps more on moral scenarios"
