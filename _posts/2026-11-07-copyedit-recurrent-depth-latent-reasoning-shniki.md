@@ -55,7 +55,7 @@ As for the structure of the text, I personally would prefer having the motivatio
     <div class="after"><span class="label">After</span>
     <h3>3.1. Macroscopic Design</h3>
     <p>
-        The model suggests 3 new functional groups: prelude \(P\), the core recurrent block \(R\), and coda \(C\). While keeping the stucture primarily around decoder-only transformer blocks (Vaswani et al., 2017; Radford et al., 2019).
+        The model suggests 3 new functional groups: prelude \(P\), the core recurrent block \(R\), and coda \(C\). While keeping the stucture primarily around decoder-only transformer blocks (Vaswani et al., 2017; Radford et al., 2019). The core block is set between the prelude and coda blocks. And by looping the core we can put an indefinite amount of "verses".
     </p>
     <h4>The idea behind the 3 groups.</h4> 
     <p>
@@ -70,7 +70,6 @@ As for the structure of the text, I personally would prefer having the motivatio
             \(C\), the <i>coda</i>, has 2 main responsibilities. It un-embeds from latent space using several layers and contains the prediction head of the model.
             </li>
         </ul>
-        Similarly to a song, the core block is set between the prelude and coda blocks. And by looping the core we can put an indefinite amount of verses.
     </p>
     <h4>Motivation for this Design.</h4>
     <p>
