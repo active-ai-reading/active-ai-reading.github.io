@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-reproducing-the-exit-rule-and-the-latent-trajectories-on-huginn-0125",
+        },{id: "post-critique-tokenization-survey",
+        
+          title: "Critique Tokenization Survey",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-tokenization-survey/";
+          
+        },
+      },{id: "post-reproducing-the-exit-rule-and-the-latent-trajectories-on-huginn-0125",
         
           title: "Reproducing the exit rule and the latent trajectories on Huginn-0125",
         
