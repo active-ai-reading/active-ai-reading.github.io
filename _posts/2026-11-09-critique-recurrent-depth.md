@@ -1,4 +1,3 @@
-
 ---
 title: "Critique: Parameter-efficient, but is it compute-efficient?"
 description: "A solid proof of concept at scale, but the comparisons do not control for compute, and the latent-space figures show structure rather than reasoning."
