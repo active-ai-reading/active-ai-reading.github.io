@@ -58,15 +58,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-tokenization-survey",
+        },{id: "post-critique-recurrent-depth",
         
-          title: "Critique Tokenization Survey",
+          title: "Critique Recurrent Depth",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/critique-tokenization-survey/";
+            window.location.href = "/posts/2026/critique-recurrent-depth/";
           
         },
       },{id: "post-reproducing-the-exit-rule-and-the-latent-trajectories-on-huginn-0125",
