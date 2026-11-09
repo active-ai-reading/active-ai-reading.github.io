@@ -58,11 +58,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-recurrent-depth",
+        },{id: "post-critique-parameter-efficient-but-is-it-compute-efficient",
         
-          title: "Critique Recurrent Depth",
+          title: "Critique: Parameter-efficient, but is it compute-efficient?",
         
-        description: "",
+        description: "A solid proof of concept at scale, but the comparisons do not control for compute, and the latent-space figures show structure rather than reasoning.",
         section: "Posts",
         handler: () => {
           

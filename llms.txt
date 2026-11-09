@@ -14,7 +14,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
-- [Critique Recurrent Depth](https://active-ai-reading.github.io/posts/2026/critique-recurrent-depth/): (, 2026-11-09)
+- [Critique: Parameter-efficient, but is it compute-efficient?](https://active-ai-reading.github.io/posts/2026/critique-recurrent-depth/): A solid proof of concept at scale, but the comparisons do not control for compute, and the latent-space figures show structure rather than reasoning. (Research skills, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-09)
 - [Reproducing the exit rule and the latent trajectories on Huginn-0125](https://active-ai-reading.github.io/posts/2026/recurrent-depth-exit-and-trajectories-yak0v/): Per-token exit trips, what the answer would be if the loop stopped early, and the latent trajectories of every token, measured on the released model. (Coding, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-08)
 - [Learning about Information Bottleneck](https://active-ai-reading.github.io/posts/2026/Week3-learning-Information-Bottleneck/): How can we measure the usefulness of latent representations? (Learning to learn, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-08)
 - [Key points regarding Latenct reasoning](https://active-ai-reading.github.io/posts/2026/week3-The-points-that-matter/): Does latent reasoning bring LLM processing mechanisms closer to human thinking processes? (Writing, 2026-11-07)
