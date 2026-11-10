@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/week4-recurrent-pretraining-demonstration-website/";
           
         },
+      },{id: "post-reimplementing-bpe-from-the-survey-do-the-three-code-listings-agree-and-is-the-fast-one-really-faster",
+        
+          title: "Reimplementing BPE from the survey: do the three code listings agree, and is...",
+        
+        description: "Running Codes 3.1 to 3.3 of the tokenization survey on two novels, cross-checking them with an independent implementation, and testing the survey&#39;s claims about equivalence, wasted computation and morphemes.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reimplement-bpe-tokenization-survey/";
+          
+        },
       },{id: "post-reimplementing-greedy-vs-shortest-path-tokenization",
         
           title: "Reimplementing Greedy vs. Shortest-Path Tokenization",
