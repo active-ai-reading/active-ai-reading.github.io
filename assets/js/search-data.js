@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-parameter-efficient-but-is-it-compute-efficient",
+        },{id: "post-reimplementing-greedy-vs-shortest-path-tokenization",
+        
+          title: "Reimplementing Greedy vs. Shortest-Path Tokenization",
+        
+        description: "Reproducing the survey&#39;s MaxMatch vs. PathPiece example and measuring when greedy segmentation is suboptimal on 2,046 synthetic strings.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reimplement-tokenization-survey/";
+          
+        },
+      },{id: "post-critique-parameter-efficient-but-is-it-compute-efficient",
         
           title: "Critique: Parameter-efficient, but is it compute-efficient?",
         
