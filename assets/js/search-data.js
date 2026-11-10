@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-reimplementing-greedy-vs-shortest-path-tokenization",
+        },{id: "post-recurrent-depth-latent-reasoning",
+        
+          title: "recurrent-depth-latent-reasoning",
+        
+        description: "Website that demonstrates the recurrent-pretraining architecture.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week4-recurrent-pretraining-demonstration-website/";
+          
+        },
+      },{id: "post-reimplementing-greedy-vs-shortest-path-tokenization",
         
           title: "Reimplementing Greedy vs. Shortest-Path Tokenization",
         
