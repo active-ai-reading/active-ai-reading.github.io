@@ -74,7 +74,7 @@ I timed both decoders on 3,000 words while making the merge list longer:
 
 Code 3.2's time grows with the *length of the merge list*, because each word is checked against every merge. Code 3.3 stays almost flat, because it only looks at merges that really appear in the word. The survey notes that modern tokenizers have hundreds of thousands of merges, which is why this matters.
 
-![Left: time to tokenize 3,000 words as the merge list grows, for the iterative and priority decoders. Right: characters per token on the held-out book as merges are added.](/assets/img/posts/reimplement-bpe-tokenization-survey/bpe_inference_and_compression.png)
+<img src="/assets/img/posts/reimplement-bpe-tokenization-survey/bpe_inference_and_compression.png" alt="Left: time to tokenize 3,000 words as the merge list grows, for the iterative and priority decoders. Right: characters per token on the held-out book as merges are added." loading="lazy" style="display: block; width: 100%; max-width: 100%; height: auto;">
 
 ### 5. Claim 3: "surfaces morphemes". Partly
 
