@@ -5,6 +5,6 @@ authors: Jonas Geiping, Sean McLeish, Neel Jain, John Kirchenbauer, Siddharth Si
 year: 2025
 arxiv: "2502.05171"
 tldr: >
-  Warning: this is a survey paper, it is long and you won't understand and read everything, it is fine (To be written by the class after week 3.)
+  This paper suggests an efficient approach towards test-time compute scaling. While Chain-of-Thought has proven effective, it is wasteful in memory and compute by design, the authors suggest a latent reasoning approach instead, demonstrating its gains at scale.
 tags: [reasoning, test-time compute]
 ---
