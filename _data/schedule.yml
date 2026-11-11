@@ -31,8 +31,19 @@
   paper: tokenization-survey
 
 - week: 5
+  paper: spurious-forgetting
 
 - week: 6
+  # Planned, not scheduled yet: LLM-JEPA (Huang, LeCun, Balestriero; ICLR 2026)
+  #   https://arxiv.org/abs/2509.14252 · code https://github.com/rbalestr-lab/llm-jepa
+  # For more reading:
+  #   Semantic Tube Prediction, the same lab's follow-up, no paired views, claims 16x data efficiency
+  #     https://arxiv.org/abs/2602.22617
+  #   The arguments against:
+  #     Representation Without Reward, 22 JEPA auxiliaries change hidden geometry but not task accuracy
+  #       https://arxiv.org/abs/2605.15394
+  #     The JEPA Paradox in Language, text has many valid completions, so predicting one embedding averages them
+  #       https://arxiv.org/abs/2607.23531
 
 - week: 7
 
