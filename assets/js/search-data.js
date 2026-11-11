@@ -1196,6 +1196,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/recurrent-depth-latent-reasoning/";
+            },},{id: "papers-when-forgetting-is-not-catastrophic-on-the-mechanics-of-spurious-forgetting",
+          title: 'When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting',
+          description: "",
+          section: "Papers",handler: () => {
+              window.location.href = "/papers/spurious-forgetting/";
             },},{id: "papers-tokenization-a-survey-for-modern-nlp",
           title: 'Tokenization: A Survey for Modern NLP',
           description: "",

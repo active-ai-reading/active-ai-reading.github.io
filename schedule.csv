@@ -4,7 +4,7 @@ week,date,paper_id,title,page,link,topic,notes
 2,2026-11-01,"multi-stream-attention-residuals","Multi-Stream Attention Residuals","https://active-ai-reading.github.io/papers/multi-stream-attention-residuals/","https://arxiv.org/abs/2610.13630","",""
 3,2026-11-08,"recurrent-depth-latent-reasoning","Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach","https://active-ai-reading.github.io/papers/recurrent-depth-latent-reasoning/","https://arxiv.org/abs/2502.05171","Recurrent-depth latent reasoning (tentative)",""
 4,2026-11-15,"tokenization-survey","Tokenization: A Survey for Modern NLP","https://active-ai-reading.github.io/papers/tokenization-survey/","https://www.alphaxiv.org/abs/2609.tokenization-survey-modern-nlp","",""
-5,2026-11-22,"","","","","",""
+5,2026-11-22,"spurious-forgetting","When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting","https://active-ai-reading.github.io/papers/spurious-forgetting/","https://arxiv.org/abs/2610.08718","",""
 6,2026-11-29,"","","","","",""
 7,2026-12-13,"","","","","",""
 8,2026-12-20,"","","","","",""
