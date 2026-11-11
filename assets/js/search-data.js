@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/two-questions-for-the-tokenization-survey/";
           
         },
+      },{id: "post-making-the-small-share-of-tokenization-research-visible",
+        
+          title: "Making the small share of tokenization research visible",
+        
+        description: "Redesigning Figure 2.1 to show how few abstracts mention tokenization.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/tokenization-research-share/";
+          
+        },
       },{id: "post-recurrent-depth-latent-reasoning",
         
           title: "recurrent-depth-latent-reasoning",
