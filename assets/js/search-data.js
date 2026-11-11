@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-recurrent-depth-latent-reasoning",
+        },{id: "post-2-papers-challenging-the-tokenization-survey",
+        
+          title: "2 papers challenging the tokenization survey",
+        
+        description: "Recent papers question how we evaluate tokenizers and how we help underrepresented languages.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/two-questions-for-the-tokenization-survey/";
+          
+        },
+      },{id: "post-recurrent-depth-latent-reasoning",
         
           title: "recurrent-depth-latent-reasoning",
         
