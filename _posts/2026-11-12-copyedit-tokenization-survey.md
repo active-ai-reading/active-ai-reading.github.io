@@ -60,10 +60,6 @@ model robustness (Kudo, 2018). BPE achieves a similar effect only through ad hoc
 BPE-dropout (Provilkov et al., 2020)
   </div>
   <div class="after"><span class="label">After</span>
- 
-## 2. Proposed Rewrite: Unigram Language Modeling Tokenization
-
-### 2.1 The Main Idea
 
 Unigram is a probabilistic tokenization algorithm. Unlike BPE, which starts with individual characters or bytes and gradually merges them into larger tokens, Unigram works in the opposite direction. It starts with a large vocabulary of possible tokens and gradually removes the ones that are less useful.
 
