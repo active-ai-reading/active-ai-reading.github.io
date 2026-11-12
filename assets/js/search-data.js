@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/reimplement-tokenization-survey/";
           
         },
+      },{id: "post-rewriting-section-3-2-unigram-language-modeling-tokenization",
+        
+          title: "Rewriting Section 3.2 — Unigram Language Modeling Tokenization",
+        
+        description: "a detailed explanation of the unigram tokenization",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-tokenization-survey/";
+          
+        },
       },{id: "post-2-papers-challenging-the-tokenization-survey",
         
           title: "2 papers challenging the tokenization survey",
