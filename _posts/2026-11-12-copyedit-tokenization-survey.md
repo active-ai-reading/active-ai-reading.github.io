@@ -86,9 +86,9 @@ Here, \(p(t)\) is the probability assigned to token \(t\). These probabilities a
 \]
 
 The goal of Unigram is to find a vocabulary and token probabilities that assign high likelihood to the training corpus.
-
-### 2.2 Initializing the Vocabulary and Probabilities
-
+\\
+Initializing the Vocabulary and Probabilities:
+\\
 Before training begins, we need to construct an initial vocabulary and assign probabilities to its tokens.
 
 Unlike BPE, which begins with a small vocabulary, Unigram starts with a much larger set of candidate tokens.
