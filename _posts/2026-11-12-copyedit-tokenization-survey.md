@@ -60,7 +60,7 @@ model robustness (Kudo, 2018). BPE achieves a similar effect only through ad hoc
 BPE-dropout (Provilkov et al., 2020)
   </div>
   <div class="after"><span class="label">After</span>
-    <h4>2.1 The Main Idea</h4>
+    <h4>The Main Idea</h4>
 <p>
     Unigram is a probabilistic tokenization algorithm. Unlike BPE,
     which starts with individual characters or bytes and gradually
@@ -110,7 +110,7 @@ BPE-dropout (Provilkov et al., 2020)
     probabilities that assign high likelihood to the training corpus.
 </p>
 
-<h4>2.2 Initializing the Vocabulary and Probabilities</h4>
+<h4> Initializing the Vocabulary and Probabilities</h4>
 <p>
     Before training begins, we need to construct an initial vocabulary
     and assign probabilities to its tokens.
@@ -164,7 +164,7 @@ BPE-dropout (Provilkov et al., 2020)
     them according to how well the tokens explain the training corpus.
 </p>
 
-<h4>2.3 A Simple Example</h4>
+<h4>A Simple Example</h4>
 <p>
     Suppose our vocabulary contains the tokens
     <code>play</code>, <code>ing</code>, and
@@ -237,7 +237,7 @@ BPE-dropout (Provilkov et al., 2020)
     probabilities are learned.
 </p>
 
-<h4>2.4 Learning the Token Probabilities</h4>
+<h4>Learning the Token Probabilities</h4>
 <p>
     Unigram uses an algorithm called Expectation-Maximization (EM)
     to learn the token probabilities.
@@ -384,7 +384,7 @@ BPE-dropout (Provilkov et al., 2020)
     corpus under the current vocabulary.
 </p>
 
-<h4>2.5 Removing Tokens from the Vocabulary</h4>
+<h4>Removing Tokens from the Vocabulary</h4>
 <p>
     So far, we have only learned probabilities for the tokens,
     but Unigram also needs to decide which tokens should remain
@@ -549,86 +549,7 @@ BPE-dropout (Provilkov et al., 2020)
     with the smaller estimated removal loss.
 </p>
 
-<h4>Approximating the Removal Loss</h4>
-<p>
-    Computing the exact change in corpus likelihood
-    for every candidate token would be expensive.
-</p>
-<p>
-    The implementation presented in the paper uses
-    an approximation:
-</p>
-<p>
-    \[
-    \operatorname{Loss}(t)\approx
-    c_t\left(
-    \log p(t)-
-    \operatorname{BestAlternativeLogScore}(t)
-    \right)
-    \]
-</p>
-<p>
-    Here:
-</p>
-<ul>
-    <li>
-        \(c_t\) is the expected count of token \(t\).
-    </li>
-    <li>
-        \(\log p(t)\) is the log-probability of
-        representing the string using token \(t\)
-        directly.
-    </li>
-    <li>
-        \(\operatorname{BestAlternativeLogScore}(t)\)
-        is the highest log-probability of representing
-        the same string using other tokens, without
-        using \(t\).
-    </li>
-</ul>
-<p>
-    More formally, the alternative score can be written as:
-</p>
-<p>
-    \[
-    \operatorname{BestAlternativeLogScore}(t)
-    =
-    \max_{\substack{z\in T(t)\\z\ne[t]}}
-    \sum_{u\in z}\log p(u)
-    \]
-</p>
-<p>
-    Where \(T(t)\) is the set of all valid tokenizations
-    of the string represented by \(t\).
-</p>
-<p>
-    This score can be calculated using the Viterbi
-    algorithm while excluding the token we are
-    considering removing.
-</p>
-<p>
-    The intuition is that if a token rarely appears,
-    or if it can easily be replaced by other tokens
-    with similar scores, removing it is less harmful.
-</p>
-<p>
-    The algorithm estimates the loss caused by removing
-    each token and removes a fraction of the least useful
-    ones, meaning those with the smallest estimated
-    removal loss.
-</p>
-<p>
-    It then runs EM again to update the probabilities
-    using the reduced vocabulary.
-</p>
-<p>
-    This process continues until the desired vocabulary
-    size is reached. Essential atomic tokens are
-    preserved so that the tokenizer can still
-    represent the input text.
-</p>
-
-<h4>2.6 Tokenization During Inference</h4>
+<h4>Tokenization During Inference</h4>
 <p>
     Once training is complete, the tokenizer has a fixed
     vocabulary and a probability assigned to each token.
@@ -681,7 +602,7 @@ BPE-dropout (Provilkov et al., 2020)
     subword regularization.
 </p>
 
-<h4>2.7 Summary</h4>
+<h4>Summary</h4>
 <p>
     To summarize, the Unigram algorithm works as follows:
 </p>
