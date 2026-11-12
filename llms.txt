@@ -15,6 +15,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Reimplementing BPE-Dropout](https://active-ai-reading.github.io/posts/2026/reimplement-tokenization-survey/): Reimplemented BPE-Dropout, with few examples. (Coding, on "Tokenization: A Survey for Modern NLP", 2026-11-12)
 - [2 papers challenging the tokenization survey](https://active-ai-reading.github.io/posts/2026/two-questions-for-the-tokenization-survey/): Recent papers question how we evaluate tokenizers and how we help underrepresented languages. (Paper scouting, on "Tokenization: A Survey for Modern NLP", 2026-11-11)
 - [Making the small share of tokenization research visible](https://active-ai-reading.github.io/posts/2026/tokenization-research-share/): Redesigning Figure 2.1 to show how few abstracts mention tokenization. (Visualization, on "Tokenization: A Survey for Modern NLP", 2026-11-11)
 - [recurrent-depth-latent-reasoning](https://active-ai-reading.github.io/posts/2026/week4-recurrent-pretraining-demonstration-website/): Website that demonstrates the recurrent-pretraining architecture. (Communicate to the world, on "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach", 2026-11-10)

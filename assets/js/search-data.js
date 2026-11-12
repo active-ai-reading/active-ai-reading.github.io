@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-2-papers-challenging-the-tokenization-survey",
+        },{id: "post-reimplementing-bpe-dropout",
+        
+          title: "Reimplementing BPE-Dropout",
+        
+        description: "Reimplemented BPE-Dropout, with few examples.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reimplement-tokenization-survey/";
+          
+        },
+      },{id: "post-2-papers-challenging-the-tokenization-survey",
         
           title: "2 papers challenging the tokenization survey",
         
