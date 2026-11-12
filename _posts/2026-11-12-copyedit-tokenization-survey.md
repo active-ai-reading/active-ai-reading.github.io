@@ -60,7 +60,7 @@ model robustness (Kudo, 2018). BPE achieves a similar effect only through ad hoc
 BPE-dropout (Provilkov et al., 2020)
   </div>
   <div class="after"><span class="label">After</span>
-    <h4>The Main Idea</h4>
+ <h4>The Main Idea</h4>
 <p>
     Unigram is a probabilistic tokenization algorithm. Unlike BPE,
     which starts with individual characters or bytes and gradually
@@ -74,13 +74,13 @@ BPE-dropout (Provilkov et al., 2020)
     over the vocabulary.
 </p>
 <p>
-    For example, consider the word <i>playing</i>. Depending on
+    For example, consider the word playing. Depending on
     the vocabulary, it could be represented as:
 </p>
 <ul>
-    <li><code>playing</code></li>
-    <li><code>play | ing</code></li>
-    <li><code>p | lay | ing</code></li>
+    <li>playing</li>
+    <li>play | ing</li>
+    <li>p | lay | ing</li>
 </ul>
 <p>
     All three tokenizations represent the same word, but Unigram
@@ -110,7 +110,7 @@ BPE-dropout (Provilkov et al., 2020)
     probabilities that assign high likelihood to the training corpus.
 </p>
 
-<h4> Initializing the Vocabulary and Probabilities</h4>
+<h4>Initializing the Vocabulary and Probabilities</h4>
 <p>
     Before training begins, we need to construct an initial vocabulary
     and assign probabilities to its tokens.
@@ -128,7 +128,7 @@ BPE-dropout (Provilkov et al., 2020)
 </p>
 <p>
     For example, if our corpus contains words such as
-    <i>play</i>, <i>playing</i>, and <i>player</i>,
+    play, playing, and player,
     the initial vocabulary might contain:
 </p>
 <p>
@@ -144,8 +144,9 @@ BPE-dropout (Provilkov et al., 2020)
 </p>
 <p>
     To understand the idea, one possible initialization is to use
-    estimated token frequencies. If \(c_0(t)\) is an initial
-    frequency-based weight assigned to token \(t\), we can define:
+    the frequency of each candidate token in the training corpus.
+    If \(c_0(t)\) is the number of times the candidate token \(t\)
+    appears in the training corpus, we can define:
 </p>
 <p>
     \[
@@ -153,10 +154,12 @@ BPE-dropout (Provilkov et al., 2020)
     \]
 </p>
 <p>
-    This gives more probability to frequent candidates while
-    ensuring that the probabilities sum to 1. This is an
-    illustrative initialization and not necessarily the exact
-    initialization procedure used by SentencePiece.
+    Here, the occurrences are counted as substrings, before
+    choosing the final tokenization of the text.
+    This gives more probability to frequently appearing
+    candidates while ensuring that the probabilities sum to 1.
+    This is an illustrative initialization and not necessarily
+    the exact initialization procedure used by SentencePiece.
 </p>
 <p>
     The important point is that these probabilities are only
@@ -167,13 +170,12 @@ BPE-dropout (Provilkov et al., 2020)
 <h4>A Simple Example</h4>
 <p>
     Suppose our vocabulary contains the tokens
-    <code>play</code>, <code>ing</code>, and
-    <code>playing</code>, with the following initial probabilities:
+    play, ing, and playing, with the following initial probabilities:
 </p>
 <table>
     <tr>
-        <th>Token</th>
-        <th>Probability</th>
+        <td>Token</td>
+        <td>Probability</td>
     </tr>
     <tr>
         <td>play</td>
@@ -194,7 +196,7 @@ BPE-dropout (Provilkov et al., 2020)
 </table>
 <p>
     These probabilities are chosen only to make the example simple.
-    Now suppose we want to tokenize the word <i>playing</i>.
+    Now suppose we want to tokenize the word playing.
 </p>
 <p>
     For simplicity, assume there are only two possible tokenizations.
@@ -248,14 +250,14 @@ BPE-dropout (Provilkov et al., 2020)
     each word. For this reason, EM alternates between two steps.
 </p>
 
-<h4>E-step: Estimating Token Counts</h4>
+<h5>E-step: Estimating Token Counts</h5>
 <p>
     In this step, we consider all possible tokenizations of each
     word and calculate their probabilities.
 </p>
 <p>
     Returning to our example, the two possible tokenizations
-    of <i>playing</i> had probabilities \(0.10\) and \(0.12\).
+    of playing had probabilities \(0.10\) and \(0.12\).
     The total probability assigned to the word is:
 </p>
 <p>
@@ -265,7 +267,7 @@ BPE-dropout (Provilkov et al., 2020)
 </p>
 <p>
     We can now calculate the probability of each tokenization,
-    given that the observed word is <i>playing</i>:
+    given that the observed word is playing:
 </p>
 <p>
     \[
@@ -293,8 +295,8 @@ BPE-dropout (Provilkov et al., 2020)
 </p>
 <table>
     <tr>
-        <th>Token</th>
-        <th>Expected Count</th>
+        <td>Token</td>
+        <td>Expected Count</td>
     </tr>
     <tr>
         <td>playing</td>
@@ -310,7 +312,7 @@ BPE-dropout (Provilkov et al., 2020)
     </tr>
 </table>
 <p>
-    For example, <code>play</code> appears only in the second
+    For example, play appears only in the second
     segmentation, so its expected count is \(0.545\).
 </p>
 <p>
@@ -318,7 +320,7 @@ BPE-dropout (Provilkov et al., 2020)
     the entire training corpus.
 </p>
 
-<h4>M-step: Updating Token Probabilities</h4>
+<h5>M-step: Updating Token Probabilities</h5>
 <p>
     After estimating the expected counts, we update the probability
     of each token by dividing its expected count by the total
@@ -449,10 +451,10 @@ BPE-dropout (Provilkov et al., 2020)
     significantly affecting the likelihood assigned to the data.
 </p>
 
-<h4>Example: Removing a Token</h4>
+<h5>Example: Removing a Token</h5>
 <p>
     Let's return to our previous example, where the training
-    corpus consists only of the word <i>playing</i>.
+    corpus consists only of the word playing.
 </p>
 <p>
     Recall that the initial probabilities were:
@@ -486,7 +488,7 @@ BPE-dropout (Provilkov et al., 2020)
 </p>
 <p>
     Now suppose we want to remove the token
-    <code>playing</code> from our vocabulary.
+    playing from our vocabulary.
 </p>
 <p>
     After removing it, the only remaining possible
@@ -522,7 +524,7 @@ BPE-dropout (Provilkov et al., 2020)
     \]
 </p>
 <p>
-    This shows that removing <code>playing</code> eliminates
+    This shows that removing playing eliminates
     one possible way to represent the word, but another
     segmentation remains available.
 </p>
@@ -536,17 +538,96 @@ BPE-dropout (Provilkov et al., 2020)
 </p>
 <p>
     Now imagine a larger corpus containing many occurrences
-    of <i>player</i>, <i>playing</i>, and <i>playful</i>.
+    of player, playing, and playful.
 </p>
 <p>
-    Removing <code>play</code> might affect many different
-    words, whereas removing <code>playing</code> might be
+    Removing play might affect many different
+    words, whereas removing playing might be
     less harmful because it can be replaced by
-    <code>play</code> and <code>ing</code>.
+    play and ing.
 </p>
 <p>
     We would therefore prefer to remove the token
     with the smaller estimated removal loss.
+</p>
+
+<h5>Approximating the Removal Loss</h5>
+<p>
+    Computing the exact change in corpus likelihood
+    for every candidate token would be expensive.
+</p>
+<p>
+    The implementation presented in the paper uses
+    an approximation:
+</p>
+<p>
+    \[
+    \operatorname{Loss}(t)\approx
+    c_t\left(
+    \log p(t)-
+    \operatorname{BestAlternativeLogScore}(t)
+    \right)
+    \]
+</p>
+<p>
+    Here:
+</p>
+<ul>
+    <li>
+        \(c_t\) is the expected count of token \(t\).
+    </li>
+    <li>
+        \(\log p(t)\) is the log-probability of
+        representing the string using token \(t\)
+        directly.
+    </li>
+    <li>
+        \(\operatorname{BestAlternativeLogScore}(t)\)
+        is the highest log-probability of representing
+        the same string using other tokens, without
+        using \(t\).
+    </li>
+</ul>
+<p>
+    More formally, the alternative score can be written as:
+</p>
+<p>
+    \[
+    \operatorname{BestAlternativeLogScore}(t)
+    =
+    \max_{\substack{z\in T(t)\\z\ne[t]}}
+    \sum_{u\in z}\log p(u)
+    \]
+</p>
+<p>
+    Where \(T(t)\) is the set of all valid tokenizations
+    of the string represented by \(t\).
+</p>
+<p>
+    This score can be calculated using the Viterbi
+    algorithm while excluding the token we are
+    considering removing.
+</p>
+<p>
+    The intuition is that if a token rarely appears,
+    or if it can easily be replaced by other tokens
+    with similar scores, removing it is less harmful.
+</p>
+<p>
+    The algorithm estimates the loss caused by removing
+    each token and removes a fraction of the least useful
+    ones, meaning those with the smallest estimated
+    removal loss.
+</p>
+<p>
+    It then runs EM again to update the probabilities
+    using the reduced vocabulary.
+</p>
+<p>
+    This process continues until the desired vocabulary
+    size is reached. Essential atomic tokens are
+    preserved so that the tokenizer can still
+    represent the input text.
 </p>
 
 <h4>Tokenization During Inference</h4>
@@ -629,7 +710,6 @@ BPE-dropout (Provilkov et al., 2020)
         most probable tokenization of the input.
     </li>
 </ol>
-<p>
   </div>
 </div>
 
