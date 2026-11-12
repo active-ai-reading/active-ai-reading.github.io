@@ -61,263 +61,384 @@ BPE-dropout (Provilkov et al., 2020)
   </div>
   <div class="after"><span class="label">After</span>
 
-### 2.1 The Main Idea
+2.1 The Main Idea
 
 Unigram is a probabilistic tokenization algorithm. Unlike BPE, which starts with individual characters or bytes and gradually merges them into larger tokens, Unigram works in the opposite direction. It starts with a large vocabulary of possible tokens and gradually removes the ones that are less useful.
 
 The main idea is to assume that a word can be constructed by independently sampling tokens from a probability distribution over the vocabulary.
 
-For example, consider the word *playing*. Depending on the vocabulary, it could be represented as
+For example, consider the word playing. Depending on the vocabulary, it could be represented as:
 
-- `[playing]`
+playing
 
-- `[play, ing]`
+play | ing
 
-- `[p, lay, ing]`
+p | lay | ing
 
 All three tokenizations represent the same word, but Unigram assigns each one a different probability.
 
-If a tokenization consists of the tokens $t_1,t_2,\ldots,t_k$, its probability is defined as
+If a tokenization consists of the tokens $t_1,t_2,\ldots,t_k$, its probability is defined as:
 
 $$
-P(t_1,\ldots,t_k)=\prod_{i=1}^{k}p(t_i).
+P(t_1,\ldots,t_k)=\prod_{i=1}^{k}p(t_i)
 $$
 
 Here, $p(t)$ is the probability assigned to token $t$. These probabilities are learned during training, and their sum over the entire vocabulary must equal 1:
 
 $$
-\sum_{t\in V}p(t)=1.
+\sum_{t\in V}p(t)=1
 $$
 
 The goal of Unigram is to find a vocabulary and token probabilities that assign high likelihood to the training corpus.
 
-### 2.2 Initializing the Vocabulary and Probabilities
+2.2 Initializing the Vocabulary and Probabilities
 
 Before training begins, we need to construct an initial vocabulary and assign probabilities to its tokens.
 
-Unlike BPE, which begins with a small vocabulary, Unigram starts with a much larger set of candidate tokens. In the SentencePiece implementation discussed in the paper, the initial vocabulary contains all characters appearing in the training corpus, together with a large number of frequent substrings. These candidate substrings are identified using a suffix array.
+Unlike BPE, which begins with a small vocabulary, Unigram starts with a much larger set of candidate tokens.
 
-For example, if our corpus contains words such as *play*, *playing*, and *player*, the initial vocabulary might contain
+In the SentencePiece implementation discussed in the paper, the initial vocabulary contains all characters appearing in the training corpus, together with a large number of frequent substrings. These candidate substrings are identified using a suffix array.
 
-$$
-V=\{\texttt{p},\texttt{l},\ldots,\texttt{play},\texttt{ing},\texttt{playing},\texttt{player},\ldots\}.
-$$
-
-We also need to assign an initial probability to each candidate token. The paper does not specify one universal initialization rule, since the exact procedure depends on the implementation. SentencePiece uses initial scores for its seed vocabulary.
-
-To understand the idea, one possible initialization is to use estimated token frequencies. If $c_0(t)$ is an initial frequency-based weight assigned to token $t$, we can define
+For example, if our corpus contains words such as play, playing, and player, the initial vocabulary might contain:
 
 $$
-p_0(t)=\frac{c_0(t)}{\sum_{u\in V}c_0(u)}.
+V={\text{p},\text{l},\ldots,\text{play},\text{ing},\text{playing},\text{player},\ldots}
 $$
 
-This assigns more probability to frequent candidates while ensuring that the probabilities sum to 1. It is an illustrative initialization, not a claim about the exact default used by SentencePiece.
+We also need to assign an initial probability to each candidate token.
+
+The paper does not specify one universal initialization rule, since the exact procedure depends on the implementation. SentencePiece uses initial scores for its seed vocabulary.
+
+To understand the idea, one possible initialization is to use estimated token frequencies. If $c_0(t)$ is an initial frequency-based weight assigned to token $t$, we can define:
+
+$$
+p_0(t)=\frac{c_0(t)}{\sum_{u\in V}c_0(u)}
+$$
+
+This assigns more probability to frequent candidates while ensuring that the probabilities sum to 1. It is an illustrative initialization, not the exact default initialization rule of SentencePiece.
 
 The important point is that these probabilities are only initial estimates. The EM algorithm will update them according to how well the candidate tokens explain the training corpus.
 
-### 2.3 A Simple Example
+2.3 A Simple Example
 
-Suppose our vocabulary contains the tokens `play`, `ing`, and `playing`, with the following initial probabilities:
+Suppose our vocabulary contains the tokens play, ing, and playing, with the following initial probabilities:
 
-| Token | Probability |
-|---|---:|
-| `play` | 0.40 |
-| `ing` | 0.30 |
-| `playing` | 0.10 |
-| Other tokens | 0.20 |
+Token
 
-These values are chosen only to make the example simple. For this example, suppose the word *playing* has only two possible tokenizations.
+Probability
+
+play
+
+0.40
+
+ing
+
+0.30
+
+playing
+
+0.10
+
+Other tokens
+
+0.20
+
+These values are chosen only to make the example simple.
+
+Now suppose we want to tokenize the word playing.
+
+For simplicity, assume there are only two possible tokenizations.
 
 Option 1: Represent the entire word as one token.
 
 $$
-P([\texttt{playing}])=0.10.
+P([\text{playing}])=0.10
 $$
 
 Option 2: Split the word into two tokens.
 
 $$
-P([\texttt{play},\texttt{ing}])=0.40\cdot 0.30=0.12.
+P([\text{play},\text{ing}])=0.40\cdot0.30=0.12
 $$
 
-Since $0.12>0.10$, the second tokenization has a higher probability according to the model. The tokenizer therefore chooses $[\mathrm{play},\mathrm{ing}]$. Unlike BPE, Unigram does not replay a learned sequence of merges. It compares the probabilities of possible segmentations and selects the most probable one.
+Since $0.12>0.10$, the second tokenization has a higher probability according to our model.
 
-### 2.4 Learning the Token Probabilities
-
-Unigram uses Expectation-Maximization (EM) to learn token probabilities. The difficulty is that the training corpus contains words, but we do not know which segmentation should be used for each word. EM therefore alternates between two steps.
-
-#### E-step: Estimating Token Counts
-
-In this step, we consider all valid tokenizations of each word and calculate their probabilities. In our example, the two tokenizations of *playing* have probabilities $0.10$ and $0.12$.
-
-The total probability assigned to the word is
+Therefore, the tokenizer would choose:
 
 $$
-P(\texttt{playing})=0.10+0.12=0.22.
+[\text{play},\text{ing}]
 $$
 
-We then calculate the conditional probability of each tokenization, given that we observed the word *playing*:
+This illustrates how Unigram makes its decisions. Instead of following a predetermined sequence of merges, as BPE does, it compares the probabilities of the possible tokenizations and chooses the most probable one.
+
+However, we still need to understand how these token probabilities are learned.
+
+2.4 Learning the Token Probabilities
+
+Unigram uses an algorithm called Expectation-Maximization (EM) to learn the token probabilities.
+
+The difficulty is that the training corpus contains words, but we do not know which tokenization should be used for each word.
+
+For this reason, EM alternates between two steps.
+
+E-step: Estimating Token Counts
+
+In this step, we consider all possible tokenizations of each word and calculate their probabilities.
+
+Returning to our example, the two possible tokenizations of playing had probabilities 0.10 and 0.12.
+
+The total probability assigned to the word is:
+
+$$
+P(\text{playing})=0.10+0.12=0.22
+$$
+
+We can now calculate the probability of each tokenization, given that the observed word is playing:
+
+$$
+P([\text{playing}]\mid\text{playing})
+=\frac{0.10}{0.22}\approx0.455
+$$
+
+$$
+P([\text{play},\text{ing}]\mid\text{playing})
+=\frac{0.12}{0.22}\approx0.545
+$$
+
+These probabilities tell us how likely each segmentation is, given the observed word.
+
+Instead of choosing only the most probable segmentation during training, we use both to calculate the expected number of occurrences of each token.
+
+For this example, the expected counts are:
+
+Token
+
+Expected count
+
+playing
+
+0.455
+
+play
+
+0.545
+
+ing
+
+0.545
+
+For example, play appears only in the second segmentation, so its expected count is 0.545.
+
+In practice, these expected counts are calculated over the entire training corpus.
+
+M-step: Updating Token Probabilities
+
+After estimating the expected counts, we update the probability of each token by dividing its expected count by the total expected number of tokens.
+
+The update rule is:
+
+$$
+p_{\text{new}}(t)=
+\frac{\mathbb E[\operatorname{count}(t)]}
+{\sum_{u\in V}\mathbb E[\operatorname{count}(u)]}
+$$
+
+For our simplified example, the total expected count is:
+
+$$
+0.455+0.545+0.545=1.545
+$$
+
+Therefore, the updated probabilities would be approximately:
+
+$$
+p_{\text{new}}(\text{playing})
+=\frac{0.455}{1.545}\approx0.294
+$$
+
+$$
+p_{\text{new}}(\text{play})
+=\frac{0.545}{1.545}\approx0.353
+$$
+
+$$
+p_{\text{new}}(\text{ing})
+=\frac{0.545}{1.545}\approx0.353
+$$
+
+Notice that these probabilities sum to 1, up to rounding. In this toy corpus, the other candidate tokens have zero expected counts.
+
+Here we considered only one training word to keep the calculation simple. With a real corpus, the update would account for all the words and all the possible segmentations.
+
+The algorithm repeats the E-step and M-step, using the updated probabilities to calculate new expected counts. This process improves the likelihood assigned to the training corpus under the current vocabulary.
+
+2.5 Removing Tokens from the Vocabulary
+
+So far, we have only learned probabilities for the tokens, but Unigram also needs to decide which tokens should remain in the vocabulary.
+
+As mentioned earlier, the algorithm begins with a large vocabulary containing many possible substrings. However, keeping all these tokens would require a large embedding table in the language model.
+
+To reduce the vocabulary size, Unigram periodically removes tokens.
+
+The important point is that we do not simply remove the tokens with the lowest probabilities.
+
+Instead, we estimate how much the likelihood of the training corpus would decrease if a particular token were removed.
+
+Conceptually, we can define the loss caused by removing token $t$ as:
+
+\log P(D\mid V)
+
+\log P(D\mid V\setminus{t})
+$$
+
+where $D$ is the training corpus, $V$ is the current vocabulary, and $V\setminus{t}$ is the vocabulary without token $t$.
+
+The probability also depends on the token probability parameters, which are omitted from the notation for simplicity.
+
+This equation measures how much worse the corpus likelihood becomes when we can no longer use token $t$.
+
+Example: Removing a Token
+
+Let's return to our previous example, where the training corpus consists only of the word playing.
+
+Recall that the initial probabilities were:
+
+$$
+p(\text{play})=0.4,\quad
+p(\text{ing})=0.3,\quad
+p(\text{playing})=0.1
+$$
+
+For simplicity, assume there are only two possible tokenizations:
+
+$$
+[\text{playing}]
+\qquad\text{and}\qquad
+[\text{play},\text{ing}]
+$$
+
+The total probability of the word using the current vocabulary is:
+
+0.1+(0.4\cdot0.3)
+
+0.22
+$$
+
+Now suppose we want to remove the token playing from our vocabulary.
+
+After removing it, the only remaining possible tokenization is:
+
+$$
+[\text{play},\text{ing}]
+$$
+
+If we temporarily keep the probabilities of the other tokens unchanged, the remaining probability assigned to this word is:
+
+0.4\cdot0.3
+
+0.12
+$$
+
+Therefore, the decrease in log-likelihood under these fixed scores is:
 
 $$
 \begin{aligned}
-    P([\texttt{playing}]\mid\texttt{playing})
-    &=\frac{0.10}{0.22}\approx0.455,\\
-    P([\texttt{play},\texttt{ing}]\mid\texttt{playing})
-    &=\frac{0.12}{0.22}\approx0.545.
+\operatorname{Loss}(\text{playing})
+&=\log(0.22)-\log(0.12)\
+&=\log\left(\frac{0.22}{0.12}\right)\
+&\approx0.606
 \end{aligned}
 $$
 
-Instead of choosing only one segmentation during training, we use these conditional probabilities to calculate expected token counts:
+This shows that removing playing eliminates one possible way to represent the word, but another segmentation remains available.
 
-| Token | Expected count |
-|---|---:|
-| `playing` | 0.455 |
-| `play` | 0.545 |
-| `ing` | 0.545 |
+This calculation is a simplified illustration. After permanently removing a token, the remaining token probabilities must be normalized and can later be re-estimated by EM. Therefore, the actual change in corpus likelihood can be different from 0.606.
 
-For example, `play` appears only in the second segmentation, so its expected count is $0.545$. In practice, expected counts are accumulated across the entire training corpus.
+Now imagine a larger corpus containing many occurrences of player, playing, and playful.
 
-#### M-step: Updating Token Probabilities
+Removing play might affect many different words, whereas removing playing might be less harmful because it can be replaced by play and ing.
 
-After obtaining expected counts, we update each token's probability by dividing its expected count by the total expected number of tokens:
+We would therefore prefer to remove the token with the smaller estimated removal loss.
 
-$$
-p_{\mathrm{new}}(t)=
-    \frac{\mathbb{E}[\operatorname{count}(t)]}
-    {\sum_{u\in V}\mathbb{E}[\operatorname{count}(u)]}.
-$$
+Approximating the Removal Loss
 
-In our simplified corpus, the total expected count is
+Computing the exact change in corpus likelihood for every possible token removal would be expensive.
 
-$$
-0.455+0.545+0.545=1.545.
+The implementation presented in the paper uses an approximation:
+
+\operatorname{BestAlternativeLogScore}(t)
+\right)
 $$
 
-Therefore,
+Here:
 
-$$
-\begin{aligned}
-    p_{\mathrm{new}}(\texttt{playing})
-    &=\frac{0.455}{1.545}\approx0.294,\\
-    p_{\mathrm{new}}(\texttt{play})
-    &=\frac{0.545}{1.545}\approx0.353,\\
-    p_{\mathrm{new}}(\texttt{ing})
-    &=\frac{0.545}{1.545}\approx0.353.
-\end{aligned}
-$$
+$c_t$ is the expected count of token $t$.
 
-These probabilities sum to 1, up to rounding. In this toy corpus, the other candidate tokens have zero expected counts.
+$\log p(t)$ is the log-probability of representing the string using token $t$ directly.
 
-The E-step and M-step are repeated: the updated token probabilities change the probabilities of possible segmentations, which in turn change the expected token counts. With a real corpus, this process uses all observed words and their possible segmentations.
+$\operatorname{BestAlternativeLogScore}(t)$ is the highest log-probability of representing the same string using other tokens, without using $t$.
 
-### 2.5 Removing Tokens from the Vocabulary
+More formally, the alternative score can be written as:
 
-The EM algorithm updates token probabilities, but Unigram also needs to decide which tokens to keep. The vocabulary starts large and is gradually reduced to a desired size.
-
-We do not simply remove tokens with the smallest probabilities. Instead, we want to remove tokens whose absence causes the least harm to the likelihood of the training corpus.
-
-Conceptually, the loss caused by removing a token $t$ can be written as
-
-$$
-\operatorname{Loss}(t)
-    =\log P(D\mid V)
-    -\log P(D\mid V\setminus\{t\}),
+\max_{\substack{z\in T(t)\z\ne[t]}}
+\sum_{u\in z}\log p(u)
 $$
 
-where $D$ is the training corpus, $V$ is the current vocabulary, and $V\setminus\{t\}$ is the vocabulary after removing $t$. This expression is shorthand: the probability also depends on the token probability parameters. Comparing full models after removal may require re-estimating these parameters.
+where $T(t)$ is the set of all valid tokenizations of the string represented by $t$.
 
-#### Example: Removing a Token
+This score can be calculated using the Viterbi algorithm while excluding the token we are considering removing.
 
-Return to our example, where the training corpus consists only of the word *playing*. Before the EM update, the token probabilities were
+The intuition is that if a token rarely appears, or if it can easily be replaced by other tokens with similar scores, removing it is less harmful.
 
-$$
-p(\texttt{play})=0.4,\qquad
-    p(\texttt{ing})=0.3,\qquad
-    p(\texttt{playing})=0.1.
-$$
+The algorithm estimates the loss caused by removing each token and removes a fraction of the least useful ones, meaning those with the smallest estimated removal loss.
 
-The two possible segmentations are $[\texttt{playing}]$ and $[\texttt{play},\texttt{ing}]$, so
+It then runs EM again to update the probabilities using the reduced vocabulary.
 
-$$
-P(D\mid V)=0.1+(0.4\cdot0.3)=0.22.
-$$
+This process continues until the desired vocabulary size is reached. Essential atomic tokens are preserved so that the tokenizer can still represent the input text.
 
-Suppose we remove the token `playing`. It is no longer available, but the word can still be represented as $[\texttt{play},\texttt{ing}]$. If we temporarily keep the scores of the other tokens fixed, the probability assigned to this word is
+2.6 Tokenization During Inference
 
-$$
-P_{\mathrm{remaining}}(D)=0.4\cdot0.3=0.12.
-$$
+Once training is complete, the tokenizer has a fixed vocabulary and a probability assigned to each token.
 
-The decrease in log-likelihood under these fixed scores is therefore
+When a new word is given, the tokenizer needs to find the sequence of vocabulary tokens with the highest probability.
+
+For a tokenization consisting of $t_1,\ldots,t_k$, this means finding:
 
 $$
-\begin{aligned}
-    \operatorname{Loss}_{\mathrm{fixed}}(\texttt{playing})
-    &=\log(0.22)-\log(0.12)\\
-    &=\log\left(\frac{0.22}{0.12}\right)\\
-    &\approx0.606.
-\end{aligned}
+z^*=
+\arg\max_{z\in T(w)}
+\prod_{t\in z}p(t)
 $$
 
-This illustrates that removing `playing` eliminates one possible way to represent the word, but another segmentation remains available.
+where $T(w)$ is the set of all valid tokenizations of the input word $w$.
 
-The calculation is only an illustration: after permanently removing a token, the remaining token probabilities must be normalized and can later be re-estimated by EM. Therefore, the actual change in corpus likelihood under the updated model can be different from $0.606$.
-
-Now imagine a larger corpus that contains many occurrences of *player*, *playing*, and *playful*. Removing `play` might affect many different words, whereas removing `playing` might be less harmful because it can be replaced by `play` and `ing`. We would therefore prefer to remove the token with the smaller estimated removal loss.
-
-#### Approximating the Removal Loss
-
-Computing the exact change in corpus likelihood for every candidate token would be expensive. The paper gives an approximation of the form
+Equivalently, using log-probabilities:
 
 $$
-\widehat{\operatorname{Loss}}(t)
-    =c_t\left(\log p(t)-s_{-t}(t)\right),
+z^*=
+\arg\max_{z\in T(w)}
+\sum_{t\in z}\log p(t)
 $$
 
-where $c_t$ is the expected count of token $t$, and
+Since a word may have many possible segmentations, enumerating all of them individually can be expensive.
 
-$$
-s_{-t}(t)
-    =\max_{z\in T(t),\;t\notin z}
-      \sum_{u\in z}\log p(u)
-$$
+Instead, Unigram uses the Viterbi algorithm, a dynamic programming algorithm that efficiently finds the most probable segmentation by reusing the best solutions for shorter prefixes of the input.
 
-is the best log-score for representing the same string without using token $t$. This score can be found using Viterbi decoding while excluding the candidate token.
+The result is a deterministic tokenization, although Unigram can also sample different tokenizations according to their probabilities during training.
 
-The intuition is that a token is less useful if it is rarely used or if it can be replaced by other tokens with similar scores. Tokens with the smallest estimated removal losses are candidates for pruning.
+2.7 Summary
 
-After pruning a portion of the vocabulary, Unigram repeats EM with the remaining candidates. This continues until the desired vocabulary size is reached. Necessary atomic tokens are retained so the input can still be represented.
+1. To summarize, the Unigram algorithm works as follows:
 
-### 2.6 Tokenization During Inference
+Start with a large vocabulary of candidate tokens and initialize their probabilities.
 
-Once training is complete, the tokenizer has a fixed vocabulary and token probabilities. To tokenize a new input word $w$, it chooses the most probable segmentation:
+Use EM to estimate how frequently each token is used and update its probability.
 
-$$
-z^*=\arg\max_{z\in T(w)}\prod_{t\in z}p(t).
-$$
+Estimate how much the corpus likelihood would decrease if each token were removed.
 
-Equivalently, using log-probabilities,
+Remove the least useful tokens and repeat the process until the desired vocabulary size is reached.
 
-$$
-z^*=\arg\max_{z\in T(w)}\sum_{t\in z}\log p(t).
-$$
-
-Since a word can have many possible segmentations, testing all of them separately would be expensive. Instead, Unigram uses the Viterbi algorithm, which finds the most probable segmentation by reusing optimal solutions for shorter prefixes of the input.
-
-This produces a deterministic segmentation at inference time. During training, Unigram can also sample alternative segmentations according to their probabilities, a technique known as subword regularization.
-
-### 2.7 Summary
-
-The Unigram algorithm can be summarized as follows:
-
-1.  Start with a large vocabulary of candidate tokens and initialize their probabilities.
-
-2.  Use EM to estimate expected token counts and update token probabilities.
-
-3.  Estimate the loss of removing each candidate token.
-
-4.  Remove the least useful tokens and repeat until the desired vocabulary size is reached.
-
+During inference, use Viterbi to find the most probable tokenization of the input.
   </div>
 </div>
 
