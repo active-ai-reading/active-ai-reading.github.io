@@ -1,6 +1,6 @@
 ---
 title: "Making the parameter cost of tokenization visible"
-description: "Table 2.1 gives the numbers; a ranked bar chart makes their differences easier to see."
+description: "Replacing Table 2.1 with a ranked bar chart makes differences easier to see and model families easier to compare."
 paper: tokenization-survey
 role: visualization
 task: redo-graph
@@ -12,11 +12,13 @@ chart:
 
 ## The original
 
-[Table 2.1 of *Tokenization: A Survey for Modern NLP*](https://www.alphaxiv.org/abs/2609.tokenization-survey-modern-nlp.pdf#page=10) supports a point made in Section 2.2: **the vocabulary can account for a large share of a model's parameter budget, especially in smaller models.** The table lists vocabulary sizes, hidden dimensions, parameter counts, and embedding percentages for fifteen models, grouped by family.
+{% include figure.liquid path="assets/img/papers/tokenization/table_2_1.png" class="img-fluid rounded z-depth-1" alt="Original Table 2.1 listing vocabulary sizes, hidden dimensions, embedding and output parameter counts, total parameters, and embedding percentages for fifteen models grouped by family." caption="Table 2.1 from Tokenization: A Survey for Modern NLP, p. 10." zoomable=true %}
+
+Table 2.1 of *Tokenization: A Survey for Modern NLP* supports a point made in Section 2.2: **the vocabulary can account for a large share of a model's parameter budget, especially in smaller models.** The table lists vocabulary sizes, hidden dimensions, parameter counts, and embedding percentages for fifteen models, grouped by family.
 
 The percentage column contains the comparison we need, but **the reader has to assemble the picture**: scan fifteen rows, mentally rank the percentages, remember the gaps, and look back at model sizes to interpret them. Every entry has the same visual weight, whether it represents almost 60% of a model or less than 1%.
 
-The table makes individual values easy to look up. The redesign makes the differences between them easy to see.
+The redesign replaces the table with a graph that makes these differences visible directly.
 
 ## The redesign
 
@@ -262,18 +264,15 @@ I focus on one question: **How much of each model's parameter budget goes to the
 
 ## What the graph makes easier to see
 
-- **The size of the difference.** Gemma 4 E2B allocates 59.80% of its parameters to embedding and output layers; gpt-oss-120b allocates 0.99%. Bar lengths make that gap apparent before the reader reads either number. Sorting also places the two Gemma 4 EXB models together at the top.
-- **The effect of the total parameter budget.** Both gpt-oss models have 1.16B embedding and output parameters, occupying 5.54% of the smaller model and 0.99% of the larger one. Their shared teal color connects them across the ranking, and their total parameter counts help explain why the same allocation represents different shares.
-- **Exceptions to a simple size-based explanation.** Qwen3.5 9B has a larger share than Qwen3.5 4B: 22.12% versus 14.69%. Purple connects their bars; † flags that 4B shares input and output weights while 9B does not. Readers can spot the reversal and a relevant architectural difference together. Their hidden dimensions also differ, so the comparison does not isolate the effect of weight sharing.
+- **Differences are visible at a glance.** Bar lengths let readers see how much the parameter shares differ without mentally comparing a column of numbers. Sorting makes the ranking clear and helps both large gaps and small differences stand out.
+- **Colors make comparisons easier.** Models from the same family share a color, so readers can quickly find related models even when sorting places them apart. This makes it easier to compare models within a family and see how families compare with one another.
 
 ## Design decisions
 
-- **Use bar length on a common zero baseline.** Readers can compare magnitudes directly, reducing the need to remember and subtract numbers across rows.
 - **Sort by percentage.** Readers can find the extremes and follow the ranking without constructing it themselves.
-- **Focus on one metric.** Leaving hidden dimensions and absolute embedding counts in the original table gives visual priority to the parameter share that motivates the comparison.
-- **Preserve family context with color.** Consistent colors reconnect related models after sorting. The legend supplies vocabulary sizes once per family, avoiding repetition on every row.
-- **Keep names and exact values readable.** Horizontal labels accommodate long model names. Precise percentages and total parameter counts let readers check a value after noticing a pattern, without returning to the table.
+- **Focus on one metric.** Leaving out hidden dimensions and absolute embedding counts allows the users to focus on what's important.
+- **Preserve family context with color.** Consistent colors reconnect related models after sorting.
 
-The original table remains useful for detailed parameter accounting. A smaller share in this graph means fewer parameters allocated to these layers relative to the model's total; it does not by itself establish better model quality.
+A smaller share in this graph means fewer parameters allocated to these layers relative to the model's total; it does not by itself establish better model quality.
 
-Data: [Table 2.1, p. 10](https://www.alphaxiv.org/abs/2609.tokenization-survey-modern-nlp.pdf#page=10). Totals count full model parameters for MoE models and the Gemma 4 EXB series, and only text parameters for multimodal models.
+Data: Table 2.1, p. 10, shown above.
