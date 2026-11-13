@@ -15,6 +15,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [How language models put words back together](https://active-ai-reading.github.io/posts/2026/hidden-gems-tokenization-survey/): Understanding how language models reconstruct words from subword tokens. (Paper scouting, on "Tokenization: A Survey for Modern NLP", 2026-11-13)
 - [Reimplementing BPE-Dropout](https://active-ai-reading.github.io/posts/2026/reimplement-tokenization-survey/): Reimplemented BPE-Dropout, with few examples. (Coding, on "Tokenization: A Survey for Modern NLP", 2026-11-12)
 - [Rewriting Section 3.2 — Unigram Language Modeling Tokenization](https://active-ai-reading.github.io/posts/2026/copyedit-tokenization-survey/): a detailed explanation of the unigram tokenization (Writing, on "Tokenization: A Survey for Modern NLP", 2026-11-12)
 - [2 papers challenging the tokenization survey](https://active-ai-reading.github.io/posts/2026/two-questions-for-the-tokenization-survey/): Recent papers question how we evaluate tokenizers and how we help underrepresented languages. (Paper scouting, on "Tokenization: A Survey for Modern NLP", 2026-11-11)

@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-reimplementing-bpe-dropout",
+        },{id: "post-how-language-models-put-words-back-together",
+        
+          title: "How language models put words back together",
+        
+        description: "Understanding how language models reconstruct words from subword tokens.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-tokenization-survey/";
+          
+        },
+      },{id: "post-reimplementing-bpe-dropout",
         
           title: "Reimplementing BPE-Dropout",
         
