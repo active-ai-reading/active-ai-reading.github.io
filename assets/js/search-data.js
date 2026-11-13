@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-how-language-models-put-words-back-together",
+        },{id: "post-making-the-parameter-cost-of-tokenization-visible",
+        
+          title: "Making the parameter cost of tokenization visible",
+        
+        description: "Table 2.1 gives the numbers; a ranked bar chart makes their differences easier to see.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-tokenization-survey/";
+          
+        },
+      },{id: "post-how-language-models-put-words-back-together",
         
           title: "How language models put words back together",
         
