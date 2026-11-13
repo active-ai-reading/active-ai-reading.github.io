@@ -62,7 +62,7 @@ ninja.data = [{
         
           title: "Making the parameter cost of tokenization visible",
         
-        description: "Table 2.1 gives the numbers; a ranked bar chart makes their differences easier to see.",
+        description: "Replacing Table 2.1 with a ranked bar chart makes differences easier to see and model families easier to compare.",
         section: "Posts",
         handler: () => {
           
