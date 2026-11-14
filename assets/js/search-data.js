@@ -113,6 +113,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/copyedit-tokenization-survey/";
           
         },
+      },{id: "post-rewriting-the-abstract-of-tokenization-a-survey-for-modern-nlp",
+        
+          title: "Rewriting the abstract of Tokenization - A Survey for Modern NLP",
+        
+        description: "A more concise and contribution centered rewrite of the abstract.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-tokenization-survey/";
+          
+        },
       },{id: "post-making-the-parameter-cost-of-tokenization-visible",
         
           title: "Making the parameter cost of tokenization visible",
