@@ -129,12 +129,3 @@ yet common practice scores only the canonical one. The survey's overview figure 
 
 *Left: the usual picture, in which text passes through a fixed tokenizer to a single token sequence. Right: the same text spelled three ways, using the example and tokenizations from Section 2.2 (▁ marks a word-initial space). The probability of the text is the sum over all of them, but in common practice only the canonical one is scored.*
 
-## What changed and why
-
-- Contrasted the usual picture with what the survey shows, since the new idea is the difference between the two.
-- Gave the right panel, which carries the new idea, most of the width.
-- Used the survey's own example and tokenizations, so every element can be checked against Section 2.2.
-- Aligned each tokenization under the characters it covers, so it is visible at a glance that all three spell the same text.
-- Kept the canonical sequence the same color in both panels, placing the usual picture's single sequence among its alternatives.
-- Drew the sum as a bracket next to the sequences, so the equation underneath restates the picture instead of introducing something new.
-- Added a bottom row of what the tokenizer therefore controls, with one number from Table 2.1 to make the parameter cost concrete.
