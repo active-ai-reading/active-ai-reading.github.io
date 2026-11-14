@@ -9,7 +9,7 @@ by: [NettaShemesh103]
 ---
 
 
-<!-- For key-points: list the 3 points most readers should leave with, where the paper currently says them, and how they could be emphasized better (title? figure 1? first sentence of the intro?). -->
+<!-- For key-points: list the 3 points most readers should leave with, where the paper currently says them, and how they could be emphasized better (title? figure 1? first sentence of the intro). -->
 
 ## Key Points
 
