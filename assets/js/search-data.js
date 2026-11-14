@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-copyedit-4-1",
+        },{id: "post-beyond-fixed-tokenization-new-strategies",
+        
+          title: "Beyond Fixed Tokenization: New Strategies",
+        
+        description: "Two papers extending the survey&#39;s discussion: one addressing the noted limitations of byte-level generation, and the other further exploring the claim of why fewer tokens don&#39;t necessarily mean greater efficiency.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-tokenization-survey/";
+          
+        },
+      },{id: "post-copyedit-4-1",
         
           title: "copyedit 4.1",
         
