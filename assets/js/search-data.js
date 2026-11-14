@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-tokenization-survey/";
           
         },
+      },{id: "post-one-text-many-token-sequences",
+        
+          title: "One text, many token sequences",
+        
+        description: "The survey&#39;s core point in one figure: a language model scores token sequences, not text, so the tokenizer is part of the model rather than a preprocessing step.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-tokenization-survey/";
+          
+        },
       },{id: "post-copyedit-4-1",
         
           title: "copyedit 4.1",
