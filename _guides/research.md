@@ -31,3 +31,7 @@ For example, in Multi-Stream-Att-Res the article is presented as a direct contin
 
 
 ## Follow-ups
+
+## The authors' path
+
+Look into the authors' academic and research backgrounds. Explore their previous publications, recurring research interests, collaborations, and how their research direction has evolved over time. Try to understand what led them to work on this particular problem and whether the paper represents a continuation of their previous research or a new direction. Don't just list their publications; look for the story connecting them.
