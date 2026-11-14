@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/teach-tokenization-survey/";
           
         },
+      },{id: "post-pickybpe-vocabulary-trimming-reimplemented",
+        
+          title: "PickyBPE - Vocabulary Trimming Reimplemented",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reimplement-tokenization-survey/";
+          
+        },
       },{id: "post-one-text-many-token-sequences",
         
           title: "One text, many token sequences",
