@@ -24,3 +24,4 @@ start from this week's paper rather than from a blank search. The papers most li
 3. **Check the views for each candidate.** Look up how many views each paper has on arXiv.
 4. **Pick the most viewed.** The paper with the highest views becomes the scouting pick.
 
+Look beyond the leaderboard: A paper can be scientifically important before it becomes popular. Pay attention to papers introducing surprising ideas, challenging widely held assumptions, or opening up new research directions. Trending status is a useful signal of interest, not a measure of research quality.
