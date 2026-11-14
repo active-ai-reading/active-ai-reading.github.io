@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-making-the-parameter-cost-of-tokenization-visible",
+        },{id: "post-copyedit-4-1",
+        
+          title: "copyedit 4.1",
+        
+        description: "One sentence that makes people want to click.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-tokenization-survey/";
+          
+        },
+      },{id: "post-making-the-parameter-cost-of-tokenization-visible",
         
           title: "Making the parameter cost of tokenization visible",
         

@@ -15,6 +15,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [copyedit 4.1](https://active-ai-reading.github.io/posts/2026/copyedit-tokenization-survey/): One sentence that makes people want to click. (Writing, on "Tokenization: A Survey for Modern NLP", 2026-11-14)
 - [Making the parameter cost of tokenization visible](https://active-ai-reading.github.io/posts/2026/redo-graph-tokenization-survey/): Replacing Table 2.1 with a ranked bar chart makes differences easier to see and model families easier to compare. (Visualization, on "Tokenization: A Survey for Modern NLP", 2026-11-13)
 - [How language models put words back together](https://active-ai-reading.github.io/posts/2026/hidden-gems-tokenization-survey/): Understanding how language models reconstruct words from subword tokens. (Paper scouting, on "Tokenization: A Survey for Modern NLP", 2026-11-13)
 - [Reimplementing BPE-Dropout](https://active-ai-reading.github.io/posts/2026/reimplement-tokenization-survey/): Reimplemented BPE-Dropout, with few examples. (Coding, on "Tokenization: A Survey for Modern NLP", 2026-11-12)
