@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/key-visual-byte-representation/";
           
         },
+      },{id: "post-lt-critique-literature-review-follow-ups-gt-of-lt-paper-gt",
+        
+          title: "&lt;Critique / literature review / follow-ups&gt; of &lt;paper&gt;",
+        
+        description: "Splintered SuperBPE",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/followups-tokenization-survey/";
+          
+        },
       },{id: "post-copyedit-4-1",
         
           title: "copyedit 4.1",
