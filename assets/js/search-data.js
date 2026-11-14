@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/key-visual-tokenization-survey/";
           
         },
+      },{id: "post-byte-level-modeling-and-latent-tokenization-chapter-9",
+        
+          title: "Byte-Level Modeling and Latent Tokenization - Chapter 9",
+        
+        description: "A side-by-side view of how byte-level approaches differ in the way they group input into latent representations",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-byte-representation/";
+          
+        },
       },{id: "post-copyedit-4-1",
         
           title: "copyedit 4.1",
