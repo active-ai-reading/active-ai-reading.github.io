@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-tokenization-survey/";
           
         },
+      },{id: "post-teach-tokenization-survey",
+        
+          title: "Teach Tokenization Survey",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/teach-tokenization-survey/";
+          
+        },
       },{id: "post-one-text-many-token-sequences",
         
           title: "One text, many token sequences",
