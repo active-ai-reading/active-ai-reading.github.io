@@ -1,4 +1,3 @@
-
 ---
 title: "When Two Identical-Looking Words Are Not the Same"
 description: "How visually identical Unicode characters can change tokenization and create security vulnerabilities."
