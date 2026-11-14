@@ -69,11 +69,11 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-tokenization-survey/";
           
         },
-      },{id: "post-teach-tokenization-survey",
+      },{id: "post-when-two-identical-looking-words-are-not-the-same",
         
-          title: "Teach Tokenization Survey",
+          title: "When Two Identical-Looking Words Are Not the Same",
         
-        description: "",
+        description: "How visually identical Unicode characters can change tokenization and create security vulnerabilities.",
         section: "Posts",
         handler: () => {
           
