@@ -8,6 +8,10 @@ Yours to write. Some questions to start from:
 - What makes people stop scrolling?
 - What did you post, and what happened?
 
+## Our X account
+
+The course has a shared X account: [@OpalsLLM](https://x.com/OpalsLLM). The login details for the X account and for its email address are on the course Moodle. Never post them here or anywhere else in the repo, since the repo is public.
+
 ## LinkedIn
 
 - If you have more than one figure, combine them into a single image before attaching: LinkedIn shows several images as a cropped grid, but one image appears whole in the feed.
