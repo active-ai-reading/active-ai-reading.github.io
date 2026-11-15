@@ -214,7 +214,7 @@ ninja.data = [{
         },
       },{id: "post-reimplementing-bpe-dropout",
         
-          title: "Reimplementing BPE-Dropout",
+          title: "Reimplementing BPE-Dropout - !",
         
         description: "Reimplemented BPE-Dropout, with few examples.",
         section: "Posts",
