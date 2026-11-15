@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/tldr-tokenization-survey/";
           
         },
+      },{id: "post-seahorses-and-strawberries-where-tokenization-leaks-through",
+        
+          title: "Seahorses and strawberries: where tokenization leaks through",
+        
+        description: "Two well-known failures, counting the letters in strawberry and producing a seahorse emoji, show the two places where the tokenizer affects what the model can read and what it can write.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/seahorses-and-strawberries-yak0v/";
+          
+        },
       },{id: "post-a-clearer-figure-6-1-corpus-share-and-token-counts-relative-to-english",
         
           title: "A clearer Figure 6.1: corpus share and token counts relative to English",
