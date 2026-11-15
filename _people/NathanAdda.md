@@ -7,7 +7,7 @@ tagline: I am interested in AI research, specifically in NLP and interpretabilit
 # photo: # leave empty to use your GitHub picture, or e.g. /assets/img/people/your-username.jpg
 # website:
 # scholar:
-# x:
+x: https://x.com/Nathan_Adda
 linkedin: https://www.linkedin.com/in/nathan-adda/
 ---
 
