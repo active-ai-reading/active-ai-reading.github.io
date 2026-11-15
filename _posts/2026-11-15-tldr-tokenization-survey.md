@@ -71,3 +71,5 @@ The survey explains BPE, but the abstract and introduction never mention it. Onl
 ## Bottom line
 
 The opening chapters of the survey explain why tokenization research is stuck. The ways forward come much later. A one-sentence pointer to the solution next to each problem, right at the start, would give even readers who stop early something they can use.
+
+**To be fair, you can't really TL;DR this survey. There is much more in it than these three points.**
