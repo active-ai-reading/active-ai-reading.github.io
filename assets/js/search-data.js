@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/tldr-tokenization-survey/";
           
         },
+      },{id: "post-a-clearer-figure-6-1-corpus-share-and-token-counts-relative-to-english",
+        
+          title: "A clearer Figure 6.1: corpus share and token counts relative to English",
+        
+        description: "Languages ordered by BLOOM corpus share, with English as a reference.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-tokenization-survey-chanoch1234/";
+          
+        },
       },{id: "post-when-two-identical-looking-words-are-not-the-same",
         
           title: "When Two Identical-Looking Words Are Not the Same",
