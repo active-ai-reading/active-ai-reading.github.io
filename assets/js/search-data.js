@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-beyond-fixed-tokenization-new-strategies",
+        },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "Traditional tokenizers rely on fixed vocabularies, which can limit their ability to adapt to new domains and languages. These two papers explore alternative approaches to make tokenization more flexible and efficient.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-tokenization-survey/";
+          
+        },
+      },{id: "post-beyond-fixed-tokenization-new-strategies",
         
           title: "Beyond Fixed Tokenization: New Strategies",
         
@@ -113,9 +124,9 @@ ninja.data = [{
             window.location.href = "/posts/2026/key-visual-byte-representation/";
           
         },
-      },{id: "post-lt-critique-literature-review-follow-ups-gt-of-lt-paper-gt",
+      },{id: "post-follow-up-of-tokenization-survey",
         
-          title: "&lt;Critique / literature review / follow-ups&gt; of &lt;paper&gt;",
+          title: "follow-up of tokenization-survey",
         
         description: "Splintered SuperBPE",
         section: "Posts",
