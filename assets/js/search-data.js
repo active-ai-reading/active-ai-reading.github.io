@@ -95,7 +95,7 @@ ninja.data = [{
         
           title: "PickyBPE - Vocabulary Trimming Reimplemented",
         
-        description: "",
+        description: "Reimplementing BPE and the PickyBPE variant. How does vocabulary trimming affects the final vocabulary?",
         section: "Posts",
         handler: () => {
           
