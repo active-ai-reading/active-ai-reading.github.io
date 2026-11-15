@@ -102,11 +102,11 @@ ninja.data = [{
             window.location.href = "/posts/2026/seahorses-and-strawberries-yak0v/";
           
         },
-      },{id: "post-follow-ups-on-tokenization-a-survey-for-modern-nlp",
+      },{id: "post-why-do-language-models-read-and-write-in-the-same-tokens",
         
-          title: "Follow-ups on Tokenization: A Survey for Modern NLP",
+          title: "Why Do Language Models Read and Write in the Same Tokens?",
         
-        description: "Should input and output tokenization be optimized separately, and when would this be beneficial?",
+        description: "Input and output tokenization serve different purposes. Should we really use the same tokenizer for both?",
         section: "Posts",
         handler: () => {
           
