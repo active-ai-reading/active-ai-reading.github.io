@@ -231,7 +231,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/reimplement-tokenization-survey/";
+            window.location.href = "/posts/2026/reimplement-tokenization-survey_3/";
           
         },
       },{id: "post-rewriting-section-3-2-unigram-language-modeling-tokenization",
@@ -297,7 +297,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/reimplement-tokenization-survey/";
+            window.location.href = "/posts/2026/reimplement-tokenization-survey_2/";
           
         },
       },{id: "post-critique-parameter-efficient-but-is-it-compute-efficient",
