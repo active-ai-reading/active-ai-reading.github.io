@@ -80,17 +80,6 @@ ninja.data = [{
             window.location.href = "/posts/2026/tldr-tokenization-survey/";
           
         },
-      },{id: "post-beyond-fixed-tokenization-new-strategies",
-        
-          title: "Beyond Fixed Tokenization: New Strategies",
-        
-        description: "Two papers extending the survey&#39;s discussion: one addressing the noted limitations of byte-level generation, and the other further exploring the claim of why fewer tokens don&#39;t necessarily mean greater efficiency.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/trending-tokenization-survey/";
-          
-        },
       },{id: "post-when-two-identical-looking-words-are-not-the-same",
         
           title: "When Two Identical-Looking Words Are Not the Same",
@@ -155,6 +144,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/posts/2026/copyedit-tokenization-survey/";
+          
+        },
+      },{id: "post-beyond-fixed-tokenization-new-strategies",
+        
+          title: "Beyond Fixed Tokenization: New Strategies",
+        
+        description: "Two papers extending the survey&#39;s discussion: one addressing the noted limitations of byte-level generation, and the other further exploring the claim of why fewer tokens don&#39;t necessarily mean greater efficiency.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/beyond-fixed-tokenization/";
           
         },
       },{id: "post-rewriting-the-abstract-of-tokenization-a-survey-for-modern-nlp",
