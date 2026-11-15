@@ -242,7 +242,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/posts/2026/copyedit-tokenization-survey/";
+            window.location.href = "/posts/2026/copyedit-tokenization-survey_2/";
           
         },
       },{id: "post-2-papers-challenging-the-tokenization-survey",
