@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-tokenization-survey/";
           
         },
+      },{id: "post-tl-dr",
+        
+          title: "TL;DR",
+        
+        description: "Three points to walk away with from the tokenization survey, and why they should come earlier in the paper.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/tldr-tokenization-survey/";
+          
+        },
       },{id: "post-beyond-fixed-tokenization-new-strategies",
         
           title: "Beyond Fixed Tokenization: New Strategies",
