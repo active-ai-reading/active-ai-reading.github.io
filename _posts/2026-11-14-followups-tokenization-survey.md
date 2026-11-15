@@ -1,5 +1,5 @@
 ---
-title: "<Critique / literature review / follow-ups> of <paper>"
+title: "follow-up of tokenization-survey"
 description: Splintered SuperBPE
 paper: tokenization-survey
 role: research
