@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-papers-worth-knowing-this-week",
+        },{id: "post-how-bpe-works-but-in-a-more-intuitive-way",
+        
+          title: "How BPE works but in a more intuitive way!",
+        
+        description: "How BPE decides what a token is.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week-4-Learning-BPE-but-easier/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
         
