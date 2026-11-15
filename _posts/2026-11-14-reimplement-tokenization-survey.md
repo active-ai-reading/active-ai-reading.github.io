@@ -1,6 +1,6 @@
 ---
 title: "PickyBPE - Vocabulary Trimming Reimplemented"
-description: 
+description: Reimplementing BPE and the PickyBPE variant. How does vocabulary trimming affects the final vocabulary?
 paper: tokenization-survey
 role: coding
 task: reimplement
