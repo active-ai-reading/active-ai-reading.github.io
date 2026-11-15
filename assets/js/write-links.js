@@ -53,7 +53,9 @@
       .join("\n")
       .replace(/^paper:.*$/m, `paper: ${paper}`)
       .replace(/^task:.*$/m, `task: ${task}`);
-    location.href = editorUrl(`_posts/${today()}-${task}-${paper}.md`, text);
+    const suffix = Date.now().toString(36).slice(-4); // short unique tag to prevent url collisions 
+    location.href = editorUrl(`_posts/${today()}-${task}-${paper}-${suffix}.md`, text);
+
   }
 
   async function openProfile() {
