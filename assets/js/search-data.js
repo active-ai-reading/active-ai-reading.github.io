@@ -1459,11 +1459,11 @@ ninja.data = [{
           description: "",
           section: "People",handler: () => {
               window.location.href = "/people/shueyr/";
-            },},{id: "people-tals",
-          title: 'Tals',
+            },},{id: "people-tal-sokolov",
+          title: 'Tal Sokolov',
           description: "",
           section: "People",handler: () => {
-              window.location.href = "/people/tals/";
+              window.location.href = "/people/talsokolov/";
             },},{id: "people-tomer-atia",
           title: 'Tomer Atia',
           description: "",
