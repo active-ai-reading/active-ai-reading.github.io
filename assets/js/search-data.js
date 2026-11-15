@@ -102,6 +102,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/seahorses-and-strawberries-yak0v/";
           
         },
+      },{id: "post-follow-ups-on-tokenization-a-survey-for-modern-nlp",
+        
+          title: "Follow-ups on Tokenization: A Survey for Modern NLP",
+        
+        description: "Should input and output tokenization be optimized separately, and when would this be beneficial?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/followups-tokenization-survey-c5xj/";
+          
+        },
       },{id: "post-a-clearer-figure-6-1-corpus-share-and-token-counts-relative-to-english",
         
           title: "A clearer Figure 6.1: corpus share and token counts relative to English",
