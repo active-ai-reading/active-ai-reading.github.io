@@ -4,6 +4,7 @@ title: Liad Bercovitch
 affiliation: Weizmann Institute of Science
 role_in_course: student
 tagline: Software engineer.
+x: https://x.com/LiadBercovitch
 linkedin: https://www.linkedin.com/in/liadbercovitch/
 ---
 
