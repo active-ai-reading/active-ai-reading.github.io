@@ -14,11 +14,12 @@ Text is both the input and the output of an LLM, but before a model can process 
 Although this step is central, and is behind popular failures like miscounting the r’s in “strawberry”, it rarely gets the spotlight. 
 The 32 authors aim to bring it to the surface, covering algorithms, multilingual challenges, evaluation, theory and more.
 
-## What we wrote
-**✍️ Writing.** [Rewriting the abstract]({{ 'posts/2026/abstract-tokenization-survey/' | relative_url }}) skips some of the background and jumps right ahead to why we should care about the topic. 
-Our beginner-friendly copy edits suggested some [context to the Unigram algorithm]({{ 'posts/2026/copyedit-tokenization-survey_2/' | relative_url }}) in the Tokenization Algorithms section (3), 
+## Our posts:
+
+**✍️ Writing.** [Rewriting the abstract]({{ 'posts/2026/abstract-tokenization-survey/' | relative_url }}) skips some background and jumps right ahead to why we should care about the topic. 
+Our beginner-friendly copy edits suggested some [context for the Unigram algorithm]({{ 'posts/2026/copyedit-tokenization-survey_2/' | relative_url }}) in the Tokenization Algorithms section (3), 
 explaining what it means to assign tokens probabilities, and a [simplified opening of 4.1 normalization]({{ 'posts/2026/copyedit-tokenization-survey/' | relative_url }}) in the Pretokenization section.
-This is a long survey so we send you home with key points through a [TL;DR]({{ 'posts/2026/tldr-tokenization-survey/' | relative_url }}): 
+This is a long survey, so we send you home with key points through a [TL;DR]({{ 'posts/2026/tldr-tokenization-survey/' | relative_url }}): 
 Tokenizers can be compared, updated without retraining from scratch, and if you learn only one algorithm, make it BPE.
 
 **🧠 Learning.** One of the reasons tokenization matters: [security]({{ 'posts/2026/teach-tokenization-survey/' | relative_url }}). It is also the barrier between the model and natural language, 
@@ -26,17 +27,17 @@ Tokenizers can be compared, updated without retraining from scratch, and if you 
 To work through BPE, we introduce it first [intuitively]({{ 'posts/2026/week-4-Learning-BPE-but-easier/' | relative_url }}), using an example.
 More on BPE later. 
 
-**📊 Visualization.** We visualize the numbers behind the significance of tokenization research: how much of a model’s parameters the vocabulary takes up [Table 2.1]({{ 'posts/2026/redo-graph-tokenization-survey/' | relative_url }}), 
-and in contrast how little research the topic gets [Figure 2.1]({{ 'posts/2026/tokenization-research-share/' | relative_url }}).
-Expanding on the overview figure 1.1, we [emphasize the many-to-one]({{ 'posts/2026/key-visual-tokenization-survey/' | relative_url }}) 
+**📊 Visualization.** We visualize the numbers behind the significance of tokenization research: how much of a model’s parameters the vocabulary [takes up]({{ 'posts/2026/redo-graph-tokenization-survey/' | relative_url }}), 
+and, in contrast, how [little spotlight]({{ 'posts/2026/tokenization-research-share/' | relative_url }}) the topic gets.
+Expanding on the overview in Figure 1.1, we [emphasize the many-to-one]({{ 'posts/2026/key-visual-tokenization-survey/' | relative_url }}) 
 probability mapping of token sequences to a sentence. 
-Diving into token allocation bias between languages, a [revisited figure 6.1]({{ 'posts/2026/redo-graph-tokenization-survey-chanoch1234/' | relative_url }}) highlights English as the reference and compares different tokenizers. 
-We add a [comparative visualization]({{ 'posts/2026/key-visual-byte-representation/' | relative_url }}) to chapter 9, showing different approaches to grouping bytes into latent tokens.
+Diving into token allocation bias between languages, a [revisited Figure 6.1]({{ 'posts/2026/redo-graph-tokenization-survey-chanoch1234/' | relative_url }}) highlights English as the reference and compares different tokenizers. 
+We add a [comparative visualization]({{ 'posts/2026/key-visual-byte-representation/' | relative_url }}) to chapter 9 (Byte and Character Representations), showing different approaches to grouping bytes into latent tokens.
 
 **🔬 Research.** Building on the described algorithms, [a follow-up on the paper]({{'posts/2026/followups-tokenization-survey/' | relative_url }})  proposes combining SuperBPE’s merging of words into 
 superword tokens with SPLINTER’s morphological templates, allowing sentence-level templates to form superwords from non-adjacent words. 
 Inspired by work on arithmetic, [a second follow-up questions]({{'posts/2026/followups-tokenization-survey-c5xj/' | relative_url }})
-why models read and write with the same tokenizer, and proposes experiments that separate the two.
+why models read and write with the same tokenizer and proposes experiments that separate the two.
 
 **💻 Coding.** Back to BPE: we put the code for BPE provided in the paper [to the test]({{'posts/2026/reimplement-bpe-tokenization-survey/' | relative_url }}).
 On the variants: [PickyBPE]({{'posts/2026/reimplement-tokenization-survey/' | relative_url }}) reimplements and compares PickyBPE vs. BPE,
