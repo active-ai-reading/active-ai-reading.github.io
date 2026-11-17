@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-papers",
           title: "papers",
-          description: "Every paper the course has read, with everything the class wrote about it.",
+          description: "Every paper the course reads, latest week first, with everything the class wrote about it.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/papers/";
@@ -1401,6 +1401,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/cross-lingual-knowledge-pretraining/";
+            },},{id: "papers-llm-jepa-large-language-models-meet-joint-embedding-predictive-architectures",
+          title: 'LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures',
+          description: "",
+          section: "Papers",handler: () => {
+              window.location.href = "/papers/llm-jepa/";
             },},{id: "papers-matryoshka-language-model-suites",
           title: 'Matryoshka Language Model Suites',
           description: "",
