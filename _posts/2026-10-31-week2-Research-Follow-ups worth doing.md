@@ -3,7 +3,7 @@ title: "Research: Follow-ups worth doing  of Multi-Stream Attention Residuals"
 description: Follow-ups worth doing - continue to explore the MSAR architecture 
 paper: multi-stream-attention-residuals
 role: research
-task: Follow-ups worth doing
+task: followups
 by: NettaShemesh103
 ---
 

@@ -2,7 +2,6 @@
 title: "Reimplementing <experiment / metric / figure>"
 description: What you reimplemented and whether it matched.
 paper: paper-id
-role: coding
 task: reimplement
 by: [your-github-username]
 ---

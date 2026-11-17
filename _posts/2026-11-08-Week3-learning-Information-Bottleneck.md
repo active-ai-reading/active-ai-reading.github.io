@@ -4,6 +4,7 @@ title: "Learning about Information Bottleneck"
 description: How can we measure the usefulness of latent representations?
 paper: recurrent-depth-latent-reasoning 
 role: learning
+task: teach
 by: [leonicus]
 ---
 # What makes a latent representation good?

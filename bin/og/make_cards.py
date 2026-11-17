@@ -83,13 +83,14 @@ def card(path, title, kicker, kicker_color, footer):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     roles = {r["id"]: r for r in yaml.safe_load((ROOT / "_data" / "roles.yml").read_text(encoding="utf-8"))}
+    role_of = {t["id"]: r for r in roles.values() for t in r.get("tasks", [])}  # a post's role follows from its task
     papers = {p.stem: front_matter(p) for p in (ROOT / "_papers").glob("*.md")}
     n = 0
     for p in sorted((ROOT / "_posts").glob("*.md")):
         fm = front_matter(p)
         if not fm.get("title"):
             continue
-        role = roles.get(fm.get("role"), {})
+        role = role_of.get(fm.get("task")) or roles.get(fm.get("role"), {})
         task = next((t for t in role.get("tasks", []) if t.get("id") == fm.get("task")), {})
         kicker = " · ".join(x for x in (role.get("name"), task.get("name")) if x)
         paper = papers.get(str(fm.get("paper")), {})

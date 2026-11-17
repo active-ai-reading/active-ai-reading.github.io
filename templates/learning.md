@@ -2,7 +2,6 @@
 title: "<Something worth knowing>"
 description: One sentence on what readers will learn.
 paper: paper-id
-role: learning
 task: teach
 by: [your-github-username]
 ---

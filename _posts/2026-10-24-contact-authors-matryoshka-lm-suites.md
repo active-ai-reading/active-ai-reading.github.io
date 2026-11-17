@@ -1,7 +1,7 @@
 ---
 title: "<Critique / literature review / follow-ups> of <paper>"
 description: One sentence summary of your take.
-paper: matryoshka-language-model-suites
+paper: matryoshka-lm-suites
 role: research
 task: contact-authors
 by: sprinzak

@@ -3,7 +3,6 @@
 title: "Papers worth knowing this week"
 description: One sentence on what you found.
 paper: paper-id # the upcoming meeting's paper (from _papers/), or delete the line
-role: scouting
 task: trending # trending | hidden-gems
 by: [your-github-username]
 ---

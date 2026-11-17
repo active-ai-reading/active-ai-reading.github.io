@@ -2,7 +2,6 @@
 title: "<Critique / literature review / follow-ups> of <paper>"
 description: One sentence summary of your take.
 paper: paper-id
-role: research
 task: critique # critique | literature | followups | authors
 by: [your-github-username]
 ---

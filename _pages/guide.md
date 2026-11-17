@@ -44,11 +44,12 @@ The header is what puts your post on the right paper page with the right badge:
 title: A better Figure 1
 description: One sentence that makes people want to click.
 paper: cross-lingual-knowledge-pretraining # the filename of the paper in _papers/ (no .md)
-role: visualization # a role id from the roles page
 task: redo-graph # a task id from the roles page
 by: [your-github-username] # several authors? [alice, bob]
 ---
 ```
+
+Nothing may come before the first `---`, or the site skips the post. If **Check posts** in the Actions tab turns red after you save, it names the line to fix.
 
 **Stuck on how to do something?** The [example posts]({{ '/papers/cross-lingual-knowledge-pretraining/' | relative_url }}) for the first paper cover the common cases (citations, figures, charts, code, before/after blocks), and the [feature showcase]({{ '/showcase/' | relative_url }}) covers everything else (math, tabs, diagrams, videos, notebooks, Distill-style posts...). Open the source of any post and copy.
 

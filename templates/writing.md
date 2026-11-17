@@ -3,7 +3,6 @@
 title: "Rewriting the abstract of <paper>"
 description: One sentence that makes people want to click.
 paper: paper-id # the filename of the paper in _papers/, without .md
-role: writing
 task: abstract # abstract | copyedit | key-points   (see the roles page)
 by: [your-github-username]
 ---

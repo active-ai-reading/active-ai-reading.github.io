@@ -2,7 +2,6 @@
 title: "A better Figure <N>"
 description: What the new figure makes obvious that the old one didn't.
 paper: paper-id
-role: visualization
 task: redo-graph # redo-graph | key-visual
 by: [your-github-username]
 chart:

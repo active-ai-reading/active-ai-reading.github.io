@@ -1,4 +1,3 @@
-
 ---
 title: "Copyediting Speculative Decoding Throughput in Matryoshka Language Model Suites"
 description: "Why a larger draft model can slow down speculative decoding—and how Matryoshka changes that trade-off."

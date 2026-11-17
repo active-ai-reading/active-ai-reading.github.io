@@ -1,8 +1,7 @@
 ---
-# Copy to _posts/YYYY-MM-DD-short-title.md  and fill in. Delete these comment lines.
 title: "Key points regarding Latenct reasoning"
 description: Does latent reasoning bring LLM processing mechanisms closer to human thinking processes?
-paper: 2502 # the filename of the paper in _papers/, without .md
+paper: recurrent-depth-latent-reasoning
 role: writing
 task: key-points 
 by: [NettaShemesh103]
