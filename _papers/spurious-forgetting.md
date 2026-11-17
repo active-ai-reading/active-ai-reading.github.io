@@ -4,6 +4,7 @@ short: Spurious forgetting
 authors: Vedant Palit, Florent Draye, Nicolas Zucchet, Zhijing Jin, Bernhard Schölkopf
 year: 2026
 arxiv: "2610.08718"
+license: CC0 1.0
 tldr: >
   (To be written by the class after week 5. Edit this file: one or two sentences someone can read in 10 seconds.)
 tags: [forgetting, fine-tuning, plasticity, learning dynamics]

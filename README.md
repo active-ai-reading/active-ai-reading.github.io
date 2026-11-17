@@ -27,7 +27,7 @@ What one week learns, the next week inherits.
 | You want to... | Edit |
 | --- | --- |
 | Write a post | `_posts/YYYY-MM-DD-title.md` (start from `templates/`) |
-| Add a paper | `_papers/<paper-id>.md` (start from `templates/paper.md`) |
+| Add a paper | `python3 bin/add_paper.py <arXiv id> --week <n>`, or `_papers/<paper-id>.md` from `templates/paper.md` |
 | Your profile | `_people/<github-username>.md` |
 | Take a role this week | the sign-up Google Sheet (linked on the schedule page) |
 | The weeks and their papers (read / upcoming meeting / after that / planned) | `_data/schedule.yml` only: the schedule page and the sign-up sheet's *Papers* tab both read it |

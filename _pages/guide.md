@@ -103,7 +103,9 @@ Only use images you may reuse: your own, or from a paper with an open license (l
 
 ## Adding a paper
 
-Copy [`templates/paper.md`](https://github.com/{{ site.github_repo }}/blob/main/templates/paper.md) to `_papers/<short-id>.md`, e.g. `_papers/recurrent-depth.md`. The filename is the paper's id: posts point to it with `paper: recurrent-depth`. Add a week for it in the schedule.
+If it is on arXiv, one command writes the page and puts it on a week: `python3 bin/add_paper.py 2502.05171 --week 3 --id recurrent-depth`. It takes the title, authors, year and license from arXiv, and won't replace a week that already has a paper unless you add `--replace`.
+
+Otherwise, copy [`templates/paper.md`](https://github.com/{{ site.github_repo }}/blob/main/templates/paper.md) to `_papers/<short-id>.md`, e.g. `_papers/recurrent-depth.md`, and add a week for it in the schedule. Either way, the filename is the paper's id: posts point to it with `paper: recurrent-depth`.
 
 ## Changing the look
 
