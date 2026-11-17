@@ -62,7 +62,7 @@ ninja.data = [{
         
           title: "Literature review: where spurious forgetting comes from",
         
-        description: "The paper sits where several lines of work meet: catastrophic forgetting, forgetting that turns out to be recoverable, factual recall as associative memory, and what training choices change how much is forgotten.",
+        description: "The paper sits where four lines of work meet: catastrophic forgetting, forgetting that is actually recoverable, factual recall as associative memory, and what training choices change how much is forgotten.",
         section: "Posts",
         handler: () => {
           
