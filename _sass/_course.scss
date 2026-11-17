@@ -242,6 +242,11 @@ body {
     flex-direction: column;
     flex: 1;
   }
+  .paper-card-week {
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 0.2rem;
+  }
   .paper-card-title {
     font-weight: 700;
     line-height: 1.3;
