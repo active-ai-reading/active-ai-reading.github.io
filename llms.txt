@@ -15,6 +15,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Week 4 in one page: all about Tokenization](https://active-ai-reading.github.io/posts/2026/compile-tokenization-survey-sqat/): Our focus points from an extensive survey on tokenization (Communicate to the world, on "Tokenization: A Survey for Modern NLP", 2026-11-16)
 - [How BPE works but in a more intuitive way!](https://active-ai-reading.github.io/posts/2026/week-4-Learning-BPE-but-easier/): How BPE decides what a token is. (Learning to learn, on "Tokenization: A Survey for Modern NLP", 2026-11-15)
 - [Papers worth knowing this week](https://active-ai-reading.github.io/posts/2026/trending-tokenization-survey/): Traditional tokenizers rely on fixed vocabularies, which can limit their ability to adapt to new domains and languages. These two papers explore alternative approaches to make tokenization more flexible and efficient. (Paper scouting, on "Tokenization: A Survey for Modern NLP", 2026-11-15)
 - [TL;DR](https://active-ai-reading.github.io/posts/2026/tldr-tokenization-survey/): Three points to walk away with from the tokenization survey, and why they should come earlier in the paper. (Writing, on "Tokenization: A Survey for Modern NLP", 2026-11-15)

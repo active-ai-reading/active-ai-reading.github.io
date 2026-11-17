@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-how-bpe-works-but-in-a-more-intuitive-way",
+        },{id: "post-week-4-in-one-page-all-about-tokenization",
+        
+          title: "Week 4 in one page: all about Tokenization",
+        
+        description: "Our focus points from an extensive survey on tokenization",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/compile-tokenization-survey-sqat/";
+          
+        },
+      },{id: "post-how-bpe-works-but-in-a-more-intuitive-way",
         
           title: "How BPE works but in a more intuitive way!",
         
