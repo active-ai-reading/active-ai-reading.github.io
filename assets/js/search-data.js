@@ -916,22 +916,11 @@ ninja.data = [{
             window.location.href = "/posts/2026/week-1-matryoshka-collective-compilation/";
           
         },
-      },{id: "post-copyedit-matryoshka-lm-suites-2",
+      },{id: "post-copyediting-speculative-decoding-throughput-in-matryoshka-language-model-suites",
         
-          title: "Copyedit Matryoshka Lm Suites_2",
+          title: "Copyediting Speculative Decoding Throughput in Matryoshka Language Model Suites",
         
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/copyedit-matryoshka-lm-suites_2/";
-          
-        },
-      },{id: "post-copyedit-matryoshka-lm-suites",
-        
-          title: "Copyedit Matryoshka Lm Suites",
-        
-        description: "",
+        description: "Why a larger draft model can slow down speculative decoding—and how Matryoshka changes that trade-off.",
         section: "Posts",
         handler: () => {
           
