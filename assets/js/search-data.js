@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-week-4-in-one-page-all-about-tokenization",
+        },{id: "post-literature-review-where-spurious-forgetting-comes-from",
+        
+          title: "Literature review: where spurious forgetting comes from",
+        
+        description: "The paper sits where several lines of work meet: catastrophic forgetting, forgetting that turns out to be recoverable, factual recall as associative memory, and what training choices change how much is forgotten.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/literature-spurious-forgetting/";
+          
+        },
+      },{id: "post-week-4-in-one-page-all-about-tokenization",
         
           title: "Week 4 in one page: all about Tokenization",
         
