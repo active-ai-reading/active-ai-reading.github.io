@@ -1,35 +1,40 @@
-{% assign have_related_posts = false %}
-{% for post in site.related_posts | limit: site.related_blog_posts.max_related %}
-  {% unless have_related_posts %}
-    {% assign have_related_posts = true %}
-    {% if page.layout == 'post' %}
-      <br>
-      <hr>
-      <br>
-      <ul class="list-disc pl-8"></ul>
+{%- comment -%}
+  Bottom of a post. For a post on a paper: every other post the class wrote on that paper,
+  then the newest posts on other papers. For a post with no paper: the newest other posts.
+  How many from other papers: related_blog_posts.max_related in _config.yml.
+{%- endcomment -%}
+{%- assign _max = site.related_blog_posts.max_related | default: 5 -%}
+{%- if page.paper -%}
+  {%- assign _paper = site.papers | where: 'slug', page.paper | first -%}
+  {%- assign _same = site.posts | where: 'paper', page.paper | where_exp: 'p', 'p.url != page.url' -%}
+  {%- assign _others = site.posts | where_exp: 'p', 'p.paper != page.paper' -%}
+{%- else -%}
+  {%- assign _same = '' | split: '' -%}
+  {%- assign _others = site.posts | where_exp: 'p', 'p.url != page.url' -%}
+{%- endif -%}
 
-      <!-- Adds related posts to the end of an article -->
-      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
-    {% else %}
-      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
-    {% endif %}
+{% if _same.size > 0 %}
+  <section class="related-posts">
+    <h2 class="section-title">
+      More on {{ _paper.short | default: _paper.title | default: 'this paper' }} <span class="count">{{ _same.size }}</span>
+    </h2>
+    <div class="post-grid">
+      {% for p in _same %}{% include course/post_card.liquid post=p %}{% endfor %}
+    </div>
+    {% if _paper %}<p><a href="{{ _paper.url | relative_url }}">The paper's page, with every post by role →</a></p>{% endif %}
+  </section>
+{% endif %}
 
-    <p class="mb-2">Here are some more articles you might like to read next:</p>
-  {% endunless %}
+{% if _others.size > 0 %}
+  <section class="related-posts">
+    <h2 class="section-title">{% if page.paper %}On other papers{% else %}More from the class{% endif %}</h2>
+    <div class="post-grid">
+      {% for p in _others limit: _max %}{% include course/post_card.liquid post=p show_paper=true %}{% endfor %}
+    </div>
+    <p><a href="{{ '/posts/' | relative_url }}">All posts →</a></p>
+  </section>
+{% endif %}
 
-  <li class="my-2">
-    {% if post.redirect == blank %}
-      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% elsif post.redirect contains '://' %}
-      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-      <svg width="1rem" height="1rem" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    {% else %}
-      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
-    {% endif %}
-  </li>
-{% endfor %}
 {% if site.newsletter.enabled and site.footer_fixed %}
   <p class="mb-2" style="margin-top: 1.5rem !important">Subscribe to be notified of future articles:</p>
   {% include newsletter.liquid left=true %}
