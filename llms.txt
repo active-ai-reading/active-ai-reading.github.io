@@ -16,6 +16,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Critique of Spurious Forgetting paper](https://active-ai-reading.github.io/posts/2026/critique-spurious-forgetting/): The Spurious Forgetting paper offers a cool and intuitive explanation of this odd phenomena, but assumes rather strong assumptions that might not be reproducible or hold for real-sized LLMs. (Research skills, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-18)
 - [Literature review: where spurious forgetting comes from](https://active-ai-reading.github.io/posts/2026/literature-spurious-forgetting/): The paper sits where four lines of work meet: catastrophic forgetting, forgetting that is actually recoverable, factual recall as associative memory, and what training choices change how much is forgotten. (Research skills, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-17)
 - [Week 4 in one page: all about Tokenization](https://active-ai-reading.github.io/posts/2026/compile-tokenization-survey-sqat/): Our focus points from an extensive survey on tokenization (Communicate to the world, on "Tokenization: A Survey for Modern NLP", 2026-11-16)
 - [How BPE works but in a more intuitive way!](https://active-ai-reading.github.io/posts/2026/week-4-Learning-BPE-but-easier/): How BPE decides what a token is. (Learning to learn, on "Tokenization: A Survey for Modern NLP", 2026-11-15)

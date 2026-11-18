@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-literature-review-where-spurious-forgetting-comes-from",
+        },{id: "post-critique-of-spurious-forgetting-paper",
+        
+          title: "Critique of Spurious Forgetting paper",
+        
+        description: "The Spurious Forgetting paper offers a cool and intuitive explanation of this odd phenomena, but assumes rather strong assumptions that might not be reproducible or hold for real-sized LLMs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-spurious-forgetting/";
+          
+        },
+      },{id: "post-literature-review-where-spurious-forgetting-comes-from",
         
           title: "Literature review: where spurious forgetting comes from",
         
