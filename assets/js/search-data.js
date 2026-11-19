@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-spurious-forgetting-paper",
+        },{id: "post-a-better-figure-5",
+        
+          title: "A better Figure 5",
+        
+        description: "One panel per run, so you can see what removing the top direction does to old facts and what it costs on new facts.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/better-figure-5-spurious-forgetting/";
+          
+        },
+      },{id: "post-critique-of-spurious-forgetting-paper",
         
           title: "Critique of Spurious Forgetting paper",
         
