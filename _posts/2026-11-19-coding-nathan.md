@@ -1,6 +1,6 @@
 ---
 title: "Reproducing Spurious Forgetting: Shared Keys Hide Old Facts"
-description: "A ten-seed reproduction of Figure 2, panel 1: increasing shared-key strength turns gradual forgetting into collapse, recovery, and erosion."
+description: "A ten-seed reproduction of Figure 2"
 paper: spurious-forgetting
 role: coding
 task: reimplement
