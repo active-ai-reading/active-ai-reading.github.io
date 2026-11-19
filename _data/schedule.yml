@@ -37,6 +37,9 @@
   paper: llm-jepa
 
 - week: 7
+  topic: Muon vs AdamW after fine-tuning (tentative, might be postponed)
+  paper: muon-adamw-finetuning-gap
+  notes: "Guest lecture on visualization this day (13 Dec). The paper may move to a later week."
 
 - week: 8
 
