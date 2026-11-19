@@ -31,7 +31,15 @@ This requires much effort and makes user skip it all together, which misses the 
 
 ## How to improve an existing graph/diagram?
 
+### Make the main takeaway visible at a glance
 
+Before redesigning a figure, identify the one conclusion the reader should take from it.
+
+Then ask: Can the reader understand this conclusion without comparing multiple curves, estimating distances, or performing calculations?
+
+For example, if the important result is the improvement between two methods, consider showing that improvement directly rather than forcing the reader to calculate it.
+
+**The lesson:** A good redesign doesn't just make a figure prettier. It makes its main message easier to understand.
 
 ## How to visualize the core idea of a paper?
 
