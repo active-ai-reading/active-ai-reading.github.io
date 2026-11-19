@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-a-better-figure-5",
+        },{id: "post-the-authors-path",
+        
+          title: "The authors’ path",
+        
+        description: "How Vedant Palit’s work on interpretability and Bernhard Schölkopf’s research on causality connect to spurious forgetting.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/spurious-forgetting-authors-path-yakovafgin/";
+          
+        },
+      },{id: "post-a-better-figure-5",
         
           title: "A better Figure 5",
         
