@@ -6,7 +6,7 @@ week,date,paper_id,title,page,link,topic,notes
 4,2026-11-15,"tokenization-survey","Tokenization: A Survey for Modern NLP","https://active-ai-reading.github.io/papers/tokenization-survey/","https://www.alphaxiv.org/abs/2609.tokenization-survey-modern-nlp","",""
 5,2026-11-22,"spurious-forgetting","When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting","https://active-ai-reading.github.io/papers/spurious-forgetting/","https://arxiv.org/abs/2610.08718","",""
 6,2026-11-29,"llm-jepa","LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures","https://active-ai-reading.github.io/papers/llm-jepa/","https://arxiv.org/abs/2509.14252","",""
-7,2026-12-13,"","","","","",""
+7,2026-12-13,"muon-adamw-finetuning-gap","Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap","https://active-ai-reading.github.io/papers/muon-adamw-finetuning-gap/","https://arxiv.org/abs/2611.03633","Muon vs AdamW after fine-tuning (tentative, might be postponed)","Guest lecture on visualization this day (13 Dec). The paper may move to a later week."
 8,2026-12-20,"","","","","",""
 9,2026-12-27,"","","","","","Free choice from this week: repeat any role you like."
 10,2027-01-03,"","","","","",""

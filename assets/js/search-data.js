@@ -1493,6 +1493,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/multi-stream-attention-residuals/";
+            },},{id: "papers-pretraining-data-scale-reverses-the-muon-adamw-fine-tuning-gap",
+          title: 'Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap',
+          description: "",
+          section: "Papers",handler: () => {
+              window.location.href = "/papers/muon-adamw-finetuning-gap/";
             },},{id: "papers-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-approach",
           title: 'Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach',
           description: "",
