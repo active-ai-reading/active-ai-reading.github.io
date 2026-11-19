@@ -102,6 +102,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/better-figure-5-spurious-forgetting/";
           
         },
+      },{id: "post-rewriting-the-abstract-of-quot-when-forgetting-is-not-catastrophic-quot",
+        
+          title: "Rewriting the abstract of &quot;When Forgetting is not Catastrophic&quot;",
+        
+        description: "Forgetting during finetuning is two processes, and only one is permanent. The rewritten abstract says so in its first sentence.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-spurious-forgetting-b1wa/";
+          
+        },
       },{id: "post-critique-of-spurious-forgetting-paper",
         
           title: "Critique of Spurious Forgetting paper",
