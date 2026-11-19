@@ -12,6 +12,8 @@ Yours to write. Some questions to start from:
 
 The course has a shared X account: [@OpalsLLM](https://x.com/OpalsLLM). The login details for the X account and for its email address are on the course Moodle. Never post them here or anywhere else in the repo, since the repo is public.
 
+- **Posting threads:** Standard X accounts have a 280-character limit per post (links count as 23 characters regardless of URL length). Don't paste an entire thread into a single text box—paste the first post, click the **`+`** button at the bottom right of the composer to add each connected reply one by one, and make sure nothing is highlighted in red before clicking **Post all**.
+
 ## LinkedIn
 
 - If you have more than one figure, combine them into a single image before attaching: LinkedIn shows several images as a cropped grid, but one image appears whole in the feed.
