@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/social-spurious-forgetting-k0dv/";
           
         },
+      },{id: "post-redo-graph-spurious-forgetting-9xtc",
+        
+          title: "Redo Graph Spurious Forgetting 9xtc",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-spurious-forgetting-9xtc/";
+          
+        },
       },{id: "post-reproducing-spurious-forgetting-shared-keys-hide-old-facts",
         
           title: "Reproducing Spurious Forgetting: Shared Keys Hide Old Facts",
