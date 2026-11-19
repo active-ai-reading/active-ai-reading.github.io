@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/spurious-forgetting-authors-path-yakovafgin/";
           
         },
+      },{id: "post-the-authors-path-spurious-forgetting",
+        
+          title: "The authors’ path: Spurious forgetting",
+        
+        description: "How the authors’ research on mechanistic interpretability, representation learning, and learning dynamics connects to spurious forgetting.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/spurious-forgetting-authors-path-Shueyr/";
+          
+        },
       },{id: "post-reproducing-spurious-forgetting-shared-keys-hide-old-facts",
         
           title: "Reproducing Spurious Forgetting: Shared Keys Hide Old Facts",
