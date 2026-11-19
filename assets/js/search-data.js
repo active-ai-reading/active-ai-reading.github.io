@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/spurious-forgetting-authors-path-Shueyr/";
           
         },
+      },{id: "post-tokenization-survey-in-a-thread",
+        
+          title: "Tokenization survey in a thread",
+        
+        description: "Social media posts for tokenization survey.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/social-spurious-forgetting-k0dv/";
+          
+        },
       },{id: "post-reproducing-spurious-forgetting-shared-keys-hide-old-facts",
         
           title: "Reproducing Spurious Forgetting: Shared Keys Hide Old Facts",
