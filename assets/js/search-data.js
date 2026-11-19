@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/spurious-forgetting-authors-path-yakovafgin/";
           
         },
+      },{id: "post-reproducing-spurious-forgetting-shared-keys-hide-old-facts",
+        
+          title: "Reproducing Spurious Forgetting: Shared Keys Hide Old Facts",
+        
+        description: "A ten-seed reproduction of Figure 2",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/coding-nathan/";
+          
+        },
       },{id: "post-a-better-figure-5",
         
           title: "A better Figure 5",

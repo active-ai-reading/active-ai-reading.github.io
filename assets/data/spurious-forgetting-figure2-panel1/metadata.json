@@ -1,0 +1,1 @@
+{"seeds":"0-9","out_dir":"results/final","dimension":128,"vocab":32,"facts":128,"batch_size":32,"pretrain_lr":0.1,"finetune_lr":0.02,"max_pretrain_steps":20000,"pretrain_eval_every":20,"finetune_steps":500,"eval_every":1,"seeds_resolved":[0,1,2,3,4,5,6,7,8,9],"alphas":[0.0,0.1,0.25,0.5],"runtime_seconds":25.62369179725647,"numpy_version":"2.4.6"}
