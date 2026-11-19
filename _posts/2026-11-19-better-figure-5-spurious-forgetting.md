@@ -18,7 +18,7 @@ What makes it hard to read:
 
 ## The redesign
 
-{% include figure.liquid path="assets/img/posts/better-figure-5-spurious-forgetting/better-figure-5.png" class="img-fluid rounded" caption="Synthetic individuals (name gives no hint of the answer), real entities (product type hints at the maker), and synthetic individuals, large set (1,000 new individuals instead of 250). Redrawn from Fig. 5 of Palit et al. (2026); curves read off the published figure (approximate); star from Table 3." %}
+{% include figure.liquid path="assets/img/posts/better-figure-5-spurious-forgetting/better-figure-5.png" class="img-fluid rounded" caption="Figure 5 (redrawn). Removing the top direction of each weight update prevents the collapse of old facts. OLMo 2 1B is finetuned on new facts without replay, in separate runs. Old facts (CounterFact facts the model knows) are blue, and green when the top direction of each weight update is removed; new facts are gray dashed; the star marks new-fact accuracy at step 400 with the top direction removed (Table 3). (1) Synthetic individuals (invented names with random answers, so the name gives no hint of the answer): old facts collapse, then partly recover; removing the top direction largely prevents the collapse. (2) Real entities (real products with their real makers, so the product type hints at the maker): old facts drop less and do not recover; removing the top direction keeps them higher. (3) With a larger set of 1,000 synthetic individuals instead of 250, the collapse goes deeper and lasts longer. Curves are read off Fig. 5 of Palit et al. (2026) and are approximate; stars are from Table 3." %}
 
 ## What changed and why
 
