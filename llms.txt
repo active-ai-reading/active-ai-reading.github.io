@@ -17,6 +17,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Transformer Feed-Forward Layers Store Memories](https://active-ai-reading.github.io/posts/2026/teach-spurious-forgetting-q0l2/): How feed-forward layers store and retrieve learned associations. (Learning to learn, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-20)
 - [The authors’ path](https://active-ai-reading.github.io/posts/2026/spurious-forgetting-authors-path-yakovafgin/): How Vedant Palit’s work on interpretability and Bernhard Schölkopf’s research on causality connect to spurious forgetting. (Research skills, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-19)
 - [The authors’ path: Spurious forgetting](https://active-ai-reading.github.io/posts/2026/spurious-forgetting-authors-path-Shueyr/): How the authors’ research on mechanistic interpretability, representation learning, and learning dynamics connects to spurious forgetting. (Research skills, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-19)
 - [Tokenization survey in a thread](https://active-ai-reading.github.io/posts/2026/social-spurious-forgetting-k0dv/): Social media posts for tokenization survey. (Communicate to the world, on "Tokenization: A Survey for Modern NLP", 2026-11-19)

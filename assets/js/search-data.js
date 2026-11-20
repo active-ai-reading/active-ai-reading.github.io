@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-the-authors-path",
+        },{id: "post-transformer-feed-forward-layers-store-memories",
+        
+          title: "Transformer Feed-Forward Layers Store Memories",
+        
+        description: "How feed-forward layers store and retrieve learned associations.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/teach-spurious-forgetting-q0l2/";
+          
+        },
+      },{id: "post-the-authors-path",
         
           title: "The authors’ path",
         
