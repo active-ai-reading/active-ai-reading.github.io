@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-multi-stream-attention-residuals-in-a-thread",
+        },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "Two recent papers exploring how language models can acquire new knowledge while preserving previously learned capabilities.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-spurious-forgetting/";
+          
+        },
+      },{id: "post-multi-stream-attention-residuals-in-a-thread",
         
           title: "Multi-Stream Attention Residuals in a thread",
         
