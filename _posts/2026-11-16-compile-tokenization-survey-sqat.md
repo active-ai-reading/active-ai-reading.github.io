@@ -8,8 +8,6 @@ by: TalSokolov
 ---
 
 ## About the paper
-This week we dove into tokenization through a survey that works on two levels: a high-level map of the field, 
-and a detailed reference for those who want to go deeper.
 Text is both the input and the output of an LLM, but before a model can process it, the text has to be split into tokens and converted into numerical values. 
 Although this step is central, and is behind popular failures like miscounting the r’s in “strawberry”, it rarely gets the spotlight. 
 The 32 authors aim to bring it to the surface, covering algorithms, multilingual challenges, evaluation, theory and more.
@@ -50,6 +48,7 @@ MaxMatch and PathPiece. While the paper gives an example of MaxMatch using more 
 Two posts look beyond fixed tokenization: one on how the [optimal token size depends on the compute budget]({{'posts/2026/beyond-fixed-tokenization/' | relative_url }}),
 and the other suggesting [adaptive tokenization]({{'posts/2026/trending-tokenization-survey/' | relative_url }}).
 
-**📣 Communication.** To be updated soon
+**📣 Communication.** An [X thread]({{'posts/2026/social-spurious-forgetting-k0dv/' | relative_url }}) walks through the main challenges of tokenization and briefly covers the survey's sections. 
+
 
 
