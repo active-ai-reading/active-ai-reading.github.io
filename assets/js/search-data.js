@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-rewriting-section-2-forgetting-that-undoes-itself",
+        },{id: "post-3-follow-ups-understanding-and-preventing-spurious-forgetting",
+        
+          title: "3 Follow-Ups: Understanding and Preventing Spurious Forgetting",
+        
+        description: "Exploring how semantic structure, learned abilities, and training dynamics influence spurious forgetting.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/followups-spurious-forgetting-chenshani-droid/";
+          
+        },
+      },{id: "post-rewriting-section-2-forgetting-that-undoes-itself",
         
           title: "Rewriting Section 2 - Forgetting that undoes itself",
         
