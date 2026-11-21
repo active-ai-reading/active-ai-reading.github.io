@@ -5,7 +5,8 @@ authors: Marco Cognetta, Christopher Akiki, Pawan Sasanka Ammanamanchi, Catherin
 year: 2026
 arxiv: # not on arXiv yet; add the id here once it is, and the arXiv/PDF links appear
 url_paper: https://www.alphaxiv.org/abs/2609.tokenization-survey-modern-nlp
-tldr: > Tokenization is the fundamental step where text is split into the building blocks an LLM digests. It has implications for efficiency, multilingual balance, and security; this survey is both a high-level map of the field and a detailed reference for those who want to go deeper.
+tldr: > 
+  Tokenization is the fundamental step where text is split into the building blocks an LLM digests. It has implications for efficiency, multilingual balance, and   security; this survey is both a high-level map of the field and a detailed reference for those who want to go deeper.
 tags: [tokenization, survey]
 ---
 
