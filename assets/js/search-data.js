@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-spurious-forgetting/";
           
         },
+      },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "A run of trending papers keeps finding the same thing — a lot of what we call &quot;training&quot; turns out to be one shift in activations or weights, plus a clean attention-architecture conversion that lands next to our MSAR read.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-spurious-forgetting-wge3/";
+          
+        },
       },{id: "post-multi-stream-attention-residuals-in-a-thread",
         
           title: "Multi-Stream Attention Residuals in a thread",
