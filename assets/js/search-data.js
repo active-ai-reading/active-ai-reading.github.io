@@ -157,11 +157,11 @@ ninja.data = [{
             window.location.href = "/posts/2026/social-spurious-forgetting-k0dv/";
           
         },
-      },{id: "post-redo-graph-spurious-forgetting-9xtc",
+      },{id: "post-a-better-figure-5",
         
-          title: "Redo Graph Spurious Forgetting 9xtc",
+          title: "A better Figure 5",
         
-        description: "",
+        description: "Removing one direction restores forgotten facts: a direct comparison of old-fact recall before and after the intervention.",
         section: "Posts",
         handler: () => {
           
