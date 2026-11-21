@@ -1,4 +1,3 @@
-
 ---
 title: "A better Figure 5"
 description: "Removing one direction restores forgotten facts: a direct comparison of old-fact recall before and after the intervention."
