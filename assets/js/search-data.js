@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-transformer-feed-forward-layers-store-memories",
+        },{id: "post-rewriting-section-2-forgetting-that-undoes-itself",
+        
+          title: "Rewriting Section 2 - Forgetting that undoes itself",
+        
+        description: "One sentence that makes people want to click.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-spurious-forgetting-8vno/";
+          
+        },
+      },{id: "post-transformer-feed-forward-layers-store-memories",
         
           title: "Transformer Feed-Forward Layers Store Memories",
         
