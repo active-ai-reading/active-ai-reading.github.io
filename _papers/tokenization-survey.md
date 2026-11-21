@@ -5,11 +5,7 @@ authors: Marco Cognetta, Christopher Akiki, Pawan Sasanka Ammanamanchi, Catherin
 year: 2026
 arxiv: # not on arXiv yet; add the id here once it is, and the arXiv/PDF links appear
 url_paper: https://www.alphaxiv.org/abs/2609.tokenization-survey-modern-nlp
-tldr: >
-  (To be written by the class after week 4. Edit this file: one or two sentences someone can read in 10 seconds.)
+tldr: > Tokenization is the fundamental step where text is split into the building blocks an LLM digests. It has implications for efficiency, multilingual balance, and security; this survey is both a high-level map of the field and a detailed reference for those who want to go deeper.
 tags: [tokenization, survey]
 ---
 
-A long survey (32 authors) of how tokenizers are built and where they go wrong: normalization, subword
-algorithms, vocabularies, multilingual imbalance, evaluation, theory, and alternatives such as latent or
-visual tokenization. It is long, so for your task read the main part and the sections it needs.
