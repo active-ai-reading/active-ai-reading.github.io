@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-3-follow-ups-understanding-and-preventing-spurious-forgetting",
+        },{id: "post-multi-stream-attention-residuals-in-a-thread",
+        
+          title: "Multi-Stream Attention Residuals in a thread",
+        
+        description: "Social media posts for MSAR (Multi-Stream Attention Residuals), the paper that reframes the residual stream as multi-head attention over depth.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/social-spurious-forgetting-l0t7/";
+          
+        },
+      },{id: "post-3-follow-ups-understanding-and-preventing-spurious-forgetting",
         
           title: "3 Follow-Ups: Understanding and Preventing Spurious Forgetting",
         

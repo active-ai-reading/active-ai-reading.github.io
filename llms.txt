@@ -17,6 +17,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Multi-Stream Attention Residuals in a thread](https://active-ai-reading.github.io/posts/2026/social-spurious-forgetting-l0t7/): Social media posts for MSAR (Multi-Stream Attention Residuals), the paper that reframes the residual stream as multi-head attention over depth. (Communicate to the world, on "Multi-Stream Attention Residuals", 2026-11-21)
 - [3 Follow-Ups: Understanding and Preventing Spurious Forgetting](https://active-ai-reading.github.io/posts/2026/followups-spurious-forgetting-chenshani-droid/): Exploring how semantic structure, learned abilities, and training dynamics influence spurious forgetting. (Research skills, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-21)
 - [Rewriting Section 2 - Forgetting that undoes itself](https://active-ai-reading.github.io/posts/2026/copyedit-spurious-forgetting-8vno/): One sentence that makes people want to click. (Writing, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-21)
 - [Transformer Feed-Forward Layers Store Memories](https://active-ai-reading.github.io/posts/2026/teach-spurious-forgetting-q0l2/): How feed-forward layers store and retrieve learned associations. (Learning to learn, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-20)
