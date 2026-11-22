@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-a-better-figure-1",
+        },{id: "post-suppressed-not-erased-and-automatic-soundness-check",
+        
+          title: "Suppressed, not erased, and automatic soundness check",
+        
+        description: "A probe finds edited facts still readable inside the model, plus one trending paper I kept anyway: an AI reviewer trained to judge soundness.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/scouting-not-trendding-spurious-forgetting/";
+          
+        },
+      },{id: "post-a-better-figure-1",
         
           title: "A better Figure 1",
         

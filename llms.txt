@@ -17,6 +17,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Suppressed, not erased, and automatic soundness check](https://active-ai-reading.github.io/posts/2026/scouting-not-trendding-spurious-forgetting/): A probe finds edited facts still readable inside the model, plus one trending paper I kept anyway: an AI reviewer trained to judge soundness. (Paper scouting, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-22)
 - [A better Figure 1](https://active-ai-reading.github.io/posts/2026/key-visual-spurious-forgetting-otlt/): The new figure is easier to read and understand because it follows the conventional left-to-right reading direction. (Visualization, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-22)
 - [Papers worth knowing this week](https://active-ai-reading.github.io/posts/2026/hidden-gems-spurious-forgetting-glmf/): A single-line optimizer adjustment may serve as the primary defense against catastrophic forgetting. (Paper scouting, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-22)
 - [Papers worth knowing this week](https://active-ai-reading.github.io/posts/2026/hidden-gems-spurious-forgetting-4vdo/): Five recent papers on forgetting during finetuning, each answering a different part of the question this week's paper raises: when is lost knowledge really gone? (Paper scouting, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-22)
