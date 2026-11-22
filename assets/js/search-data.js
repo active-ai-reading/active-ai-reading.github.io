@@ -1648,6 +1648,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/llm-jepa/";
+            },},{id: "papers-is-this-machine-playing",
+          title: 'Is this machine playing?',
+          description: "",
+          section: "Papers",handler: () => {
+              window.location.href = "/papers/machine-playing/";
             },},{id: "papers-matryoshka-language-model-suites",
           title: 'Matryoshka Language Model Suites',
           description: "",
