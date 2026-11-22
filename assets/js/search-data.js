@@ -113,6 +113,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/hidden-gems-spurious-forgetting-4vdo/";
           
         },
+      },{id: "post-jepa-llm-explainer-video",
+        
+          title: "JEPA-LLM Explainer Video",
+        
+        description: "Video explainer for JEPA-LLM.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/extras-jepa-llm/";
+          
+        },
       },{id: "post-why-did-olmo-recover-old-facts-in-only-one-experiment",
         
           title: "Why did OLMo recover old facts in only one experiment?",
