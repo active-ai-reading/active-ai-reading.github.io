@@ -20,11 +20,13 @@ The AIDA method is used by many to maximize engagement and impact. In short, the
 ## Writing AIDA slides
 
 You may use the slides template I've created or change it to your liking, but try keeping a standard format.
-[Canva Link](https://canva.link/n86lno6o6iv6pvl)
+[Canva Link](https://canva.link/9m63c12laouxhok), 
 
 Platforms usually include: X (4-6 slides in a thread), LinkedIn (4-10 slides as a PDF), and Instagram (4-10 slides).
 
 **Discussion:** Should we open an Instagram account? As slides are commonly used on Instagram, LinkedIn and X might already have more of our target academic audience. Although such accounts do exist on Instagram, such as [@ourworldindata](https://www.instagram.com/ourworldindata) and [@quantamag](https://www.instagram.com/quantamag/). 
+
+After discussing in class we've decided to try all options (even **TikTok**) as we already have the slides prepared. 
 
 ## Examples for posts
 
