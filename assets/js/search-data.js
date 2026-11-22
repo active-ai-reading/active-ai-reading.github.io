@@ -58,7 +58,40 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-papers-worth-knowing-this-week",
+        },{id: "post-a-better-figure-1",
+        
+          title: "A better Figure 1",
+        
+        description: "The new figure is easier to read and understand because it follows the conventional left-to-right reading direction.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-visual-spurious-forgetting-otlt/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "Five recent papers on forgetting during finetuning, each answering a different part of the question this week&#39;s paper raises: when is lost knowledge really gone?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-spurious-forgetting-4vdo/";
+          
+        },
+      },{id: "post-a-better-figure-3",
+        
+          title: "A better Figure 3",
+        
+        description: "A schematic of the three phases of finetuning, with and without normalization, showing where the old and the new facts land and which ones are answered.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/better-figure-3-spurious-forgetting-yak0v/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
         
@@ -100,6 +133,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/posts/2026/followups-spurious-forgetting-chenshani-droid/";
+          
+        },
+      },{id: "post-applying-aida-for-communication",
+        
+          title: "Applying AIDA for Communication",
+        
+        description: "What&#39;s AIDA and how can we use it to improve course communication. Including a Canva template.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/extras-spurious-forgetting-75lv/";
           
         },
       },{id: "post-rewriting-section-2-forgetting-that-undoes-itself",
