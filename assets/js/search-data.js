@@ -73,6 +73,17 @@ ninja.data = [{
         
           title: "A better Figure 1",
         
+        description: "removing redundancy.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/redo-graph-spurious-forgetting-s2ol-adamg/";
+          
+        },
+      },{id: "post-a-better-figure-1",
+        
+          title: "A better Figure 1",
+        
         description: "The new figure is easier to read and understand because it follows the conventional left-to-right reading direction.",
         section: "Posts",
         handler: () => {
