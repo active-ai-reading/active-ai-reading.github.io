@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-a-better-figure-1",
+        },{id: "post-",
+        
+          title: "",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/2026-11-22-hidden-gems-spurious-forgetting-glmf/";
+          
+        },
+      },{id: "post-a-better-figure-1",
         
           title: "A better Figure 1",
         
