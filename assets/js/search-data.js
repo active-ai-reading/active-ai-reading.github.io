@@ -91,6 +91,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/hidden-gems-spurious-forgetting-4vdo/";
           
         },
+      },{id: "post-why-did-olmo-recover-old-facts-in-only-one-experiment",
+        
+          title: "Why did OLMo recover old facts in only one experiment?",
+        
+        description: "A critique of what the two OLMo training runs tell us about recovery and how to test the explanation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-spurious-forgetting-chanoch1234/";
+          
+        },
       },{id: "post-a-better-figure-3",
         
           title: "A better Figure 3",
