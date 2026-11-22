@@ -1,7 +1,6 @@
 ---
 title: "Papers worth knowing this week"
-description:  A single-line optimizer adjustment
-may serve as the primary defense against catastrophic forgetting.
+description: A single-line optimizer adjustment may serve as the primary defense against catastrophic forgetting.
 paper: spurious-forgetting
 task: hidden-gems
 by: ohad-agadi
