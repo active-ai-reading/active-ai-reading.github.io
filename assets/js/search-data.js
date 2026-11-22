@@ -58,18 +58,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-",
-        
-          title: "",
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/posts/2026/2026-11-22-hidden-gems-spurious-forgetting-glmf/";
-          
-        },
-      },{id: "post-a-better-figure-1",
+        },{id: "post-a-better-figure-1",
         
           title: "A better Figure 1",
         
@@ -78,6 +67,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/posts/2026/key-visual-spurious-forgetting-otlt/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "A single-line optimizer adjustment may serve as the primary defense against catastrophic forgetting.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-spurious-forgetting-glmf/";
           
         },
       },{id: "post-papers-worth-knowing-this-week",
