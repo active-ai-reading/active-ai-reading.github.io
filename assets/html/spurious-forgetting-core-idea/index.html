@@ -49,7 +49,7 @@ h1{font-size:clamp(28px,4vw,38px);line-height:1.12;margin:7px 0 10px;letter-spac
   <div class="setupItem"><div class="eyebrow">The surprise</div><strong>One shared shift moves both rows together</strong><small>It can hide an old A answer without erasing its stored information.</small></div>
  </div>
 </section>
-<div class="controls"><div class="stages" role="group" aria-label="Choose stage"><button data-stage="before" aria-pressed="false">Before</button><button data-stage="collapse" aria-pressed="true">1 · Collapse</button><button data-stage="recovery" aria-pressed="false">2 · Recovery</button></div><button type="button" id="play">▶ Watch the story</button></div>
+<div class="controls"><div class="stages" role="group" aria-label="Choose stage"><button data-stage="before" aria-pressed="true">Before</button><button data-stage="collapse" aria-pressed="false">1 · Collapse</button><button data-stage="recovery" aria-pressed="false">2 · Recovery</button></div><button type="button" id="play">▶ Watch the story</button></div>
 <section class="story" aria-live="polite"><div class="label" id="storyLabel">1 · Collapse</div><h2 id="storyHead">The lift helps the new fact, while hiding the old one</h2><p id="storyText">The same purple lift appears under all B answers in both rows. Because RMSNorm also shrinks each row's own spikes, it helps while the new fact's spikes are misleading — but it buries the old A₂ fact at the same time.</p></section>
 <section class="board" aria-label="Shared lift acting on a new and old fact together">
  
@@ -145,7 +145,7 @@ const TRACE={"step":4,"s":[0.0,0.4999,0.7309,0.8992,1.0279,1.1478,1.2203,1.3001,
  function rebuild(){ buildChart(); buildTrend(); }
  const phaseLabels={before:['Before','No shared lift yet','The old A₂ fact is recalled correctly. The new fact has never been seen, and its own spikes still point to wrong answers.'],collapse:['1 · Collapse','The lift helps the new fact, while hiding the old one','The purple lift raises all B answers in both rows. RMSNorm also shrinks each row\'s own spikes. That helps while the new fact\'s spikes are misleading, but it buries the old A₂ fact at the same time.'],recovery:['2 · Recovery','Now the lift hurts the new fact, so it shrinks','The B₂-specific spike is now useful. Raising all B answers cannot distinguish B₂ from B₁, but RMSNorm still shrinks their useful difference, so <span class="emphasis">gradient descent pulls the lift back</span>, and the old A₂ fact reappears without being retrained.']};
  function phase(t){ if(t<1) return 'before'; if(t<PEAK) return 'collapse'; return 'recovery'; }
- let time=48, playing=false, anim=null, jumpToken=0;
+ let time=0, playing=false, anim=null, jumpToken=0;
  function render(){
   const h=shares(time),newWinner=drawRow(chart.rows[0],chart.topBase,newSignal(time),h,NEW,chart.platforms[0],chart.pLabels[0],true),oldWinner=drawRow(chart.rows[1],chart.bottomBase,oldSignal(),h,OLD,chart.platforms[1],chart.pLabels[1],false);
   chart.status[0].textContent=newWinner===NEW?'✓':'✕';chart.status[1].textContent=oldWinner===OLD?'✓':'✕';
@@ -160,7 +160,7 @@ const TRACE={"step":4,"s":[0.0,0.4999,0.7309,0.8992,1.0279,1.1478,1.2203,1.3001,
  byId('play').addEventListener('click',()=>playing?cancel():play()); for(const b of app.querySelectorAll('[data-stage]')) b.addEventListener('click',()=>jump({before:0,collapse:48,recovery:232}[b.dataset.stage])); window.addEventListener('resize',()=>{const m=window.innerWidth<630; if(m!==mobile){ mobile=m; rebuild(); render(); }});
  function syncTheme(){try{const pt=window.parent!==window&&window.parent.document.documentElement.getAttribute('data-theme'); if(pt) document.documentElement.setAttribute('data-theme',pt);}catch(e){}}
  function fitFrame(){try{if(window.frameElement){const m=document.querySelector('main');window.frameElement.style.height=Math.ceil(m.getBoundingClientRect().bottom+window.scrollY+10)+'px';}}catch(e){}}
- if(window.parent!==window){document.body.style.background='transparent';document.body.style.padding='2px 2px 6px';const hd=document.querySelector('header');if(hd)hd.style.display='none'; syncTheme(); try{new MutationObserver(syncTheme).observe(window.parent.document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}}
+ if(window.parent!==window){document.body.style.background='transparent';document.body.style.padding='2px 2px 6px';const hd=document.querySelector('header');if(hd)hd.style.display='none';try{document.documentElement.style.fontFamily=window.parent.getComputedStyle(window.parent.document.body).fontFamily;}catch(e){}document.querySelectorAll('.after > h2, .after > p').forEach(e=>e.style.display='none'); syncTheme(); try{new MutationObserver(syncTheme).observe(window.parent.document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}}
  for(const d of document.querySelectorAll('details')) d.addEventListener('toggle', fitFrame); window.addEventListener('resize', fitFrame);
  rebuild(); render(); fitFrame(); if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitFrame);
 })();

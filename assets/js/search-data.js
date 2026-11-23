@@ -80,9 +80,9 @@ ninja.data = [{
             window.location.href = "/posts/2026/communication-X-post/";
           
         },
-      },{id: "post-a-better-figure-3-one-shared-lift-two-consequences",
+      },{id: "post-the-core-idea-a-shortcut-that-helps-until-it-hurts",
         
-          title: "A better Figure 3: one shared lift, two consequences",
+          title: "The core idea: a shortcut that helps, until it hurts",
         
         description: "Why old facts vanish and come back without retraining, in one picture: a shortcut that helps the new facts, until it hurts them.",
         section: "Posts",
