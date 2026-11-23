@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/reimplement-spurious-forgetting-biography-wording/";
           
         },
+      },{id: "post-when-forgetting-is-not-catastrophic-x-post",
+        
+          title: "When Forgetting Is Not Catastrophic X post",
+        
+        description: "X posts for &quot;When Forgetting Is Not Catastrophic&quot;",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/communication-X-post/";
+          
+        },
       },{id: "post-suppressed-not-erased-and-automatic-soundness-check",
         
           title: "Suppressed, not erased, and automatic soundness check",
