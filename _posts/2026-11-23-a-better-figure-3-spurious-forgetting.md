@@ -1,12 +1,12 @@
 ---
-title: "A better Figure 3: one shared lift, two consequences"
+title: "The core idea: a shortcut that helps, until it hurts"
 description: "Why old facts vanish and come back without retraining, in one picture: a shortcut that helps the new facts, until it hurts them."
 paper: spurious-forgetting
 task: key-visual
 by: [Reuvenspitz]
 ---
 
-## The original
+## How the paper shows it
 
 [Figure 3 of the paper](https://arxiv.org/abs/2610.08718) explains why recall of the old facts collapses and then recovers on its own. It has three panels: the old facts' hidden states projected on the shared direction, the size of the common shift *s* during fine-tuning (with and without normalization), and the shared and individual margins of the new facts.
 
@@ -18,15 +18,22 @@ A shared shortcut helps new learning but hides old knowledge. Once precise learn
 
 <iframe src="{{ '/assets/html/spurious-forgetting-core-idea/index.html' | relative_url }}" title="One shared lift, two consequences: an interactive view of spurious forgetting" loading="lazy" style="width: 100%; height: 1500px; border: 0;"></iframe>
 
-*[Open the figure on its own page]({{ '/assets/html/spurious-forgetting-core-idea/index.html' | relative_url }}). The curve of the shared lift comes from [minimal_model.py]({{ '/assets/html/spurious-forgetting-core-idea/minimal_model.py' | relative_url }}), a NumPy re-implementation of the paper's minimal model (§3.1, App. B.1).*
+### What did we just see?
+
+Early in training, the model finds a shortcut: boosting all B answers helps it learn new facts, even before it can distinguish their correct answers. But this shared boost also affects old facts, hiding their correct answers without erasing the underlying information.
+
+The key is **RMSNorm**. As the shared component grows, normalization weakens the fact-specific signals. Initially, this helps by suppressing misleading signals. Later, once the new associations become accurate, the same effect becomes harmful: the shared boost reduces the score difference between correct and incorrect B answers.
+
+Gradient descent therefore pulls the shared component back. As a side effect, the old facts become accessible again, **without ever being retrained**.
+
+### Not everything comes back
+
+The shared shift can retract: it hid the old fact without erasing it. But a second, slower process is not. Small **fact-specific changes** keep accumulating and gradually erase some old facts for good. The paper calls this **erosion**, and only this part is truly catastrophic forgetting.
 
 ## What changed and why
 
-- **Answers instead of hidden-state geometry.** Each row shows the scores a fact gives its possible answers, so "the model now answers wrong" is visible without decoding a projection.
-- **The shared shift as one object.** A purple lift under all B answers, identical in both rows, that the reader can watch grow and shrink.
-- **A new fact next to an old one.** The new fact shows *why* the lift moves; the old fact shows the *consequence*.
-- **The turning point in words, not as a zero crossing.** Early, the new fact's own spikes point to wrong answers, so diluting them helps. Later they point to the right one, so the lift only dilutes useful information, and gradient descent pulls it back.
-- **A dashed outline for the stored signal.** The old fact's spike shrinks under normalization, but what is stored stays. That is the difference between hidden and erased.
-- **Erosion in one sentence, not a stage.** It is a separate, slower process. Keeping it apart keeps the main mechanism clear, without implying that everything comes back.
-- **The math one click away.** Eq. 5 and the real curve of the shift sit in a collapsible section, for readers who want the exact link to the paper.
-- **Schematic where it has to be, real where it can be.** The bars are illustrative; the size of the shift over time comes from a real run, and the code is linked.
+- **Answers instead of hidden-state geometry**, so "the model now answers wrong" is visible directly.
+- **One purple lift, identical in both rows**, so the shared shift reads as a single object that grows and shrinks.
+- **A dashed outline for the stored signal**, so hidden and erased look different.
+
+*The bars are a qualitative schematic of the mechanism, not measured logits. The curve of the shared lift comes from a simulation of the paper's minimal model (§3.1; d = 128, α = 0.5, one seed); the code is in [minimal_model.py]({{ '/assets/html/spurious-forgetting-core-idea/minimal_model.py' | relative_url }}).*
