@@ -30,7 +30,6 @@ After discussing in class we've decided to try all options (even **TikTok**) as 
 
 ## What I posted this week?
 
-% todo: Add links and posts tonight!
 - Everything you need to know about Spurious Forgetting. [Instagram](https://www.instagram.com/p/DgF2c7miIWf/?utm_source=ig_web_copy_link&jplx=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==), [TikTok](https://www.tiktok.com/@opalsllm/photo/7711410940272561426?is_from_webapp=1&sender_device=pc&web_id=7711404948693648948)
 - Can a great AI paper still have a broken abstract. [Instagram](https://www.instagram.com/p/DgF16O8CBwH/?utm_source=ig_web_button_share_sheet&gwpx=MzRlODBiNWFlZA==), [TikTok](https://www.tiktok.com/@opalsllm/photo/7711409201892969735?is_from_webapp=1&sender_device=pc&web_id=7711404948693648948)
 - Never assume a toy model can scale to real Transformers. [Instagram](https://www.instagram.com/p/DgF2__aCH4l/?utm_source=ig_web_button_share_sheet&lqvp=MzRlODBiNWFlZA==), [TikTok](https://www.tiktok.com/@opalsllm/photo/7711410437459365128?is_from_webapp=1&sender_device=pc&web_id=7711404948693648948)
