@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-does-the-wording-of-new-facts-change-spurious-forgetting-rerunning-figure-1-with-dossier-style-biographies",
+        },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "Two recent and trending papers about JEPA.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-llm-jepa-w6td/";
+          
+        },
+      },{id: "post-does-the-wording-of-new-facts-change-spurious-forgetting-rerunning-figure-1-with-dossier-style-biographies",
         
           title: "Does the wording of new facts change spurious forgetting? Rerunning Figure 1 with...",
         
