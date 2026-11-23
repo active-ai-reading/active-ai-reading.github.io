@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-suppressed-not-erased-and-automatic-soundness-check",
+        },{id: "post-does-the-wording-of-new-facts-change-spurious-forgetting-rerunning-figure-1-with-dossier-style-biographies",
+        
+          title: "Does the wording of new facts change spurious forgetting? Rerunning Figure 1 with...",
+        
+        description: "Starting from the paper&#39;s Figure 1 Transformer, I fine-tuned on the same new facts in two wordings, shared templates and short dossier entries. The wording changed the forgetting curve, but in opposite directions depending on where the answers come from.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reimplement-spurious-forgetting-biography-wording/";
+          
+        },
+      },{id: "post-suppressed-not-erased-and-automatic-soundness-check",
         
           title: "Suppressed, not erased, and automatic soundness check",
         
