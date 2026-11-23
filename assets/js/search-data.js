@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/communication-X-post/";
           
         },
+      },{id: "post-a-better-figure-3-one-shared-lift-two-consequences",
+        
+          title: "A better Figure 3: one shared lift, two consequences",
+        
+        description: "Why old facts vanish and come back without retraining, in one picture: a shortcut that helps the new facts, until it hurts them.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/a-better-figure-3-spurious-forgetting/";
+          
+        },
       },{id: "post-suppressed-not-erased-and-automatic-soundness-check",
         
           title: "Suppressed, not erased, and automatic soundness check",

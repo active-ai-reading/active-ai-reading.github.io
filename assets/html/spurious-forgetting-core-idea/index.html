@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>One shared lift, two facts | Spurious forgetting</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light;
+ --page:#faf9f7;--paper:#fff;--ink:#22252b;--sub:#555c67;--muted:#707882;--rule:#e3e5e7;
+ --purple:#7563d4;--purple-light:#c7bdf2;--blue:#2f80d5;--orange:#e16b42;--base:#c8cdd1;
+ --soft:#f5f6f7;--chip:#f0ecfc;--ghost:#7a828d;--purple-soft:rgba(117,99,212,.11);--orange-soft:rgba(225,107,66,.12);
+}
+*{box-sizing:border-box} body{margin:0;background:var(--page);color:var(--ink);padding:24px 15px 48px} main{max-width:1000px;margin:auto}
+h1{font-size:clamp(28px,4vw,38px);line-height:1.12;margin:7px 0 10px;letter-spacing:-.045em;font-weight:790}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:var(--purple)}
+.lead{font-size:15.5px;line-height:1.56;color:var(--sub);margin:0 0 19px;max-width:720px}
+.setup{border:1px solid #d7d0ed;background:var(--paper);border-radius:14px;overflow:hidden;margin-bottom:19px}
+.setupHd{display:flex;align-items:center;gap:11px;padding:14px 17px 9px}.setupHd .pill{font-size:11px;font-weight:780;letter-spacing:.05em;border-radius:6px;background:var(--purple);color:#fff;padding:5px 9px;white-space:nowrap}.setupHd h2{font-size:17px;margin:0;letter-spacing:-.015em}
+.setupIntro{margin:0;padding:0 17px 13px;color:var(--sub);font-size:13.5px;line-height:1.5}
+.setupFlow{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr;gap:7px;background:#f8f6fd;border-top:1px solid #ebe6f9;padding:15px 17px;align-items:center}
+.setupItem .eyebrow{color:var(--muted);font-size:10.5px;font-weight:750;text-transform:uppercase;letter-spacing:.055em;margin-bottom:5px}.setupItem strong{display:block;font-size:13.5px;line-height:1.35}.setupItem small{display:block;color:var(--sub);font-size:12px;line-height:1.42;margin-top:5px}.groupA{color:var(--blue)}.groupB{color:var(--purple)}.setupArrow{text-align:center;font-size:23px;color:var(--purple)}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:9px}.stages{display:flex;gap:3px;border-radius:10px;border:1px solid var(--rule);background:var(--soft);padding:3px}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}.stages button{background:transparent;color:var(--sub);border:0;border-radius:7px;padding:9px 15px;font-size:13px;font-weight:650}.stages button[aria-pressed="true"]{color:#fff;background:var(--ink)}#play{border:1px solid var(--purple);border-radius:9px;background:var(--paper);color:var(--purple);font-size:13.5px;font-weight:750;padding:9px 14px}
+.story{border-left:4px solid var(--purple);padding:11px 17px;background:var(--paper);border-radius:0 10px 10px 0;margin-top:0;margin-bottom:12px;min-height:98px}.story .label{font-size:10px;color:var(--purple);font-weight:800;letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px}.story h2{margin:0 0 5px;font-size:17px;letter-spacing:-.02em}.story p{font-size:13.5px;line-height:1.48;color:var(--sub);margin:0}.story strong{color:var(--ink)}.story .emphasis{color:var(--purple);font-weight:750}
+.board{border:1px solid var(--rule);border-radius:15px;background:var(--paper);padding:19px 18px 13px}.boardHd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:11px}.boardHd strong{font-size:14px}.boardHd span{font-size:11px;color:var(--muted)}
+#jointChart{display:block;width:100%;height:auto;overflow:visible}
+.legend{display:flex;gap:8px 18px;align-items:center;flex-wrap:wrap;font-size:11.5px;color:var(--sub);border-top:1px solid var(--rule);padding-top:12px;margin-top:8px}.legend span{display:inline-flex;align-items:center;gap:6px}.key{display:inline-block;border-radius:2px}.key.purple{background:var(--purple-light);border:1px solid var(--purple);width:17px;height:11px}.key.blue{background:var(--blue);width:10px;height:12px}.key.orange{background:var(--orange);width:10px;height:12px}.key.ghost{border:1.5px dashed var(--ghost);width:10px;height:12px}
+.after{padding:18px 3px 4px}.after h2{font-size:17px;letter-spacing:-.02em;margin:0 0 6px}.after p{font-size:13.7px;line-height:1.6;margin:0 0 10px;color:var(--sub)}details{border:1px solid var(--rule);background:var(--paper);border-radius:11px;padding:12px 14px;margin-top:11px}summary{font-size:13.5px;font-weight:750;cursor:pointer}details p{color:var(--sub);font-size:13px;line-height:1.56}.eq{margin:11px 0;text-align:center;font-family:Georgia,'Times New Roman',serif;font-size:18px;overflow-x:auto;white-space:nowrap;padding:4px}.trend{margin-top:12px;border-top:1px solid var(--rule);padding-top:10px}.trend .hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-bottom:4px}.trend .hd strong{color:var(--ink);font-size:12.5px}#trend{display:block;width:100%;height:auto;overflow:visible;touch-action:pan-y;cursor:ew-resize}.scope{margin-top:15px!important;color:var(--muted)!important;font-size:12px!important}.scope a{color:inherit}
+@media(max-width:640px){body{padding:15px 10px 30px}.setupHd{padding:13px 13px 8px;align-items:flex-start}.setupHd h2{font-size:15px}.setupIntro{padding:0 13px 11px;font-size:12.5px}.setupFlow{padding:12px;grid-template-columns:1fr;gap:5px}.setupArrow{font-size:16px;line-height:1;transform:rotate(90deg);justify-self:start;margin-left:10px}.board{padding:12px 10px 11px}.stages button{padding:8px 10px;font-size:12px}.story{padding:10px 12px}.story h2{font-size:15.5px}.story p{font-size:12.5px}.legend{font-size:10.5px;gap:8px 12px}}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--page:#191a1e;--paper:#25262b;--ink:#f2f2f2;--sub:#c0c3c9;--muted:#a1a6b1;--rule:#414249;--purple:#ae9cf8;--purple-light:#7665b8;--blue:#64aaf9;--orange:#fb936d;--base:#6b6d73;--soft:#2d2e35;--chip:#3d3656;--ghost:#bec1c7;--purple-soft:rgba(174,156,248,.15);--orange-soft:rgba(251,147,109,.15)}:root:not([data-theme="light"]) .setup{border-color:#504568}:root:not([data-theme="light"]) .setupFlow{background:#282431;border-top-color:#473e59}:root:not([data-theme="light"]) .stages button[aria-pressed="true"]{background:#f0f0f1;color:#191a1e}}
+:root[data-theme="dark"]{color-scheme:dark;--page:#191a1e;--paper:#25262b;--ink:#f2f2f2;--sub:#c0c3c9;--muted:#a1a6b1;--rule:#414249;--purple:#ae9cf8;--purple-light:#7665b8;--blue:#64aaf9;--orange:#fb936d;--base:#6b6d73;--soft:#2d2e35;--chip:#3d3656;--ghost:#bec1c7;--purple-soft:rgba(174,156,248,.15);--orange-soft:rgba(251,147,109,.15)}:root[data-theme="dark"] .setup{border-color:#504568}:root[data-theme="dark"] .setupFlow{background:#282431;border-top-color:#473e59}:root[data-theme="dark"] .stages button[aria-pressed="true"]{background:#f0f0f1;color:#191a1e}
+</style>
+</head>
+<body>
+<main id="app">
+<header>
+<div class="kicker">Visualize the core idea · Section 3's minimal model</div>
+<h1>One shared lift, two consequences</h1>
+<p class="lead">A shared shortcut helps new learning but hides old knowledge. Once precise learning takes over, the shortcut becomes harmful — and retracts.</p>
+</header>
+<section class="setup" aria-label="The setup">
+ <div class="setupHd"><span class="pill">THE SETUP</span><h2>Why would new learning affect old facts?</h2></div>
+ <p class="setupIntro">In the toy associative-memory model, facts share a component of their keys. Training on new facts therefore causes a common change in the representations of old facts, too.</p>
+ <div class="setupFlow">
+  <div class="setupItem"><div class="eyebrow">Initially memorized</div><strong><span class="groupA">Old facts A</span> + <span class="groupB">Old facts B</span></strong><small>Two groups of possible answers.</small></div>
+  <div class="setupArrow" aria-hidden="true">→</div>
+  <div class="setupItem"><div class="eyebrow">Fine-tuning only on B′</div><strong>New facts → <span class="groupB">B answers only</span></strong><small>No old facts are shown again.</small></div>
+  <div class="setupArrow" aria-hidden="true">→</div>
+  <div class="setupItem"><div class="eyebrow">The surprise</div><strong>One shared shift moves both rows together</strong><small>It can hide an old A answer without erasing its stored information.</small></div>
+ </div>
+</section>
+<div class="controls"><div class="stages" role="group" aria-label="Choose stage"><button data-stage="before" aria-pressed="false">Before</button><button data-stage="collapse" aria-pressed="true">1 · Collapse</button><button data-stage="recovery" aria-pressed="false">2 · Recovery</button></div><button type="button" id="play">▶ Watch the story</button></div>
+<section class="story" aria-live="polite"><div class="label" id="storyLabel">1 · Collapse</div><h2 id="storyHead">The lift helps the new fact, while hiding the old one</h2><p id="storyText">The same purple lift appears under all B answers in both rows. Because RMSNorm also shrinks each row's own spikes, it helps while the new fact's spikes are misleading — but it buries the old A₂ fact at the same time.</p></section>
+<section class="board" aria-label="Shared lift acting on a new and old fact together">
+ 
+ <svg id="jointChart" viewBox="0 0 960 365" role="img" aria-label="A unified chart showing how the same shared lift affects a new fact and an old fact"></svg>
+ <div class="legend"><span><i class="key purple"></i>Same shared lift (both facts)</span><span><i class="key blue"></i>Correct-answer signal</span><span><i class="key orange"></i>Misleading signal</span><span><i class="key ghost"></i>Original A₂ signal (before RMSNorm)</span></div>
+</section>
+<section class="after">
+<h2>What did we just see?</h2>
+<p>Early in training, the model finds a shortcut: boosting all B answers helps it learn new facts, even before it can distinguish their correct answers. But this shared boost also affects old facts, hiding their correct answers without erasing the underlying information.</p>
+<p>The key is <strong>RMSNorm</strong>. As the shared component grows, normalization weakens the fact-specific signals. Initially, this helps by suppressing misleading signals. Later, once the new associations become accurate, the same effect becomes harmful: the shared boost reduces the score difference between correct and incorrect B answers.</p>
+<p>Gradient descent therefore pulls the shared component back. As a side effect, the old facts become accessible again — <strong>without ever being retrained</strong>.</p>
+<h2>Not everything comes back</h2>
+<p>The shared shift can retract: it hid the old fact without erasing it. But a second, slower process is not. Small <strong>fact-specific changes</strong> keep accumulating and gradually erase some old facts for good. The paper calls this <strong>erosion</strong>, and only this part is truly catastrophic forgetting.</p>
+<details>
+<summary>Connect the picture to the mathematics (Eqs. 3–5)</summary>
+<p>Overlapping keys make old hidden states move together: <em>ḣ</em><sub>a</sub> ≈ −αδ̄<sub>B</sub>. For new facts, write <em>h</em> = <em>s</em>û<sub>sh</sub> + <em>r</em>, where <em>r</em> is the individual component, orthogonal to the shared direction, and ‖<em>r</em>‖ = σ.</p>
+<div class="eq">RMSNorm(h) ∝ (s û<sub>sh</sub> + r) / √(s² + σ²)</div>
+<p>As <em>s</em> grows, the shared direction gains influence while the effective individual signal is scaled down by the factor 1/√(s² + σ²). This makes the shared shift suppress <em>wrong</em> individual signals early, but suppress <em>correct</em> ones later.</p>
+<div class="eq">ṡ = α√d · σ(σγ̄<sub>sh</sub> − sγ̄<sub>ind</sub>) / (s² + σ²)<sup>3/2</sup></div>
+<p>Early: γ̄<sub>sh</sub> &gt; 0 and γ̄<sub>ind</sub> &lt; 0, favoring growth. Later: γ̄<sub>sh</sub> ≈ 0, γ̄<sub>ind</sub> &gt; 0, pulling the common shift back. The same optimization of <em>new</em> facts causes both movements.</p>
+<div class="trend"><div class="hd"><strong>Size of the shared lift during training (real run)</strong><span>click or drag to move through time</span></div><svg id="trend" viewBox="0 0 760 100" role="img" aria-label="The shared lift grows while it helps the new fact and shrinks once it hurts"></svg></div>
+</details>
+<p class="scope"><strong>Scope.</strong> The bars are a qualitative schematic of the mechanism in Section 3, not measured logits. The shared-lift curve comes from a run of the paper's minimal model (§3.1; d = 128, α = 0.5, one seed; <a href="minimal_model.py" target="_blank" rel="noopener">code</a>). Based on <a href="https://arxiv.org/abs/2610.08718" target="_blank" rel="noopener">Palit et al., <em>When Forgetting Is Not Catastrophic</em></a>.</p>
+</section>
+</main>
+<script>
+'use strict';
+const TRACE={"step":4,"s":[0.0,0.4999,0.7309,0.8992,1.0279,1.1478,1.2203,1.3001,1.3673,1.4269,1.4682,1.5104,1.5359,1.5697,1.5886,1.6088,1.6159,1.6186,1.6212,1.618,1.6172,1.6122,1.5997,1.5914,1.5796,1.5672,1.5559,1.5369,1.5176,1.4968,1.4741,1.457,1.4325,1.4179,1.3929,1.377,1.3519,1.3347,1.312,1.2819,1.2631,1.2374,1.209,1.1877,1.1694,1.1448,1.1227,1.1041,1.077,1.0575,1.0434,1.0249,1.0046,0.9838,0.9653,0.9497,0.9312,0.9142,0.9044,0.8856,0.8724,0.8611,0.8472,0.8413,0.8296,0.8176,0.8053,0.7968,0.79,0.7844,0.7756,0.7644,0.7598,0.7512,0.745,0.7364,0.7311,0.726,0.7213,0.7145,0.7094,0.7033,0.6991,0.6933,0.6904,0.6844,0.6832,0.6816,0.6776,0.6736,0.6705,0.6672,0.6642,0.6612,0.6584,0.6573,0.6559,0.6521,0.6509,0.6498,0.6448,0.6411,0.6395,0.638,0.6364,0.6354,0.6348,0.6315,0.6305,0.6273,0.6263,0.6244,0.6219,0.6216,0.62,0.6205,0.6187,0.618,0.6161,0.6131,0.6118,0.6105,0.6095,0.6103,0.6087,0.6054,0.6034,0.6019,0.6016,0.6005,0.5999,0.5989,0.5971,0.5968,0.5962,0.5935,0.5934,0.5926,0.5906,0.5901,0.5904,0.5892,0.589,0.5897,0.5875,0.5861,0.5851,0.5842,0.5831,0.5821,0.5818,0.58,0.5796,0.5784,0.578,0.5769,0.577,0.5763,0.576,0.5759,0.5754,0.575,0.5745,0.5749,0.5752,0.5745,0.5752,0.5744,0.5747,0.5736,0.5734,0.5726,0.572,0.5717,0.5709,0.5701,0.5688,0.5686,0.568,0.5677,0.5668,0.5655,0.565,0.5651,0.564,0.563,0.5628,0.5619,0.5618,0.561,0.5605,0.5602,0.56,0.5599,0.5599,0.5599,0.5607,0.5599,0.5589,0.5585,0.5576]};
+(function(){
+ const byId=id=>document.getElementById(id), app=byId('app'), NS='http://www.w3.org/2000/svg';
+ const css=n=>`var(--${n})`, S=TRACE.step, END=(TRACE.s.length-1)*S, MAXSTORY=248, PEAK=TRACE.s.indexOf(Math.max(...TRACE.s))*S;
+ const lerp=(v,a,b)=>a+(b-a)*v, clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+ function at(t){let q=clamp(t,0,END)/S,i=Math.floor(q),j=Math.min(i+1,TRACE.s.length-1);return lerp(q-i,TRACE.s[i],TRACE.s[j]);}
+ const NAMES=['A₁','A₂','B₁','B₂'], OLD=1, NEW=3, SIGMA=1, BASE=6, GAIN=52;
+ function shares(t){const s=at(t);return {common:s/Math.hypot(s,SIGMA),individual:SIGMA/Math.hypot(s,SIGMA)};}
+ function newSignal(t){const p=1/(1+Math.exp(-(t-78)/18)); return [0.74*(1-p), 0.58*(1-p), 0.62*(1-p), p];}
+ function oldSignal(){return [0,1,0,0];}
+ function scores(o,h){return o.map((v,k)=>GAIN*((k>=2?h.common:0)+h.individual*v));}
+ const argmax=x=>x.indexOf(Math.max(...x));
+ const svg=(p,tag,a={},txt)=>{const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(a))e.setAttribute(k,v); if(txt!==undefined)e.textContent=txt; p.append(e); return e;};
+ let mobile=window.innerWidth<630, chart, trend;
+ function buildChart(){
+  const p=byId('jointChart');
+  const w=mobile?430:960, H=mobile?358:365;
+  p.innerHTML=''; p.setAttribute('viewBox',`0 0 ${w} ${H}`);
+  const positions=mobile?[125,182,271,336]:[275,404,584,731];
+  const barW=mobile?35:57, topBase=mobile?160:165, bottomBase=mobile?288:298;
+  const x=i=>positions[i], bandX=x(2)-11, bandW=x(3)+barW+11-bandX;
+  svg(p,'text',{x:(x(0)+x(1)+barW)/2,y:29,'text-anchor':'middle','font-size':mobile?15:16,'font-weight':750,fill:css('sub')},'Group A');
+  svg(p,'text',{x:(x(2)+x(3)+barW)/2,y:29,'text-anchor':'middle','font-size':mobile?15:16,'font-weight':750,fill:css('sub')},'Group B');
+  svg(p,'line',{x1:x(0)-10,x2:x(3)+barW+10,y1:topBase,y2:topBase,stroke:css('rule'),'stroke-width':1.4});
+  svg(p,'line',{x1:x(0)-10,x2:x(3)+barW+10,y1:bottomBase,y2:bottomBase,stroke:css('rule'),'stroke-width':1.4});
+  const platforms=[svg(p,'rect',{x:bandX,width:bandW,height:0,rx:4,fill:css('purple-light'),stroke:css('purple'),'stroke-width':1.4}),svg(p,'rect',{x:bandX,width:bandW,height:0,rx:4,fill:css('purple-light'),stroke:css('purple'),'stroke-width':1.4})];
+  const rows=[];
+  [topBase,bottomBase].forEach((baseline,row)=>{
+   const bits=NAMES.map((name,i)=>{
+    const gray=svg(p,'rect',{x:x(i),width:barW,y:baseline,height:0,fill:css('base')});
+    const spike=svg(p,'rect',{x:x(i),width:barW,y:baseline,height:0,fill:css(i===(row===0?NEW:OLD)?'blue':'orange')});
+    const ghost=svg(p,'rect',{x:x(i)+1,width:barW-2,y:baseline,height:0,fill:'none',stroke:css('ghost'),'stroke-width':1.8,'stroke-dasharray':'4 3'});
+    const mark=svg(p,'path',{fill:css('ink')});
+    return {gray,spike,ghost,mark};
+   });rows.push(bits);
+  });
+  const pLabels=[svg(p,'text',{x:bandX+bandW/2,'text-anchor':'middle','font-size':mobile?12:15,'font-weight':760,fill:css('ink')}), svg(p,'text',{x:bandX+bandW/2,'text-anchor':'middle','font-size':mobile?12:15,'font-weight':760,fill:css('ink')})];
+  const leftX=mobile?7:18, rightX=mobile?w-5:w-21;
+  const leftLabels=[
+   svg(p,'text',{x:leftX,y:topBase-55,'font-size':mobile?15:19,'font-weight':770,fill:css('ink')},'New fact'),
+   svg(p,'text',{x:leftX,y:bottomBase-55,'font-size':mobile?15:19,'font-weight':770,fill:css('ink')},'Old fact')];
+  const subLabels=[
+   svg(p,'text',{x:leftX,y:topBase-35,'font-size':mobile?11.5:14,'font-weight':640,fill:css('sub')},'trained · target B₂'),
+   svg(p,'text',{x:leftX,y:bottomBase-35,'font-size':mobile?11.5:14,'font-weight':640,fill:css('sub')},'not trained · target A₂')];
+  const status=[svg(p,'text',{x:rightX,y:topBase-41,'text-anchor':'end','font-size':mobile?20:26,'font-weight':760}),svg(p,'text',{x:rightX,y:bottomBase-41,'text-anchor':'end','font-size':mobile?20:26,'font-weight':760})];
+  NAMES.forEach((name,i)=>svg(p,'text',{x:x(i)+barW/2,y:H-18,'text-anchor':'middle','font-size':mobile?15:19,'font-weight':i===OLD||i===NEW?760:540,fill:(i===OLD||i===NEW)?css('ink'):css('muted')},name));
+  chart={p,w,H,barW,topBase,bottomBase,bandX,bandW,platforms,pLabels,rows,status,mult:mobile?1.15:1.28,x};
+ }
+ function drawRow(rowBits,baseline,own,sh,correct,platform,pLabel,topRow){
+  const u=chart.mult, platformH=GAIN*sh.common*u;
+  platform.setAttribute('y',baseline-platformH);platform.setAttribute('height',platformH);
+  pLabel.setAttribute('y',baseline-platformH/2+(mobile?4:5));
+  pLabel.setAttribute('opacity',platformH>24?1:0);pLabel.textContent='shared lift';
+  const val=scores(own,sh),winner=argmax(val);
+  rowBits.forEach((b,i)=>{
+   const bottom=baseline-(i>=2?platformH:0),h0=BASE*u,spec=GAIN*sh.individual*own[i]*u,stored=GAIN*own[i]*u;
+   b.gray.setAttribute('y',bottom-h0);b.gray.setAttribute('height',h0);
+   b.spike.setAttribute('y',bottom-h0-spec);b.spike.setAttribute('height',Math.max(0,spec));b.spike.setAttribute('opacity',own[i]>.007?1:0);
+   b.ghost.setAttribute('y',bottom-h0-stored);b.ghost.setAttribute('height',Math.max(0,stored));b.ghost.setAttribute('opacity',(!topRow&&i===OLD&&sh.individual<.98)?1:0);
+   const cx=chart.x(i)+chart.barW/2,top=bottom-h0-spec;
+   b.mark.setAttribute('d',i===winner?`M ${cx-7} ${top-12} L ${cx+7} ${top-12} L ${cx} ${top-4} Z`:'');
+  });return winner;
+ }
+ function buildTrend(){ const p=byId('trend'),w=mobile?340:760,H=100,L=6,R=w-8,T=32,B=76; p.innerHTML=''; p.setAttribute('viewBox',`0 0 ${w} ${H}`); const X=t=>L+t/MAXSTORY*(R-L), smax=Math.max(...TRACE.s)*1.1, Y=v=>B-v/smax*(B-T), fs=mobile?10.5:11.5; svg(p,'rect',{x:X(0),y:4,width:X(PEAK)-X(0),height:B-4,fill:css('purple-soft')}); svg(p,'rect',{x:X(PEAK),y:4,width:R-X(PEAK),height:B-4,fill:css('orange-soft')}); svg(p,'text',{x:X(0)+5,y:17,'font-size':fs,'font-weight':700,fill:css('ink')},mobile?'helps → grows':'helps the new fact → grows'); svg(p,'text',{x:X(PEAK)+6,y:17,'font-size':fs,'font-weight':700,fill:css('ink')},mobile?'hurts → shrinks':'hurts the new fact → shrinks'); svg(p,'line',{x1:L,x2:R,y1:B,y2:B,stroke:css('rule')}); let d=''; for(let t=0;t<=MAXSTORY;t+=S)d+=(t?'L':'M')+X(t).toFixed(1)+','+Y(at(t)).toFixed(1); svg(p,'path',{d,fill:'none',stroke:css('purple'),'stroke-width':2.6,'stroke-linejoin':'round'}); svg(p,'circle',{cx:X(PEAK),cy:Y(at(PEAK)),r:3.5,fill:css('purple')}); for(const t of (mobile?[0,100]:[0,100,200])) svg(p,'text',{x:X(t),y:B+15,'text-anchor':t?'middle':'start','font-size':fs-1,fill:css('muted')},String(t)); svg(p,'text',{x:R,y:B+15,'text-anchor':'end','font-size':fs-1,fill:css('muted')},mobile?'steps':'training steps'); const cur=svg(p,'line',{y1:22,y2:B,stroke:css('ink'),'stroke-width':1.4}), dot=svg(p,'circle',{r:5,fill:css('purple'),stroke:css('paper'),'stroke-width':2}); trend={X,Y,cur,dot,p,L,R,w}; let drag=false; const tOf=e=>{const r=p.getBoundingClientRect();return clamp(((e.clientX-r.left)/r.width*w-L)/(R-L)*MAXSTORY,0,MAXSTORY);}; p.onpointerdown=e=>{drag=true;p.setPointerCapture(e.pointerId); cancel(); time=tOf(e); render();}; p.onpointermove=e=>{if(drag){time=tOf(e); render();}}; p.onpointerup=()=>{drag=false;}; }
+ function drawTrend(){ if(!trend) return; const x=trend.X(Math.min(time,MAXSTORY)); trend.cur.setAttribute('x1',x); trend.cur.setAttribute('x2',x); trend.dot.setAttribute('cx',x); trend.dot.setAttribute('cy',trend.Y(at(Math.min(time,MAXSTORY)))); }
+ function rebuild(){ buildChart(); buildTrend(); }
+ const phaseLabels={before:['Before','No shared lift yet','The old A₂ fact is recalled correctly. The new fact has never been seen, and its own spikes still point to wrong answers.'],collapse:['1 · Collapse','The lift helps the new fact, while hiding the old one','The purple lift raises all B answers in both rows. RMSNorm also shrinks each row\'s own spikes. That helps while the new fact\'s spikes are misleading, but it buries the old A₂ fact at the same time.'],recovery:['2 · Recovery','Now the lift hurts the new fact, so it shrinks','The B₂-specific spike is now useful. Raising all B answers cannot distinguish B₂ from B₁, but RMSNorm still shrinks their useful difference, so <span class="emphasis">gradient descent pulls the lift back</span>, and the old A₂ fact reappears without being retrained.']};
+ function phase(t){ if(t<1) return 'before'; if(t<PEAK) return 'collapse'; return 'recovery'; }
+ let time=48, playing=false, anim=null, jumpToken=0;
+ function render(){
+  const h=shares(time),newWinner=drawRow(chart.rows[0],chart.topBase,newSignal(time),h,NEW,chart.platforms[0],chart.pLabels[0],true),oldWinner=drawRow(chart.rows[1],chart.bottomBase,oldSignal(),h,OLD,chart.platforms[1],chart.pLabels[1],false);
+  chart.status[0].textContent=newWinner===NEW?'✓':'✕';chart.status[1].textContent=oldWinner===OLD?'✓':'✕';
+  chart.status[0].setAttribute('fill',newWinner===NEW?css('blue'):css('orange'));
+  chart.status[1].setAttribute('fill',oldWinner===OLD?css('blue'):css('orange'));
+  const key=phase(time),p=phaseLabels[key];byId('storyLabel').textContent=p[0];byId('storyHead').textContent=p[1];byId('storyText').innerHTML=p[2];drawTrend();app.querySelectorAll('[data-stage]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.stage===key)));if(!playing)byId('play').textContent=time>=MAXSTORY-1?'↻ Replay':'▶ Watch the story';
+ }
+ function cancel(){ playing=false; if(anim!==null) cancelAnimationFrame(anim); anim=null; jumpToken++; render(); }
+ function jump(target){ cancel(); const token=jumpToken, from=time, start=performance.now(), dur=1500+Math.min(900, Math.abs(target-from)*4.5); function frame(now){ if(token!==jumpToken) return; let q=clamp((now-start)/dur,0,1), smooth=q*q*(3-2*q); time=lerp(smooth,from,target); render(); if(q<1) anim=requestAnimationFrame(frame);} anim=requestAnimationFrame(frame); }
+ const BEATS=[{to:0,hold:1800},{to:PEAK-0.5,hold:2600},{to:MAXSTORY,hold:2600}];
+ function play(){ cancel(); time=0; playing=true; byId('play').textContent='❚❚ Pause'; let i=0,last=null,holdUntil=null; function frame(now){ if(!playing)return; const dt=last===null?0:Math.min(.05,(now-last)/1000); last=now; const b=BEATS[i]; const speed=b.to>time?12:16; if(Math.abs(time-b.to)>1) time += Math.sign(b.to-time)*dt*speed*10/10, time=(b.to>time?Math.min(b.to,time):Math.max(b.to,time)); else { if(holdUntil===null) holdUntil=now+b.hold; if(now>=holdUntil){ i++; holdUntil=null; if(i>=BEATS.length){ playing=false; render(); return; } } } render(); anim=requestAnimationFrame(frame);} anim=requestAnimationFrame(frame);} 
+ byId('play').addEventListener('click',()=>playing?cancel():play()); for(const b of app.querySelectorAll('[data-stage]')) b.addEventListener('click',()=>jump({before:0,collapse:48,recovery:232}[b.dataset.stage])); window.addEventListener('resize',()=>{const m=window.innerWidth<630; if(m!==mobile){ mobile=m; rebuild(); render(); }});
+ function syncTheme(){try{const pt=window.parent!==window&&window.parent.document.documentElement.getAttribute('data-theme'); if(pt) document.documentElement.setAttribute('data-theme',pt);}catch(e){}}
+ function fitFrame(){try{if(window.frameElement){const m=document.querySelector('main');window.frameElement.style.height=Math.ceil(m.getBoundingClientRect().bottom+window.scrollY+10)+'px';}}catch(e){}}
+ if(window.parent!==window){document.body.style.background='transparent';document.body.style.padding='2px 2px 6px';const hd=document.querySelector('header');if(hd)hd.style.display='none'; syncTheme(); try{new MutationObserver(syncTheme).observe(window.parent.document.documentElement,{attributes:true,attributeFilter:['data-theme']});}catch(e){}}
+ for(const d of document.querySelectorAll('details')) d.addEventListener('toggle', fitFrame); window.addEventListener('resize', fitFrame);
+ rebuild(); render(); fitFrame(); if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitFrame);
+})();
+</script>
+</body>
+</html>
