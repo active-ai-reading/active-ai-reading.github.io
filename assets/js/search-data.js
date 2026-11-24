@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-papers-worth-knowing-this-week",
+        },{id: "post-critique-of-llm-jepa-large-language-models-meet-joint-embedding-predictive-architectures",
+        
+          title: "Critique of LLM-JEPA: LARGE LANGUAGE MODELS MEET JOINT EMBEDDING PREDICTIVE ARCHITECTURES",
+        
+        description: "Necessity of JEPA-loss via Fig 3 is flawed; effect of different k values unclear",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-llm-jepa-7iiv/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
         
