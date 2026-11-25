@@ -2,7 +2,6 @@
 title: "Spurious Forgetting in a thread"
 description: An eight-post X thread presenting the paper's findings, student experiments, visualizations, and research questions.
 paper: spurious-forgetting
-role: communication
 task: social
 by: [shaharOssy]
 ---
