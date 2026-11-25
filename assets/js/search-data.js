@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-can-predicting-an-answer-s-representation-help-a-language-model-generate-better-answers",
+        },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "One sentence on what you found.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/trending-llm-jepa-zu30/";
+          
+        },
+      },{id: "post-can-predicting-an-answer-s-representation-help-a-language-model-generate-better-answers",
         
           title: "Can predicting an answer’s representation help a language model generate better answers?",
         
