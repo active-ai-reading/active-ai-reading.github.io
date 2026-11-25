@@ -62,7 +62,7 @@ ninja.data = [{
         
           title: "Papers worth knowing this week",
         
-        description: "One sentence on what you found.",
+        description: "two papers ont the use of hidden representation on the training.",
         section: "Posts",
         handler: () => {
           
