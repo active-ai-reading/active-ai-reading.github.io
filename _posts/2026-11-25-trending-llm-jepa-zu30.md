@@ -1,6 +1,6 @@
 ---
 title: "Papers worth knowing this week"
-description: One sentence on what you found.
+description: two papers ont the use of hidden representation on the training.
 paper: llm-jepa
 task: trending
 by: [matan2001]
@@ -22,11 +22,7 @@ by: [matan2001]
     vision-language model (VLM) performance. This directly addresses a concern
     raised by LLM-JEPA: forcing related representations to align does not
     necessarily benefit the model's original task and may even hurt its performance.
-    The authors train five variants of a latent visual reasoning model and find
-    a strong negative correlation between representation alignment and accuracy
-    (r = -0.94). Through causal interventions and linear probing, they show that
-    the models largely bypass these intermediate representations when generating
-    answers. Their findings suggest that auxiliary representation losses may
+    Their findings suggest that auxiliary representation losses may
     influence performance by modifying the model's shared parameters rather
     than by improving the representations used for reasoning.
 </p>
@@ -48,10 +44,7 @@ by: [matan2001]
     internal representations that capture information necessary for future
     predictions, rather than relying entirely on attention over previous tokens.
     The authors theoretically show that, under ideal conditions, these hidden
-    states become sufficient for predicting future sequences. Experiments
-    demonstrate improvements in world modeling, planning, and reasoning,
-    including an increase in Countdown accuracy from 33.1% to 58.7%,
-    alongside more modest improvements in general language modeling.
+    states become sufficient for predicting future sequences. 
     This presents another approach to incorporating representation learning
     into a model's loss function, using the prediction of future hidden states
     rather than aligning representations of semantically related inputs.
