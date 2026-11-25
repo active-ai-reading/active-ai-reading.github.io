@@ -69,6 +69,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/trending-llm-jepa-zu30/";
           
         },
+      },{id: "post-spurious-forgetting-in-a-thread",
+        
+          title: "Spurious Forgetting in a thread",
+        
+        description: "An eight-post X thread presenting the paper&#39;s findings, student experiments, visualizations, and research questions.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/social-spurious-forgetting-ma4n/";
+          
+        },
       },{id: "post-can-predicting-an-answer-s-representation-help-a-language-model-generate-better-answers",
         
           title: "Can predicting an answer’s representation help a language model generate better answers?",
