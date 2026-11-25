@@ -1,7 +1,7 @@
 ---
 title: "When Forgetting Is Not Catastrophic X post"
 description: X posts for "When Forgetting Is Not Catastrophic"
-paper: 2610
+paper: spurious-forgetting
 task: social 
 by: [NettaShemesh103]
 ---
