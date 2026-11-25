@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/llm-jepa-poster/";
           
         },
+      },{id: "post-new-abstract-for-llm-jepa",
+        
+          title: "New abstract for LLM-JEPA",
+        
+        description: "reframing the novel contributions of the paper",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-llm-jepa/";
+          
+        },
       },{id: "post-critique-of-llm-jepa-large-language-models-meet-joint-embedding-predictive-architectures",
         
           title: "Critique of LLM-JEPA: LARGE LANGUAGE MODELS MEET JOINT EMBEDDING PREDICTIVE ARCHITECTURES",
