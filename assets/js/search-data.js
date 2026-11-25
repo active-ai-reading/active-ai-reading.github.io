@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-llm-jepa-large-language-models-meet-joint-embedding-predictive-architectures",
+        },{id: "post-can-predicting-an-answer-s-representation-help-a-language-model-generate-better-answers",
+        
+          title: "Can predicting an answer’s representation help a language model generate better answers?",
+        
+        description: "This poster explains how LLM-JEPA trains a language model to predict both the next token and a vector representing the answer.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/llm-jepa-poster/";
+          
+        },
+      },{id: "post-critique-of-llm-jepa-large-language-models-meet-joint-embedding-predictive-architectures",
         
           title: "Critique of LLM-JEPA: LARGE LANGUAGE MODELS MEET JOINT EMBEDDING PREDICTIVE ARCHITECTURES",
         
