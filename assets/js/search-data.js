@@ -1775,6 +1775,11 @@ ninja.data = [{
           description: "",
           section: "Papers",handler: () => {
               window.location.href = "/papers/cross-lingual-knowledge-pretraining/";
+            },},{id: "papers-diffusion-language-models-are-super-data-learners",
+          title: 'Diffusion Language Models are Super Data Learners',
+          description: "",
+          section: "Papers",handler: () => {
+              window.location.href = "/papers/diffusion-super-data-learners/";
             },},{id: "papers-llm-jepa-large-language-models-meet-joint-embedding-predictive-architectures",
           title: 'LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures',
           description: "",

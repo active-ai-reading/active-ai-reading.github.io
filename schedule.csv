@@ -8,6 +8,6 @@ week,date,paper_id,title,page,link,topic,notes
 6,2026-11-29,"llm-jepa","LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures","https://active-ai-reading.github.io/papers/llm-jepa/","https://arxiv.org/abs/2509.14252","",""
 7,2026-12-13,"muon-adamw-finetuning-gap","Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap","https://active-ai-reading.github.io/papers/muon-adamw-finetuning-gap/","https://arxiv.org/abs/2611.03633","Muon vs AdamW after fine-tuning (tentative, might be postponed)","Guest lecture on visualization this day (13 Dec). The paper may move to a later week."
 8,2026-12-20,"machine-playing","Is this machine playing?","https://active-ai-reading.github.io/papers/machine-playing/","https://arxiv.org/abs/2610.07130","","Suggested by Tamar Rott Shaham, thank you!"
-9,2026-12-27,"","","","","","Free choice from this week: repeat any role you like."
+9,2026-12-27,"diffusion-super-data-learners","Diffusion Language Models are Super Data Learners","https://active-ai-reading.github.io/papers/diffusion-super-data-learners/","https://arxiv.org/abs/2511.03276","","Free choice from this week: repeat any role you like."
 10,2027-01-03,"","","","","",""
 11,2027-01-10,"","","","","",""

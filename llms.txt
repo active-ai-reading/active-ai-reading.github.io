@@ -15,6 +15,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 - [Why Pretraining Fails to Share Cross-Lingual Knowledge](https://active-ai-reading.github.io/papers/cross-lingual-knowledge-pretraining/): Bilingual LLMs learn the same fact twice, once per language, and the cause is largely tokenization: two copies of English with disjoint token IDs already fail to share knowledge. Mapping Arabic words into English tokens (word-wise translation) makes knowledge transfer 14× better. (arXiv 2609.19291)
 - [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](https://active-ai-reading.github.io/papers/recurrent-depth-latent-reasoning/): This paper suggests an efficient approach towards test-time compute scaling. While Chain-of-Thought has proven effective, it is wasteful in memory and compute by design, the authors suggest a latent reasoning approach instead, demonstrating its gains at scale. (arXiv 2502.05171)
 - [LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures](https://active-ai-reading.github.io/papers/llm-jepa/): Hai Huang, Yann LeCun, Randall Balestriero, 2025 (arXiv 2509.14252)
+- [Diffusion Language Models are Super Data Learners](https://active-ai-reading.github.io/papers/diffusion-super-data-learners/): Jinjie Ni, Qian Liu, Longxu Dou, Chao Du, Zili Wang, Hang Yan, Tianyu Pang, Michael Qizhe Shieh, 2025 (arXiv 2511.03276)
 
 ## Posts
 
