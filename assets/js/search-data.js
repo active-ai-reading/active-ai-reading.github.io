@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-papers-worth-knowing-this-week",
+        },{id: "post-does-learning-to-write-a-regex-also-align-its-embedding",
+        
+          title: "Does learning to write a regex also align its embedding?",
+        
+        description: "A CPU reimplementation of Figure 3’s training-loss comparison on NL-RX-SYNTH.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/reimplement-llm-jepa-figure-3/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
         
