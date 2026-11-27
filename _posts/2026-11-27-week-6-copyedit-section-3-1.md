@@ -1,4 +1,3 @@
-
 ---
 # Copy to _posts/YYYY-MM-DD-short-title.md  and fill in. Delete these comment lines.
 title: "Copyediting LLM-JEPA's 3.1 section"
