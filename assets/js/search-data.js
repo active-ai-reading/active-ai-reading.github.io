@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-week-5-in-one-page-spurious-forgetting",
+        },{id: "post-week-6-copyedit-section-3-1",
+        
+          title: "Week 6 Copyedit Section 3 1",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/week-6-copyedit-section-3-1/";
+          
+        },
+      },{id: "post-week-5-in-one-page-spurious-forgetting",
         
           title: "Week 5 in one page: Spurious Forgetting",
         

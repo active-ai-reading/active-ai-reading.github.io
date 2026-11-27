@@ -19,6 +19,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Week 6 Copyedit Section 3 1](https://active-ai-reading.github.io/posts/2026/week-6-copyedit-section-3-1/): (, 2026-11-27)
 - [Week 5 in one page: Spurious Forgetting](https://active-ai-reading.github.io/posts/2026/compile-spurious-forgetting/): Our focus points from a paper on when forgetting during finetuning is not catastrophic. (Communicate to the world, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-27)
 - [Week 6 in one page: <paper>](https://active-ai-reading.github.io/posts/2026/compile-llm-jepa-k9fk/): (Communicate to the world, on "LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures", 2026-11-27)
 - [Rewriting the abstract of LLM-JEPA](https://active-ai-reading.github.io/posts/2026/abstract-llm-jepa-7vhf/): One sentence that makes people want to click. (Writing, on "LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures", 2026-11-27)
