@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/compile-llm-jepa-k9fk/";
           
         },
+      },{id: "post-rewriting-the-abstract-of-llm-jepa",
+        
+          title: "Rewriting the abstract of LLM-JEPA",
+        
+        description: "One sentence that makes people want to click.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-llm-jepa-7vhf/";
+          
+        },
       },{id: "post-does-learning-to-write-a-regex-also-align-its-embedding",
         
           title: "Does learning to write a regex also align its embedding?",
