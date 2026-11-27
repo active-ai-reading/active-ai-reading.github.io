@@ -19,6 +19,7 @@ Students of a graduate course read one AI research paper per week and publish wh
 
 ## Posts
 
+- [Compile Spurious Forgetting](https://active-ai-reading.github.io/posts/2026/compile-spurious-forgetting/): (, 2026-11-27)
 - [Week 5 in one page: Spurious Forgetting](https://active-ai-reading.github.io/posts/2026/compile-llm-jepa-k9fk/): Our focus points from a paper on when forgetting during finetuning is not catastrophic. (Communicate to the world, on "When Forgetting is not Catastrophic: On the Mechanics of Spurious Forgetting", 2026-11-27)
 - [Does learning to write a regex also align its embedding?](https://active-ai-reading.github.io/posts/2026/reimplement-llm-jepa-figure-3/): A CPU reimplementation of Figure 3’s training-loss comparison on NL-RX-SYNTH. (Coding, on "LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures", 2026-11-26)
 - [Papers worth knowing this week](https://active-ai-reading.github.io/posts/2026/trending-llm-jepa-zu30/): two papers ont the use of hidden representation on the training. (Paper scouting, on "LLM-JEPA: Large Language Models Meet Joint Embedding Predictive Architectures", 2026-11-25)
