@@ -58,11 +58,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-week-6-copyedit-section-3-1",
+        },{id: "post-copyediting-llm-jepa-39-s-3-1-section",
         
-          title: "Week 6 Copyedit Section 3 1",
+          title: "Copyediting LLM-JEPA&#39;s 3.1 section",
         
-        description: "",
+        description: "Simpler explanation of the LLM-JEPA main points",
         section: "Posts",
         handler: () => {
           
