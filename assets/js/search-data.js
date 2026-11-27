@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-does-learning-to-write-a-regex-also-align-its-embedding",
+        },{id: "post-week-5-in-one-page-spurious-forgetting",
+        
+          title: "Week 5 in one page: Spurious Forgetting",
+        
+        description: "Our focus points from a paper on when forgetting during finetuning is not catastrophic.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/compile-llm-jepa-k9fk/";
+          
+        },
+      },{id: "post-does-learning-to-write-a-regex-also-align-its-embedding",
         
           title: "Does learning to write a regex also align its embedding?",
         
