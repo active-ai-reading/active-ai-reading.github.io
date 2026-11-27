@@ -1,3 +1,4 @@
+---
 title: "Week 5 in one page: Spurious Forgetting"
 description: Our focus points from a paper on when forgetting during finetuning is not catastrophic.
 paper: spurious-forgetting
