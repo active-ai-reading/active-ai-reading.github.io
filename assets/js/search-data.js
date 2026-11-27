@@ -58,11 +58,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-compile-spurious-forgetting",
+        },{id: "post-week-5-in-one-page-spurious-forgetting",
         
-          title: "Compile Spurious Forgetting",
+          title: "Week 5 in one page: Spurious Forgetting",
         
-        description: "",
+        description: "Our focus points from a paper on when forgetting during finetuning is not catastrophic.",
         section: "Posts",
         handler: () => {
           
