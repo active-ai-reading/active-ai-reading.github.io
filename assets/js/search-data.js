@@ -113,6 +113,28 @@ ninja.data = [{
             window.location.href = "/posts/2026/critique-llm-jepa-chenshani/";
           
         },
+      },{id: "post-critique-of-when-forgetting-is-not-catastrophic-on-the-mechanics-of-spurious-forgetting",
+        
+          title: "Critique of When Forgetting is Not Catastrophic: On the Mechanics of Spurious Forgetting...",
+        
+        description: "A sharp, well-controlled mechanistic result I would accept, but it stops at factual recall and never connects its irreversible &quot;drift&quot; term to the plasticity-loss literature where it belongs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-llm-jepa-8leq/";
+          
+        },
+      },{id: "post-rewriting-the-abstract-of-llm-jepa",
+        
+          title: "Rewriting the abstract of LLM-JEPA",
+        
+        description: "The abstract spends five sentences clearing its throat before telling you what it did — here&#39;s a version that leads with the finding, the mechanism, and a number.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-llm-jepa-9ucd/";
+          
+        },
       },{id: "post-copyediting-llm-jepa-39-s-3-1-section",
         
           title: "Copyediting LLM-JEPA&#39;s 3.1 section",
