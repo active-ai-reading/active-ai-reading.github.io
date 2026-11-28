@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-teach-llm-jepa-1pxl",
+        },{id: "post-representation-collapse-when-a-perfect-loss-means-a-useless-model",
+        
+          title: "Representation Collapse: When a Perfect Loss Means a Useless Model",
+        
+        description: "Understanding why learning in embedding space can lead to trivial solutions and how modern self-supervised learning methods prevent them.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/teach-llm-jepa-Representation_Collapse/";
+          
+        },
+      },{id: "post-teach-llm-jepa-1pxl",
         
           title: "Teach Llm Jepa 1pxl",
         
