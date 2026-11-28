@@ -14,6 +14,20 @@ Treat this as an exercise in understanding and communicating the paper's core co
 ## What's worth editing
 When reading the paper for the first time, notice what part takes you long to read or what part you find yourself having to go back to again and again, rereading and understanding things that weren't clear on the first read based on the next context. These areas probably can be written better in a way that the first read clears up most of the confusion.
 
+## Writing principles
+
+### Flow
+
+- **Flow of words.** Start each sentence with something the reader already knows, and end it with what is new. Let the end of one sentence set up the start of the next.
+
+  <img src="/assets/img/guides/flow-of-words.png" alt="Three lines of text. The end of each line and the start of the next share a color, joined by an arrow." width="240">
+
+  To check, read only the opening words of each sentence. Each opening should pick up something the reader has already seen. Where a sentence opens with a new term, the flow breaks.
+
+- **Flow of ideas (argumentative flow).** This is the logic underneath the writing. Before you write any sentences, list your ideas, number them, and settle only their order: each idea should lead to the next. Then turn each idea into sentences.
+
+  <img src="/assets/img/guides/flow-of-ideas.png" alt="A paragraph with ideas marked in colors and numbered, and an arrow to the same ideas lined up in order." width="340">
+
 ## Additional resources
 
 - [Writing tips](https://docs.google.com/document/d/14Wax8M5w8F_8miDlYJ9-I6wqpelxlXjCEUbkNzNMqqE/edit?usp=sharing): an ever-growing guide (see *Title*, *Abstract*, *Review*, *Sentence*)
