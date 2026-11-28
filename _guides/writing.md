@@ -18,15 +18,13 @@ When reading the paper for the first time, notice what part takes you long to re
 
 ### Flow
 
-- **Flow of words.** Start each sentence with something the reader already knows, and end it with what is new. Let the end of one sentence set up the start of the next.
-
-  <img src="/assets/img/guides/flow-of-words.png" alt="Three lines of text. The end of each line and the start of the next share a color, joined by an arrow." width="240">
+- <img src="/assets/img/guides/flow-of-words.png" alt="Three lines of text. The end of each line and the start of the next share a color, joined by an arrow." width="240" style="float: right; max-width: 45%; height: auto; margin: 0.3rem 0 0.5rem 1.5rem;">
+  **Flow of words.** Start each sentence with something the reader already knows, and end it with what is new. Let the end of one sentence set up the start of the next.
 
   To check, read only the opening words of each sentence. Each opening should pick up something the reader has already seen. Where a sentence opens with a new term, the flow breaks.
 
-- **Flow of ideas (argumentative flow).** This is the logic underneath the writing. Before you write any sentences, list your ideas, number them, and settle only their order: each idea should lead to the next. Then turn each idea into sentences.
-
-  <img src="/assets/img/guides/flow-of-ideas.png" alt="A paragraph with ideas marked in colors and numbered, and an arrow to the same ideas lined up in order." width="340">
+- <img src="/assets/img/guides/flow-of-ideas.png" alt="A paragraph with ideas marked in colors and numbered, and an arrow to the same ideas lined up in order." width="280" style="float: right; max-width: 45%; height: auto; margin: 0.3rem 0 0.5rem 1.5rem;">
+  **Flow of ideas (argumentative flow).** This is the logic underneath the writing. Before you write any sentences, list your ideas, number them, and settle only their order: each idea should lead to the next. Then turn each idea into sentences.
 
 ## Additional resources
 
