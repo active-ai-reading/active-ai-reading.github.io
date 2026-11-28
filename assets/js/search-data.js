@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/teach-llm-jepa-1pxl/";
           
         },
+      },{id: "post-the-points-that-matter-in-llm-jepa",
+        
+          title: "The points that matter in LLM-JEPA",
+        
+        description: "LLM-JEPA gets more accuracy for the same compute and a better organized latent space, but mostly on paired text-code data.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/key-points-llm-jepa-adam-gabet/";
+          
+        },
       },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
