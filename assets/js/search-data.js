@@ -80,6 +80,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/teach-llm-jepa-1pxl/";
           
         },
+      },{id: "post-interesting-papers-that-came-out-3-days-ago",
+        
+          title: "Interesting papers that came out 3 days ago!",
+        
+        description: "AI agents beat the experts at research, AI ghost-reviewers get caught, and LLMs learn to tidy up their own memory.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/scouting-week6-NA/";
+          
+        },
       },{id: "post-reimplementing-the-llm-jepa-custom-attention-mask",
         
           title: "Reimplementing the LLM-JEPA Custom Attention Mask",
