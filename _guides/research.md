@@ -21,6 +21,10 @@ Yours to write. Some questions to start from:
 
 ## Literature Review
 
+- **The goal.** A literature review serves the paper it reviews. It explains the concepts the paper rests on, shows where the paper departs from earlier work, and shows what it builds on.
+- **What to read.** Read the abstract and the introduction to get the topic. Read the background and related-work sections to see what the paper borrows from earlier work, and what it leaves behind.
+- **The writing.** In a literature review, the writing is the work. What you need is scattered across several papers, and your job is to pull it into one text a reader can follow. Put real effort into the writing, and follow the [writing principles](/guides/writing/#writing-principles) in the writing guide.
+
 ### Look at the references
 
 References are a great way to understand what were the previous article leading up to the current article and what were the related works in the field (that this article compares itself to).
