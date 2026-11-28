@@ -80,6 +80,28 @@ ninja.data = [{
             window.location.href = "/posts/2026/teach-llm-jepa-1pxl/";
           
         },
+      },{id: "post-reimplementing-the-llm-jepa-custom-attention-mask",
+        
+          title: "Reimplementing the LLM-JEPA Custom Attention Mask",
+        
+        description: "Reimplementing the block-causal attention mask and verifying that it prevents information leakage between text and code representations.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/llm-jepa-custom-attention-mask/";
+          
+        },
+      },{id: "post-literature-review-of-the-idea-not-just-the-next-token",
+        
+          title: "Literature review of the idea, not just the next token",
+        
+        description: "A literature review of LLM-JEPA.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/literature-llm-jepa/";
+          
+        },
       },{id: "post-the-points-that-matter-in-llm-jepa",
         
           title: "The points that matter in LLM-JEPA",
@@ -122,6 +144,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/posts/2026/critique-llm-jepa-8leq/";
+          
+        },
+      },{id: "post-rewriting-the-abstract-of-llm-jepa",
+        
+          title: "Rewriting the abstract of LLM-JEPA",
+        
+        description: "The abstract spends five sentences clearing its throat before telling you what it did — here&#39;s a version that leads with the finding, the mechanism, and a number.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/copyedit-llm-jepa-9ucd/";
           
         },
       },{id: "post-copyediting-llm-jepa-39-s-3-1-section",
