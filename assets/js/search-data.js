@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-copyediting-llm-jepa-39-s-3-1-section",
+        },{id: "post-critique-of-llm-jepa-better-representations-or-better-regularization",
+        
+          title: "Critique of LLM-JEPA: Better Representations or Better Regularization?",
+        
+        description: "Examining whether improved performance reflects better semantic representations or an additional regularization effect.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/critique-llm-jepa-chenshani/";
+          
+        },
+      },{id: "post-copyediting-llm-jepa-39-s-3-1-section",
         
           title: "Copyediting LLM-JEPA&#39;s 3.1 section",
         
