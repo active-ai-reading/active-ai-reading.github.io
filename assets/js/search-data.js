@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-papers-worth-knowing-this-week",
+        },{id: "post-teach-llm-jepa-1pxl",
+        
+          title: "Teach Llm Jepa 1pxl",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/teach-llm-jepa-1pxl/";
+          
+        },
+      },{id: "post-papers-worth-knowing-this-week",
         
           title: "Papers worth knowing this week",
         
