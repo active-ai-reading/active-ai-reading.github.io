@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/guide/";
           },
-        },{id: "post-critique-of-llm-jepa-better-representations-or-better-regularization",
+        },{id: "post-papers-worth-knowing-this-week",
+        
+          title: "Papers worth knowing this week",
+        
+        description: "More JEPAs in Language and looped transformer distiliation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/hidden-gems-llm-jepa-43bm-adam/";
+          
+        },
+      },{id: "post-critique-of-llm-jepa-better-representations-or-better-regularization",
         
           title: "Critique of LLM-JEPA: Better Representations or Better Regularization?",
         
