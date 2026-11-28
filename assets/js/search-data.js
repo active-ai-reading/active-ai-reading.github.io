@@ -157,6 +157,17 @@ ninja.data = [{
             window.location.href = "/posts/2026/copyedit-llm-jepa-9ucd/";
           
         },
+      },{id: "post-making-the-llm-jepa-abstract-clearer",
+        
+          title: "Making the LLM-JEPA abstract clearer",
+        
+        description: "Introduce JEPA, make its application to language concrete, and clarify what the experiments show.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/posts/2026/abstract-llm-jepa-roey-magen/";
+          
+        },
       },{id: "post-copyediting-llm-jepa-39-s-3-1-section",
         
           title: "Copyediting LLM-JEPA&#39;s 3.1 section",
