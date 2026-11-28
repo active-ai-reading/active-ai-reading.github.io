@@ -18,9 +18,9 @@ JEPA learns by predicting representations in latent space rather than reconstruc
 
 Consider an encoder trained to minimize the distance between representations of two views of the same input:
 
-\[
+$$
 \mathcal{L} = \mathbb{E}_{x,x'}\left[\|f_\theta(x)-f_\theta(x')\|_2^2\right]
-\]
+$$
 
 
 Consider two possible solutions:
@@ -48,9 +48,9 @@ Contrastive learning brings representations of positive pairs closer while pushi
 
 These methods use a target encoder whose parameters are updated through an exponential moving average of the online encoder:
 
-\[
+$$
 \xi \leftarrow \tau\xi + (1-\tau)\theta
-\]
+$$
 
 Combined with a predictor and stop-gradient mechanism, this asymmetry helps avoid collapse in practice, without requiring negative examples.
 
@@ -64,9 +64,9 @@ VICReg combines three objectives:
 
 For example, its simplified variance loss is:
 
-\[
+$$
 \mathcal{L}_{var}=\frac{1}{d}\sum_{j=1}^{d}\max(0,\gamma-\operatorname{Std}(Z_j))
-\]
+$$
 
 Constant representations have zero variance and are therefore penalized.
 
@@ -74,9 +74,9 @@ Constant representations have zero variance and are therefore penalized.
 
 LLM-JEPA combines the standard next-token prediction objective with a JEPA objective:
 
-\[
+$$
 \mathcal{L}_{\text{LLM-JEPA}}=\mathcal{L}_{\text{NTP}}+\lambda\mathcal{L}_{\text{JEPA}}
-\]
+$$
 
 While the JEPA objective encourages alignment between semantically related inputs, next-token prediction encourages the model to preserve information necessary for generation.
 
